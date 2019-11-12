@@ -8,16 +8,8 @@ import {
   SecondLevelTitleStyle,
   FourthLevelTitleStyle,
 } from 'Client/ui/Elements/TitleElements';
-import {
-  SmallSeparatorWithMarginStyle,
-  SeparatorWrapperStyle,
-  TextSeparatorStyle,
-  SeparatorStyle,
-} from 'Client/ui/Elements/Separators';
 import { RedLinkButtonStyle } from 'Client/ui/Elements/Buttons/style';
 import { ExtraParagraphStyle } from 'Client/ui/Elements/Form/Styled/Content';
-import { FacebookAuthentication } from 'Client/features/auth/Social/FacebookAuthentication';
-import { GoogleAuthentication } from 'Client/features/auth/Social/GoogleAuthentication';
 import { modalShowLogin, modalClose } from 'Shared/store/actions/modal';
 import {
   trackSignupEmailSuccess,
@@ -153,18 +145,6 @@ export const Register = () => {
         <SecondLevelTitleStyle id="register_title">
           {i18n.t('register.title')}
         </SecondLevelTitleStyle>
-        <SmallSeparatorWithMarginStyle />
-        <FourthLevelTitleStyle as="h3">
-          {i18n.t('register.social_connect')}
-          <FacebookAuthentication />
-          {i18n.t('register.or')}
-          <GoogleAuthentication />
-        </FourthLevelTitleStyle>
-        <SeparatorWrapperStyle>
-          <SeparatorStyle />
-          <TextSeparatorStyle>{i18n.t('register.or')}</TextSeparatorStyle>
-          <SeparatorStyle />
-        </SeparatorWrapperStyle>
         <FourthLevelTitleStyle as="h3">
           {i18n.t('register.subtitle')}
         </FourthLevelTitleStyle>

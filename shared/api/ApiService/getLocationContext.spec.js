@@ -250,6 +250,7 @@ describe('getLocationContext', () => {
       'ROUTE_STATIC_GTU_EN',
       'ROUTE_STATIC_DATA_EN',
       'ROUTE_STATIC_CONTACT_EN',
+      'ROUTE_STATIC_COOKIES',
       'ROUTE_STATIC_NOCOOKIES',
       'ROUTE_CONSULTATION_STEP',
       'ROUTE_WHOAREWE',

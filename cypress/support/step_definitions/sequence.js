@@ -169,14 +169,6 @@ then('I see {string} in the current card', (text) => {
 then ('I see signup buttons in the current card', () => {
   cy.get('[data-cy-card-number]')
     .find('[data-cy-container=signup-auth-buttons] button:nth-child(1)')
-   
-    .should('contain', 'Google');
-  cy.get('[data-cy-card-number]')
-    .find('[data-cy-container=signup-auth-buttons] button:nth-child(2)')
-   
-    .should('contain', 'Facebook');
-  cy.get('[data-cy-card-number]')
-    .find('[data-cy-container=signup-auth-buttons] button:nth-child(3)')
     .should('contain', 'Email');
 });
 

@@ -48,14 +48,13 @@ type Props = {
 };
 
 export const SequenceCard = ({ card }: Props) => {
-  const isProposalCard = card.type === CARD_TYPE_PROPOSAL;
   const topComponentContext: TopComponentContextValueType = TopComponentContextValue.getSequenceProposal();
 
   return (
     <>
       <TopComponentContext.Provider value={topComponentContext}>
         <SequenceCardStyle
-          className={!isProposalCard && 'center'}
+          className="center"
           id={`card-${card.index}`}
           data-cy-card-type={card.type}
           data-cy-card-number={card.index + 1}

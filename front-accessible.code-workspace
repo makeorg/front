@@ -1,22 +1,27 @@
 {
   "folders": [
     {
-      "path": ".",
-      "name": "root"
+      "name": "root",
+      "path": "."
     },
     {
+      "name": "server",
       "path": "server"
     },
     {
+      "name": "client",
       "path": "client"
     },
     {
+      "name": "shared",
       "path": "shared"
     },
     {
+      "name": "docs",
       "path": "docs"
     },
     {
+      "name": "apiMocks",
       "path": "apiMocks"
     },
     {

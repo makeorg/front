@@ -10,13 +10,13 @@ Array [
     FontSize
   </h1>,
   .c0 {
-  color: rgba(213,21,60,1);
+  color: rgba(37,49,134,1);
   font-size: 12px;
 }
 
 .c0:hover,
 .c0:focus {
-  color: rgba(213,21,60,1);
+  color: rgba(37,49,134,1);
 }
 
 .c1 {

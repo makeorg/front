@@ -33,7 +33,7 @@ export const ProfileProposalCard = ({ proposal, position, size }: Props) => {
       <AuthorWrapperStyle>
         <DeprecatedProposalAuthor
           proposal={proposal}
-          withAvatar
+          withCreationDate
           formattedProposalStatus={formattedProposalStatus}
         />
       </AuthorWrapperStyle>

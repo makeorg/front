@@ -2,6 +2,7 @@
 import React from 'react';
 import { RedLinkHTMLElementStyle } from 'Client/ui/Elements/LinkElements';
 import { i18n } from 'Shared/i18n';
+import { CONTACT_EMAIL } from 'Shared/constants/config';
 import { MetaTags } from 'Client/app/MetaTags';
 import {
   StaticPageWrapperStyle,
@@ -19,10 +20,8 @@ export const Contact = () => (
       <StaticParagraphStyle>
         {i18n.t('contact.paragraph')}
         &nbsp;
-        <RedLinkHTMLElementStyle
-          href={`mailto:${i18n.t('contact.email_address')}`}
-        >
-          {i18n.t('contact.email_address')}
+        <RedLinkHTMLElementStyle href={`mailto:${CONTACT_EMAIL}`}>
+          {`${CONTACT_EMAIL}.`}
         </RedLinkHTMLElementStyle>
       </StaticParagraphStyle>
     </StaticPageWrapperStyle>

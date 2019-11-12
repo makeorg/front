@@ -26,6 +26,9 @@ export const CookieContentStyle = styled(CenterRowStyle)`
   margin: 0 auto;
   width: 100%;
   max-width: ${intToPx(Layouts.ContainerWidth)};
+  .tofill {
+    fill: ${color.white};
+  }
 `;
 
 export const CookieContentInnerStyle = styled(ColumnToRowElementStyle)`

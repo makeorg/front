@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { i18n } from 'Shared/i18n';
 import { useCookies } from 'react-cookie';
-import { getGTUPageLink, getDataPageLink } from 'Shared/helpers/url';
+import { getCookiesPageLink } from 'Shared/helpers/url';
 import { type StateRoot } from 'Shared/store/types';
 import {
   NAVIGATION_ARIA_NEGATIVE_TAB_CLASS,
@@ -60,12 +60,9 @@ export const CookieBanner = () => {
           <CookieParagraphStyle
             dangerouslySetInnerHTML={{
               __html: i18n.t('cookie_alert.text', {
-                gtu_link: `<a href="${getGTUPageLink(
+                cookies: `<a href="${getCookiesPageLink(
                   country || 'FR'
-                )}" data-cy-link="gtu">$t(cookie_alert.gtu)</a>`,
-                policy_link: `<a href="${getDataPageLink(
-                  country || 'FR'
-                )}" data-cy-link="policy">$t(cookie_alert.policy)</a>`,
+                )}" data-cy-link="gtu">$t(cookie_alert.cookies)</a>`,
               }),
             }}
           />

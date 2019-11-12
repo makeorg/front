@@ -34,6 +34,7 @@ import {
   ROUTE_PASSWORD_RECOVERY,
   ROUTE_ACCOUNT_ACTIVATION,
   ROUTE_EXPLORE,
+  ROUTE_STATIC_COOKIES,
 } from 'Shared/routes';
 import { env } from 'Shared/env';
 
@@ -380,6 +381,17 @@ export const getGTUPageLink = (country: string) =>
       country,
     }
   );
+
+/**
+ * Get the Cookies page link
+ *
+ * @param  {string} country
+ * @return {string}
+ */
+export const getCookiesPageLink = (country: string) =>
+  generatePath(ROUTE_STATIC_COOKIES, {
+    country,
+  });
 
 /**
  * Get the GTU page link

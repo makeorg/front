@@ -18,14 +18,14 @@
 	"main": "index.js",
 	"license": "GPL-3.0-or-later",
 	"engines": {
-		"node": ">=12.18 <12.20",
+		"node": ">=12.18 <=12.22",
 		"yarn": "~1.22"
 	},
 	"dependencies": {
 		"@loadable/component": "~5.14.1",
 		"@loadable/server": "~5.14.0",
 		"adblockdetect": "^0.0.2",
-		"athena-design-tokens": "^0.1.7",
+		"athena-design-tokens": "^0.1.6-beta.place.1",
 		"axios": "~0.21.0",
 		"axios-retry": "~3.1.9",
 		"body-parser": "~1.19.0",
@@ -182,7 +182,7 @@
 		"cypress:run": "cypress run -b chrome --headless",
 		"cypress:open": "cypress open",
 		"lighthouse:run": "env NODE_ENV=test start-server-and-test server:dev http://localhost:9009 test:lighthouse:all",
-		"test:lighthouse:all": "yarn test:lighthouse:home && yarn test:lighthouse:sequence && yarn test:lighthouse:consultation && yarn test:lighthouse:proposal",
+		"test:lighthouse:all": "yarn test:lighthouse:sequence && yarn test:lighthouse:consultation && yarn test:lighthouse:proposal",
 		"test:lighthouse:home": "lighthouse-ci http://localhost:9009 --accessibility=100 --report='.' --filename=report-home.html --chrome-flags='--headless --no-sandbox'",
 		"test:lighthouse:sequence": "lighthouse-ci http://localhost:9009/FR/consultation/question-0-slug/selection --accessibility=100 --report='.' --filename=report-sequence.html --chrome-flags='--headless --no-sandbox'",
 		"test:lighthouse:consultation": "lighthouse-ci http://localhost:9009/FR/consultation/question-0-slug/consultation --accessibility=100 --report='.' --filename=report-consultation.html --chrome-flags='--headless --no-sandbox'",

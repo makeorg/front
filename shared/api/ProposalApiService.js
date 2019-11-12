@@ -19,7 +19,6 @@ type TypeSort =
 
 type TypeFeedAlgortithms = {
   CONTROVERSY: { key: string, value: string },
-  ACTORS: { key: string, value: string },
   POPULAR: { key: string, value: TypeSort },
   REALISTIC: { key: string, value: string },
   RECENT: { key: string, value: string },
@@ -29,7 +28,6 @@ type TypeFeedAlgortithms = {
 export const PROPOSALS_FEED_ALGORITHMS: TypeFeedAlgortithms = {
   TAGGED_FIRST: { key: 'sortAlgorithm', value: 'taggedFirst' },
   POPULAR: { key: 'sortAlgorithm', value: 'popular' },
-  ACTORS: { key: 'userType', value: 'ORGANISATION,PERSONALITY' },
   RECENT: { key: 'sort', value: 'createdAt' },
   REALISTIC: { key: 'sortAlgorithm', value: 'realistic' },
   CONTROVERSY: { key: 'sortAlgorithm', value: 'controversy' },
@@ -37,7 +35,6 @@ export const PROPOSALS_FEED_ALGORITHMS: TypeFeedAlgortithms = {
 
 type TypeAvailableAlgorithms = {
   CONTROVERSY: { key: string, value: string },
-  ACTORS: { key: string, value: string },
   POPULAR: { key: string, value: TypeSort },
   REALISTIC: { key: string, value: string },
   RECENT: { key: string, value: string },
@@ -48,7 +45,6 @@ type TypeAvailableAlgorithms = {
 export const AVAILABLE_ALGORITHMS: TypeAvailableAlgorithms = {
   TAGGED_FIRST: { key: 'sortAlgorithm', value: 'taggedFirst' },
   POPULAR: { key: 'sortAlgorithm', value: 'popular' },
-  ACTORS: { key: 'userType', value: 'ORGANISATION,PERSONALITY' },
   REALISTIC: { key: 'sortAlgorithm', value: 'realistic' },
   CONTROVERSY: { key: 'sortAlgorithm', value: 'controversy' },
   TOP_SCORE: { key: 'sort', value: 'scores.topScoreAjustedWithVotes' },

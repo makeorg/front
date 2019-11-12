@@ -112,3 +112,9 @@ export const FloatingLabelStyle = styled.label`
   transition: 0.25s ease all;
   white-space: nowrap;
 `;
+
+export const CommentFieldStyle = styled(ParagraphStyle)`
+  width: 100%;
+  text-align: left;
+  padding-left: 15px;
+`;

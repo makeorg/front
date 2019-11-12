@@ -4,7 +4,6 @@ import { Vote } from 'Client/features/vote';
 import { type ProposalType } from 'Shared/types/proposal';
 import { getProposalLink } from 'Shared/helpers/url';
 import { ProposalFooterWithTagElement } from 'Client/ui/Proposal/FooterElement/ProposalWithTag';
-import { DeprecatedProposalAuthor } from 'Client/ui/Proposal/DeprecatedAuthor';
 import {
   ProposalCardStyle,
   ProposalStyle,
@@ -13,12 +12,13 @@ import {
 import { OrganisationsVote } from 'Client/features/vote/Organisation';
 import { isInProgress } from 'Shared/helpers/date';
 import { DetailledVoteResults } from 'Client/ui/Proposal/DetailledVoteResults';
-import { AuthorWrapperStyle } from 'Client/ui/Proposal/DeprecatedAuthor/Styled';
 import { ScreenReaderItemStyle } from 'Client/ui/Elements/AccessibilityElements';
 import { i18n } from 'Shared/i18n';
 import { ColumnElementStyle } from 'Client/ui/Elements/FlexElements';
 import { useSelector } from 'react-redux';
 import { type StateRoot } from 'Shared/store/types';
+import { AuthorWrapperStyle } from 'Client/ui/Proposal/DeprecatedAuthor/Styled';
+import { DeprecatedProposalAuthor } from 'Client/ui/Proposal/DeprecatedAuthor';
 
 type Props = {
   /** Object with all organisation's properties */
@@ -43,11 +43,7 @@ export const ProposalCardTagged = ({ proposal, position, size }: Props) => {
   return (
     <ProposalCardStyle aria-posinset={position} aria-setsize={size}>
       <AuthorWrapperStyle>
-        <DeprecatedProposalAuthor
-          proposal={proposal}
-          withAvatar
-          withCreationDate
-        />
+        <DeprecatedProposalAuthor proposal={proposal} withCreationDate />
       </AuthorWrapperStyle>
       <ProposalInnerStyle>
         <ColumnElementStyle>

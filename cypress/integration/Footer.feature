@@ -21,18 +21,7 @@ Feature: The footer
   
   Scenario: French Mobile Footer is complete
     Given I go to "france homepage"
-    Then I see an external link "Revue de presse" to "https://about.make.org/les-medias-en-parlent" in "footer" container
-    And I see an external link "Fonds de dotation Make.org" to "https://foundation.make.org" in "footer" container
-    And I see a link "Mentions légales" to "/FR/mentions-legales" in "footer" container
-    And I see a link "Conditions d'utilisation" to "/FR/conditions-dutilisation" in "footer" container
-    And I see a link "Politique de données" to "/FR/politique-donnees" in "footer" container
-    And I see "Changer de pays" in "footer" container
-    And I see a link "Contact" to "/FR/contact" in "footer" container
-
-  Scenario: Foreign Mobile Footer is complete
-    Given I go to "british homepage"
-    Then I see a link "Legal notice" to "/GB/legal-mentions" in "footer" container
-    And I see a link "Terms of use" to "/GB/terms-of-use" in "footer" container
-    And I see a link "Data use policy" to "/GB/data-terms" in "footer" container
-    And I see "Change country" in "footer" container
-    And I see a link "Contact" to "/GB/contact" in "footer" container
+    Then I see a link "Conditions d'utilisation" to "/FR/conditions-dutilisation" in "footer" container
+    And I see an external link "Mentions légales" to "https://about.make.org/legals-place/mentions-legales" in "footer" container
+    And I see an external link "Politique de données" to "https://about.make.org/legals-place/politique-donnees" in "footer" container
+    And I see an external link "Contact" to "https://about.make.org/legals-place/contact" in "footer" container

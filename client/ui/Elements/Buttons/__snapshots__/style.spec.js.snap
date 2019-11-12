@@ -25,7 +25,7 @@ exports[`ButtonElements/Styled ActiveButtonStyle snapshot by default 1`] = `
 
 .c1 {
   color: rgba(255,255,255,1);
-  background-color: rgba(213,21,60,1);
+  background-color: rgba(37,49,134,1);
 }
 
 .c1 svg,
@@ -245,7 +245,7 @@ exports[`ButtonElements/Styled CloseButtonStyle snapshot by default 1`] = `
   position: absolute;
   top: 20px;
   right: 20px;
-  fill: rgba(213,21,60,1);
+  fill: rgba(37,49,134,1);
   z-index: 1;
   font-size: 16px;
 }
@@ -733,7 +733,7 @@ exports[`ButtonElements/Styled RedButtonStyle snapshot by default 1`] = `
 
 .c1 {
   color: rgba(255,255,255,1);
-  background-color: rgba(213,21,60,1);
+  background-color: rgba(37,49,134,1);
 }
 
 .c1 svg {
@@ -779,7 +779,7 @@ exports[`ButtonElements/Styled RedLinkButtonStyle snapshot by default 1`] = `
 
 .c1 {
   display: inline-block;
-  color: rgba(213,21,60,1);
+  color: rgba(37,49,134,1);
   -webkit-text-decoration: underline;
   text-decoration: underline;
   margin: 0 5px;
@@ -960,7 +960,7 @@ exports[`ButtonElements/Styled SmallRedButtonStyle snapshot by default 1`] = `
 
 .c1 {
   color: rgba(255,255,255,1);
-  background-color: rgba(213,21,60,1);
+  background-color: rgba(37,49,134,1);
 }
 
 .c1 svg {

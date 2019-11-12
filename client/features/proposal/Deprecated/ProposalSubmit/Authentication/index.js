@@ -6,14 +6,13 @@ import {
   trackDisplayAuthenticationForm,
   trackClickPersonnalDataLink,
 } from 'Shared/services/Tracking';
-import { type StateRoot } from 'Shared/store/types';
 import {
   RedButtonStyle,
   ButtonsWrapperStyle,
 } from 'Client/ui/Elements/Buttons/style';
 import {
-  ThirdLevelTitleStyle,
   FourthLevelTitleStyle,
+  ThirdLevelTitleStyle,
 } from 'Client/ui/Elements/TitleElements';
 import { CenterParagraphStyle } from 'Client/ui/Elements/ParagraphElements';
 import { getDataPageLink } from 'Shared/helpers/url';

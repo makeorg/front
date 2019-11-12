@@ -74,10 +74,10 @@ export const TermsOfUseFR = () => {
             </StaticThirdLevelTitleStyle>
             <StaticParagraphStyle>
               Le Site et les Services (ou collectivement « les Services ») sont
-              exploités par lasociété Make.org, Société par Actions Simplifiées
-              au capital de 1000 euros, ayant son siège social au 4 rue René
-              Villermé, 75011, PARIS, immatriculée au RCS de PARIS sous le
-              numéro 820 016 095 (ci-après« Make.org »).
+              exploités par la société Make.org, Société par Actions Simplifiées
+              au capital de 1.056.017,00 €, ayant son siège social au 13-15 Rue
+              de la Bûcherie 75005 Paris, immatriculée au RCS de PARIS sous le
+              numéro 820 016 095 (ci-après« MAKE.ORG »).
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>

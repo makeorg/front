@@ -26,6 +26,7 @@ then ('some make data header should be sent to {string}:', (endpoint, expectedHe
 
 then('event {string} should not be tracked by Make', (trackerName) => {
   const assertCallback = () => expect(xhrTrackingRequests.list).to.not.have.any.keys(trackerName);
+  cy.wait(100);
   if (!asserts.list['postTracking']) {
     asserts.list['postTracking'] = [];
   } 
@@ -53,6 +54,7 @@ then('event {string} should be tracked by Make with parameters values:', (tracke
       }
     })
   };
+  cy.wait(100);
   if (!asserts.list['postTracking']) {
     asserts.list['postTracking'] = [];
   } 

@@ -155,7 +155,9 @@
         "invalid_postal_code_dynamic": "The {{label}} must have 5 numbers.",
         "submit_success": "Edits saved.",
         "malformed": "Please use the right url format \"https://example.com\""
-      }
+      },
+      "requirement": "@@common.form.requirement|fr:Le champ est obligatoire.",
+      "anonymous_proposals": "@@common.form.anonymous_proposals|fr:Votre participation est anonyme"
     },
     "from": "on",
     "email": "Email",
@@ -206,7 +208,7 @@
       "unexpected_error": "We are encountering an error, please try again later.",
       "network_error": "Impossible to access the full content of our website because it looks like you are offline.",
       "vote_only": {
-        "message": "Citizens have submitted many solutions since the beginning of this consultation. We need your votes to make a difference between them. In the meantime we can't accept new solutions.",
+        "message": "Many solutions have been submitted since the beginning of this consultation. We need your votes to make a difference between them. In the meantime we can't accept new solutions.",
         "button": "ok"
       },
       "vote_on_proposal": "Vote on this solution"
@@ -246,7 +248,9 @@
     "logo_alt": "Go to the Make.org website",
     "open_menu": "Go to main navigation",
     "close_menu": "Close main navigation menu",
-    "main_navigation": "Main website navigation"
+    "main_navigation": "Main website navigation",
+    "logo_alt_bis": "@@header.logo_alt_bis|fr:Place by Make.org",
+    "whoarewe": "@@header.whoarewe|fr:Qui sommes-nous ?"
   },
   "proposal_page": {
     "button_1": "Participate",
@@ -272,7 +276,8 @@
       "title": "Solution status:"
     },
     "content": "Solution content",
-    "validate": "Validate"
+    "validate": "Validate",
+    "posted_at": "@@proposal_card.posted_at|fr:Proposé le"
   },
   "intro_card": {
     "title": "Thousands of citizens submit their solutions.",
@@ -445,13 +450,15 @@
     "contact": "Contact",
     "moderation_charter": "Moderation charter",
     "press_details": "Press",
-    "a11y": "Accessibilty statement"
+    "a11y": "Accessibilty statement",
+    "cookies": "Cookies"
   },
   "pannel": {},
   "cookie_alert": {
-    "text": "By continuing to browse this site, you agree to our {{gtu_link}}, our {{policy_link}}, and to the use of cookies on our website in order to help us improve our service.",
+    "text": "By continuing to browse this site, you agree to our {{cookies}} on our website in order to help us improve our service.",
     "gtu": "terms of service",
-    "policy": "privacy policy"
+    "policy": "privacy policy",
+    "cookies": "cookies policy"
   },
   "activate_account": {},
   "reset_password": {
@@ -1003,8 +1010,7 @@
   },
   "contact": {
     "contactUs": "Contact us",
-    "paragraph": "Have an suggestion or want to report a bug? Feel free to send us an email:",
-    "email_address": "contact@make.org"
+    "paragraph": "Have an suggestion or want to report a bug? Feel free to send us an email:"
   },
   "legal": {
     "title": "Legal mentions",
@@ -1031,7 +1037,10 @@
     "minor_consent": "I agree Make.org to use my personal data.",
     "parental_consent": "As a representative of parental authority, I consent to the processing of my child personal data by Make.org.",
     "cancel": "Cancel",
-    "submit": "Validate"
+    "submit": "Validate",
+    "privacy_policy_text": "@@legal_consent.privacy_policy_text|fr:J'accepte que Make.org collecte mes données personnelles conformément à la ",
+    "privacy_policy": "@@legal_consent.privacy_policy|fr:politique de données",
+    "privacy_make": "@@legal_consent.privacy_make|fr: de Place by Make.org"
   },
   "browse": {
     "page_title": "Browse consultations",

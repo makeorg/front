@@ -10,10 +10,6 @@ import { MiddlePageWrapperStyle } from 'Client/app/Styled/MainElements';
 import { Spinner } from 'Client/ui/Elements/Loading/Spinner';
 import { ProposalSkipLinks } from 'Client/app/SkipLinks/Proposal';
 import { SingleProposalCard } from 'Client/features/proposal/SingleProposalCard';
-import { SingleProposalSharingComponent } from 'Client/features/flipping/Sharing/SingleProposal';
-import { checkIsFeatureActivated } from 'Client/helper/featureFlipping';
-import { CONSULTATION_SHARE_DISABLE } from 'Shared/constants/featureFlipping';
-import { isInProgress } from 'Shared/helpers/date';
 import { QuestionService } from 'Shared/services/Question';
 import { ProposalService } from 'Shared/services/Proposal';
 
@@ -43,10 +39,6 @@ const ProposalPage = () => {
       </MiddlePageWrapperStyle>
     );
   }
-  const isSharingDisabled: boolean = checkIsFeatureActivated(
-    CONSULTATION_SHARE_DISABLE,
-    question.activeFeatures
-  );
 
   return (
     <ThemeProvider theme={question.theme}>
@@ -64,10 +56,6 @@ const ProposalPage = () => {
             />
             <SingleProposalCard proposal={proposal} />
           </>
-        )}
-
-        {!isSharingDisabled && isInProgress(question) && (
-          <SingleProposalSharingComponent />
         )}
       </MiddlePageWrapperStyle>
     </ThemeProvider>

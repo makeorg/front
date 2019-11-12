@@ -4315,10 +4315,10 @@ at-least-node@^1.0.0:
   resolved "https://registry.yarnpkg.com/at-least-node/-/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
   integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
 
-athena-design-tokens@^0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/athena-design-tokens/-/athena-design-tokens-0.1.7.tgz#fdf8014d06a6d19a1285b0c6a17f39780713f201"
-  integrity sha512-X33ZDy4FRzJuRoVl1NpcQMsow3EoiRQQjucJC6NBexzx8z+e1/HdEyWfTeIs87Oesj0sBeEyge0xlM6g0NrD0w==
+athena-design-tokens@^0.1.6-beta.place.1:
+  version "0.1.6-beta.place.1"
+  resolved "https://registry.yarnpkg.com/athena-design-tokens/-/athena-design-tokens-0.1.6-beta.place.1.tgz#1859621b5e4140cdf94901d5cec172e145219e16"
+  integrity sha512-e2P08q8QTAZ+yBDnEJxJq3rKwlMmr1EIN7r/5Vry0uV+3DxrA39JEihg520qGTAT0HI/Y8/b3mW1IElBa61K+w==
 
 atob@^2.1.2:
   version "2.1.2"

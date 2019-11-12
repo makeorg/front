@@ -10,16 +10,10 @@ import { type StateRoot } from 'Shared/store/types';
 import { MetaTags } from 'Client/app/MetaTags';
 import { MainResultsHeader } from 'Client/features/search/MainResults/Header';
 import { MainResultsProposals } from 'Client/features/search/MainResults/Proposals';
-import { MainResultsOrganisations } from 'Client/features/search/MainResults/Organisations';
 import { Spinner } from 'Client/ui/Elements/Loading/Spinner';
 import { HiddenItemStyle } from 'Client/ui/Elements/HiddenElements';
-import {
-  getRouteSearchProposals,
-  getRouteSearchConsultations,
-  getRouteSearchOrganisations,
-} from 'Shared/routes';
+import { getRouteSearchProposals } from 'Shared/routes';
 import { useDesktop } from 'Client/hooks/useMedia';
-import { BusinessConsultationsList } from 'Client/features/search/MainResults/BusinessConsultationItem';
 import {
   SearchPageWrapperStyle,
   SearchPageTitleStyle,
@@ -117,36 +111,6 @@ export const SearchMainResults = ({ location }: Props) => {
                     searchTerm={term}
                     proposals={data.proposals.results}
                     count={proposalsCount}
-                  />
-                </MainResultsSectionStyle>
-              )}
-              {!!organisationsCount && (
-                <MainResultsSectionStyle>
-                  <MainResultsHeader
-                    title={i18n.t('search.main_results.organisation', {
-                      term,
-                      count: organisationsCount,
-                    })}
-                    count={organisationsCount}
-                    link={getRouteSearchOrganisations(country, term)}
-                  />
-                  <MainResultsOrganisations
-                    organisations={data.organisations.results}
-                  />
-                </MainResultsSectionStyle>
-              )}
-              {!!questionsCount && (
-                <MainResultsSectionStyle>
-                  <MainResultsHeader
-                    title={i18n.t('search.main_results.operation', {
-                      term,
-                      count: questionsCount,
-                    })}
-                    count={questionsCount}
-                    link={getRouteSearchConsultations(country, term)}
-                  />
-                  <BusinessConsultationsList
-                    questions={data.questions.results}
                   />
                 </MainResultsSectionStyle>
               )}

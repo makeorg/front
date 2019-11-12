@@ -7,14 +7,14 @@ import {
   ProposalStyle,
   ProposalInnerStyle,
 } from 'Client/ui/Elements/ProposalCardElements';
-import { DeprecatedProposalAuthor } from 'Client/ui/Proposal/DeprecatedAuthor';
-import { AuthorWrapperStyle } from 'Client/ui/Proposal/DeprecatedAuthor/Styled';
 import { ScreenReaderItemStyle } from 'Client/ui/Elements/AccessibilityElements';
 import { Vote } from 'Client/features/vote';
 import { DetailledVoteResults } from 'Client/ui/Proposal/DetailledVoteResults';
 import { getProposalLink } from 'Shared/helpers/url';
 import { useSelector } from 'react-redux';
 import { type StateRoot } from 'Shared/store/types';
+import { AuthorWrapperStyle } from 'Client/ui/Proposal/DeprecatedAuthor/Styled';
+import { DeprecatedProposalAuthor } from 'Client/ui/Proposal/DeprecatedAuthor';
 import {
   PopularProposalWrapperStyle,
   PopularProposalHeader,
@@ -43,7 +43,7 @@ export const PopularProposalCard = ({
         {`#${position}`}
       </PopularProposalHeader>
       <AuthorWrapperStyle>
-        <DeprecatedProposalAuthor proposal={proposal} withAvatar />
+        <DeprecatedProposalAuthor proposal={proposal} withCreationDate />
       </AuthorWrapperStyle>
       <ProposalInnerStyle>
         <ScreenReaderItemStyle>

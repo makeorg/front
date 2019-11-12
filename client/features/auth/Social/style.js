@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import { color } from 'athena-design-tokens';
 import { SocialNetworksColors } from 'Client/app/assets/vars/Colors';
 import { SvgMailPlain } from 'Client/ui/Svg/elements';
-import { SpaceBetweenRowStyle } from 'Client/ui/Elements/FlexElements';
+import { CenterColumnStyle } from 'Client/ui/Elements/FlexElements';
 import { RedButtonStyle } from 'Client/ui/Elements/Buttons/style';
 
-export const AuthenticationButtonWrapperStyle = styled(SpaceBetweenRowStyle)`
+export const AuthenticationButtonWrapperStyle = styled(CenterColumnStyle)`
   width: 100%;
   max-width: 215px;
   align-self: center;

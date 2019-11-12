@@ -1,4 +1,5 @@
 import { getIdentifierButtonByName } from '../mapping';
+import { BASE_URL } from '../../../shared/constants/config';
 
 // pages list
 export const pages = {
@@ -14,7 +15,8 @@ export const pages = {
   'browse results' : '/FR/browse/results/page/1',
   'browse results second page' : '/FR/browse/results/page/2',
   'top idea': '/FR/consultation/:questionSlug/top-ideas',
-  "search": '/FR/search'
+  "search": '/FR/search',
+  'cookies': '/FR/cookies',
 };
 
 export const container = {
