@@ -23,7 +23,6 @@ import {
   RedLinkHTMLElementStyle,
   NewWindowIconStyle,
 } from 'Client/ui/Elements/LinkElements';
-import { ABOUT_MAKE_LINK } from 'Shared/constants/url';
 import { checkIsFeatureActivated } from 'Client/helper/featureFlipping';
 import { CONSULTATION_FOLLOW_US_ACTIVE } from 'Shared/constants/featureFlipping';
 import { ScreenReaderItemStyle } from 'Client/ui/Elements/AccessibilityElements';
@@ -124,7 +123,7 @@ export const FollowUs = ({ question }: Props) => {
       <RedLinkHTMLElementStyle
         target="_blank"
         rel="noopener"
-        href={ABOUT_MAKE_LINK}
+        href={question.aboutUrl}
         onClick={() => trackClickBlog('blog list')}
       >
         {i18n.t('consultation.followus.discover')}

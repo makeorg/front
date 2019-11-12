@@ -8,15 +8,17 @@ import {
   trackClickPersonnalDataLink,
   trackDisplayAuthenticationForm,
 } from 'Shared/services/Tracking';
-import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { getDataPageLink } from 'Shared/helpers/url';
 import {
   closePanel,
   removePanelContent,
 } from 'Shared/store/reducers/panel/actions';
 import { modalShowLogin } from 'Shared/store/actions/modal';
 import { selectAuthentication } from 'Shared/store/selectors/user.selector';
+import { DATA_POLICY_LINK } from 'Shared/constants/url';
+import { ScreenReaderItemStyle } from 'Client/ui/Elements/AccessibilityElements';
+import { NewWindowLinkStyle } from 'Client/features/consultation/Sidebar/Link/style';
+import { NewWindowIconStyle } from 'Client/ui/Elements/LinkElements';
 import {
   ProposalStepWrapperStyle,
   ProposalBackButtonStyle,
@@ -45,7 +47,6 @@ export const ProposalAuthentication = ({
   const { isLoggedIn, user } = useSelector((state: StateRoot) =>
     selectAuthentication(state)
   );
-  const { country } = useSelector((state: StateRoot) => state.appConfig);
   const handleModerationLink = () => {
     dispatch(closePanel());
     dispatch(removePanelContent());
@@ -82,9 +83,18 @@ export const ProposalAuthentication = ({
           <AuthenticationRegisterButtons />
           <ProposalAuthDisclaimerStyle>
             {i18n.t('authentication.commitment')}
-            <Link to={getDataPageLink(country)} onClick={handleModerationLink}>
+            <NewWindowLinkStyle
+              target="_blank"
+              href={DATA_POLICY_LINK}
+              rel="noopener noreferrer"
+              onClick={handleModerationLink}
+            >
               {i18n.t('authentication.personal_data')}
-            </Link>
+              <NewWindowIconStyle aria-hidden focusable="false" />
+              <ScreenReaderItemStyle>
+                {i18n.t('common.open_new_window')}
+              </ScreenReaderItemStyle>
+            </NewWindowLinkStyle>
           </ProposalAuthDisclaimerStyle>
           <ProposalAuthSeparatorStyle />
           <ProposalAuthLoginStyle onClick={() => dispatch(modalShowLogin())}>

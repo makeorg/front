@@ -94,6 +94,17 @@ export const registerErrors: ErrorObjectType[] = [
       />
     ),
   },
+  {
+    field: 'approveprivacypolicy',
+    key: 'invalid_value',
+    message: (
+      <MessageWithDynamicLabel
+        messageKey="common.form.messages.invalid_privacy_policy"
+        field="approveprivacypolicy"
+        labelKey="common.form.label.privacy_polivy"
+      />
+    ),
+  },
 ];
 
 export const updateUserErrors: ErrorObjectType[] = [

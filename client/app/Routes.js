@@ -1,7 +1,5 @@
-import * as React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
-import { useLocation } from 'react-router';
-import { useSelector } from 'react-redux';
+import React from 'react';
+import { Route, Switch, Redirect, useLocation } from 'react-router-dom';
 import loadable from '@loadable/component';
 import {
   ROUTE_SEARCH,
@@ -28,8 +26,6 @@ import {
   ROUTE_ORGANISATION_VOTES,
   ROUTE_COUNTRY,
   ROUTE_STATIC_LEGAL,
-  ROUTE_STATIC_GTU,
-  ROUTE_STATIC_DATA,
   ROUTE_STATIC_CONTACT,
   ROUTE_RESULTS,
   ROUTE_TOP_IDEAS,
@@ -38,19 +34,16 @@ import {
   ROUTE_PROFILE_OPINIONS,
   ROUTE_STATIC_NOTFOUND,
   ROUTE_STATIC_LEGAL_EN,
-  ROUTE_STATIC_GTU_EN,
-  ROUTE_STATIC_DATA_EN,
   ROUTE_STATIC_CONTACT_EN,
   ROUTE_BROWSE_CONSULTATIONS,
   ROUTE_BROWSE_RESULTS,
   BASE_PREVIEW_PATH,
   ROUTE_STATIC_A11Y,
+  ROUTE_STATIC_COOKIES,
 } from 'Shared/routes';
-import { TwitterUniversalTag } from 'Shared/services/Trackers/TwitterTracking';
 import { QuestionWrapper } from 'Client/pages/Consultation/QuestionWrapper';
 import { usePageBackgoundColor } from 'Client/hooks/usePageBackgroundColor';
-import { getHomeLink } from 'Shared/helpers/url';
-import { DEFAULT_COUNTRY } from 'Shared/constants/config';
+import { BASE_URL } from 'Shared/constants/config';
 
 const BrowsePage = loadable(() => import('../pages/Browse/index.js'));
 const ConsultationPage = loadable(() =>
@@ -84,7 +77,6 @@ const PasswordRecoveryPage = loadable(() =>
   import('../pages/PasswordRecovery')
 );
 const NotFoundPage = loadable(() => import('../pages/NotFound'));
-const HomePage = loadable(() => import('../pages/Home'));
 const ProposalPage = loadable(() => import('../pages/Proposal'));
 const AccountActivationPage = loadable(() =>
   import('../pages/AccountActivation')
@@ -102,21 +94,15 @@ const PersonalityPage = loadable(() => import('../pages/Personality'));
 const SearchPage = loadable(() => import('../pages/Search'));
 
 const LegalPage = loadable(() => import('../pages/Static/Legal'));
-const TermsOfUse = loadable(() => import('../pages/Static/TermsOfUse'));
-const Data = loadable(() => import('../pages/Static/Data'));
 const Contact = loadable(() => import('../pages/Static/Contact'));
 const Accessibility = loadable(() => import('../pages/Static/Accessibility'));
+const Cookies = loadable(() => import('../pages/Static/Cookies'));
 
 export const Routes = () => {
   const location = useLocation();
-  const { country } = useSelector((state: StateRoot) => state.appConfig);
   const { pathname } = location;
 
   usePageBackgoundColor(pathname);
-
-  React.useEffect(() => {
-    TwitterUniversalTag.pageView();
-  }, [location.pathname]);
 
   return (
     <Switch>
@@ -200,23 +186,20 @@ export const Routes = () => {
         to={ROUTE_ORGANISATION_PROPOSALS}
       />
       <Redirect path={ROUTE_PROFILE} to={ROUTE_PROFILE_PROPOSALS} />
-      <Route exact path={ROUTE_COUNTRY} component={HomePage} />
+      <Redirect exact path={ROUTE_COUNTRY} to={BASE_URL} />
 
       <Route path={ROUTE_STATIC_LEGAL} component={LegalPage} />
-      <Route path={ROUTE_STATIC_GTU} component={TermsOfUse} />
-      <Route path={ROUTE_STATIC_DATA} component={Data} />
       <Route path={ROUTE_STATIC_CONTACT} component={Contact} />
       <Route path={ROUTE_STATIC_NOTFOUND} component={NotFoundPage} />
       <Route path={ROUTE_STATIC_A11Y} component={Accessibility} />
 
       {/* Routes used for en language */}
       <Route path={ROUTE_STATIC_LEGAL_EN} component={LegalPage} />
-      <Route path={ROUTE_STATIC_GTU_EN} component={TermsOfUse} />
-      <Route path={ROUTE_STATIC_DATA_EN} component={Data} />
       <Route path={ROUTE_STATIC_CONTACT_EN} component={Contact} />
+      <Route path={ROUTE_STATIC_COOKIES} component={Cookies} />
 
       <Route path={ROUTE_STATIC_NOTFOUND} component={NotFoundPage} />
-      <Redirect exact path="/" to={getHomeLink(country || DEFAULT_COUNTRY)} />
+      <Redirect exact path="/" to={BASE_URL} />
 
       <Route component={NotFoundPage} />
     </Switch>

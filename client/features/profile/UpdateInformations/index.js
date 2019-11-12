@@ -121,7 +121,7 @@ export const UpdateInformations = ({ user }: Props) => {
         className={needLegalConsent && 'hidden'}
       >
         <FormRequirementsStyle>
-          {i18n.t('common.form.requirements')}
+          {i18n.t('common.form.requirement')}
         </FormRequirementsStyle>
         <FormErrors errors={errors} />
         {user.userType === TYPE_ORGANISATION && (

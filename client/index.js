@@ -7,7 +7,6 @@ import { Router, Switch, Route, Redirect } from 'react-router-dom';
 import { HeadProvider } from 'react-head';
 import { loadableReady } from '@loadable/component';
 import { AppContainer } from 'Client/app';
-import { FacebookTracking } from 'Shared/services/Trackers/FacebookTracking';
 import { env } from 'Shared/env';
 import { configureStore, authenticationState } from 'Shared/store';
 import { Logger } from 'Shared/services/Logger';
@@ -23,12 +22,10 @@ import {
 import { track } from 'Shared/services/TrackingService';
 import * as customDataHelper from 'Client/helper/customData';
 import { updateRequestContextCustomData } from 'Shared/store/middleware/requestContext';
-import { TwitterUniversalTag } from 'Shared/services/Trackers/TwitterTracking';
 import { updateTrackingQuestionParam } from 'Shared/store/middleware/question';
 import { getRouteNoCookies } from 'Shared/routes';
 import { postPerfomanceTiming } from 'Shared/helpers/tracking';
 import { translationRessources } from 'Shared/constants/languages';
-import { SnapchatTracking } from 'Shared/services/Trackers/SnapchatTracking';
 import { CountryListener } from 'Client/app/CountryListener';
 import { NoCookies } from './pages/Static/NoCookies';
 import { history, initHistory } from './app/History';
@@ -64,10 +61,6 @@ i18n.init({
   lng: initialState.appConfig.language,
   resources: translationRessources,
 });
-
-FacebookTracking.init();
-TwitterUniversalTag.init();
-SnapchatTracking.init();
 
 ApiService.strategy = apiClient;
 

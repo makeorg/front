@@ -8,7 +8,7 @@ import {
   FlexElementStyle,
   SpaceBetweenRowStyle,
 } from 'Client/ui/Elements/FlexElements';
-import { SvgLogo } from 'Client/ui/Svg/elements';
+import { SvgPlace } from 'Client/ui/Svg/elements';
 
 export const HeaderStyle = styled.header`
   position: relative;
@@ -44,9 +44,9 @@ export const HeaderLogoLinkStyle = styled(Link)`
   display: flex;
 `;
 
-export const HeaderLogoStyle = styled(SvgLogo)`
-  width: 66px;
-  height: 33px;
+export const HeaderLogoStyle = styled(SvgPlace)`
+  width: 112px;
+  height: 39px;
 `;
 
 export const HeaderSeparatorStyle = styled.div`

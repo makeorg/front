@@ -3,12 +3,9 @@ Feature: The Cookie Banner
 
   Scenario: Check Cookie banner links
     Given I go to "france homepage"
-    And I see a link "conditions d’utilisation" to "/FR/conditions-dutilisation" in "cookie-banner" container
-    And I see a link "charte de données personnelles" to "/FR/politique-donnees" in "cookie-banner" container
+    And I see a link "politique de cookies" to "/FR/cookies" in "cookie-banner" container
     When I click on "gtu" link
-    Then I see the "general terms of use" page
-    When I click on "policy" link
-    Then I see the "data policy" page
+    Then I see the "cookies" page
 
 
   Scenario: Accept cookie policy

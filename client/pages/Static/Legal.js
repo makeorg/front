@@ -3,6 +3,7 @@ import React from 'react';
 import { RedLinkHTMLElementStyle } from 'Client/ui/Elements/LinkElements';
 import { i18n } from 'Shared/i18n';
 import { MetaTags } from 'Client/app/MetaTags';
+import { CONTACT_EMAIL } from 'Shared/constants/config';
 import {
   StaticPageWrapperStyle,
   StaticSecondLevelTitleStyle,
@@ -20,8 +21,8 @@ export const LegalPage = () => (
       <StaticParagraphStyle>
         {i18n.t('legal.mail')}
         &nbsp;
-        <RedLinkHTMLElementStyle as="a" href="mailto:contact@make.org">
-          contact@make.org
+        <RedLinkHTMLElementStyle as="a" href={`mailto:${CONTACT_EMAIL}`}>
+          {CONTACT_EMAIL}
         </RedLinkHTMLElementStyle>
       </StaticParagraphStyle>
       <StaticParagraphStyle>

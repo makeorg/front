@@ -70,3 +70,7 @@ export { SvgPreviousArrowLeft } from './PreviousArrowLeft';
 export { SvgWorldMap } from './WorldMap';
 export { SvgBigCheck } from './BigCheck';
 export { SvgArrowBottom } from './ArrowBottom';
+export { SvgPlace } from './Place';
+export { SvgSettings } from './Settings';
+export { SvgSmiley } from './Smiley';
+export { SvgStats } from './Stats';

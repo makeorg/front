@@ -7,7 +7,7 @@ Feature: Propose on sequence
     And I see "open propose panel" button
     When I click on "open propose panel" button
     Then I see "proposal_submit" container
-    And I see a link "En savoir plus sur notre charte de modération" to "https://about.make.org/moderation" in "proposal_submit" container
+    And I see a link "En savoir plus sur notre charte de modération" to "https://about.make.org/place/charte-de-moderation" in "proposal_submit" container
     And I see a button "cancel proposal form" in "proposal_submit" container with label "Annuler et continuer à voter"
     And I see a button "proposal submit" in "proposal_submit" container with label "Valider"
     And I see a "close panel" button

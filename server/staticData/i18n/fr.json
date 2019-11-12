@@ -1,9 +1,9 @@
 {
   "meta": {
     "home": {
-      "title": "Agir avec Make.org - Make.org",
-      "description": "Proposez, votez, agissons : ensemble, trouvons des solutions aux grandes problématiques actuelles. Les plus soutenues seront mises en action par Make.org et ses partenaires.",
-      "picture": "https://assets.make.org/assets/metas/default_meta-fr.png"
+      "title": "Agir avec Place by Make.org",
+      "description": "Participez à la consultation pour définir les priorités. Votez et proposez !",
+      "picture": "https://assets.make.org/assets/metas/default-meta-place.png"
     },
     "organisation": {
       "proposals": {
@@ -25,8 +25,8 @@
       }
     },
     "proposal": {
-      "title": "Proposition '{{proposal}}' de la consultation '{{question}}' - Make.org",
-      "description": "Soutenez ma proposition en votant et trouvons ensemble des solutions aux grandes problématiques actuelles. Les plus soutenues seront mises en action par Make.org et ses partenaires."
+      "title": "Proposition '{{proposal}}'",
+      "description": "Votez pour soutenir ma proposition. Les propositions les plus soutenues permettront de définir nos priorités pour mettre en place des actions concrètes."
     },
     "consultation": {
       "title": "Consultation '{{question}}' - Make.org"
@@ -50,12 +50,12 @@
     "top-ideas": {
       "title": "Le top des idées de la consultation '{{question}}' - Make.org",
       "description": "Découvrez le top des idées issu de la consultation '{{question}}'",
-      "picture": "https://assets.make.org/assets/metas/meta-top-ideas.jpg"
+      "picture": "https://assets.make.org/assets/metas/default-meta-place.png"
     },
     "top-idea-details": {
       "title": "Le detail de l'idée '{{idea}}' de la consultation '{{question}}' - Make.org",
       "description": "Découvrez toutes les propositions de l'idée {{idea}} issue de la consultation '{{question}}'",
-      "picture": "https://assets.make.org/assets/metas/meta-top-ideas.jpg"
+      "picture": "https://assets.make.org/assets/metas/default-meta-place.png"
     },
     "search": {
       "main_results": "Recherche - Résultats pour « {{term}} » - Make.org",
@@ -101,7 +101,9 @@
     "form": {
       "hide_password": "Masquer le mot de passe",
       "show_password": "Afficher le mot de passe",
-      "requirements": "Tous les champs sont obligatoires sauf indication contraire.",
+      "requirements": "Tous les champs sont obligatoires.",
+      "requirement": "Le champ est obligatoire.",
+      "anonymous_proposals": "Votre participation est anonyme",
       "label": {
         "email": "E-mail",
         "password": "Mot de passe",
@@ -120,6 +122,7 @@
         "age_optional": "Âge (optionnel)",
         "postalcode_optional": "Code postal (optionnel)",
         "profession_optional": "Profession (optionnel)",
+        "privacy_policy": "Politique de données",
         "biography_optional": "Biographie (optionnel)",
         "website_optional": "Site Internet (optionnel)",
         "organisation_optional": "Nom de l'organisation (optionnel)",
@@ -150,6 +153,7 @@
         "the_field_[email]_is_missing": "Le champ {{label}} est obligatoire.",
         "the_field_[password]_is_missing": "Le champ {{label}} est obligatoire.",
         "invalid_postal_code": "Le code postal doit être composé de 5 chiffres.",
+        "invalid_privacy_policy": "Vous devez accepter la politique de données.",
         "invalid_postal_code_dynamic": "Le {{label}} doit être composé de 5 chiffres.",
         "submit_success": "La modification a bien été enregistrée.",
         "malformed": "Merci de respecter le format url \"https://example.com\""
@@ -158,14 +162,14 @@
     "notifications": {
       "bad_link": "Ce lien n'est plus valable.",
       "activate_account_success": "Votre compte vient d'être activé. Vous pouvez vous connecter dès maintenant",
-      "delete_account_success": "Votre compte a bien été supprimé. Nous espérons vous revoir bientôt sur Make.org !",
+      "delete_account_success": "Votre compte a bien été supprimé. Nous espérons vous revoir bientôt sur Place by Make.org !",
       "login_success": "Vous avez été connecté avec succès.",
       "logout_success": "Vous avez été déconnecté avec succès.",
       "register_success": "Bienvenue ! Vous avez été inscrit avec succès.",
       "register_validate": "Merci pour votre inscription. Un mail vient de vous être envoyé à l'adresse {{email}} afin d'activer votre compte en un clic.",
       "secure_expired": {
         "first_sentence": "Nous sommes désolés, vous avez été déconnecté car il nous semble que vous êtes parti",
-        "second_sentence": "Connectez-vous à nouveau pour continuer à voter, proposer et agir sur Make.org.",
+        "second_sentence": "Connectez-vous à nouveau pour continuer à voter et proposer sur Place by Make.org.",
         "emoji": "emoji visage triste avec larme"
       },
       "session_expired": {
@@ -185,7 +189,7 @@
       "unexpected_error": "Nous rencontrons actuellement une erreur, merci de réessayer ultérieurement.",
       "network_error": "Il est impossible d'accéder à l'intégralité du contenu de Make.org car il semblerait que vous soyez hors ligne",
       "vote_only": {
-          "message": "Nous avons recueilli de nombreuses propositions citoyennes depuis le début de la consultation et avons besoin de vos votes pour les départager. En attendant, nous ne pouvons pas accepter de nouvelles propositions.",
+          "message": "La consultation ne peut plus recevoir de nouvelles propositions, mais continuez à voter pour départager les propositions existantes.",
           "button": "j'ai compris"
       },
       "vote_on_proposal" : "Votez sur cette proposition"
@@ -241,10 +245,12 @@
     "close_panel": "Fermer le panneau déroulant"
   },
   "header": {
-    "logo_alt": "Aller à l'accueil du site Make.org",
     "open_menu": "Accéder au menu de navigation principale",
     "close_menu": "Fermer le menu de navigation principale",
-    "main_navigation": "Navigation principale du site"
+    "main_navigation": "Navigation principale du site",
+    "logo_alt": "Aller à l'acceuil du site Place by Make.org",
+    "logo_alt_bis": "Place by Make.org",
+    "whoarewe": "Qui sommes-nous ?"
   },
   "proposal_page": {
     "button_1": "participer",
@@ -283,6 +289,7 @@
     "content": "Contenu de la proposition : ",
     "number": "Carte numéro {{current}} sur {{total}}",
     "posted_label": "Postée dans ",
+    "posted_at": "Proposé le",
     "author": {
       "from": "Proposition de : ",
       "age": "{{age}} ans",
@@ -351,7 +358,7 @@
       "moderation_link": "En savoir plus sur notre charte de modération"
     },
     "authentication": {
-      "button_back": "Modifier ma propositiion",
+      "button_back": "Modifier ma proposition",
       "title": "Pour valider ma proprosition",
       "subtitle": "Je m'inscris avec",
       "button_login": "J’ai déjà un compte, je me connecte"
@@ -419,7 +426,7 @@
   "authentication": {
     "title": "Inscrivez-vous pour valider votre proposition",
     "description": "avec",
-    "commitment": "Make.org s‘engage à protéger vos ",
+    "commitment": "Place by Make.org s‘engage à protéger vos ",
     "personal_data": "données personnelles "
   },
   "login": {
@@ -435,13 +442,13 @@
     "email_doesnot_exist": "Votre {{emailLabel}} ou {{passwordLabel}} est incorrect."
   },
   "register": {
-    "title": "Créer un compte",
+    "title": "Je m'inscris pour valider ma participation",
     "social_connect": "Je m’inscris avec",
     "or": "ou",
     "subtitle": "Je m'inscris avec ce formulaire",
     "login_title": "J‘ai déjà un compte.",
     "login_link": "Connexion",
-    "gtu_text": "En vous inscrivant, vous acceptez nos {{gtu_link}} et acceptez de recevoir des e-mails (peu nombreux) de Make.org.",
+    "gtu_text": "En vous inscrivant, vous acceptez de recevoir des e-mails (peu nombreux) de Place by Make.org.",
     "gtu": "conditions générales d’utilisation"
   },
   "legal_consent": {
@@ -451,11 +458,14 @@
     "minor_consent": "Je consens au traitement de mes données personnelles par Make.org.",
     "parental_consent": "En tant que titulaire de l'autorité parentale, je consens au traitement des données personnelles de mon enfant par Make.org.",
     "cancel": "Annuler",
-    "submit": "Valider"
+    "submit": "Valider",
+    "privacy_policy_text": "J'accepte la ",
+    "privacy_policy": "politique de données",
+    "privacy_make": " de Place by Make.org"
   },
   "forgot_password": {
     "title": "je réinitialise mon mot de passe",
-    "description": "Merci de renseigner l'adresse email liée à votre compte Make.org pour recevoir le lien de réinitialisation.",
+    "description": "Merci de renseigner l'adresse email liée à votre compte Place by Make.org pour recevoir le lien de réinitialisation.",
     "success": "Merci, un email vient de vous être envoyé pour vous permettre de mettre à jour votre mot de passe.",
     "return": "Revenir à ",
     "login_link": "l’écran de connexion",
@@ -479,12 +489,14 @@
     "dotation_funds": "Fonds de dotation Make.org",
     "moderation_charter": "Charte de modération",
     "press_details": "Revue de presse",
-    "a11y": "Déclaration d'accessibilité"
+    "a11y": "Déclaration d'accessibilité",
+    "cookies": "Cookies"
   },
   "cookie_alert": {
-    "text": "En poursuivant votre navigation vous consentez à nos {{gtu_link}}, à notre {{policy_link}}, ainsi qu'à l'utilisation de cookies sur notre site dans un but d'améliorer notre service.",
+    "text": "Lors de votre navigation nous utilisons seulement 3 cookies essentiels pour faire fonctionner la plateforme, améliorer votre expérience tout au long de votre session et enfin avoir des analyses. Pour plus d’informations, consultez notre {{cookies}}",
     "gtu": "conditions d’utilisation",
-    "policy": "charte de données personnelles"
+    "policy": "charte de données personnelles",
+    "cookies": "politique de cookies."
   },
   "reset_password": {
     "title": "Je crée un nouveau mot de passe",
@@ -514,12 +526,12 @@
     },
     "proposals": {
       "title": "Mes dernières propositions",
-      "text": "Vous n’avez pas encore soumis de proposition sur Make.org."
+      "text": "Vous n’avez pas encore soumis de proposition sur Place by Make.org."
     },
     "favourites": {
       "title": "Mes coups de cœur",
       "description": {
-        "introduction": "Vous n’avez pas encore de coup de cœur sur Make.org.",
+        "introduction": "Vous n’avez pas encore de coup de cœur sur Place by Make.org.",
         "explanation": "Vous pouvez placer une proposition en coup de cœur juste après avoir voté \" D'accord \" pour cette proposition."
       },
       "card_title": "Il faut soutenir des propositions de qualité."
@@ -527,7 +539,7 @@
     "following": {
       "title": "Mes profils suivis",
       "description": {
-        "introduction": "Vous ne suiviez aucun profil d'organisation présente sur Make.org pour le moment.",
+        "introduction": "Vous ne suiviez aucun profil d'organisation présente sur Place by Make.org pour le moment.",
         "explanation_step_one": "Rendez-vous sur le profil d'une organisation.",
         "explanation_step_two": "Cliquez sur \" Suivre \" pour vous abonner au fil d'actualité de cette organisation."
       }
@@ -570,7 +582,7 @@
     },
     "newsletter_update": {
       "title": "Gérer mes emails",
-      "optin_label": "J’accepte de recevoir des informations de Make.org (votre adresse ne sera en aucun cas diffusée à des tiers)"
+      "optin_label": "J’accepte de recevoir des informations de Place by Make.org (votre adresse ne sera en aucun cas diffusée à des tiers)"
     },
     "delete_account": {
       "title": "Demander la suppression de mon compte",
@@ -597,11 +609,11 @@
     },
     "proposals": {
       "title": "Les dernières propositions de {{name}} :",
-      "text": "{{name}} n'a pas encore soumis de proposition sur Make.org."
+      "text": "{{name}} n'a pas encore soumis de proposition sur Place by Make.org."
     },
     "votes": {
       "title": "Les dernières prises de position de {{name}} :",
-      "text": "{{name}} n'a pas encore pris position sur Make.org."
+      "text": "{{name}} n'a pas encore pris position sur Place by Make.org."
     }
   },
   "personality": {
@@ -744,7 +756,7 @@
     },
     "followus": {
       "title": "Pour aller plus loin",
-      "description": "Découvrez toute l'actualité Make.org !",
+      "description": "Découvrez toute l'actualité Place by Make.org !",
       "facebook": "Suivez nous sur Facebook",
       "twitter": "Suivez nous sur Twitter",
       "instagram": "Suivez nous sur Instagram",
@@ -793,7 +805,7 @@
       "context": "Le contexte",
       "methodology": {
         "title": "La méthodologie",
-        "description": "La méthodologie repose sur une modération fine des propositions recueillies. Elles sont d’abord soumises à validation au regard de leur conformité à la Charte Make.org, puis classées selon un balisage thématique. Les algorithmes développés par les équipes de Make.org garantissent ensuite à chacune des propositions validées un niveau égal d’exposition, et organisent une compétition entre elles. Grâce à ce roulement permanent, Make.org identifie les propositions faisant le plus consensus auprès des citoyens avant de les analyser et de les regrouper en grandes idées."
+        "description": "La méthodologie repose sur une modération fine des propositions recueillies. Elles sont d’abord soumises à validation au regard de leur conformité à la Charte Place by Make.org, puis classées selon un balisage thématique. Les algorithmes développés par les équipes de Place by Make.org garantissent ensuite à chacune des propositions validées un niveau égal d’exposition, et organisent une compétition entre elles. Grâce à ce roulement permanent, Place by Make.org identifie les propositions faisant le plus consensus auprès des citoyens avant de les analyser et de les regrouper en grandes idées."
       },
       "key_figures": {
         "title": "Chiffres-clés",
@@ -803,9 +815,9 @@
       },
       "top_ideas": {
         "skiplink": "Le top des idées émergentes",
-        "title": "Le top des idées émergentes, regroupées en {{count}} thème",
         "title_plural": "Le top des idées émergentes, regroupées en {{count}} thèmes",
-        "introduction": "À leur arrivée sur la plateforme, les meilleures propositions citoyennes sont regroupées en grandes idées qui structurent la consultation. Pour classer ces idées, l’algorithme Make.org tient compte des votes « pour » et « contre » ainsi que des mentions « coup de cœur», « banalité », « surtout pas ! » et « réaliste ».",
+        "title": "Le top des idées émergentes, regroupées en {{count}} thèmes",
+        "introduction": "À leur arrivée sur la plateforme, les meilleures propositions citoyennes sont regroupées en grandes idées qui structurent la consultation. Pour classer ces idées, l’algorithme Place by Make.org tient compte des votes « pour » et « contre » ainsi que des mentions « coup de cœur», « banalité », « surtout pas ! » et « réaliste ».",
         "theme_title": "Thème {{count}} : {{name}}"
       },
       "proposals": {
@@ -936,7 +948,7 @@
     "plan": {
       "title": "Notre plan d'actions citoyen",
       "text": "Vous trouverez ici prochainement le plan d'actions citoyen issu de la consultation.",
-      "list-bait": "Qu'est-ce qu'une action sur Make.org ?",
+      "list-bait": "Qu'est-ce qu'une action sur Place by Make.org ?",
       "list-intro": "Pour nous une action se doit d'être :",
       "list-first-item": "- citoyenne car issue de vos propositions,",
       "list-second-item": "- collective, et toujours ouverte à toutes et tous,",
@@ -944,12 +956,12 @@
     },
     "partners": {
       "title": "Nos partenaires actions",
-      "text": "Chez Make.org nous sommes convaincus que c'est en rassemblant tous les acteurs de la société civile (citoyens mais aussi entreprises, associations, institutions, ...) que nous pourrons changer la donne."
+      "text": "Chez Place by Make.org nous sommes convaincus que c'est en rassemblant tous les acteurs de la société civile (citoyens mais aussi entreprises, associations, institutions, ...) que nous pourrons changer la donne."
     }
   },
   "homepage": {
     "featured": {
-      "title": "En ce moment sur Make.org",
+      "title": "En ce moment sur Place by Make.org",
       "status": "Label de l'opération : ",
       "link": "Aller sur la page de la consultation : {{name}}"
     },
@@ -961,7 +973,7 @@
       "discover": "Découvrez nos grandes causes"
     },
     "highlights":{
-      "title": "Make.org en quelques chiffres",
+      "title": " Place by Make.org en quelques chiffres",
       "participants":{
         "subtitle": "de participant(e)s"
       },
@@ -1021,7 +1033,7 @@
     },
     "sidebar": {
       "register": {
-        "title": "Suivez l’actualité de make.org en vous inscrivant."
+        "title": "Suivez l’actualité de Place by Make.org en vous inscrivant."
       }
     },
     "form": {
@@ -1040,16 +1052,15 @@
   "no_cookies": {
     "title": "Ooops ! Vos cookies sont désactivés",
     "first_paragraph": "Nous sommes dans l'incapacité de vous laisser accéder au site car nous utilisons les cookies pour assurer la qualité de notre service.",
-    "second_paragraph": "Afin de pouvoir naviguer en toute tranquillité sur Make.org nous vous invitons à autoriser les cookies sur ce navigateur ou à en utiliser un autre. Pour autoriser les cookies sur votre navigateur allez dans le menu puis dans les paramètres.",
+    "second_paragraph": "Afin de pouvoir naviguer en toute tranquillité sur Place by Make.org nous vous invitons à autoriser les cookies sur ce navigateur ou à en utiliser un autre. Pour autoriser les cookies sur votre navigateur allez dans le menu puis dans les paramètres.",
     "information": "Pour plus d'informations sur la façon de gérer vos cookies, cliquez sur ce lien :",
     "link": "www.accepterlescookies.com",
     "thanks": "Merci de votre compréhension et à bientôt !",
-    "footer": "Make.org est une plateforme d’engagement qui permet d'identifier les idées plébiscitées sur divers sujets. Pour en savoir + sur notre initiative, découvrez <a href=\"https://about.make.org\">notre actualité</a>."
+    "footer": "Place by Make.org est une plateforme d’engagement qui permet d'identifier les idées plébiscitées sur divers sujets. Pour en savoir + sur notre initiative, découvrez <a href=\"https://about.make.org\">notre actualité</a>."
   },
   "contact": {
     "contactUs": "Contactez-nous",
-    "paragraph": "Une idée, une suggestion, un bug ? N’hésitez pas à nous contacter en envoyant un e-mail à notre adresse :", 
-    "email_address": "contact@make.org"
+    "paragraph": "Une idée, une suggestion, un bug ? N’hésitez pas à nous contacter en envoyant un e-mail à notre adresse :"
   },
   "legal":{
     "title": "Mentions légales",

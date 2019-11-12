@@ -1,5 +1,5 @@
 const Green = 'rgb(80,122,31)';
-const MakeRed = 'rgb(222,26,66)';
+const MakeRed = 'rgb(37,49,134)';
 const LightGrey = 'rgb(247,247,247)';
 
 export const BasicColors = {
@@ -24,7 +24,7 @@ export const BackgroundColors = {
   ExtraLightGrey: 'rgb(229,229,229)',
   TaintedWhite: 'rgb(242,242,242)',
   NotFoundPage: 'rgb(230,230,240)',
-  Notifications: 'rgb(51, 67, 91)',
+  Notifications: 'rgb(239, 247, 253)',
 };
 
 export const BorderColors = {
@@ -60,7 +60,7 @@ export const VoteColors = {
 
 export const StatusColors = {
   Accepted: Green,
-  Refused: MakeRed,
+  Refused: 'rgb(190,24,44)',
   Pending: 'rgb(255,118,26)',
 };
 

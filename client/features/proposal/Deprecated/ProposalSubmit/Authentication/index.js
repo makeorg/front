@@ -1,24 +1,23 @@
 // @flow
 import React, { useRef, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { i18n } from 'Shared/i18n';
 import {
   trackDisplayAuthenticationForm,
   trackClickPersonnalDataLink,
 } from 'Shared/services/Tracking';
-import { type StateRoot } from 'Shared/store/types';
 import {
   RedButtonStyle,
   ButtonsWrapperStyle,
 } from 'Client/ui/Elements/Buttons/style';
 import {
-  ThirdLevelTitleStyle,
   FourthLevelTitleStyle,
+  ThirdLevelTitleStyle,
 } from 'Client/ui/Elements/TitleElements';
 import { CenterParagraphStyle } from 'Client/ui/Elements/ParagraphElements';
-import { getDataPageLink } from 'Shared/helpers/url';
 import { modalShowLogin } from 'Shared/store/actions/modal';
 import { AuthenticationRegisterButtons } from 'Client/features/auth/Register/Buttons';
+import { DATA_POLICY_LINK } from 'Shared/constants/url';
 import {
   DeprecatedProposalSubmitAuthenticationWrapperStyle,
   ProposalSubmitSeparatorStyle,
@@ -30,7 +29,6 @@ import {
 export const DeprecatedProposalSubmitAuthentication = () => {
   const authetificationRef = useRef(null);
   const dispatch = useDispatch();
-  const { country } = useSelector((state: StateRoot) => state.appConfig);
 
   useEffect(() => {
     trackDisplayAuthenticationForm();
@@ -59,8 +57,9 @@ export const DeprecatedProposalSubmitAuthentication = () => {
       <CenterParagraphStyle>
         {i18n.t('authentication.commitment')}
         <a
-          href={getDataPageLink(country)}
-          rel="noopener"
+          target="_blank"
+          href={DATA_POLICY_LINK}
+          rel="noopener noreferrer"
           onClick={() => trackClickPersonnalDataLink()}
         >
           {i18n.t('authentication.personal_data')}

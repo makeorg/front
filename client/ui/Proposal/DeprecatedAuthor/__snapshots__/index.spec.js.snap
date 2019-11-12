@@ -2,19 +2,5 @@
 
 exports[`DeprecatedProposalAuthor must match the diff snapshot between default vs custom avatar 1`] = `
 Snapshot Diff:
-- First value
-+ Second value
-
-@@ -1,10 +1,11 @@
-  <AuthorDescriptionStyle>
-    <AuthorInfosStyle
-      as="div"
-      isSequence={false}
-    >
-+     <Avatar />
-      <ProposalAuthorInformations
-        isSequence={false}
-        proposal={
-          Object {
-            "author": Object {
+Compared values have no visual difference.
 `;

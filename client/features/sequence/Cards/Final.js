@@ -6,7 +6,6 @@ import {
   trackDisplayFinalCard,
   trackClickLearnMore,
 } from 'Shared/services/Tracking';
-import { Sharing } from 'Client/features/flipping/Sharing/FinalCards';
 import { i18n } from 'Shared/i18n';
 import { resetSequenceVotedProposals } from 'Shared/store/actions/sequence';
 import { CenterColumnStyle } from 'Client/ui/Elements/FlexElements';
@@ -31,11 +30,6 @@ export const FinalCard = ({ configuration }: Props) => {
     return () => dispach(resetSequenceVotedProposals(currentQuestion));
   }, [currentQuestion, dispach]);
 
-  const sharingText =
-    configuration.share === '' || !configuration.share
-      ? i18n.t('final_card.sharing_text')
-      : configuration.share;
-
   return (
     <>
       <CenterColumnStyle data-cy-container="final-card-share">
@@ -44,7 +38,6 @@ export const FinalCard = ({ configuration }: Props) => {
             ? configuration.title
             : i18n.t('final_card.title')}
         </SequenceAltTitleStyle>
-        <Sharing text={sharingText} />
         <SequenceFinalMoreWrapperStyle data-cy-container="final-card-learn-more">
           <SequenceParagraphStyle as="p">
             {configuration.learnMoreTitle

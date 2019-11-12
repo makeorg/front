@@ -14,17 +14,13 @@ import {
   ROUTE_ORGANISATION_PROFILE,
   ROUTE_PERSONALITY_PROFILE,
   ROUTE_STATIC_CONTACT,
-  ROUTE_STATIC_DATA,
-  ROUTE_STATIC_GTU,
   ROUTE_STATIC_LEGAL,
   ROUTE_RESULTS,
   ROUTE_TOP_IDEAS,
   ROUTE_TOP_IDEA_DETAILS,
   ROUTE_STATIC_NOTFOUND,
   ROUTE_STATIC_A11Y,
-  ROUTE_STATIC_GTU_EN,
   ROUTE_STATIC_LEGAL_EN,
-  ROUTE_STATIC_DATA_EN,
   ROUTE_STATIC_CONTACT_EN,
   ROUTE_BROWSE_CONSULTATIONS,
   ROUTE_BROWSE_RESULTS,
@@ -34,6 +30,7 @@ import {
   ROUTE_PASSWORD_RECOVERY,
   ROUTE_ACCOUNT_ACTIVATION,
   ROUTE_EXPLORE,
+  ROUTE_STATIC_COOKIES,
 } from 'Shared/routes';
 import { env } from 'Shared/env';
 
@@ -354,35 +351,18 @@ export const getContactPageLink = (country: string) =>
   );
 
 /**
- * Get the data page link
+ * Get the Cookies page link
  *
  * @param  {string} country
  * @return {string}
  */
-export const getDataPageLink = (country: string) =>
-  generatePath(
-    country === 'FR' || !country ? ROUTE_STATIC_DATA : ROUTE_STATIC_DATA_EN,
-    {
-      country,
-    }
-  );
+export const getCookiesPageLink = (country: string) =>
+  generatePath(ROUTE_STATIC_COOKIES, {
+    country,
+  });
 
 /**
- * Get the GTU page link
- *
- * @param  {string} country
- * @return {string}
- */
-export const getGTUPageLink = (country: string) =>
-  generatePath(
-    country === 'FR' || !country ? ROUTE_STATIC_GTU : ROUTE_STATIC_GTU_EN,
-    {
-      country,
-    }
-  );
-
-/**
- * Get the GTU page link
+ * Get the Legal page link
  *
  * @param  {string} country
  * @return {string}

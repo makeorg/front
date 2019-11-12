@@ -11,15 +11,11 @@ import { RedLinkRouterStyle } from 'Client/ui/Elements/LinkElements';
 
 import { VoteResultElement } from 'Client/ui/Proposal/VoteResultElement';
 import { ProposalFooterWithTagElement } from 'Client/ui/Proposal/FooterElement/ProposalWithTag';
-import { DeprecatedProposalAuthor } from 'Client/ui/Proposal/DeprecatedAuthor';
 import {
   ProposalStyle,
   ProposalInnerStyle,
 } from 'Client/ui/Elements/ProposalCardElements';
-import {
-  AuthorWrapperStyle,
-  CertifiedIconStyle,
-} from 'Client/ui/Proposal/DeprecatedAuthor/Styled';
+import { CertifiedIconStyle } from 'Client/ui/Proposal/DeprecatedAuthor/Styled';
 import { ScreenReaderItemStyle } from 'Client/ui/Elements/AccessibilityElements';
 import { CardStyle } from 'Client/ui/Cards';
 import { formatOrganisationName } from 'Shared/helpers/stringFormatter';
@@ -79,9 +75,6 @@ export const ProfileVoteCard = ({
       </ProfileVoteTitleStyle>
       <ProfileVoteCardStyle>
         <CardStyle as="div">
-          <AuthorWrapperStyle>
-            <DeprecatedProposalAuthor proposal={proposal} withAvatar />
-          </AuthorWrapperStyle>
           <ProposalInnerStyle>
             <ScreenReaderItemStyle>
               {i18n.t('proposal_card.content')}

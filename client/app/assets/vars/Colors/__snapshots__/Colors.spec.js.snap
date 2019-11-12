@@ -10,13 +10,13 @@ Array [
     Colors
   </h1>,
   .c0 {
-  color: rgba(213,21,60,1);
+  color: rgba(37,49,134,1);
   font-size: 12px;
 }
 
 .c0:hover,
 .c0:focus {
-  color: rgba(213,21,60,1);
+  color: rgba(37,49,134,1);
 }
 
 .c1 {
@@ -38,7 +38,7 @@ Array [
   height: 25px;
   border: 1px solid;
   margin: 5px;
-  background-color: rgba(213,21,60,1);
+  background-color: rgba(0,0,0,1);
 }
 
 .c4 {
@@ -46,7 +46,7 @@ Array [
   height: 25px;
   border: 1px solid;
   margin: 5px;
-  background-color: rgba(0,0,0,1);
+  background-color: rgba(255,255,255,1);
 }
 
 .c5 {
@@ -54,7 +54,7 @@ Array [
   height: 25px;
   border: 1px solid;
   margin: 5px;
-  background-color: rgba(255,255,255,1);
+  background-color: rgba(51,67,91,1);
 }
 
 .c6 {
@@ -62,7 +62,7 @@ Array [
   height: 25px;
   border: 1px solid;
   margin: 5px;
-  background-color: rgba(51,67,91,1);
+  background-color: rgba(80,122,31,1);
 }
 
 .c7 {
@@ -70,7 +70,7 @@ Array [
   height: 25px;
   border: 1px solid;
   margin: 5px;
-  background-color: rgba(80,122,31,1);
+  background-color: rgba(190,24,44,1);
 }
 
 .c8 {
@@ -78,7 +78,7 @@ Array [
   height: 25px;
   border: 1px solid;
   margin: 5px;
-  background-color: rgba(190,24,44,1);
+  background-color: rgba(117,117,117,1);
 }
 
 .c9 {
@@ -86,7 +86,7 @@ Array [
   height: 25px;
   border: 1px solid;
   margin: 5px;
-  background-color: rgba(117,117,117,1);
+  background-color: rgba(0,0,0,0.65);
 }
 
 .c10 {
@@ -94,18 +94,10 @@ Array [
   height: 25px;
   border: 1px solid;
   margin: 5px;
-  background-color: rgba(0,0,0,0.65);
-}
-
-.c11 {
-  width: 25px;
-  height: 25px;
-  border: 1px solid;
-  margin: 5px;
   background-color: rgba(0,0,0,0.15);
 }
 
-.c12 {
+.c11 {
   width: 25px;
   height: 25px;
   border: 1px solid;
@@ -200,11 +192,11 @@ Array [
         </th>
         <td>
           <div
-            className="c3"
+            className="c2"
           />
         </td>
         <td>
-          rgba(213,21,60,1)
+          rgba(37,49,134,1)
         </td>
       </tr>
     </tbody>
@@ -217,7 +209,7 @@ Array [
         </th>
         <td>
           <div
-            className="c4"
+            className="c3"
           />
         </td>
         <td>
@@ -234,7 +226,7 @@ Array [
         </th>
         <td>
           <div
-            className="c5"
+            className="c4"
           />
         </td>
         <td>
@@ -251,7 +243,7 @@ Array [
         </th>
         <td>
           <div
-            className="c6"
+            className="c5"
           />
         </td>
         <td>
@@ -268,7 +260,7 @@ Array [
         </th>
         <td>
           <div
-            className="c7"
+            className="c6"
           />
         </td>
         <td>
@@ -285,7 +277,7 @@ Array [
         </th>
         <td>
           <div
-            className="c8"
+            className="c7"
           />
         </td>
         <td>
@@ -302,7 +294,7 @@ Array [
         </th>
         <td>
           <div
-            className="c7"
+            className="c6"
           />
         </td>
         <td>
@@ -319,7 +311,7 @@ Array [
         </th>
         <td>
           <div
-            className="c8"
+            className="c7"
           />
         </td>
         <td>
@@ -336,7 +328,7 @@ Array [
         </th>
         <td>
           <div
-            className="c9"
+            className="c8"
           />
         </td>
         <td>
@@ -353,7 +345,7 @@ Array [
         </th>
         <td>
           <div
-            className="c10"
+            className="c9"
           />
         </td>
         <td>
@@ -370,7 +362,7 @@ Array [
         </th>
         <td>
           <div
-            className="c11"
+            className="c10"
           />
         </td>
         <td>
@@ -387,7 +379,7 @@ Array [
         </th>
         <td>
           <div
-            className="c12"
+            className="c11"
           />
         </td>
         <td>

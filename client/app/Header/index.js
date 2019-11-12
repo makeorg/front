@@ -11,7 +11,6 @@ import {
 } from 'Shared/constants/a11y';
 import { MobileSearchInput } from 'Client/features/search/Form/Mobile';
 import { DesktopSearchInput } from 'Client/features/search/Form/Desktop';
-import { MobileMenu } from 'Client/features/navigation/Menu/Mobile';
 import { DesktopMenu } from 'Client/features/navigation/Menu/Desktop';
 import { MAIN_HEADER } from 'Shared/constants/ids';
 import { getHomeLink } from 'Shared/helpers/url';
@@ -42,7 +41,6 @@ export const Header = () => {
       data-cy-container="header"
     >
       <HeaderInnerStyle>
-        {!isDesktop && <MobileMenu />}
         <HeaderFlexLeftStyle
           className={`${NAVIGATION_ELEMENT_ARIA_CLASS} ${SEARCH_ELEMENT_ARIA_CLASS}`}
         >

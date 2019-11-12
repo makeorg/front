@@ -104,9 +104,13 @@ export const StaticParagraphStyle = styled.p`
   }
 `;
 
-export const StaticStrongStyle = styled.strong`
-  font-display: ${MakeFonts.CircularStandardBold};
+export const StaticStrongStyle = styled.span`
+  font-family: ${MakeFonts.CircularStandardBold};
 `;
+
+export const StaticSvgStyle = {
+  marginRight: '5px',
+};
 
 export const StaticPrimaryUnorderedListStyle = styled.ol`
   margin: 15px 0 0;
@@ -115,6 +119,7 @@ export const StaticPrimaryUnorderedListStyle = styled.ol`
 
 export const StaticPrimaryUnorderedListItemStyle = styled.li`
   list-style-type: none;
+  margin-bottom: 15px;
 `;
 
 export const StaticPrimaryOrderedListStyle = styled.ol`

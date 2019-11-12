@@ -23,15 +23,11 @@ import {
   ROUTE_SEARCH_ORGANISATIONS,
   ROUTE_STATIC_LEGAL,
   ROUTE_STATIC_CONTACT,
-  ROUTE_STATIC_DATA,
-  ROUTE_STATIC_GTU,
   ROUTE_RESULTS,
   ROUTE_TOP_IDEAS,
   ROUTE_TOP_IDEA_DETAILS,
   ROUTE_PERSONALITY_PROFILE,
   ROUTE_PROFILE_OPINIONS,
-  ROUTE_STATIC_GTU_EN,
-  ROUTE_STATIC_DATA_EN,
   ROUTE_STATIC_CONTACT_EN,
   ROUTE_STATIC_LEGAL_EN,
   ROUTE_BROWSE_CONSULTATIONS,
@@ -176,15 +172,11 @@ export const initRoutes = app => {
 
   app.get(ROUTE_STATIC_LEGAL, frontMiddlewares, defaultRoute);
   app.get(ROUTE_STATIC_CONTACT, frontMiddlewares, defaultRoute);
-  app.get(ROUTE_STATIC_DATA, frontMiddlewares, defaultRoute);
-  app.get(ROUTE_STATIC_GTU, frontMiddlewares, defaultRoute);
   app.get(ROUTE_STATIC_A11Y, frontMiddlewares, defaultRoute);
 
   // routes for en language
   app.get(ROUTE_STATIC_LEGAL_EN, frontMiddlewares, defaultRoute);
   app.get(ROUTE_STATIC_CONTACT_EN, frontMiddlewares, defaultRoute);
-  app.get(ROUTE_STATIC_DATA_EN, frontMiddlewares, defaultRoute);
-  app.get(ROUTE_STATIC_GTU_EN, frontMiddlewares, defaultRoute);
 
   // not found
   app.get(`${ROUTE_COUNTRY}/*`, frontMiddlewares, (req, res) => {

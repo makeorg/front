@@ -10,8 +10,6 @@ import {
   getBrowseResultsLink,
   getConsultationLink,
   getContactPageLink,
-  getDataPageLink,
-  getGTUPageLink,
   getHomeLink,
   getLegalPageLink,
   getPasswordRecoveryLink,
@@ -429,18 +427,6 @@ export const Accessibility = () => (
               {'Page de mentions légales : '}
               <RedLinkHTMLElementStyle href={getLegalPageLink('FR')}>
                 {env.frontUrl() + getLegalPageLink('FR')}
-              </RedLinkHTMLElementStyle>
-            </StaticSquareListItemStyle>
-            <StaticSquareListItemStyle>
-              {"Page de conditions d'utilisation : "}
-              <RedLinkHTMLElementStyle href={getGTUPageLink('FR')}>
-                {env.frontUrl() + getGTUPageLink('FR')}
-              </RedLinkHTMLElementStyle>
-            </StaticSquareListItemStyle>
-            <StaticSquareListItemStyle>
-              {'Page de politique de données : '}
-              <RedLinkHTMLElementStyle href={getDataPageLink('FR')}>
-                {env.frontUrl() + getDataPageLink('FR')}
               </RedLinkHTMLElementStyle>
             </StaticSquareListItemStyle>
             <StaticSquareListItemStyle>

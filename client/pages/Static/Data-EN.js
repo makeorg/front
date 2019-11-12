@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import { RedLinkHTMLElementStyle } from 'Client/ui/Elements/LinkElements';
+import { CONTACT_EMAIL } from 'Shared/constants/config';
 import { MetaTags } from 'Client/app/MetaTags';
 import {
   StaticPageWrapperStyle,
@@ -194,8 +195,8 @@ export const DataEN = () => (
           <StaticParagraphStyle>
             These rights can be exercised by any means, and notably by sending
             an e-mail to the following address :&nbsp;
-            <RedLinkHTMLElementStyle as="a" href="mailto:contact@make.org">
-              contact@make.org
+            <RedLinkHTMLElementStyle as="a" href={`mailto:${CONTACT_EMAIL}`}>
+              {CONTACT_EMAIL}
             </RedLinkHTMLElementStyle>
           </StaticParagraphStyle>
         </StaticPrimaryUnorderedListItemStyle>
@@ -247,20 +248,9 @@ export const DataEN = () => (
           </StaticParagraphStyle>
           <StaticParagraphStyle>
             The DPO can be contacted at the following address:&nbsp;
-            <RedLinkHTMLElementStyle href="mailto:contact@make.org">
-              contact@make.org
+            <RedLinkHTMLElementStyle href={`mailto:${CONTACT_EMAIL}`}>
+              {CONTACT_EMAIL}
             </RedLinkHTMLElementStyle>
-          </StaticParagraphStyle>
-        </StaticPrimaryUnorderedListItemStyle>
-
-        <StaticPrimaryUnorderedListItemStyle>
-          <StaticThirdLevelTitleStyle>
-            RECORDS OF PROCESSING ACTIVITIES
-          </StaticThirdLevelTitleStyle>
-          <StaticParagraphStyle>
-            Make.org affirms that it maintains written records of all processing
-            activities carried out in the framework of the performance of its
-            activities.
           </StaticParagraphStyle>
         </StaticPrimaryUnorderedListItemStyle>
       </StaticPrimaryUnorderedListStyle>

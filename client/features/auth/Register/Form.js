@@ -1,34 +1,28 @@
 // @flow
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { i18n } from 'Shared/i18n';
 import { type RegisterFormDataType } from 'Shared/types/form';
 import { type ErrorObjectType } from 'Shared/types/api';
-import { type StateRoot } from 'Shared/store/types';
 import {
   FormCenterAlignStyle,
   ConditionParagraphStyle,
   FormRequirementsStyle,
+  CommentFieldStyle,
 } from 'Client/ui/Elements/Form/Styled/Content';
 import { getFieldError } from 'Shared/helpers/form';
 import { UntypedInput } from 'Client/ui/Elements/Form/UntypedInput';
-import { NumberInput } from 'Client/ui/Elements/Form/NumberInput';
 import { PasswordInput } from 'Client/ui/Elements/Form/PasswordInput';
 import { REGISTER_FORMNAME } from 'Shared/constants/form';
 import { SubmitButton } from 'Client/ui/Elements/Form/SubmitButton';
+import { RegisterCheckBox } from 'Client/ui/Elements/Form/CheckBox/RegisterCheckbox';
 import {
   EmailFieldIcon,
   PasswordFieldIcon,
   NameFiledIcon,
-  AgeFieldIcon,
-  PostalCodeFieldIcon,
-  JobFieldIcon,
   SubmitThumbsUpIcon,
 } from 'Shared/constants/icons';
 import { throttle } from 'Shared/helpers/throttle';
 import { FormErrors } from 'Client/ui/Elements/Form/Errors';
-import { CustomPatternInput } from 'Client/ui/Elements/Form/CustomPatternInput';
-import { getGTUPageLink } from 'Shared/helpers/url';
 
 type Props = {
   user: RegisterFormDataType,
@@ -47,21 +41,9 @@ export const RegisterForm = ({
   handleSubmit,
   disableSubmit,
 }: Props) => {
-  const { country } = useSelector((state: StateRoot) => state.appConfig);
-  const currentQuestion = useSelector(
-    (state: StateRoot) => state.currentQuestion
-  );
-
   const emailError = getFieldError('email', errors);
   const passwordError = getFieldError('password', errors);
   const firstnameError = getFieldError('firstname', errors);
-  const ageError = getFieldError('dateofbirth', errors);
-  const postalcodeError = getFieldError('postalcode', errors);
-  // @todo remove after territoires consultation is over
-  const isPostalCodeRequired = currentQuestion === 'territoires';
-  const postalCodeLabel = i18n.t('common.form.label.postalcode', {
-    context: !isPostalCodeRequired && 'optional',
-  });
 
   return (
     <FormCenterAlignStyle
@@ -90,6 +72,9 @@ export const RegisterForm = ({
         label={i18n.t('common.form.label.password')}
         handleChange={handleChange}
       />
+      <CommentFieldStyle>
+        {i18n.t('common.form.anonymous_proposals')}
+      </CommentFieldStyle>
       <UntypedInput
         type="text"
         name="profile.firstname"
@@ -100,47 +85,10 @@ export const RegisterForm = ({
         required
         handleChange={handleChange}
       />
-      <NumberInput
-        name="profile.age"
-        icon={AgeFieldIcon}
-        value={user.profile.age}
-        error={ageError}
-        label={i18n.t('common.form.label.age')}
-        handleChange={handleChange}
-        min={8}
-        max={120}
-        required
-      />
-      <CustomPatternInput
-        type="text"
-        name="profile.postalcode"
-        icon={PostalCodeFieldIcon}
-        value={user.profile.postalcode}
-        error={postalcodeError}
-        label={postalCodeLabel}
-        handleChange={handleChange}
-        maxLength={5}
-        pattern="^[0-9]{5}"
-        required={isPostalCodeRequired}
-      />
-      <UntypedInput
-        type="text"
-        name="profile.profession"
-        icon={JobFieldIcon}
-        value={user.profile.profession}
-        label={i18n.t('common.form.label.profession', { context: 'optional' })}
-        handleChange={handleChange}
-      />
-      <ConditionParagraphStyle
-        dangerouslySetInnerHTML={{
-          __html: i18n.t('register.gtu_text', {
-            gtu_link: `<a href="${getGTUPageLink(
-              country
-            )}">$t(register.gtu)</a>`,
-            interpolation: { escapeValue: false },
-          }),
-        }}
-      />
+      <ConditionParagraphStyle>
+        {i18n.t('register.gtu_text')}
+      </ConditionParagraphStyle>
+      <RegisterCheckBox required />
       <SubmitButton
         formName={REGISTER_FORMNAME}
         id="authentication-register-submit"

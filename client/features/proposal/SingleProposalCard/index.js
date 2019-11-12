@@ -3,7 +3,6 @@ import { i18n } from 'Shared/i18n';
 import { Link } from 'react-router-dom';
 import { type ProposalType } from 'Shared/types/proposal';
 import { getSequenceLink, getConsultationLink } from 'Shared/helpers/url';
-import { DeprecatedProposalAuthor } from 'Client/ui/Proposal/DeprecatedAuthor';
 import { Vote } from 'Client/features/vote';
 import { ContentSeparatorStyle } from 'Client/ui/Elements/Separators';
 import { TallCardStyle } from 'Client/ui/Cards';
@@ -19,7 +18,6 @@ import { useSelector } from 'react-redux';
 import {
   InnerProposalStyle,
   ProposalCardContentStyle,
-  ProposalCardSeparatorStyle,
   ProposalFooterStyle,
   FooterContentSeparatorStyle,
   FooterContentStyle,
@@ -42,12 +40,10 @@ export const SingleProposalCard = ({ proposal }: Props) => {
     <TopComponentContext.Provider value={topComponentContext}>
       <TallCardStyle id="proposal_card">
         <InnerProposalStyle>
-          <DeprecatedProposalAuthor proposal={proposal} />
-          <ProposalCardSeparatorStyle />
-          <ScreenReaderItemStyle>
-            {i18n.t('proposal_card.content')}
-          </ScreenReaderItemStyle>
-          <ProposalCardContentStyle lang={proposal.question.language}>
+          <ProposalCardContentStyle>
+            <ScreenReaderItemStyle>
+              {i18n.t('proposal_card.content')}
+            </ScreenReaderItemStyle>
             {proposal.content}
           </ProposalCardContentStyle>
           {isConsultationOpened ? (

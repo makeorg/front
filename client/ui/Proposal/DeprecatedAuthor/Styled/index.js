@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { color, typography } from 'athena-design-tokens';
-import { TextColors } from 'Client/app/assets/vars/Colors';
 import { Breakpoints } from 'Client/app/assets/vars/Breakpoints';
 import { intToPx } from 'Shared/helpers/styled';
 import { ParagraphStyle } from 'Client/ui/Elements/ParagraphElements';
@@ -58,6 +57,6 @@ export const ProposalStatusStyle = styled.span`
 export const CertifiedIconStyle = styled(SvgCheckedSymbol)`
   margin-left: 5px;
   .tofill {
-    fill: ${TextColors.Blue};
+    fill: ${color.brandPrimary};
   }
 `;

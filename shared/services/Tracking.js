@@ -239,9 +239,6 @@ export const trackVote = (
     ...internalParams,
   });
   TrackingService.track(eventName, parameters);
-  TrackingService.trackFacebookPixel(eventName, params);
-  TrackingService.trackTwitterPixel(eventName);
-  TrackingService.trackSnapchatPixel(eventName);
 };
 
 export const trackFirstVote = (
@@ -258,9 +255,6 @@ export const trackFirstVote = (
     ...internalParams,
   });
   TrackingService.track(eventName, parameters);
-  TrackingService.trackFacebookPixel(eventName, params);
-  TrackingService.trackTwitterPixel(eventName);
-  TrackingService.trackSnapchatPixel(eventName);
 };
 
 export const trackUnvote = (
@@ -278,9 +272,6 @@ export const trackUnvote = (
     ...internalParams,
   });
   TrackingService.track(eventName, parameters);
-  TrackingService.trackFacebookPixel(eventName, params);
-  TrackingService.trackTwitterPixel(eventName);
-  TrackingService.trackSnapchatPixel(eventName);
 };
 
 /* Qualifications */
@@ -300,9 +291,6 @@ export const trackQualify = (
     ...internalParams,
   });
   TrackingService.track(eventName, parameters);
-  TrackingService.trackFacebookPixel(eventName, params);
-  TrackingService.trackTwitterPixel(eventName);
-  TrackingService.trackSnapchatPixel(eventName);
 };
 
 export const trackUnqualify = (
@@ -321,9 +309,6 @@ export const trackUnqualify = (
     ...internalParams,
   });
   TrackingService.track(eventName, parameters);
-  TrackingService.trackFacebookPixel(eventName, params);
-  TrackingService.trackTwitterPixel(eventName);
-  TrackingService.trackSnapchatPixel(eventName);
 };
 
 /* Sharing */
