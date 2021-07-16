@@ -115,6 +115,7 @@ export const LoginForm = () => {
       <UntypedInput
         type="email"
         name="email"
+        id="email"
         icon={EmailFieldIcon}
         value={formValues.email}
         label={i18n.t('common.form.label.email')}

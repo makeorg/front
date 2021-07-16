@@ -294,6 +294,45 @@ Then('The field {string} should be empty', fieldName => {
     .should('have.value', '')
 });
 
+Then ('The field {string} should be invalid', (fieldName) => (
+  cy.get(`[name=${fieldName}]`)
+  .invoke('prop', 'validity')
+  .should('deep.include', {
+  valid:false
+  })
+));
+
+Then ('The field {string} should be invalid', (field) => (
+  cy.get(`[name=${fieldName}]`)
+  .invoke('prop', 'validity')
+  .should('deep.include', {
+  valueMissing: true,
+  valid:false
+  })
+));
+
+Then ('The register checkbox should be invalid', () => (
+  cy.get('#registerCheckbox')
+  .invoke('prop', 'validity')
+  .should('deep.include', {
+  valueMissing: true,
+  valid:false
+  })
+));
+
+When ('I check the {string} checkbox', (field) => {
+  cy.get(`.${field}`).click({force:true});
+});
+
+When ('I uncheck the {string} checkbox', (field) => {
+  cy.get(`.${field}`).click({force:true});
+});
+
+When ('I check both legalMinorConsent and legalAdvisorApproval checkboxes', () => {
+  cy.get('.legalMinorConsent').click({force:true});
+  cy.get('.legalAdvisorApproval').click({force:true});
+});
+
 // others
 Then('The mouse is focused in {string} field', (field) => {
   cy.focused().should('have.attr', 'id').and('eq', field);

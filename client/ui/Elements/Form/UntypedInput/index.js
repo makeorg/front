@@ -16,6 +16,8 @@ type Props = {
   type: string,
   /** Name of the input */
   name: string,
+  /** Id of the input */
+  id: string,
   /** Icon of the input */
   icon: HTMLElement,
   /** Value of the input */
@@ -33,6 +35,7 @@ type Props = {
 export const UntypedInput = ({
   type,
   name,
+  id,
   icon,
   value,
   label,
@@ -51,7 +54,7 @@ export const UntypedInput = ({
           ref={inputRef}
           type={type}
           name={name}
-          id={name}
+          id={id}
           value={value}
           required={required}
           onChange={handleChange}

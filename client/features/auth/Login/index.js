@@ -68,7 +68,11 @@ export const Login = () => {
       </ExtraParagraphStyle>
       <ExtraAltParagraphStyle>
         {i18n.t('login.registration_title')}
-        <RedLinkButtonStyle onClick={handleRegisterModal} type="button">
+        <RedLinkButtonStyle
+          onClick={handleRegisterModal}
+          type="button"
+          data-cy-button="register"
+        >
           {i18n.t('login.registration_link')}
         </RedLinkButtonStyle>
       </ExtraAltParagraphStyle>

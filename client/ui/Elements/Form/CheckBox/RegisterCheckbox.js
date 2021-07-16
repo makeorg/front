@@ -41,6 +41,7 @@ export const RegisterCheckBox = ({
           required={required}
           checked={checked}
           onChange={handleChange}
+          id="registerCheckbox"
         />
         <StyledCheckbox checked={checked}>
           <SvgCheck />
