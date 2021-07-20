@@ -61,9 +61,9 @@ const logAndTrackEvent = (eventName: string) => {
   Logger.logInfo({
     message: `Track event : ${eventName}`,
     name: 'log-and-track',
-    trackingEvent: eventName,
-    referrer: window.document.referrer,
-    url: window.location.href,
+    app_trackingEvent: eventName,
+    app_referrer: window.document.referrer,
+    app_url: window.location.href,
   });
   track(eventName, {
     referrer: window.document.referrer,
