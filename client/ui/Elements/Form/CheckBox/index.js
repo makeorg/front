@@ -69,7 +69,7 @@ export const CheckBox = ({
         isBlack={isBlack}
         noFontSizeChange={noFontSizeChange}
       >
-        <FakeCheckboxInputStyle aria-hidden className={id}>
+        <FakeCheckboxInputStyle aria-hidden data-cy-field={id}>
           {isChecked ? <SvgCheck /> : null}
         </FakeCheckboxInputStyle>
         <span>{label}</span>

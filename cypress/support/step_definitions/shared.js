@@ -288,8 +288,8 @@ Then('The field {string} should have value {string}', (fieldName, value) => {
     .should('have.value', value)
 });
 
-Then('The field {string} should be empty', fieldName => {
-  cy.get(`[data-cy-field=${fieldName}]`)
+Then('The field search should be empty', () => {
+  cy.get('[data-cy-field=search]')
     .first()
     .should('have.value', '')
 });
@@ -302,7 +302,7 @@ Then ('The field {string} should be invalid', (fieldName) => (
   })
 ));
 
-Then ('The field {string} should be invalid', (field) => (
+Then ('The field {string} should be empty', (fieldName) => (
   cy.get(`[name=${fieldName}]`)
   .invoke('prop', 'validity')
   .should('deep.include', {
@@ -311,7 +311,7 @@ Then ('The field {string} should be invalid', (field) => (
   })
 ));
 
-Then ('The register checkbox should be invalid', () => (
+Then ('The register checkbox should be empty', () => (
   cy.get('#registerCheckbox')
   .invoke('prop', 'validity')
   .should('deep.include', {
@@ -321,16 +321,16 @@ Then ('The register checkbox should be invalid', () => (
 ));
 
 When ('I check the {string} checkbox', (field) => {
-  cy.get(`.${field}`).click({force:true});
+  cy.get(`[data-cy-field=${field}]`).click({force:true});
 });
 
 When ('I uncheck the {string} checkbox', (field) => {
-  cy.get(`.${field}`).click({force:true});
+  cy.get(`[data-cy-field=${field}]`).click({force:true});
 });
 
 When ('I check both legalMinorConsent and legalAdvisorApproval checkboxes', () => {
-  cy.get('.legalMinorConsent').click({force:true});
-  cy.get('.legalAdvisorApproval').click({force:true});
+  cy.get('[data-cy-field=legalMinorConsent]').click({force:true});
+  cy.get('[data-cy-field=legalAdvisorApproval]').click({force:true});
 });
 
 // others
