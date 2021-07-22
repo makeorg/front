@@ -106,9 +106,9 @@ export const reactRender = async (req, res, routeState = {}) => {
   if (!country || !language) {
     logInfo({
       message: 'Country or language not found from request params',
-      url: req.originalUrl,
-      country: country || 'none',
-      language: language || 'none',
+      app_url: req.originalUrl,
+      app_country: country || 'none',
+      app_language: language || 'none',
       ...commonLogs,
     });
   }
@@ -120,15 +120,15 @@ export const reactRender = async (req, res, routeState = {}) => {
     () => {
       logInfo({
         message: 'ViewsService.getCountries return 404',
-        url: req.originalUrl,
+        app_url: req.originalUrl,
         ...commonLogs,
       });
     },
     error =>
       logError({
         message: `ViewsService.getCountries error : ${error.message}`,
-        url: req.originalUrl,
-        logId: error.logId,
+        app_url: req.originalUrl,
+        app_logId: error.logId,
         ...commonLogs,
       })
   );
