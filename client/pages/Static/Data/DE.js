@@ -3,7 +3,12 @@ import React from 'react';
 import { RedLinkHTMLElementStyle } from 'Client/ui/Elements/LinkElements';
 import { MetaTags } from 'Client/app/MetaTags';
 import { ScreenReaderItemStyle } from 'Client/ui/Elements/AccessibilityElements';
-import { CONTACT_EMAIL_DE, PRIVACY_POLICY_DATE } from 'Shared/constants/config';
+import {
+  CONTACT_EMAIL_DE,
+  PRIVACY_POLICY_DATE,
+  MAKE_ADDRESS,
+  MAKE_RCS,
+} from 'Shared/constants/config';
 import { DateHelper } from 'Shared/helpers/date';
 import { useSelector } from 'react-redux';
 import { getCountryDPA } from 'Shared/helpers/countries';
@@ -45,9 +50,9 @@ export const DataDE = () => {
         <StaticParagraphStyle>
           Dieses Dokument ergänzt die Allgemeinen Geschäftsbedingungen von
           MAKE.ORG und stellt die Verpflichtungen von Make.org,{' '}
-          <span lang="fr">Société par Actions Simplifiées</span>, mit Sitz in 4
-          rue René Villermé, 75011 Paris, eingetragen im Handels- und
-          Gesellschaftsregister PARIS unter der Nummer 820 016 095, als
+          <span lang="fr">Société par Actions Simplifiées</span>, mit Sitz in{' '}
+          {MAKE_ADDRESS} Frankreich, eingetragen im Handels- und
+          Gesellschaftsregister PARIS unter der Nummer {MAKE_RCS}, als
           Verantwortlicher für die Verarbeitung personenbezogener Daten im
           Hinblick auf die Einhaltung der geltenden Vorschriften für die
           Verarbeitung personenbezogener Daten, insbesondere der Verordnung (

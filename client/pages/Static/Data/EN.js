@@ -2,7 +2,11 @@
 import React from 'react';
 import { RedLinkHTMLElementStyle } from 'Client/ui/Elements/LinkElements';
 import { MetaTags } from 'Client/app/MetaTags';
-import { CONTACT_EMAIL, PRIVACY_POLICY_DATE } from 'Shared/constants/config';
+import {
+  CONTACT_EMAIL,
+  PRIVACY_POLICY_DATE,
+  CNIL_NUMBER,
+} from 'Shared/constants/config';
 import { DateHelper } from 'Shared/helpers/date';
 import { DATE_CAPITALIZE_LL_FORMAT } from 'Shared/constants/date';
 import {
@@ -62,7 +66,8 @@ export const DataEN = () => (
             its site and its services.
           </StaticParagraphStyle>
           <StaticParagraphStyle>
-            Make.org has filed a declaration with the CNIL under number 2005312
+            Make.org has filed a declaration with the CNIL under number{' '}
+            {CNIL_NUMBER}
             and has chosen to name a DPO in order to guarantee the best level of
             protection possible.
           </StaticParagraphStyle>

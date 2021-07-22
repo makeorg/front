@@ -1135,17 +1135,17 @@
   },
   "legal":{
     "title": "Mentions légales",
-    "make_infos": "Editeur du site : MAKE.ORG, Société par Actions Simplifiées au capital de 1.056.017,00 €, ayant son siège social au 13-15 Rue de la Bûcherie 75005 Paris, immatriculée au RCS de PARIS sous le numéro 820 016 095 (ci-après« MAKE.ORG »).",
+    "make_infos": "Editeur du site : MAKE.ORG, Société par Actions Simplifiées au capital de {{make_capital}}, ayant son siège social au {{make_address}}, immatriculée au RCS de PARIS sous le numéro {{make_rcs}} (ci-après« MAKE.ORG »).",
     "mail": "Adresse de courrier électronique : ",
     "make_phone": "Numéro de téléphone : ",
-    "make_phone_number": "01 84 25 15 74",
+    "make_phone_number": "0{{make_phone_number}}",
     "director": "Directeur de Publication : ",
     "host": "Hébergeur du site : ",
-    "host_address": "OVH, 2 rue Kellermann, 59100, ROUBAIX FRANCE", 
+    "host_address": "{{make_host_address}} FRANCE", 
     "host_phone": "Numéro de téléphone : ",
-    "host_phone_number": "08 99 70 17 61",
+    "host_phone_number": "0{{host_number}}",
     "cnil": "Numéro de déclaration CNIL : ",
-    "cnil_number": "2005312"
+    "cnil_number": "{{cnil_number}}"
   },
   "cookies_management": {
     "title": "Gestion des Cookies",

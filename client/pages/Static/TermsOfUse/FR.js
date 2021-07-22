@@ -5,7 +5,13 @@ import { type StateRoot } from 'Shared/store/types';
 import { RedLinkHTMLElementStyle } from 'Client/ui/Elements/LinkElements';
 import { getDataPageLink } from 'Shared/helpers/url';
 import { MetaTags } from 'Client/app/MetaTags';
-import { CONTACT_EMAIL, GTU_DATE } from 'Shared/constants/config';
+import {
+  CONTACT_EMAIL,
+  GTU_DATE,
+  MAKE_ADDRESS,
+  MAKE_CAPITAL,
+  MAKE_RCS,
+} from 'Shared/constants/config';
 import { DateHelper } from 'Shared/helpers/date';
 import {
   DATE_CAPITALIZE_LL_FORMAT,
@@ -90,10 +96,10 @@ export const TermsOfUseFR = () => {
             </StaticThirdLevelTitleStyle>
             <StaticParagraphStyle>
               Le Site et les Services (ou collectivement « les Services ») sont
-              exploités par lasociété Make.org, Société par Actions Simplifiées
-              au capital de 1000 euros, ayant son siège social au 4 rue René
-              Villermé, 75011, PARIS, immatriculée au RCS de PARIS sous le
-              numéro 820 016 095 (ci-après« Make.org »).
+              exploités par la société Make.org, Société par Actions Simplifiées
+              au capital de {MAKE_CAPITAL}, ayant son siège social au{' '}
+              {MAKE_ADDRESS}, immatriculée au RCS de PARIS sous le numéro{' '}
+              {MAKE_RCS} (ci-après« Make.org »).
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>

@@ -6,7 +6,12 @@ import {
 } from 'Client/ui/Elements/LinkElements';
 import { MetaTags } from 'Client/app/MetaTags';
 import { ScreenReaderItemStyle } from 'Client/ui/Elements/AccessibilityElements';
-import { CONTACT_EMAIL, PRIVACY_POLICY_DATE } from 'Shared/constants/config';
+import {
+  CONTACT_EMAIL,
+  PRIVACY_POLICY_DATE,
+  MAKE_ADDRESS,
+  MAKE_RCS,
+} from 'Shared/constants/config';
 import { DateHelper } from 'Shared/helpers/date';
 import { getCountryDPA } from 'Shared/helpers/countries';
 import { type StateRoot } from 'Shared/store/types';
@@ -49,11 +54,11 @@ export const DataFR = () => {
         <StaticParagraphStyle>
           Le présent document complète les Conditions Générales de MAKE.ORG et
           représente les engagements de Make.org, Société par Actions
-          Simplifiées, ayant son siège social au 4 rue René Villermé, 75011
-          Paris, immatriculée au RCS de PARIS sous le numéro 820 016 095,
-          agissant en tant que responsable de traitement, en ce qui concerne le
-          respect de la réglementation en vigueur applicable au traitement de
-          données personnelles et, en particulier, le règlement (
+          Simplifiées, ayant son siège social au {MAKE_ADDRESS}, immatriculée au
+          RCS de PARIS sous le numéro {MAKE_RCS}, agissant en tant que
+          responsable de traitement, en ce qui concerne le respect de la
+          réglementation en vigueur applicable au traitement de données
+          personnelles et, en particulier, le règlement (
           <abbr title="Union Européenne">UE</abbr>) 2016/679 du Parlement
           européen et du Conseil du 27 avril 2016 applicable à compter du 25 mai
           2018 (ci-après, « le RGPD »).

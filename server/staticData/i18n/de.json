@@ -1095,17 +1095,17 @@
   },
   "legal": {
     "title": "Impressum",
-    "make_infos": "Herausgeber der Website: MAKE.ORG, Rechtsform: SAS (kleine Aktiengesellschaft) mit einem Grundkapital von 1.056.017,00 €, mit Hauptsitz in der 13-15 Rue de la Bûcherie 75005 Paris, Frankreich. Eingetragen im RCS de PARIS (Handels- und Firmenregister) unter der Nummer 820 016 095 (nachfolgend „MAKE.ORG“ genannt).",
+    "make_infos": "Herausgeber der Website: MAKE.ORG, Rechtsform: SAS (kleine Aktiengesellschaft) mit einem Grundkapital von {{make_capital}}, mit Hauptsitz in der {{make_address}}, Frankreich. Eingetragen im RCS de PARIS (Handels- und Firmenregister) unter der Nummer {{make_rcs}} (nachfolgend „MAKE.ORG“ genannt).",
     "mail": "E-Mail-Adresse: ",
     "make_phone": "Telefonnummer: ",
-    "make_phone_number": "+33(0)1 84 25 15 74 ",
+    "make_phone_number": "+33(0){{make_phone_number}}",
     "director": "Verantwortlich für den Inhalt: ",
     "host": "Seitenbetreiber: ",
-    "host_address": "OVH, 2 rue Kellermann, 59100 Roubaix, Frankreich",
+    "host_address": "{{make_host_address}}, Frankreich",
     "host_phone": "Telefonnummer: ",
-    "host_phone_number": "+33(0)8 99 70 17 61",
+    "host_phone_number": "+33(0){{host_number}}",
     "cnil": "Meldenummer bei der französischen Datenschutzbehörde CNIL: ",
-    "cnil_number": "2005312"
+    "cnil_number": "{{cnil_number}}"
   },
   "cookies_management": {
     "title": "Cookie-Verwaltung",
