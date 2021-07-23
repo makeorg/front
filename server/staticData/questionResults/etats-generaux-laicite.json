@@ -38,12 +38,6 @@
           "agreement": 78,
           "adhesion": 12,
           "realistic": 17
-        },
-        {
-          "idea": "Mieux lutter contre la stigmatisation des pratiques et des pratiquants",
-          "agreement": 76,
-          "adhesion": 16,
-          "realistic": 10
         }
       ]
     },
@@ -84,6 +78,18 @@
           "agreement": 80,
           "adhesion": 16,
           "realistic": 15
+        },
+        {
+          "idea": "Mieux lutter contre la stigmatisation des pratiques et des pratiquants",
+          "agreement": 76,
+          "adhesion": 16,
+          "realistic": 10
+        },
+        {
+          "idea": "Garantir et protéger la liberté d’expression",
+          "agreement": 82,
+          "adhesion": 14,
+          "realistic": 16
         }
       ]
     }
