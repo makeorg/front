@@ -85,7 +85,7 @@ Feature: The header
     And I see "mobile search cancel" button
     And I see a "search clear" button
     When I click on "search clear" button
-    Then The field "search" should be empty
+    Then The field search should be empty
 
   Scenario: Display authentication form
     Given I am on "homepage"

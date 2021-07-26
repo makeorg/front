@@ -83,6 +83,7 @@ export const RegisterForm = ({
       <UntypedInput
         type="email"
         name="email"
+        id="email"
         icon={EmailFieldIcon}
         value={user.email}
         label={i18n.t('common.form.label.email')}
@@ -100,7 +101,8 @@ export const RegisterForm = ({
       />
       <UntypedInput
         type="text"
-        name="profile.firstname"
+        name="firstname"
+        id="profile.firstname"
         icon={NameFiledIcon}
         error={firstnameError}
         value={user.profile.firstname}
@@ -109,7 +111,8 @@ export const RegisterForm = ({
         handleChange={handleChange}
       />
       <NumberInput
-        name="profile.age"
+        name="age"
+        id="profile.age"
         icon={AgeFieldIcon}
         value={user.profile.age}
         error={ageError}

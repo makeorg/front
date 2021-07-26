@@ -15,6 +15,8 @@ import {
 type Props = {
   /** Name of the input */
   name: string,
+  /** Id of the input */
+  id: string,
   /** Icon of the input */
   icon: HTMLElement,
   /** Label of the input */
@@ -35,6 +37,7 @@ type Props = {
 
 export const NumberInput = ({
   name,
+  id,
   icon,
   value,
   label,
@@ -54,7 +57,7 @@ export const NumberInput = ({
           ref={inputRef}
           type="number"
           name={name}
-          id={name}
+          id={id}
           value={value}
           required={required}
           onChange={throttle(handleChange)}

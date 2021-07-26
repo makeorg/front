@@ -10,6 +10,8 @@ import {
 type Props = {
   /** Name of the checkbox */
   name: string,
+  /** Id of the checkbox */
+  id?: string,
   /** Label of the checkbox */
   label: string,
   /** handleLabelClick of the checkbox */
@@ -30,6 +32,7 @@ type Props = {
 
 export const CheckBox = ({
   name,
+  id,
   label,
   handleCheck,
   value,
@@ -66,7 +69,7 @@ export const CheckBox = ({
         isBlack={isBlack}
         noFontSizeChange={noFontSizeChange}
       >
-        <FakeCheckboxInputStyle aria-hidden>
+        <FakeCheckboxInputStyle aria-hidden data-cy-field={id}>
           {isChecked ? <SvgCheck /> : null}
         </FakeCheckboxInputStyle>
         <span>{label}</span>

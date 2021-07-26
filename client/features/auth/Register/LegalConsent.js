@@ -63,6 +63,7 @@ export const LegalConsent = ({
       <LegalCheckboxWrapperStyle>
         <CheckBox
           name="legalMinorConsent"
+          id="legalMinorConsent"
           value={minorConsent}
           handleCheck={() => setMinorConsent(!minorConsent)}
           handleChange={() =>
@@ -76,6 +77,7 @@ export const LegalConsent = ({
       <LegalCheckboxWrapperStyle>
         <CheckBox
           name="profile.legalAdvisorApproval"
+          id="legalAdvisorApproval"
           value={parentalConsent}
           handleCheck={() => setParentalConsent(!parentalConsent)}
           handleChange={() =>
@@ -94,6 +96,7 @@ export const LegalConsent = ({
           type="submit"
           form={LEGAL_CONSENT_FORMNAME}
           disabled={!agreedAllConsents}
+          data-cy-button="legal_consent"
         >
           {i18n.t('legal_consent.submit')}
         </LegalSubmitStyle>

@@ -5,8 +5,8 @@ Snapshot Diff:
 - First value
 + Second value
 
-@@ -12,11 +12,11 @@
-        id="bar"
+@@ -11,11 +11,11 @@
+        aria-invalid={false}
         max={100000}
         min={0}
         name="bar"
