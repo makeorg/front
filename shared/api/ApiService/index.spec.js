@@ -15,7 +15,7 @@ describe('ApiService', () => {
     );
   });
 
-  it('get mock strategy instance ', () => {
+  it('get mock strategy instance', () => {
     expect(ApiService.strategy).toBe(mockStrategy);
   });
 
@@ -26,7 +26,7 @@ describe('ApiService', () => {
     expect(ApiService.questionId).toBe('foo');
   });
 
-  it('callApi must call strategy.callApi ', () => {
+  it('callApi must call strategy.callApi', () => {
     // Given
     jest.spyOn(mockStrategy, 'callApi');
     const url = 'http://url.fr';

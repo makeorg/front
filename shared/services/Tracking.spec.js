@@ -123,15 +123,14 @@ describe('Tracking Service', () => {
 
   beforeEach(() => {
     jest.spyOn(TrackingService, 'sendAllTrackers');
-    jest.spyOn(TrackingService, 'track');
     jest.spyOn(FacebookTracking, 'trackCustom');
     jest.spyOn(TwitterTracking, 'track');
   });
 
   afterEach(() => {
-    TrackingService.track.mockRestore();
     FacebookTracking.trackCustom.mockRestore();
     TwitterTracking.track.mockRestore();
+    TrackingService.sendAllTrackers.mockRestore();
   });
 
   it('track performance', async () => {
@@ -183,31 +182,22 @@ describe('Tracking Service', () => {
 
     jest.spyOn(ApiService, 'callApi');
 
-    TrackingService.track(eventName, eventParameters);
+    TrackingService.sendAllTrackers({ eventName, parameters: eventParameters });
     expect(ApiService.callApi).toHaveBeenNthCalledWith(1, '/tracking/front', {
       body: expectedBody,
       method: 'POST',
     });
   });
 
-  it('track trackFacebookPixel', () => {
-    TrackingService.trackFacebookPixel('eventName', eventParameters);
-    expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
-      1,
-      'eventName',
-      eventParameters
-    );
-  });
-
-  it('track trackTwitterPixel', () => {
-    TrackingService.trackTwitterPixel('eventName', eventParameters);
-    expect(TwitterTracking.track).toHaveBeenNthCalledWith(1, 'eventName');
-  });
   it('track DisplaySequence', () => {
     const eventName = trackingConfiguration.DISPLAY_SEQUENCE.key;
 
     trackDisplaySequence();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -221,8 +211,12 @@ describe('Tracking Service', () => {
     const component = trackingConstants.COMPONENT_PARAM_SEQUENCE;
 
     trackOpenSequence(component);
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      component,
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {
+        component,
+      },
+      protectedParameters: [],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -235,7 +229,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.DISPLAY_PAGE_OPERATION.key;
 
     trackDisplayOperationPage();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -248,7 +246,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_ACTIONS_TAB.key;
 
     trackClickActionsTab();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -261,7 +263,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_PARTICIPATE_TAB.key;
 
     trackClickParticipateTab();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -274,7 +280,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_EXPLORE_TAB.key;
 
     trackClickExploreTab();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -287,7 +297,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_MAKEORG_LOGO.key;
 
     trackClickMakeLogo();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -300,7 +314,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.DISPLAY_MODERATION_TEXT.key;
 
     trackDisplayModerationText();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -313,7 +331,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_MODERATION_LINK.key;
 
     trackClickModerationLink();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -326,7 +348,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.DISPLAY_AUTHENTICATION_FORM.key;
 
     trackDisplayAuthenticationForm();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -339,7 +365,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_PERSONNAL_DATA_LINK.key;
 
     trackClickPersonnalDataLink();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -352,7 +382,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.DISPLAY_PROPOSAL_FIELD.key;
 
     trackDisplayProposalField();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -365,7 +399,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_PROPOSAL_SUBMIT.key;
 
     trackClickProposalSubmit();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -378,7 +416,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_BACK_PROPOSALS.key;
 
     trackClickBackProposals();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -392,7 +434,11 @@ describe('Tracking Service', () => {
       trackingConfiguration.DISPLAY_PROPOSAL_SUBMIT_VALIDATION.key;
 
     trackDisplayProposalSubmitValidation();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -405,7 +451,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_KEEP_VOTING.key;
 
     trackClickKeepVoting();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -418,7 +468,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.DISPLAY_FORGOTPASSWORD_FORM.key;
 
     trackDisplayForgotPasswordForm();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -434,11 +488,11 @@ describe('Tracking Service', () => {
     const fbParams = { ...eventParameters, ...trackParams };
 
     trackClickCloseModal(contextName);
-    expect(TrackingService.track).toHaveBeenNthCalledWith(
-      1,
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
       eventName,
-      trackParams
-    );
+      parameters: trackParams,
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -451,7 +505,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.DISPLAY_SIGN_UP_FORM.key;
 
     trackDisplaySignupForm();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -464,7 +522,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.SIGN_UP_EMAIL_SUCCESS.key;
 
     trackSignupEmailSuccess();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -477,7 +539,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.SIGN_UP_EMAIL_FAILURE.key;
 
     trackSignupEmailFailure();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -490,7 +556,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.DISPLAY_SIGN_IN_FORM.key;
 
     trackDisplaySigninForm();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -508,11 +578,11 @@ describe('Tracking Service', () => {
     const fbParams = { ...eventParameters, ...trackParams };
 
     trackAuthenticationSocialSuccess('foo', 'false');
-    expect(TrackingService.track).toHaveBeenNthCalledWith(
-      1,
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
       eventName,
-      trackParams
-    );
+      parameters: trackParams,
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -527,11 +597,11 @@ describe('Tracking Service', () => {
     const fbParams = { ...eventParameters, ...trackParams };
 
     trackAuthenticationSocialFailure('foo');
-    expect(TrackingService.track).toHaveBeenNthCalledWith(
-      1,
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
       eventName,
-      trackParams
-    );
+      parameters: trackParams,
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -544,7 +614,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.SIGN_IN_EMAIL_SUCCESS.key;
 
     trackLoginEmailSuccess();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -557,7 +631,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.SIGN_IN_EMAIL_FAILURE.key;
 
     trackLoginEmailFailure();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -570,7 +648,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_START_SEQUENCE.key;
 
     trackClickStartSequence();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -583,7 +665,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_SEQUENCE_NEXT_CARD.key;
 
     trackClickNextCard();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -596,7 +682,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_SEQUENCE_LAST_PROPOSAL.key;
 
     trackClickNextOnLastProposal();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -609,7 +699,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_SEQUENCE_PREVIOUS_CARD.key;
 
     trackClickPreviousCard();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -622,7 +716,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.DISPLAY_FINAL_CARD.key;
 
     trackDisplayFinalCard();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -635,10 +733,14 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_SEQUENCE_FIRST_VOTE.key;
 
     trackFirstVote('foo', 'bar', 999);
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      proposalId: 'foo',
-      nature: 'bar',
-      'card-position': '999',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {
+        proposalId: 'foo',
+        nature: 'bar',
+        'card-position': '999',
+      },
+      protectedParameters: ['proposalId', 'nature'],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -651,11 +753,15 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_PROPOSAL_VOTE.key;
 
     trackVote('foo', 'bar', 999, 'my-component');
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      proposalId: 'foo',
-      nature: 'bar',
-      'card-position': '999',
-      component: 'my-component',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {
+        proposalId: 'foo',
+        nature: 'bar',
+        'card-position': '999',
+        component: 'my-component',
+      },
+      protectedParameters: ['proposalId', 'nature'],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -669,11 +775,15 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_PROPOSAL_UNVOTE.key;
 
     trackUnvote('foo', 'bar', 999);
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      proposalId: 'foo',
-      nature: 'bar',
-      'card-position': '999',
-      component: '',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {
+        proposalId: 'foo',
+        nature: 'bar',
+        'card-position': '999',
+        component: '',
+      },
+      protectedParameters: ['proposalId', 'nature'],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -687,11 +797,15 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_PROPOSAL_VOTE.key;
 
     trackVote('foo', 'bar', undefined);
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      proposalId: 'foo',
-      nature: 'bar',
-      'card-position': 'single-proposal',
-      component: '',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {
+        proposalId: 'foo',
+        nature: 'bar',
+        'card-position': 'single-proposal',
+        component: '',
+      },
+      protectedParameters: ['proposalId', 'nature'],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -705,11 +819,15 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_PROPOSAL_UNVOTE.key;
 
     trackUnvote('foo', 'bar', undefined);
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      proposalId: 'foo',
-      nature: 'bar',
-      'card-position': 'single-proposal',
-      component: '',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {
+        proposalId: 'foo',
+        nature: 'bar',
+        'card-position': 'single-proposal',
+        component: '',
+      },
+      protectedParameters: ['proposalId', 'nature'],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -723,12 +841,16 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_PROPOSAL_QUALIFY.key;
 
     trackQualify('foo', 'baz', 'bar', 999);
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      proposalId: 'foo',
-      type: 'baz',
-      nature: 'bar',
-      'card-position': '999',
-      component: '',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {
+        proposalId: 'foo',
+        type: 'baz',
+        nature: 'bar',
+        'card-position': '999',
+        component: '',
+      },
+      protectedParameters: ['proposalId', 'type', 'nature'],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -742,12 +864,16 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_PROPOSAL_UNQUALIFY.key;
 
     trackUnqualify('foo', 'baz', 'bar', 999);
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      proposalId: 'foo',
-      type: 'baz',
-      nature: 'bar',
-      'card-position': '999',
-      component: '',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {
+        proposalId: 'foo',
+        type: 'baz',
+        nature: 'bar',
+        'card-position': '999',
+        component: '',
+      },
+      protectedParameters: ['proposalId', 'type', 'nature'],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -761,9 +887,13 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_PROPOSAL_VIEW_MORE.key;
 
     trackLoadMoreProposals('proposals');
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      page: undefined,
-      component: 'proposals',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {
+        page: undefined,
+        component: 'proposals',
+      },
+      protectedParameters: [],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -778,9 +908,13 @@ describe('Tracking Service', () => {
     const componentName = trackingConstants.COMPONENT_PARAM_PROPOSALS;
 
     trackLoadMoreProposals(componentName, 9);
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      page: '9',
-      component: componentName,
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {
+        page: '9',
+        component: componentName,
+      },
+      protectedParameters: [],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -794,7 +928,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.DISPLAY_HOMEPAGE.key;
 
     trackDisplayHomepage();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -807,7 +945,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_HOMEPAGE_CONSULTATION.key;
 
     trackClickHomepageConsultations();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -819,7 +961,11 @@ describe('Tracking Service', () => {
   it('track Display Browse Consultations', () => {
     const eventName = trackingConfiguration.DISPLAY_BROWSE_CONSULTATIONS.key;
     trackDisplayBrowseConsultations();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -831,7 +977,11 @@ describe('Tracking Service', () => {
   it('track Display Browse Results', () => {
     const eventName = trackingConfiguration.DISPLAY_BROWSE_RESULTS.key;
     trackDisplayBrowseResults();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -843,7 +993,11 @@ describe('Tracking Service', () => {
   it('track Click Homepage Participate consultations', () => {
     const eventName = trackingConfiguration.CLICK_HOMEPAGE_PARTICIPATE.key;
     trackClickHomepageParticipate();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -855,7 +1009,11 @@ describe('Tracking Service', () => {
   it('track Click Homepage Discover great causes', () => {
     const eventName = trackingConfiguration.CLICK_HOMEPAGE_GREAT_CAUSES.key;
     trackClickHomepageDiscover();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -868,7 +1026,11 @@ describe('Tracking Service', () => {
     const eventName =
       trackingConfiguration.CLICK_HOMEPAGE_BROWSE_CONSULTATIONS.key;
     trackClickBrowseConsultations();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -880,7 +1042,11 @@ describe('Tracking Service', () => {
   it('track Click Homepage Browse Results', () => {
     const eventName = trackingConfiguration.CLICK_HOMEPAGE_BROWSE_RESULTS.key;
     trackClickBrowseResults();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -892,8 +1058,12 @@ describe('Tracking Service', () => {
   it('track Click view Blog', () => {
     const eventName = trackingConfiguration.CLICK_VIEW_BLOG.key;
     trackClickBlog('blog list');
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      component: 'blog list',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {
+        component: 'blog list',
+      },
+      protectedParameters: [],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -906,8 +1076,12 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_BROWSE_PARTICIPATE.key;
 
     trackClickParticipate(999);
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      'question-Id': '999',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {
+        'question-Id': '999',
+      },
+      protectedParameters: [],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -920,8 +1094,12 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_PAGINATION.key;
 
     trackClickPageNumber(9);
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      'page-number': '9',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {
+        'page-number': '9',
+      },
+      protectedParameters: [],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -933,7 +1111,11 @@ describe('Tracking Service', () => {
   it('track Click see results', () => {
     const eventName = trackingConfiguration.CLICK_RESULTS.key;
     trackClickResults();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -945,8 +1127,12 @@ describe('Tracking Service', () => {
   it('track Click susbscribe', () => {
     const eventName = trackingConfiguration.CLICK_SUBSCRIBE.key;
     trackClickSubscribe('subscribe-next-consultation');
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      component: 'subscribe-next-consultation',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {
+        component: 'subscribe-next-consultation',
+      },
+      protectedParameters: [],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -959,8 +1145,10 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_BREADCRUMBS.key;
 
     trackClickBreadcrumbs(1);
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      level: '1',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: { level: '1' },
+      protectedParameters: [],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -973,7 +1161,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.DISPLAY_PROPOSAL_PAGE.key;
 
     trackDisplayProposalPage();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -986,8 +1178,12 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_PUBLIC_PROFILE.key;
 
     trackClickPublicProfile(TYPE_ORGANISATION);
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      type: TYPE_ORGANISATION,
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {
+        type: TYPE_ORGANISATION,
+      },
+      protectedParameters: [],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -1000,9 +1196,13 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_PUBLIC_PROFILE.key;
 
     trackClickPublicProfile(TYPE_ORGANISATION, 'foo');
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      type: TYPE_ORGANISATION,
-      component: 'foo',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {
+        type: TYPE_ORGANISATION,
+        component: 'foo',
+      },
+      protectedParameters: [],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -1015,7 +1215,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_OPERATION_PAGE.key;
 
     trackClickOperationPage();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -1028,7 +1232,11 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_BUTTON_LEARN_MORE.key;
 
     trackClickLearnMore();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -1041,8 +1249,10 @@ describe('Tracking Service', () => {
     const eventName = trackingConfiguration.CLICK_BUTTON_LEARN_MORE.key;
 
     trackClickLearnMore('foo');
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      component: 'foo',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: { component: 'foo' },
+      protectedParameters: [],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -1054,7 +1264,11 @@ describe('Tracking Service', () => {
   it('track display Modal Cookie First Step', () => {
     const eventName = trackingConfiguration.DISPLAY_COOKIE_MODAL_FIRST_STEP.key;
     trackDisplayModalCookieFirstStep();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -1067,7 +1281,11 @@ describe('Tracking Service', () => {
     const eventName =
       trackingConfiguration.DISPLAY_COOKIE_MODAL_SECOND_STEP.key;
     trackDisplayModalCookieSecondStep();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -1079,7 +1297,11 @@ describe('Tracking Service', () => {
   it('track click Modal Cookie Refuse', () => {
     const eventName = trackingConfiguration.CLICK_COOKIE_MODAL_REFUSE.key;
     trackClickModalCookieRefuse();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -1091,7 +1313,11 @@ describe('Tracking Service', () => {
   it('track click Modal Cookie Personalize', () => {
     const eventName = trackingConfiguration.CLICK_COOKIE_MODAL_PERSONALIZE.key;
     trackClickModalCookiePersonalize();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -1103,8 +1329,10 @@ describe('Tracking Service', () => {
   it('track click Modal Cookie Save', () => {
     const eventName = trackingConfiguration.CLICK_COOKIE_MODAL_SAVE.key;
     trackClickModalCookieSave('cookies-accept-all');
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      type: 'cookies-accept-all',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: { type: 'cookies-accept-all' },
+      protectedParameters: [],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -1116,8 +1344,10 @@ describe('Tracking Service', () => {
   it('track click Modal Switch Accept', () => {
     const eventName = trackingConfiguration.CLICK_COOKIE_SWITCH_ACCEPT.key;
     trackClickCookieSwitchAccept('facebook_tracking');
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      type: 'facebook_tracking',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: { type: 'facebook_tracking' },
+      protectedParameters: [],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -1129,8 +1359,10 @@ describe('Tracking Service', () => {
   it('track click Modal Switch Refuse', () => {
     const eventName = trackingConfiguration.CLICK_COOKIE_SWITCH_REFUSE.key;
     trackClickCookieSwitchRefuse('facebook_sharing');
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {
-      type: 'facebook_sharing',
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: { type: 'facebook_sharing' },
+      protectedParameters: [],
     });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(1, eventName, {
       ...eventParameters,
@@ -1142,7 +1374,11 @@ describe('Tracking Service', () => {
   it('track click Modal Cookie Back', () => {
     const eventName = trackingConfiguration.CLICK_COOKIE_MODAL_BACK.key;
     trackClickModalCookieBack();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,
@@ -1154,7 +1390,11 @@ describe('Tracking Service', () => {
   it('track click citizen register', () => {
     const eventName = trackingConfiguration.CLICK_CITIZEN_REGISTER.key;
     trackClickCitizenRegister();
-    expect(TrackingService.track).toHaveBeenNthCalledWith(1, eventName, {});
+    expect(TrackingService.sendAllTrackers).toHaveBeenNthCalledWith(1, {
+      eventName,
+      parameters: {},
+      protectedParameters: [],
+    });
     expect(FacebookTracking.trackCustom).toHaveBeenNthCalledWith(
       1,
       eventName,

@@ -3,7 +3,6 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import * as actionTypes from 'Shared/store/actionTypes';
-import { TrackingService } from 'Shared/services/TrackingService';
 import * as Tracking from 'Shared/services/Tracking';
 import * as actions from './index';
 
@@ -13,7 +12,6 @@ let store = mockStore();
 
 describe('Sequence Actions', () => {
   beforeEach(() => {
-    jest.spyOn(TrackingService, 'track');
     jest.spyOn(Tracking, 'trackVote');
     jest.spyOn(Tracking, 'trackFirstVote');
 
@@ -21,7 +19,6 @@ describe('Sequence Actions', () => {
   });
 
   afterEach(() => {
-    TrackingService.track.mockRestore();
     Tracking.trackVote.mockRestore();
     Tracking.trackFirstVote.mockRestore();
   });

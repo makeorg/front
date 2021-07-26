@@ -233,16 +233,14 @@ export const trackVote = (
   topComponent?: string = ''
 ) => {
   const cardPosition: string = getPosition(position);
-  const params = { 'card-position': cardPosition, component: topComponent };
-  const internalParams = { proposalId, nature };
+  const params = {
+    'card-position': cardPosition,
+    component: topComponent,
+    proposalId,
+    nature,
+  };
 
-  const { eventName, parameters } = trackingEvent.CLICK_PROPOSAL_VOTE({
-    ...params,
-    ...internalParams,
-  });
-  TrackingService.track(eventName, parameters);
-  TrackingService.trackFacebookPixel(eventName, params);
-  TrackingService.trackTwitterPixel(eventName);
+  TrackingService.sendAllTrackers(trackingEvent.CLICK_PROPOSAL_VOTE(params));
 };
 
 export const trackFirstVote = (
@@ -251,16 +249,11 @@ export const trackFirstVote = (
   position?: number
 ) => {
   const cardPosition = getPosition(position);
-  const params = { 'card-position': cardPosition };
-  const internalParams = { proposalId, nature };
+  const params = { 'card-position': cardPosition, proposalId, nature };
 
-  const { eventName, parameters } = trackingEvent.CLICK_SEQUENCE_FIRST_VOTE({
-    ...params,
-    ...internalParams,
-  });
-  TrackingService.track(eventName, parameters);
-  TrackingService.trackFacebookPixel(eventName, params);
-  TrackingService.trackTwitterPixel(eventName);
+  TrackingService.sendAllTrackers(
+    trackingEvent.CLICK_SEQUENCE_FIRST_VOTE(params)
+  );
 };
 
 export const trackUnvote = (
@@ -270,16 +263,14 @@ export const trackUnvote = (
   topComponent?: string = ''
 ) => {
   const cardPosition = getPosition(position);
-  const params = { 'card-position': cardPosition, component: topComponent };
-  const internalParams = { proposalId, nature };
+  const params = {
+    'card-position': cardPosition,
+    component: topComponent,
+    proposalId,
+    nature,
+  };
 
-  const { eventName, parameters } = trackingEvent.CLICK_PROPOSAL_UNVOTE({
-    ...params,
-    ...internalParams,
-  });
-  TrackingService.track(eventName, parameters);
-  TrackingService.trackFacebookPixel(eventName, params);
-  TrackingService.trackTwitterPixel(eventName);
+  TrackingService.sendAllTrackers(trackingEvent.CLICK_PROPOSAL_UNVOTE(params));
 };
 
 /* Qualifications */
@@ -291,16 +282,15 @@ export const trackQualify = (
   topComponent?: string = ''
 ) => {
   const cardPosition = getPosition(position);
-  const params = { 'card-position': cardPosition, component: topComponent };
-  const internalParams = { proposalId, type, nature };
+  const params = {
+    'card-position': cardPosition,
+    component: topComponent,
+    proposalId,
+    type,
+    nature,
+  };
 
-  const { eventName, parameters } = trackingEvent.CLICK_PROPOSAL_QUALIFY({
-    ...params,
-    ...internalParams,
-  });
-  TrackingService.track(eventName, parameters);
-  TrackingService.trackFacebookPixel(eventName, params);
-  TrackingService.trackTwitterPixel(eventName);
+  TrackingService.sendAllTrackers(trackingEvent.CLICK_PROPOSAL_QUALIFY(params));
 };
 
 export const trackUnqualify = (
@@ -311,16 +301,17 @@ export const trackUnqualify = (
   topComponent?: string = ''
 ) => {
   const cardPosition = getPosition(position);
-  const params = { 'card-position': cardPosition, component: topComponent };
-  const internalParams = { proposalId, type, nature };
+  const params = {
+    'card-position': cardPosition,
+    component: topComponent,
+    proposalId,
+    type,
+    nature,
+  };
 
-  const { eventName, parameters } = trackingEvent.CLICK_PROPOSAL_UNQUALIFY({
-    ...params,
-    ...internalParams,
-  });
-  TrackingService.track(eventName, parameters);
-  TrackingService.trackFacebookPixel(eventName, params);
-  TrackingService.trackTwitterPixel(eventName);
+  TrackingService.sendAllTrackers(
+    trackingEvent.CLICK_PROPOSAL_UNQUALIFY(params)
+  );
 };
 
 /* Sharing */
