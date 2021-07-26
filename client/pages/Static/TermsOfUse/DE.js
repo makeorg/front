@@ -97,7 +97,7 @@ export const TermsOfUseDE = () => {
             </StaticThirdLevelTitleStyle>
             <StaticParagraphStyle>
               Die Website und die Dienste (oder zusammen &rdquo;die
-              Dienste&rdquo;) werden von Make.org, SAS mit einem Kapital von
+              Dienste&rdquo;) werden von Make.org, SAS mit einem Kapital von{' '}
               {MAKE_CAPITAL}, mit Sitz in {MAKE_ADDRESS} Frankreich, eingetragen
               im Handels- und Gesellschaftsregister von PARIS unter der Nummer{' '}
               {MAKE_RCS} (im Folgenden &rdquo;Make.org&rdquo;) betrieben.

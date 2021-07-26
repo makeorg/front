@@ -3,6 +3,7 @@ import React from 'react';
 import { RedLinkHTMLElementStyle } from 'Client/ui/Elements/LinkElements';
 import { i18n } from 'Shared/i18n';
 import { ScreenReaderItemStyle } from 'Client/ui/Elements/AccessibilityElements';
+import { ACCESSIBILITY_EMAIL, A11Y_DATE } from 'Shared/constants/config';
 import {
   getA11YPageLink,
   getBrowseConsultationsLink,
@@ -38,7 +39,7 @@ import { MetaTags } from 'Client/app/MetaTags';
 import { env } from 'Shared/env';
 import { summary } from 'Shared/constants/accessibilitySummary';
 import { DateHelper } from 'Shared/helpers/date';
-import { A11Y_DATE } from 'Shared/constants/config';
+
 import { useSelector } from 'react-redux';
 import { type StateRoot } from 'Shared/store/types';
 import { DATE_CAPITALIZE_LL_FORMAT } from 'Shared/constants/date';
@@ -508,8 +509,8 @@ export const A11yDE = () => {
             </StaticParagraphStyle>
             <StaticParagraphStyle>
               {'Kontaktieren Sie uns unter dieser E-Mail Adresse : '}
-              <RedLinkHTMLElementStyle href="mailto:accessibility@make.org">
-                accessibility@make.org
+              <RedLinkHTMLElementStyle href={`mailto:${ACCESSIBILITY_EMAIL}`}>
+                {`${ACCESSIBILITY_EMAIL}`}
               </RedLinkHTMLElementStyle>
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>

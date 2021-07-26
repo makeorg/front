@@ -67,9 +67,8 @@ export const DataEN = () => (
           </StaticParagraphStyle>
           <StaticParagraphStyle>
             Make.org has filed a declaration with the CNIL under number{' '}
-            {CNIL_NUMBER}
-            and has chosen to name a DPO in order to guarantee the best level of
-            protection possible.
+            {CNIL_NUMBER} and has chosen to name a DPO in order to guarantee the
+            best level of protection possible.
           </StaticParagraphStyle>
           <StaticParagraphStyle>
             Make.org will only process personal data that is strictly necessary

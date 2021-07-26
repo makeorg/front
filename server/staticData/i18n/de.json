@@ -865,20 +865,14 @@
         "title": "Den vollständigen Bericht erhalten",
         "type": "Format: {{extension}} – Größe: {{weight}}",
         "button": "Herunterladen",
-        "deprecated_contact": "Wenn du den vollständigen Bericht der Konsultation erhalten möchtest, kontaktiere uns bitte unter: ",
         "contact": "Um den vollständigen Analysebericht dieser Konsultation zu erhalten, kontaktiere uns bitte unter: ",
-        "deprecated_email_object": "Anfrage – Bericht über die Konsultation",
         "email_object": "Analysebericht"
       },
       "top_ideas": {
         "skiplink": "Die besten neuen Ideen",
-        "deprecated_title": "Die besten neuen Ideen, zusammengefasst in {{count}} Thema",
         "title": "Die beliebtesten Ideen, zusammengefasst auf {{count}} Achse",
-        "deprecated_title_plural": "Die besten neuen Ideen, zusammengefasst in {{count}} Themen",
         "title_plural": "Die beliebtesten Ideen, zusammengefasst auf {{count}} Achsen",
-        "deprecated_introduction": "Die besten Vorschläge der Bürger:innen werden nach ihrer Veröffentlichung zu größeren Themenfeldern zusammengefasst, die die Konsultation strukturieren. Um diese Ideen einzuordnen, berücksichtigt der Make.org Algorithmus die abgegebenen Stimmen „Ich stimme zu“ und „Ich stimme nicht zu“ sowie die Kennzeichnungen als „Favorit“, „Unbedeutend“, „Auf keinen Fall!“ und „Machbar“.",
         "introduction": "Die besten Vorschläge der Bürger:innen werden nach ihrer Veröffentlichung zu größeren Themenfeldern zusammengefasst, die die Konsultation strukturieren. Um diese Ideen einzuordnen, berücksichtigt der Make.org Algorithmus die abgegebenen Stimmen „Ich stimme zu“ und „Ich stimme nicht zu“ sowie die Kennzeichnungen als „Favorit“, „Machbar“, „Unbedeutend“ und „Auf keinen Fall! “.",
-        "deprecated_theme_title": "Thema {{count}}: {{name}}",
         "axe_title": "Achse {{count}}: {{name}}"
       },
       "proposals": {
@@ -1071,8 +1065,6 @@
       "introduction": "Um eine Suche durchzuführen, muss dein Suchbegriff zwischen 3 und 140 Zeichen lang sein. Gib ihn in das Suchfeld ein und klicke auf die Schaltfläche „Suchen“",
       "introduction_searched": "Um das Suchfeld zu löschen, klicke auf die Schaltfläche „Suchfeld löschen“",
       "label": "Suchfeld",
-      "deprecated_placeholder": "Suche nach einer Idee, einem Thema, einer Thematik",
-      "deprecated_placeholder_mobile": "Suche nach ...",
       "placeholder": "Suchen",
       "submit": "Suchen",
       "flush": "Das Suchfeld löschen",

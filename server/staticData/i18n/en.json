@@ -681,9 +681,7 @@
         "title": "Download the full report",
         "type": "Format : {{extension}} - Weight : {{weight}}",
         "button": "Download",
-        "deprecated_contact": "If you want to receive the full report on this consultation, contact us at this address :",
         "contact": "To receive the full report on this consultation, please contact us at this address :",
-        "deprecated_email_object": "Ask for the results report.",
         "email_object": "Results report."
       },
       "top_ideas": {
@@ -691,10 +689,6 @@
         "title": "Top emerging ideas, grouped into {{count}} themes",
         "introduction": ", The best citizen solutions are grouped into big ideas that structure the consultation. To classify these ideas, the Make.org algorithm takes into account the votes 'Agree' and 'Disagree' as well as the mentions 'Genius', 'Obvious', 'Irrelevant !' and 'Nonsense'.",
         "title_plural": "Top ideas is merged in {{count}} topics",
-        "deprecated_title": "@@consultation.results.top_ideas.deprecated_title|fr:Le top des idées émergentes, regroupées en {{count}} thème",
-        "deprecated_title_plural": "@@consultation.results.top_ideas.deprecated_title_plural|fr:Le top des idées émergentes, regroupées en {{count}} thèmes",
-        "deprecated_introduction": "@@consultation.results.top_ideas.deprecated_introduction|fr:À leur arrivée sur la plateforme, les meilleures propositions citoyennes sont regroupées en grandes idées qui structurent la consultation. Pour classer ces idées, l’algorithme Make.org tient compte des votes « pour » et « contre » ainsi que des mentions « coup de cœur», « banalité », « surtout pas ! » et « réaliste ».",
-        "deprecated_theme_title": "@@consultation.results.top_ideas.deprecated_theme_title|fr:Thème {{count}} : {{name}}",
         "axe_title": "@@consultation.results.top_ideas.axe_title|fr:Axe {{count}} : {{name}}"
       },
       "proposals": {
@@ -998,8 +992,6 @@
       "placeholder": "Search",
       "submit": "Search",
       "flush": "Clear search field",
-      "deprecated_placeholder": "Search",
-      "deprecated_placeholder_mobile": "Search",
       "open_panel": "Display search field",
       "cancel": "Cancel"
     }

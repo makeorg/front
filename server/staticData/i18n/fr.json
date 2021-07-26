@@ -905,20 +905,14 @@
         "title": "Obtenez le rapport complet",
         "type": "Format : {{extension}} - Poids : {{weight}}",
         "button": "Télécharger",
-        "deprecated_contact": "Si vous souhaitez obtenir le rapport complet de la consultation, merci de nous contacter à l’adresse : ",
         "contact": "Pour obtenir le rapport d’analyses complet de cette consultation, merci de bien vouloir nous contacter à l’adresse : ",
-        "deprecated_email_object": "Demande de rapport pour la consultation",
         "email_object": "Rapport analyse"
       },
       "top_ideas": {
         "skiplink": "Le top des idées émergentes",
-        "deprecated_title": "Le top des idées émergentes, regroupées en {{count}} thème",
         "title": "Le top des idées plébiscitées, regroupées en {{count}} axe",
-        "deprecated_title_plural": "Le top des idées émergentes, regroupées en {{count}} thèmes",
         "title_plural": "Le top des idées plébiscitées, regroupées en {{count}} axes",
-        "deprecated_introduction": "À leur arrivée sur la plateforme, les meilleures propositions citoyennes sont regroupées en grandes idées qui structurent la consultation. Pour classer ces idées, l’algorithme Make.org tient compte des votes « pour » et « contre » ainsi que des mentions « coup de cœur», « banalité », « surtout pas ! » et « réaliste ».",
         "introduction": "À leur arrivée sur la plateforme, les meilleures propositions des citoyens sont regroupées en grandes idées qui structurent la consultation. Pour classer ces idées, l’algorithme Make.org tient compte des votes « pour » et « contre » ainsi que des mentions « coup de coeur », « réaliste », « banalité » et « surtout pas ! ».",
-        "deprecated_theme_title": "Thème {{count}} : {{name}}",
         "axe_title": "Axe {{count}} : {{name}}"
       },  
       "proposals": {
@@ -1111,8 +1105,6 @@
       "introduction": "Pour effectuer une recherche, votre requête doit être comprise entre 3 et 140 caratères. Saisissez la dans le champ de recherche puis cliquez sur le bouton \"Rechercher\"",
       "introduction_searched": "Pour vider le champ de recherche, cliquez sur le bouton \"Effacer le champ de recherche\"",
       "label": "Champ de recherche",
-      "deprecated_placeholder": "Recherchez une idée, un thème, un sujet",
-      "deprecated_placeholder_mobile": "Recherchez...",
       "placeholder": "Rechercher",
       "submit": "Rechercher",
       "flush": "Effacer le champ de recherche",
