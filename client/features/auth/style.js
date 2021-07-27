@@ -4,9 +4,11 @@ import { SvgLegalConsent, SvgExternalLinkPlain } from 'Client/ui/Svg/elements';
 import { SmallSeparatorStyle } from 'Client/ui/Elements/Separators';
 import { FormCenterAlignStyle } from 'Client/ui/Elements/Form/Styled/Content';
 import { ParagraphStyle } from 'Client/ui/Elements/ParagraphElements';
-import { UnstyledButtonStyle } from 'Client/ui/Elements/Buttons/style';
+import {
+  UnstyledButtonStyle,
+  RedButtonStyle,
+} from 'Client/ui/Elements/Buttons/style';
 import { color, typography } from 'athena-design-tokens';
-import { RedButtonStyle } from 'Client/ui/Elements/Buttons/V2/style';
 import { SpaceBetweenRowStyle } from 'Client/ui/Elements/FlexElements';
 import { intToPx } from 'Shared/helpers/styled';
 import { Breakpoints } from 'Client/app/assets/vars/Breakpoints';
@@ -18,6 +20,7 @@ export const AuthenticationWrapperStyle = styled.section`
   justify-content: center;
   align-items: center;
   width: 100%;
+  text-align: center;
   max-width: 470px;
   &.hidden {
     visibility: hidden;
@@ -48,7 +51,8 @@ export const LegalIconStyle = styled(SvgLegalConsent)`
 
 export const LegalParagraphStyle = styled(ParagraphStyle)`
   margin-top: 15px;
-  text-align: center;
+  text-align: center;import { SmallSeparatorStyle } from 'Client/ui/Elements/Separators';
+
 `;
 
 export const LegalSeparatorStyle = styled(SmallSeparatorStyle)`

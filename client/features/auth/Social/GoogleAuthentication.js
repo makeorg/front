@@ -1,5 +1,6 @@
 // @flow
 import React from 'react';
+import { i18n } from 'Shared/i18n';
 import { useSelector, useDispatch } from 'react-redux';
 import GoogleLogin from 'react-google-login';
 import { GOOGLE_PROVIDER_ENUM } from 'Shared/api/UserApiService';
@@ -23,7 +24,11 @@ import {
   NOTIFICATION_LEVEL_ALERT,
   UNEXPECTED_ERROR_MESSAGE,
 } from 'Shared/constants/notifications';
-import { GoogleButtonStyle } from './style';
+import {
+  GoogleButtonStyle,
+  SocialButtonLabelStyle,
+  SvgLogoWrapperStyle,
+} from './style';
 /**
  * Handles Google authentication
  */
@@ -88,7 +93,12 @@ export const GoogleAuthentication = () => {
       onFailure={handleGoogleLoginFailure}
       render={renderProps => (
         <GoogleButtonStyle onClick={renderProps.onClick} type="button">
-          <SvgGoogleLogoG aria-hidden focusable="false" />
+          <SvgLogoWrapperStyle>
+            <SvgGoogleLogoG aria-hidden focusable="false" />
+          </SvgLogoWrapperStyle>
+          <SocialButtonLabelStyle>
+            {i18n.t('common.social_register.google_register')}
+          </SocialButtonLabelStyle>
           <ScreenReaderItemStyle>Google</ScreenReaderItemStyle>
         </GoogleButtonStyle>
       )}

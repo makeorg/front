@@ -7,6 +7,7 @@ import { FACEBOOK_PROVIDER_ENUM } from 'Shared/api/UserApiService';
 import { SvgFacebookLogoF } from 'Client/ui/Svg/elements';
 import { ScreenReaderItemStyle } from 'Client/ui/Elements/AccessibilityElements';
 import { UserService } from 'Shared/services/User';
+import { i18n } from 'Shared/i18n';
 import {
   modalClose,
   modalShowDataPolicySocial,
@@ -23,7 +24,11 @@ import {
   NOTIFICATION_LEVEL_ALERT,
   UNEXPECTED_ERROR_MESSAGE,
 } from 'Shared/constants/notifications';
-import { FacebookButtonStyle } from './style';
+import {
+  FacebookButtonStyle,
+  SvgLogoFacebookWrapperStyle,
+  SocialButtonLabelStyle,
+} from './style';
 
 /**
  * Handles Facebook authentication
@@ -107,7 +112,12 @@ export const FacebookAuthentication = () => {
         disableMobileRedirect
         render={renderProps => (
           <FacebookButtonStyle onClick={renderProps.onClick} type="button">
-            <SvgFacebookLogoF aria-hidden focusable="false" />
+            <SvgLogoFacebookWrapperStyle>
+              <SvgFacebookLogoF aria-hidden focusable="false" />
+            </SvgLogoFacebookWrapperStyle>
+            <SocialButtonLabelStyle>
+              {i18n.t('common.social_register.facebook_register')}
+            </SocialButtonLabelStyle>
             <ScreenReaderItemStyle>Facebook</ScreenReaderItemStyle>
           </FacebookButtonStyle>
         )}
