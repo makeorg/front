@@ -1,0 +1,1609 @@
+{
+  "proposals": [
+      {
+          "id": "7efb1f72-dc9c-47a7-bc41-d2554592d869",
+          "userId": "a35b7734-3bea-4a83-b08f-2d9762e87417",
+          "content": "Il faut test test",
+          "slug": "il-faut-test-test",
+          "status": "Accepted",
+          "createdAt": "2020-06-03T12:40:59.469Z",
+          "updatedAt": "2021-07-13T13:44:14.323Z",
+          "votes": [
+              {
+                  "voteKey": "agree",
+                  "count": 10,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "likeIt",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doable",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeAgree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "disagree",
+                  "count": 4,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "noWay",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "impossible",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeDisagree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "neutral",
+                  "count": 8,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "doNotUnderstand",
+                          "count": 1,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "noOpinion",
+                          "count": 1,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doNotCare",
+                          "count": 1,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              }
+          ],
+          "context": {
+              "operation": null,
+              "source": "core",
+              "location": "page-operation 66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "question": null,
+              "country": "FR",
+              "language": "fr",
+              "getParameters": []
+          },
+          "trending": null,
+          "labels": [],
+          "author": {
+              "firstName": "Philippe",
+              "displayName": "Philippe",
+              "organisationName": "Philippe",
+              "organisationSlug": "philippe",
+              "postalCode": "75012",
+              "age": 31,
+              "avatarUrl": "https://assets.preprod.makeorg.tech/assets/avatars/2020/2/a35b7734-3bea-4a83-b08f-2d9762e87417/e1e6c119-56f5-4ae1-ba09-3989f3990613.jpeg",
+              "userType": "USER"
+          },
+          "organisations": [],
+          "tags": [],
+          "selectedStakeTag": null,
+          "myProposal": false,
+          "idea": null,
+          "question": {
+              "questionId": "66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "slug": "environnement",
+              "wording": {
+                  "title": "Agir ensemble pour l'environnement.",
+                  "question": "Comment agir ensemble dès maintenant pour l'environnement ?"
+              },
+              "countries": [
+                  "FR",
+                  "GB"
+              ],
+              "language": "fr",
+              "startDate": "2019-10-16T22:00:00.000Z",
+              "endDate": "2021-08-30T22:00:00.000Z"
+          },
+          "operationId": "8ae27769-c052-444d-825f-609599bd2044",
+          "proposalKey": "25bcc7323969356ff3c25c5925274c01f314d11fc33d0775a32fd645189b3687ae842afb492abc263a2f9d5e8d6121046a6ef42d115924bd7f8e1a9bdc10a94d",
+          "keywords": [
+              {
+                  "key": "test test",
+                  "label": "test test"
+              }
+          ]
+      },
+      {
+          "id": "0b550429-cfad-443b-8793-d6ba59e4773c",
+          "userId": "3dddb03e-b619-40d5-a3bf-f4d87374578f",
+          "content": "Il faut tester le segment-1 (8)",
+          "slug": "il-faut-tester-le-segment-1-8",
+          "status": "Accepted",
+          "createdAt": "2021-01-12T14:22:09.809Z",
+          "updatedAt": "2021-07-19T13:30:06.173Z",
+          "votes": [
+              {
+                  "voteKey": "agree",
+                  "count": 41,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "likeIt",
+                          "count": 10,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doable",
+                          "count": 8,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeAgree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "disagree",
+                  "count": 11,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "noWay",
+                          "count": 1,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "impossible",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeDisagree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "neutral",
+                  "count": 24,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "doNotUnderstand",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "noOpinion",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doNotCare",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              }
+          ],
+          "context": {
+              "operation": null,
+              "source": "core",
+              "location": "sequence 66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "question": null,
+              "country": "FR",
+              "language": "fr",
+              "getParameters": []
+          },
+          "trending": null,
+          "labels": [],
+          "author": {
+              "firstName": "fl+test-segment1-8",
+              "displayName": "fl+test-segment1-8",
+              "organisationName": null,
+              "organisationSlug": null,
+              "postalCode": null,
+              "age": 28,
+              "avatarUrl": null,
+              "userType": "USER"
+          },
+          "organisations": [
+              {
+                  "organisationId": "7853b545-f308-4498-adfc-ad680e7a94ca",
+                  "organisationName": "We got y'all",
+                  "organisationSlug": "we-got-y-all"
+              }
+          ],
+          "tags": [],
+          "selectedStakeTag": null,
+          "myProposal": false,
+          "idea": null,
+          "question": {
+              "questionId": "66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "slug": "environnement",
+              "wording": {
+                  "title": "Agir ensemble pour l'environnement.",
+                  "question": "Comment agir ensemble dès maintenant pour l'environnement ?"
+              },
+              "countries": [
+                  "FR",
+                  "GB"
+              ],
+              "language": "fr",
+              "startDate": "2019-10-16T22:00:00.000Z",
+              "endDate": "2021-08-30T22:00:00.000Z"
+          },
+          "operationId": "8ae27769-c052-444d-825f-609599bd2044",
+          "proposalKey": "c6f77069e16ff20bfbfd9773f9107a168177ecc3cb329a76364c961c7358ee310cee909a247dc7ac585c96915c15649bd1741067ca9b05181d866cf1306bbc42",
+          "keywords": [
+              {
+                  "key": "segment-1",
+                  "label": "segment-1"
+              },
+              {
+                  "key": "8)",
+                  "label": "8)"
+              }
+          ]
+      },
+      {
+          "id": "beea1df8-a6f8-4900-8b2f-4eecbfdbe67a",
+          "userId": "ba875fdf-5c01-4a93-bb16-757be58ff652",
+          "content": "Il faut Ne vous inquiétez pas, nous corrigerons vos éventuelles fautes d'orthographe.",
+          "slug": "il-faut-ne-vous-inquietez-pas-nous-corrigerons-vos-eventuelles-fautes-d-orthographe",
+          "status": "Accepted",
+          "createdAt": "2020-04-09T09:44:21.698Z",
+          "updatedAt": "2021-07-13T13:44:14.136Z",
+          "votes": [
+              {
+                  "voteKey": "agree",
+                  "count": 12,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "likeIt",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doable",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeAgree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "disagree",
+                  "count": 4,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "noWay",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "impossible",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeDisagree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "neutral",
+                  "count": 8,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "doNotUnderstand",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "noOpinion",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doNotCare",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              }
+          ],
+          "context": {
+              "operation": null,
+              "source": "core",
+              "location": "page-operation 66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "question": null,
+              "country": "FR",
+              "language": "fr",
+              "getParameters": []
+          },
+          "trending": null,
+          "labels": [],
+          "author": {
+              "firstName": "Julie",
+              "displayName": "Julie",
+              "organisationName": "Julie",
+              "organisationSlug": "julie",
+              "postalCode": null,
+              "age": 31,
+              "avatarUrl": "https://assets.preprod.makeorg.tech/assets/avatars/2020/2/ba875fdf-5c01-4a93-bb16-757be58ff652/d6b2ed06-1829-421f-a621-832a633e422c.jpeg",
+              "userType": "USER"
+          },
+          "organisations": [],
+          "tags": [
+              {
+                  "tagId": "587c42ed-8f3f-42fa-a984-59a0b0151184",
+                  "label": "Plage",
+                  "display": true
+              }
+          ],
+          "selectedStakeTag": {
+              "tagId": "587c42ed-8f3f-42fa-a984-59a0b0151184",
+              "label": "Plage",
+              "display": true
+          },
+          "myProposal": false,
+          "idea": "fb3bb66e-5dd3-44b5-815d-13464ea62307",
+          "question": {
+              "questionId": "66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "slug": "environnement",
+              "wording": {
+                  "title": "Agir ensemble pour l'environnement.",
+                  "question": "Comment agir ensemble dès maintenant pour l'environnement ?"
+              },
+              "countries": [
+                  "FR",
+                  "GB"
+              ],
+              "language": "fr",
+              "startDate": "2019-10-16T22:00:00.000Z",
+              "endDate": "2021-08-30T22:00:00.000Z"
+          },
+          "operationId": "8ae27769-c052-444d-825f-609599bd2044",
+          "proposalKey": "19834246d05bf7f64a30793d0bc592f487bc8a4e08aaf57616003384f164b1a6fb97b2f55aff1c5521b650c458f21f6787f50e228fdcaf71972fedf23e299187",
+          "keywords": [
+              {
+                  "key": "faute",
+                  "label": "fautes"
+              },
+              {
+                  "key": "orthographe",
+                  "label": "orthographe"
+              },
+              {
+                  "key": "éventuelle",
+                  "label": "éventuelles"
+              },
+              {
+                  "key": "éventuelle faute",
+                  "label": "éventuelles fautes"
+              }
+          ]
+      },
+      {
+          "id": "1efe7e22-c831-48b2-a6a3-a52274b1777f",
+          "userId": "a35b7734-3bea-4a83-b08f-2d9762e87417",
+          "content": "Il faut [test] test",
+          "slug": "il-faut-test-test",
+          "status": "Accepted",
+          "createdAt": "2020-06-03T10:24:49.285Z",
+          "updatedAt": "2021-07-13T13:44:14.289Z",
+          "votes": [
+              {
+                  "voteKey": "agree",
+                  "count": 17,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "likeIt",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doable",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeAgree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "disagree",
+                  "count": 7,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "noWay",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "impossible",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeDisagree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "neutral",
+                  "count": 11,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "doNotUnderstand",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "noOpinion",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doNotCare",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              }
+          ],
+          "context": {
+              "operation": null,
+              "source": "core",
+              "location": "page-operation 66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "question": null,
+              "country": "FR",
+              "language": "fr",
+              "getParameters": []
+          },
+          "trending": null,
+          "labels": [],
+          "author": {
+              "firstName": "Philippe",
+              "displayName": "Philippe",
+              "organisationName": "Philippe",
+              "organisationSlug": "philippe",
+              "postalCode": "75012",
+              "age": 31,
+              "avatarUrl": "https://assets.preprod.makeorg.tech/assets/avatars/2020/2/a35b7734-3bea-4a83-b08f-2d9762e87417/e1e6c119-56f5-4ae1-ba09-3989f3990613.jpeg",
+              "userType": "USER"
+          },
+          "organisations": [],
+          "tags": [],
+          "selectedStakeTag": null,
+          "myProposal": false,
+          "idea": null,
+          "question": {
+              "questionId": "66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "slug": "environnement",
+              "wording": {
+                  "title": "Agir ensemble pour l'environnement.",
+                  "question": "Comment agir ensemble dès maintenant pour l'environnement ?"
+              },
+              "countries": [
+                  "FR",
+                  "GB"
+              ],
+              "language": "fr",
+              "startDate": "2019-10-16T22:00:00.000Z",
+              "endDate": "2021-08-30T22:00:00.000Z"
+          },
+          "operationId": "8ae27769-c052-444d-825f-609599bd2044",
+          "proposalKey": "f144fc08d8864b740838dfded7f2342ae46decf29f2b77f5ea32167bc549ab59fd78de85b6fe1ca772eb64ec94817d092072b64e79069b8712bbd255dae1fa16",
+          "keywords": [
+              {
+                  "key": "test",
+                  "label": "test"
+              }
+          ]
+      },
+      {
+          "id": "d7b63fa3-e1e8-4582-b22f-8d4067874d3d",
+          "userId": "88457828-e2fd-46b2-8210-23894c22f1c0",
+          "content": "Il faut B2C test",
+          "slug": "il-faut-b2c-test",
+          "status": "Accepted",
+          "createdAt": "2019-12-13T14:48:12.298Z",
+          "updatedAt": "2021-08-05T14:03:33.635Z",
+          "votes": [
+              {
+                  "voteKey": "agree",
+                  "count": 31,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "likeIt",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doable",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeAgree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "disagree",
+                  "count": 16,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "noWay",
+                          "count": 1,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "impossible",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeDisagree",
+                          "count": 1,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "neutral",
+                  "count": 24,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "doNotUnderstand",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "noOpinion",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doNotCare",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              }
+          ],
+          "context": {
+              "operation": null,
+              "source": "core",
+              "location": "sequence 66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "question": null,
+              "country": "FR",
+              "language": "fr",
+              "getParameters": []
+          },
+          "trending": null,
+          "labels": [],
+          "author": {
+              "firstName": "DELETE_REQUESTED",
+              "displayName": null,
+              "organisationName": null,
+              "organisationSlug": null,
+              "postalCode": null,
+              "age": null,
+              "avatarUrl": null,
+              "userType": "ANONYMOUS"
+          },
+          "organisations": [
+              {
+                  "organisationId": "b49600de-dea6-44a9-8e15-c25bb825ce29",
+                  "organisationName": "Club Rando",
+                  "organisationSlug": "club-rando"
+              }
+          ],
+          "tags": [
+              {
+                  "tagId": "c5e55169-7431-4f75-a1d7-452935841763",
+                  "label": "nouveau tag 4",
+                  "display": true
+              }
+          ],
+          "selectedStakeTag": {
+              "tagId": "c5e55169-7431-4f75-a1d7-452935841763",
+              "label": "nouveau tag 4",
+              "display": true
+          },
+          "myProposal": false,
+          "idea": null,
+          "question": {
+              "questionId": "66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "slug": "environnement",
+              "wording": {
+                  "title": "Agir ensemble pour l'environnement.",
+                  "question": "Comment agir ensemble dès maintenant pour l'environnement ?"
+              },
+              "countries": [
+                  "FR",
+                  "GB"
+              ],
+              "language": "fr",
+              "startDate": "2019-10-16T22:00:00.000Z",
+              "endDate": "2021-08-30T22:00:00.000Z"
+          },
+          "operationId": "8ae27769-c052-444d-825f-609599bd2044",
+          "proposalKey": "e3f023c3b18635be44c8d8df2e6817a7f2eab0ed534490fb09a651ce2f25372b99f0fcf89348775d20039adef46c321419d368673b65d22fcb9fb4f4e2932cbe",
+          "keywords": [
+              {
+                  "key": "b2c test",
+                  "label": "b2c test"
+              },
+              {
+                  "key": "b2c",
+                  "label": "b2c"
+              }
+          ]
+      },
+      {
+          "id": "0e78b518-d3d2-43ec-a0d9-44c24fde08b9",
+          "userId": "ba875fdf-5c01-4a93-bb16-757be58ff652",
+          "content": "Il faut faire une proposition",
+          "slug": "il-faut-faire-une-proposition",
+          "status": "Accepted",
+          "createdAt": "2020-06-10T13:26:51.553Z",
+          "updatedAt": "2021-07-19T13:28:15.515Z",
+          "votes": [
+              {
+                  "voteKey": "agree",
+                  "count": 16,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "likeIt",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doable",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeAgree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "disagree",
+                  "count": 4,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "noWay",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "impossible",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeDisagree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "neutral",
+                  "count": 8,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "doNotUnderstand",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "noOpinion",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doNotCare",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              }
+          ],
+          "context": {
+              "operation": null,
+              "source": "core",
+              "location": "page-operation 66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "question": null,
+              "country": "FR",
+              "language": "fr",
+              "getParameters": []
+          },
+          "trending": null,
+          "labels": [],
+          "author": {
+              "firstName": "Julie",
+              "displayName": "Julie",
+              "organisationName": "Julie",
+              "organisationSlug": "julie",
+              "postalCode": null,
+              "age": 31,
+              "avatarUrl": "https://assets.preprod.makeorg.tech/assets/avatars/2020/2/ba875fdf-5c01-4a93-bb16-757be58ff652/d6b2ed06-1829-421f-a621-832a633e422c.jpeg",
+              "userType": "USER"
+          },
+          "organisations": [],
+          "tags": [],
+          "selectedStakeTag": null,
+          "myProposal": false,
+          "idea": null,
+          "question": {
+              "questionId": "66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "slug": "environnement",
+              "wording": {
+                  "title": "Agir ensemble pour l'environnement.",
+                  "question": "Comment agir ensemble dès maintenant pour l'environnement ?"
+              },
+              "countries": [
+                  "FR",
+                  "GB"
+              ],
+              "language": "fr",
+              "startDate": "2019-10-16T22:00:00.000Z",
+              "endDate": "2021-08-30T22:00:00.000Z"
+          },
+          "operationId": "8ae27769-c052-444d-825f-609599bd2044",
+          "proposalKey": "4b099e1bbc43cf1617a3f2c76ffebf198987f966ce9c6a89f8683968433bc57f5aa35936293f616bf62101353e20d9fb633cca20ec7b4ca0aab4cc0528524199",
+          "keywords": [
+              {
+                  "key": "proposition",
+                  "label": "proposition"
+              }
+          ]
+      },
+      {
+          "id": "584b52ba-035f-4d35-83d3-78a64e6a9134",
+          "userId": "aa4af9f8-7c96-4032-80ef-a7d04fa3c84f",
+          "content": "Il faut faire une proposition en tant que personnalité",
+          "slug": "il-faut-faire-une-proposition-en-tant-que-personnalite",
+          "status": "Accepted",
+          "createdAt": "2020-04-08T09:54:19.902Z",
+          "updatedAt": "2021-07-13T13:44:14.114Z",
+          "votes": [
+              {
+                  "voteKey": "agree",
+                  "count": 18,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "likeIt",
+                          "count": 1,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doable",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeAgree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "disagree",
+                  "count": 11,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "noWay",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "impossible",
+                          "count": 1,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeDisagree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "neutral",
+                  "count": 12,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "doNotUnderstand",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "noOpinion",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doNotCare",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              }
+          ],
+          "context": {
+              "operation": null,
+              "source": "core",
+              "location": "page-operation 66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "question": null,
+              "country": "FR",
+              "language": "fr",
+              "getParameters": []
+          },
+          "trending": null,
+          "labels": [],
+          "author": {
+              "firstName": "Julie",
+              "displayName": "Julie De Rouard",
+              "organisationName": "Julie De Rouard",
+              "organisationSlug": "julie-de-rouard",
+              "postalCode": null,
+              "age": null,
+              "avatarUrl": null,
+              "userType": "PERSONALITY"
+          },
+          "organisations": [
+              {
+                  "organisationId": "7853b545-f308-4498-adfc-ad680e7a94ca",
+                  "organisationName": "We got y'all",
+                  "organisationSlug": "we-got-y-all"
+              }
+          ],
+          "tags": [
+              {
+                  "tagId": "48c1bce0-c8c1-49b3-b3da-8fd18e411c0a",
+                  "label": "éducation",
+                  "display": false
+              }
+          ],
+          "selectedStakeTag": null,
+          "myProposal": false,
+          "idea": "73252721-fc16-4ceb-90b8-03347e39bbe9",
+          "question": {
+              "questionId": "66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "slug": "environnement",
+              "wording": {
+                  "title": "Agir ensemble pour l'environnement.",
+                  "question": "Comment agir ensemble dès maintenant pour l'environnement ?"
+              },
+              "countries": [
+                  "FR",
+                  "GB"
+              ],
+              "language": "fr",
+              "startDate": "2019-10-16T22:00:00.000Z",
+              "endDate": "2021-08-30T22:00:00.000Z"
+          },
+          "operationId": "8ae27769-c052-444d-825f-609599bd2044",
+          "proposalKey": "3b8c62e8113cad676703f6daa4e9134a850e40b584817cbb70258dcab08fd72b474e4aa09208c3db841b4de7dd5cb64cf9ef3dc1df56e3859fcfd0afd240455f",
+          "keywords": [
+              {
+                  "key": "personnalité",
+                  "label": "personnalité"
+              },
+              {
+                  "key": "proposition",
+                  "label": "proposition"
+              }
+          ]
+      },
+      {
+          "id": "9ce659b0-5be5-483a-a44c-c32158002152",
+          "userId": "a35b7734-3bea-4a83-b08f-2d9762e87417",
+          "content": "Il faut test test",
+          "slug": "il-faut-test-test",
+          "status": "Accepted",
+          "createdAt": "2020-06-03T12:44:25.462Z",
+          "updatedAt": "2021-07-13T13:44:14.344Z",
+          "votes": [
+              {
+                  "voteKey": "agree",
+                  "count": 10,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "likeIt",
+                          "count": 2,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doable",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeAgree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "disagree",
+                  "count": 3,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "noWay",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "impossible",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeDisagree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "neutral",
+                  "count": 6,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "doNotUnderstand",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "noOpinion",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doNotCare",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              }
+          ],
+          "context": {
+              "operation": null,
+              "source": "core",
+              "location": "page-operation 66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "question": null,
+              "country": "FR",
+              "language": "fr",
+              "getParameters": []
+          },
+          "trending": null,
+          "labels": [],
+          "author": {
+              "firstName": "Philippe",
+              "displayName": "Philippe",
+              "organisationName": "Philippe",
+              "organisationSlug": "philippe",
+              "postalCode": "75012",
+              "age": 31,
+              "avatarUrl": "https://assets.preprod.makeorg.tech/assets/avatars/2020/2/a35b7734-3bea-4a83-b08f-2d9762e87417/e1e6c119-56f5-4ae1-ba09-3989f3990613.jpeg",
+              "userType": "USER"
+          },
+          "organisations": [],
+          "tags": [],
+          "selectedStakeTag": null,
+          "myProposal": false,
+          "idea": null,
+          "question": {
+              "questionId": "66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "slug": "environnement",
+              "wording": {
+                  "title": "Agir ensemble pour l'environnement.",
+                  "question": "Comment agir ensemble dès maintenant pour l'environnement ?"
+              },
+              "countries": [
+                  "FR",
+                  "GB"
+              ],
+              "language": "fr",
+              "startDate": "2019-10-16T22:00:00.000Z",
+              "endDate": "2021-08-30T22:00:00.000Z"
+          },
+          "operationId": "8ae27769-c052-444d-825f-609599bd2044",
+          "proposalKey": "c561532618643ed566b3c75833061c79b0fd5fa174212c599df23786fe658504d7067cd6f33b53dd069436dbe9951c00566e5d30faefd4c1bb9df906ce6a50db",
+          "keywords": [
+              {
+                  "key": "test test",
+                  "label": "test test"
+              }
+          ]
+      },
+      {
+          "id": "3db4d5bd-a1c2-4ba2-bb70-48ee8bd1fc04",
+          "userId": "a35b7734-3bea-4a83-b08f-2d9762e87417",
+          "content": "Il faut [test] test",
+          "slug": "il-faut-test-test",
+          "status": "Accepted",
+          "createdAt": "2020-06-03T10:31:27.179Z",
+          "updatedAt": "2021-07-13T13:44:14.301Z",
+          "votes": [
+              {
+                  "voteKey": "agree",
+                  "count": 12,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "likeIt",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doable",
+                          "count": 1,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeAgree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "disagree",
+                  "count": 5,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "noWay",
+                          "count": 1,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "impossible",
+                          "count": 1,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeDisagree",
+                          "count": 1,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "neutral",
+                  "count": 7,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "doNotUnderstand",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "noOpinion",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doNotCare",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              }
+          ],
+          "context": {
+              "operation": null,
+              "source": "core",
+              "location": "page-operation 66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "question": null,
+              "country": "FR",
+              "language": "fr",
+              "getParameters": []
+          },
+          "trending": null,
+          "labels": [],
+          "author": {
+              "firstName": "Philippe",
+              "displayName": "Philippe",
+              "organisationName": "Philippe",
+              "organisationSlug": "philippe",
+              "postalCode": "75012",
+              "age": 31,
+              "avatarUrl": "https://assets.preprod.makeorg.tech/assets/avatars/2020/2/a35b7734-3bea-4a83-b08f-2d9762e87417/e1e6c119-56f5-4ae1-ba09-3989f3990613.jpeg",
+              "userType": "USER"
+          },
+          "organisations": [],
+          "tags": [],
+          "selectedStakeTag": null,
+          "myProposal": false,
+          "idea": null,
+          "question": {
+              "questionId": "66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "slug": "environnement",
+              "wording": {
+                  "title": "Agir ensemble pour l'environnement.",
+                  "question": "Comment agir ensemble dès maintenant pour l'environnement ?"
+              },
+              "countries": [
+                  "FR",
+                  "GB"
+              ],
+              "language": "fr",
+              "startDate": "2019-10-16T22:00:00.000Z",
+              "endDate": "2021-08-30T22:00:00.000Z"
+          },
+          "operationId": "8ae27769-c052-444d-825f-609599bd2044",
+          "proposalKey": "3f9ed9c00f9a1a715f9e1f69338ad1a97fe7bd7cbe14a0883223fdfccb4471a3050e49574002121f770f5c94f48c74715699c55a9cb240683c21434e7e89da88",
+          "keywords": [
+              {
+                  "key": "test",
+                  "label": "test"
+              }
+          ]
+      },
+      {
+          "id": "cecb9947-5051-4b93-b044-94835f67de6b",
+          "userId": "88457828-e2fd-46b2-8210-23894c22f1c0",
+          "content": "Il faut Prenez position sur ces solutions & proposez les vôtres. Les meilleures détermineront nos actions.",
+          "slug": "il-faut-prenez-position-sur-ces-solutions-proposez-les-votres-les-meilleures-determineront-nos-actions",
+          "status": "Accepted",
+          "createdAt": "2019-12-13T14:36:08.839Z",
+          "updatedAt": "2021-08-05T14:03:33.633Z",
+          "votes": [
+              {
+                  "voteKey": "agree",
+                  "count": 28,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "likeIt",
+                          "count": 1,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doable",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeAgree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "disagree",
+                  "count": 9,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "noWay",
+                          "count": 1,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "impossible",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeDisagree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "neutral",
+                  "count": 18,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "doNotUnderstand",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "noOpinion",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doNotCare",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              }
+          ],
+          "context": {
+              "operation": null,
+              "source": "core",
+              "location": "sequence 66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "question": null,
+              "country": "FR",
+              "language": "fr",
+              "getParameters": []
+          },
+          "trending": null,
+          "labels": [],
+          "author": {
+              "firstName": "DELETE_REQUESTED",
+              "displayName": null,
+              "organisationName": null,
+              "organisationSlug": null,
+              "postalCode": null,
+              "age": null,
+              "avatarUrl": null,
+              "userType": "ANONYMOUS"
+          },
+          "organisations": [],
+          "tags": [],
+          "selectedStakeTag": null,
+          "myProposal": false,
+          "idea": null,
+          "question": {
+              "questionId": "66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "slug": "environnement",
+              "wording": {
+                  "title": "Agir ensemble pour l'environnement.",
+                  "question": "Comment agir ensemble dès maintenant pour l'environnement ?"
+              },
+              "countries": [
+                  "FR",
+                  "GB"
+              ],
+              "language": "fr",
+              "startDate": "2019-10-16T22:00:00.000Z",
+              "endDate": "2021-08-30T22:00:00.000Z"
+          },
+          "operationId": "8ae27769-c052-444d-825f-609599bd2044",
+          "proposalKey": "4e3b89ecb5f3adb4637d98ce41ce424aaadfec848c4398c7a7e374cf4190991365a4927d8c00a0cda2bacbc90da085cfa345e100714f9e39523f4628b1b51f22",
+          "keywords": [
+              {
+                  "key": "vôtre",
+                  "label": "vôtres"
+              },
+              {
+                  "key": "position",
+                  "label": "position"
+              },
+              {
+                  "key": "solution",
+                  "label": "solutions"
+              },
+              {
+                  "key": "meilleure",
+                  "label": "meilleures"
+              },
+              {
+                  "key": "action",
+                  "label": "actions"
+              }
+          ]
+      },
+      {
+          "id": "864a31fe-1f3d-4c99-8959-e2fdcdced9af",
+          "userId": "8ac65df7-8c3c-4ae4-b345-bd3b36a61a21",
+          "content": "Il faut tester tout ça",
+          "slug": "il-faut-tester-tout-ca",
+          "status": "Accepted",
+          "createdAt": "2020-07-20T15:07:31.549Z",
+          "updatedAt": "2021-07-13T13:44:14.703Z",
+          "votes": [
+              {
+                  "voteKey": "agree",
+                  "count": 7,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "likeIt",
+                          "count": 1,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doable",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeAgree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "disagree",
+                  "count": 2,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "noWay",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "impossible",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeDisagree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "neutral",
+                  "count": 6,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "doNotUnderstand",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "noOpinion",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doNotCare",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              }
+          ],
+          "context": {
+              "operation": null,
+              "source": "core",
+              "location": "page-operation 66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "question": null,
+              "country": "FR",
+              "language": "fr",
+              "getParameters": []
+          },
+          "trending": null,
+          "labels": [],
+          "author": {
+              "firstName": "François",
+              "displayName": "François",
+              "organisationName": null,
+              "organisationSlug": null,
+              "postalCode": null,
+              "age": 26,
+              "avatarUrl": "https://assets.preprod.makeorg.tech/assets/avatars/2020/1/8ac65df7-8c3c-4ae4-b345-bd3b36a61a21/3846117a-b8ce-4657-a5cf-059327fb6be2..png",
+              "userType": "USER"
+          },
+          "organisations": [],
+          "tags": [],
+          "selectedStakeTag": null,
+          "myProposal": false,
+          "idea": null,
+          "question": {
+              "questionId": "66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "slug": "environnement",
+              "wording": {
+                  "title": "Agir ensemble pour l'environnement.",
+                  "question": "Comment agir ensemble dès maintenant pour l'environnement ?"
+              },
+              "countries": [
+                  "FR",
+                  "GB"
+              ],
+              "language": "fr",
+              "startDate": "2019-10-16T22:00:00.000Z",
+              "endDate": "2021-08-30T22:00:00.000Z"
+          },
+          "operationId": "8ae27769-c052-444d-825f-609599bd2044",
+          "proposalKey": "dd55edef0ce61a2d53d203b4a22297c28719fc0bd97ce7a3d8c7e74fc307dbe7dd5b02d90e6460adbafa1ad3ab289923c6419526a10ccd9a10dfd0a06bf2e282",
+          "keywords": [
+              {
+                  "key": "",
+                  "label": ""
+              }
+          ]
+      },
+      {
+          "id": "fe8373dd-5616-4ee7-8765-4d132e7e6bd1",
+          "userId": "ba875fdf-5c01-4a93-bb16-757be58ff652",
+          "content": "Il faut comment agir ensemble dès maintenant pour l'environnement ?",
+          "slug": "il-faut-comment-agir-ensemble-des-maintenant-pour-l-environnement",
+          "status": "Accepted",
+          "createdAt": "2020-07-21T08:24:51.365Z",
+          "updatedAt": "2021-07-13T13:44:14.714Z",
+          "votes": [
+              {
+                  "voteKey": "agree",
+                  "count": 8,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "likeIt",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doable",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeAgree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "disagree",
+                  "count": 8,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "noWay",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "impossible",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "platitudeDisagree",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              },
+              {
+                  "voteKey": "neutral",
+                  "count": 6,
+                  "qualifications": [
+                      {
+                          "qualificationKey": "doNotUnderstand",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "noOpinion",
+                          "count": 0,
+                          "hasQualified": false
+                      },
+                      {
+                          "qualificationKey": "doNotCare",
+                          "count": 0,
+                          "hasQualified": false
+                      }
+                  ],
+                  "hasVoted": false
+              }
+          ],
+          "context": {
+              "operation": null,
+              "source": "core",
+              "location": "page-operation 66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "question": null,
+              "country": "FR",
+              "language": "fr",
+              "getParameters": [
+                  {
+                      "key": "secureExpired",
+                      "value": "true"
+                  }
+              ]
+          },
+          "trending": null,
+          "labels": [],
+          "author": {
+              "firstName": "Julie",
+              "displayName": "Julie",
+              "organisationName": "Julie",
+              "organisationSlug": "julie",
+              "postalCode": null,
+              "age": 31,
+              "avatarUrl": "https://assets.preprod.makeorg.tech/assets/avatars/2020/2/ba875fdf-5c01-4a93-bb16-757be58ff652/d6b2ed06-1829-421f-a621-832a633e422c.jpeg",
+              "userType": "USER"
+          },
+          "organisations": [],
+          "tags": [],
+          "selectedStakeTag": null,
+          "myProposal": false,
+          "idea": null,
+          "question": {
+              "questionId": "66a9230b-08cb-4f37-8ed8-aa95a8eac19a",
+              "slug": "environnement",
+              "wording": {
+                  "title": "Agir ensemble pour l'environnement.",
+                  "question": "Comment agir ensemble dès maintenant pour l'environnement ?"
+              },
+              "countries": [
+                  "FR",
+                  "GB"
+              ],
+              "language": "fr",
+              "startDate": "2019-10-16T22:00:00.000Z",
+              "endDate": "2021-08-30T22:00:00.000Z"
+          },
+          "operationId": "8ae27769-c052-444d-825f-609599bd2044",
+          "proposalKey": "eb44056c5cf6bd6991fbaddc3cf011718cf3b970952438bbde16609f418a732f3090e04f67e575287afaafdda30caa93e7e88c048660055244cd86f626b2e7c8",
+          "keywords": [
+              {
+                  "key": "environnement",
+                  "label": "environnement"
+              },
+              {
+                  "key": "ensemble",
+                  "label": "ensemble"
+              }
+          ]
+      }
+  ]
+}

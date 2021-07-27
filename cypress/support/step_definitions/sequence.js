@@ -37,6 +37,18 @@ Given('I am/go on/to the sequence popular page of the question {string}', questi
   cy.wait('@getPopularStartSequence', {timeout: 8000});
 });
 
+/**
+ * @todo : need to refactor when moving from api mock to intercept
+ */
+ const sequenceControversyPage = '/FR/consultation/:questionSlug/selection-controversial';
+
+Given('I am/go on/to the sequence controversy page of the question {string}', questionSlug => {
+  const page = sequenceControversyPage.replace(':questionSlug', questionSlug);
+  cy.intercept('GET', 'http://localhost:9000/sequences/controversy/question-0-id', {fixture: 'sequenceControversy.json'}).as('getControversyStartSequence');
+  cy.visit(page);
+  cy.wait('@getControversyStartSequence', {timeout: 8000});
+});
+
 When('I click on {string} of the sequence', (buttonName) => {
   const button = getIdentifierButtonByName(buttonName);
   cy.get(`[data-cy-button=${button}]`)
