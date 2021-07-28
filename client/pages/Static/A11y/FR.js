@@ -39,6 +39,7 @@ import { env } from 'Shared/env';
 import { summary } from 'Shared/constants/accessibilitySummary';
 import { useSelector } from 'react-redux';
 import { type StateRoot } from 'Shared/store/types';
+import { ACCESSIBILITY_EMAIL } from 'Shared/constants/config';
 import {
   StaticPageWrapperStyle,
   StaticSecondLevelTitleStyle,
@@ -487,8 +488,8 @@ export const A11yFR = () => {
             </StaticParagraphStyle>
             <StaticParagraphStyle>
               {'Contactez-nous à cette adresse email : '}
-              <RedLinkHTMLElementStyle href="mailto:accessibility@make.org">
-                accessibility@make.org
+              <RedLinkHTMLElementStyle href={`mailto:${ACCESSIBILITY_EMAIL}`}>
+                {`${ACCESSIBILITY_EMAIL}`}
               </RedLinkHTMLElementStyle>
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>

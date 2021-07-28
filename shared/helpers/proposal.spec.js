@@ -29,9 +29,8 @@ describe('Proposal Helper', () => {
   describe('getProposalLength function', () => {
     const validProposalContent = 'foobar';
     it('getProposalLength with content', () => {
-      const proposalLength = ProposalHelper.getProposalLength(
-        validProposalContent
-      );
+      const proposalLength =
+        ProposalHelper.getProposalLength(validProposalContent);
       expect(proposalLength).toBe(13);
     });
 
@@ -86,9 +85,8 @@ describe('Proposal Helper', () => {
       };
       const proposals = [fooProposal, barProposal, bazProposal];
 
-      const firstUnvotedProposal = ProposalHelper.searchFirstUnvotedProposal(
-        proposals
-      );
+      const firstUnvotedProposal =
+        ProposalHelper.searchFirstUnvotedProposal(proposals);
       expect(firstUnvotedProposal.id).toBe('bar');
     });
   });

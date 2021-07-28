@@ -865,20 +865,14 @@
         "title": "Den vollständigen Bericht erhalten",
         "type": "Format: {{extension}} – Größe: {{weight}}",
         "button": "Herunterladen",
-        "deprecated_contact": "Wenn du den vollständigen Bericht der Konsultation erhalten möchtest, kontaktiere uns bitte unter: ",
         "contact": "Um den vollständigen Analysebericht dieser Konsultation zu erhalten, kontaktiere uns bitte unter: ",
-        "deprecated_email_object": "Anfrage – Bericht über die Konsultation",
         "email_object": "Analysebericht"
       },
       "top_ideas": {
         "skiplink": "Die besten neuen Ideen",
-        "deprecated_title": "Die besten neuen Ideen, zusammengefasst in {{count}} Thema",
         "title": "Die beliebtesten Ideen, zusammengefasst auf {{count}} Achse",
-        "deprecated_title_plural": "Die besten neuen Ideen, zusammengefasst in {{count}} Themen",
         "title_plural": "Die beliebtesten Ideen, zusammengefasst auf {{count}} Achsen",
-        "deprecated_introduction": "Die besten Vorschläge der Bürger:innen werden nach ihrer Veröffentlichung zu größeren Themenfeldern zusammengefasst, die die Konsultation strukturieren. Um diese Ideen einzuordnen, berücksichtigt der Make.org Algorithmus die abgegebenen Stimmen „Ich stimme zu“ und „Ich stimme nicht zu“ sowie die Kennzeichnungen als „Favorit“, „Unbedeutend“, „Auf keinen Fall!“ und „Machbar“.",
         "introduction": "Die besten Vorschläge der Bürger:innen werden nach ihrer Veröffentlichung zu größeren Themenfeldern zusammengefasst, die die Konsultation strukturieren. Um diese Ideen einzuordnen, berücksichtigt der Make.org Algorithmus die abgegebenen Stimmen „Ich stimme zu“ und „Ich stimme nicht zu“ sowie die Kennzeichnungen als „Favorit“, „Machbar“, „Unbedeutend“ und „Auf keinen Fall! “.",
-        "deprecated_theme_title": "Thema {{count}}: {{name}}",
         "axe_title": "Achse {{count}}: {{name}}"
       },
       "proposals": {
@@ -1071,8 +1065,6 @@
       "introduction": "Um eine Suche durchzuführen, muss dein Suchbegriff zwischen 3 und 140 Zeichen lang sein. Gib ihn in das Suchfeld ein und klicke auf die Schaltfläche „Suchen“",
       "introduction_searched": "Um das Suchfeld zu löschen, klicke auf die Schaltfläche „Suchfeld löschen“",
       "label": "Suchfeld",
-      "deprecated_placeholder": "Suche nach einer Idee, einem Thema, einer Thematik",
-      "deprecated_placeholder_mobile": "Suche nach ...",
       "placeholder": "Suchen",
       "submit": "Suchen",
       "flush": "Das Suchfeld löschen",
@@ -1095,17 +1087,17 @@
   },
   "legal": {
     "title": "Impressum",
-    "make_infos": "Herausgeber der Website: MAKE.ORG, Rechtsform: SAS (kleine Aktiengesellschaft) mit einem Grundkapital von 1.056.017,00 €, mit Hauptsitz in der 13-15 Rue de la Bûcherie 75005 Paris, Frankreich. Eingetragen im RCS de PARIS (Handels- und Firmenregister) unter der Nummer 820 016 095 (nachfolgend „MAKE.ORG“ genannt).",
+    "make_infos": "Herausgeber der Website: MAKE.ORG, Rechtsform: SAS (kleine Aktiengesellschaft) mit einem Grundkapital von {{make_capital}}, mit Hauptsitz in der {{make_address}}, Frankreich. Eingetragen im RCS de PARIS (Handels- und Firmenregister) unter der Nummer {{make_rcs}} (nachfolgend „MAKE.ORG“ genannt).",
     "mail": "E-Mail-Adresse: ",
     "make_phone": "Telefonnummer: ",
-    "make_phone_number": "+33(0)1 84 25 15 74 ",
+    "make_phone_number": "{{make_phone_number}}",
     "director": "Verantwortlich für den Inhalt: ",
     "host": "Seitenbetreiber: ",
-    "host_address": "OVH, 2 rue Kellermann, 59100 Roubaix, Frankreich",
+    "host_address": "{{make_host_address}}, Frankreich",
     "host_phone": "Telefonnummer: ",
-    "host_phone_number": "+33(0)8 99 70 17 61",
+    "host_phone_number": "{{host_number}}",
     "cnil": "Meldenummer bei der französischen Datenschutzbehörde CNIL: ",
-    "cnil_number": "2005312"
+    "cnil_number": "{{cnil_number}}"
   },
   "cookies_management": {
     "title": "Cookie-Verwaltung",

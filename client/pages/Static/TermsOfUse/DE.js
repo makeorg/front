@@ -5,7 +5,13 @@ import { type StateRoot } from 'Shared/store/types';
 import { RedLinkHTMLElementStyle } from 'Client/ui/Elements/LinkElements';
 import { getDataPageLink } from 'Shared/helpers/url';
 import { MetaTags } from 'Client/app/MetaTags';
-import { CONTACT_EMAIL_DE, GTU_DATE } from 'Shared/constants/config';
+import {
+  CONTACT_EMAIL_DE,
+  GTU_DATE,
+  MAKE_ADDRESS,
+  MAKE_CAPITAL,
+  MAKE_RCS,
+} from 'Shared/constants/config';
 import { DateHelper } from 'Shared/helpers/date';
 import {
   DATE_CAPITALIZE_LL_FORMAT,
@@ -91,11 +97,10 @@ export const TermsOfUseDE = () => {
             </StaticThirdLevelTitleStyle>
             <StaticParagraphStyle>
               Die Website und die Dienste (oder zusammen &rdquo;die
-              Dienste&rdquo;) werden von Make.org, SAS mit einem Kapital von
-              1000 Euro, mit Sitz in 4 rue René Villermé, 75011, PARIS,
-              eingetragen im Handels- und Gesellschaftsregister von PARIS unter
-              der Nummer 820 016 095 (im Folgenden &rdquo;Make.org&rdquo;)
-              betrieben.
+              Dienste&rdquo;) werden von Make.org, SAS mit einem Kapital von{' '}
+              {MAKE_CAPITAL}, mit Sitz in {MAKE_ADDRESS} Frankreich, eingetragen
+              im Handels- und Gesellschaftsregister von PARIS unter der Nummer{' '}
+              {MAKE_RCS} (im Folgenden &rdquo;Make.org&rdquo;) betrieben.
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>

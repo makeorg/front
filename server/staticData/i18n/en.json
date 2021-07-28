@@ -681,9 +681,7 @@
         "title": "Download the full report",
         "type": "Format : {{extension}} - Weight : {{weight}}",
         "button": "Download",
-        "deprecated_contact": "If you want to receive the full report on this consultation, contact us at this address :",
         "contact": "To receive the full report on this consultation, please contact us at this address :",
-        "deprecated_email_object": "Ask for the results report.",
         "email_object": "Results report."
       },
       "top_ideas": {
@@ -691,10 +689,6 @@
         "title": "Top emerging ideas, grouped into {{count}} themes",
         "introduction": ", The best citizen solutions are grouped into big ideas that structure the consultation. To classify these ideas, the Make.org algorithm takes into account the votes 'Agree' and 'Disagree' as well as the mentions 'Genius', 'Obvious', 'Irrelevant !' and 'Nonsense'.",
         "title_plural": "Top ideas is merged in {{count}} topics",
-        "deprecated_title": "@@consultation.results.top_ideas.deprecated_title|fr:Le top des idées émergentes, regroupées en {{count}} thème",
-        "deprecated_title_plural": "@@consultation.results.top_ideas.deprecated_title_plural|fr:Le top des idées émergentes, regroupées en {{count}} thèmes",
-        "deprecated_introduction": "@@consultation.results.top_ideas.deprecated_introduction|fr:À leur arrivée sur la plateforme, les meilleures propositions citoyennes sont regroupées en grandes idées qui structurent la consultation. Pour classer ces idées, l’algorithme Make.org tient compte des votes « pour » et « contre » ainsi que des mentions « coup de cœur», « banalité », « surtout pas ! » et « réaliste ».",
-        "deprecated_theme_title": "@@consultation.results.top_ideas.deprecated_theme_title|fr:Thème {{count}} : {{name}}",
         "axe_title": "@@consultation.results.top_ideas.axe_title|fr:Axe {{count}} : {{name}}"
       },
       "proposals": {
@@ -998,8 +992,6 @@
       "placeholder": "Search",
       "submit": "Search",
       "flush": "Clear search field",
-      "deprecated_placeholder": "Search",
-      "deprecated_placeholder_mobile": "Search",
       "open_panel": "Display search field",
       "cancel": "Cancel"
     }
@@ -1019,17 +1011,17 @@
   },
   "legal": {
     "title": "Legal mentions",
-    "make_infos": "Website's publisher: MAKE.ORG, Société par Actions Simplifiées with a capital of 1.056.017,00 €, having its headquarters at 13-15 Rue de la Bûcherie 75005 Paris FRANCE, registered with the RCS of PARIS under the number 820 016 095 (here after 'MAKE.ORG').",
+    "make_infos": "Website's publisher: MAKE.ORG, Société par Actions Simplifiées with a capital of {{make_capital}}, having its headquarters at {{make_address}} FRANCE, registered with the RCS of PARIS under the number {{make_rcs}} (here after 'MAKE.ORG').",
     "mail": "Email: ",
     "make_phone": "Phone number: ",
-    "make_phone_number": "(+33) 1 84 25 15 74",
+    "make_phone_number": "{{make_phone_number}}",
     "director": "Head of publishing: ",
     "host": "Webite host: ",
-    "host_address": "OVH, 2 rue Kellermann, 59100, ROUBAIX FRANCE",
+    "host_address": "{{make_host_address}} FRANCE",
     "host_phone": "Phone number: ",
-    "host_phone_number": "08 99 70 17 61",
+    "host_phone_number": "{{host_number}}",
     "cnil": "CNIL declaration number: ",
-    "cnil_number": "2005312"
+    "cnil_number": "{{cnil_number}}"
   },
   "cookies_management": {
     "title": "Use of cookies",

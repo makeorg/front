@@ -40,6 +40,16 @@ import { DateHelper } from 'Shared/helpers/date';
 import { useParams } from 'react-router';
 import { CookieSwitch } from 'Client/app/CookieModal/CookieSwitch';
 import {
+  GOOGLE_LINK_FR,
+  GOOGLE_LINK_EN,
+  FACEBOOK_LINK_FR,
+  FACEBOOK_LINK_EN,
+  TWITTER_LINK_FR,
+  TWITTER_LINK_EN,
+  LINKEDIN_LINK_FR,
+  LINKEDIN_LINK_EN,
+} from 'Shared/constants/config';
+import {
   StaticExternalLinkIconStyle,
   StaticPageWrapperStyle,
   StaticParagraphStyle,
@@ -62,18 +72,10 @@ export const Cookies = () => {
     'DD MMMM YYYY'
   );
   const isFR = country === 'FR';
-  const googleLink = isFR
-    ? 'https://policies.google.com/privacy?hl=fr&gl=fr'
-    : 'https://policies.google.com/privacy?hl=en&gl=en';
-  const facebookLink = isFR
-    ? 'https://fr-fr.facebook.com/policy.php'
-    : 'https://en-gb.facebook.com/policy.php';
-  const twitterLink = isFR
-    ? 'https://twitter.com/fr/privacy'
-    : 'https://twitter.com/en/privacy';
-  const linkedInLink = isFR
-    ? 'https://fr.linkedin.com/legal/privacy-policy'
-    : 'https://linkedin.com/legal/privacy-policy';
+  const googleLink = isFR ? GOOGLE_LINK_FR : GOOGLE_LINK_EN;
+  const facebookLink = isFR ? FACEBOOK_LINK_FR : FACEBOOK_LINK_EN;
+  const twitterLink = isFR ? TWITTER_LINK_FR : TWITTER_LINK_EN;
+  const linkedInLink = isFR ? LINKEDIN_LINK_FR : LINKEDIN_LINK_EN;
 
   const handlePreferences = () => {
     trackClickModalCookieSave('cookies-accept-preferences');
