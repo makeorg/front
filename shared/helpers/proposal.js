@@ -49,29 +49,35 @@ export const searchFirstUnvotedProposal = (proposals: ProposalType[]) =>
 
 export const searchProposals = async (
   country: string,
-  content?: string,
-  page: number = 0,
-  limit?: number = PROPOSALS_LISTING_LIMIT,
-  seed: ?number = null,
   questionId?: string,
+  content?: string,
   tagsIds?: string,
+  seed: ?number = null,
+  limit?: number = PROPOSALS_LISTING_LIMIT,
+  page: number = 0,
   sortTypeKey?: string,
-  ideaIds?: string
+  orderTypeKey?: string,
+  ideaIds?: string,
+  sortAndFilterParams?: object
 ): Promise<?ProposalsType> => {
   const skip = page * limit;
-
+  const { sortAlgorithm, keywords, isNotVoted, userType } = sortAndFilterParams;
   const result = await ProposalService.searchProposals(
     country,
     questionId,
+    content,
     tagsIds,
     seed,
     limit,
     skip,
     sortTypeKey,
-    content,
-    ideaIds
+    orderTypeKey,
+    ideaIds,
+    sortAlgorithm,
+    keywords,
+    isNotVoted,
+    userType
   );
-
   return result;
 };
 
