@@ -49,7 +49,7 @@ export const MenuPanel = ({ isExpanded, toggleExpansion }: Props) => {
     location.pathname
   );
   const onBrowseResultsPage = isBrowseResultsPage(location.pathname);
-  const isFR = country === 'FR';
+  const displayExtraNavLinks = country === 'DE' || 'FR';
   const countryHasConsultations = getCountryWithConsultations(
     country,
     countriesWithConsultations
@@ -123,7 +123,7 @@ export const MenuPanel = ({ isExpanded, toggleExpansion }: Props) => {
                 </ScreenReaderItemStyle>
               </MenuExternalLinkStyle>
             </MenuItemStyle>
-            {isFR && (
+            {displayExtraNavLinks && (
               <>
                 <MenuItemStyle>
                   <MenuExternalLinkStyle
