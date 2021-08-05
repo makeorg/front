@@ -28,11 +28,12 @@ export const DataEN = () => (
       <StaticSecondLevelTitleStyle>
         Privacy policy
         <StaticTitleExtra>
-          Dated{' '}
+          - Dated{' '}
           {DateHelper.localizedAndFormattedDate(
             PRIVACY_POLICY_DATE,
             DATE_CAPITALIZE_LL_FORMAT
-          )}
+          )}{' '}
+          -
         </StaticTitleExtra>
       </StaticSecondLevelTitleStyle>
       <StaticParagraphStyle>
