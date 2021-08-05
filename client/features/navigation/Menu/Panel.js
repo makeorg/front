@@ -49,7 +49,8 @@ export const MenuPanel = ({ isExpanded, toggleExpansion }: Props) => {
     location.pathname
   );
   const onBrowseResultsPage = isBrowseResultsPage(location.pathname);
-  const displayExtraNavLinks = country === 'DE' || 'FR';
+  const displayExtraNavLinks = country === 'DE' || country === 'FR';
+  const isFR = country === 'FR';
   const countryHasConsultations = getCountryWithConsultations(
     country,
     countriesWithConsultations
@@ -124,21 +125,23 @@ export const MenuPanel = ({ isExpanded, toggleExpansion }: Props) => {
               </MenuExternalLinkStyle>
             </MenuItemStyle>
             {displayExtraNavLinks && (
+              <MenuItemStyle>
+                <MenuExternalLinkStyle
+                  target="_blank"
+                  rel="noopener"
+                  href={getWebflowDynamicLink(language, ROUTE_PARTNERSHIP)}
+                >
+                  {i18n.t('homepage.partnership.subtitle')}
+                  <> </>
+                  <MenuNewWindowIconStyle aria-hidden focusable="false" />
+                  <ScreenReaderItemStyle>
+                    {i18n.t('common.open_new_window')}
+                  </ScreenReaderItemStyle>
+                </MenuExternalLinkStyle>
+              </MenuItemStyle>
+            )}
+            {isFR && (
               <>
-                <MenuItemStyle>
-                  <MenuExternalLinkStyle
-                    target="_blank"
-                    rel="noopener"
-                    href={getWebflowDynamicLink(language, ROUTE_PARTNERSHIP)}
-                  >
-                    {i18n.t('homepage.partnership.subtitle')}
-                    <> </>
-                    <MenuNewWindowIconStyle aria-hidden focusable="false" />
-                    <ScreenReaderItemStyle>
-                      {i18n.t('common.open_new_window')}
-                    </ScreenReaderItemStyle>
-                  </MenuExternalLinkStyle>
-                </MenuItemStyle>
                 <MenuItemStyle>
                   <MenuExternalLinkStyle
                     target="_blank"
