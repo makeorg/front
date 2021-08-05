@@ -1087,12 +1087,12 @@
   },
   "legal": {
     "title": "Impressum",
-    "make_infos": "Herausgeber der Website: MAKE.ORG, Rechtsform: SAS (kleine Aktiengesellschaft) mit einem Grundkapital von {{make_capital}}, mit Hauptsitz in der {{make_address}}, Frankreich. Eingetragen im RCS de PARIS (Handels- und Firmenregister) unter der Nummer {{make_rcs}} (nachfolgend „MAKE.ORG“ genannt).",
+    "make_infos": "Herausgeber der Website: MAKE.ORG, Rechtsform: Société par Actions Simplifiées (vereinfachte Aktiengesellschaft französischen Rechts) mit einem Grundkapital von {{make_capital}}, mit Hauptsitz in der {{make_address}}, Frankreich. Eingetragen im Handels- und Gesellschaftsregister von PARIS unter der Nummer {{make_rcs}} (nachfolgend „MAKE.ORG“ genannt).",
     "mail": "E-Mail-Adresse: ",
     "make_phone": "Telefonnummer: ",
     "make_phone_number": "{{make_phone_number}}",
     "director": "Verantwortlich für den Inhalt: ",
-    "host": "Seitenbetreiber: ",
+    "host": "Webhost: ",
     "host_address": "{{make_host_address}}, Frankreich",
     "host_phone": "Telefonnummer: ",
     "host_phone_number": "{{host_number}}",
@@ -1102,16 +1102,17 @@
   "cookies_management": {
     "title": "Cookie-Verwaltung",
     "dated": "– vom {{date}} –",
+    "subTitle": "Hinweis: Aus Gründen der Lesbarkeit wurde im Text nur die männliche Form gewählt, nichtsdestoweniger beziehen sich die Angaben auf Angehörige aller Geschlechter.",
     "button": "Meine Auswahl bestätigen",
     "intro": {
       "title": "Was ist ein Cookie?",
-      "first_paragraph": "Ein Cookie ist eine kleine Textdatei, die unabhängig von der Art des verwendeten Endgeräts (Computer, Smartphone usw.) auf diesem gespeichert und gelesen werden kann, wenn ein Benutzer eine Website oder eine mobile Anwendung besucht.",
+      "first_paragraph": "Ein Cookie ist eine kleine Textdatei, die unabhängig von der Art des verwendeten Endgeräts (Computer, Smartphone usw.) auf diesem gespeichert und gelesen werden kann, wenn Sie eine Website oder eine mobile Anwendung besuchen.",
       "second_paragraph": "Einige Cookies sind für das ordnungsgemäße Funktionieren von Websites oder Apps unerlässlich, andere tragen zur Optimierung der Leistung der Website oder zur Verbesserung der Nutzererfahrung bei."
     },
     "use": {
       "title": "Wie verwenden wir Cookies?",
-      "first_paragraph": "Wenn du unsere Seite aufrufst, werden auf deinem Endgerät Cookies hinterlegt, um deine Nutzererfahrung zu verbessern, die Leistung unserer Seite zu erhöhen und unsere Bürgerkonsultationen zu optimieren.",
-      "second_paragraph": "Die in den Cookies enthaltenen Informationen sind nicht dazu bestimmt, dich persönlich zu identifizieren und werden niemals für andere als die unten angegebenen Zwecke verwendet."
+      "first_paragraph": "Wenn Sie unsere Seite aufrufen, werden auf Ihrem Endgerät Cookies hinterlegt, um Ihre Nutzererfahrung zu verbessern, die Leistung unserer Seite zu erhöhen und unsere Bürgerkonsultationen zu optimieren.",
+      "second_paragraph": "Die in den Cookies enthaltenen Informationen sind nicht dazu bestimmt, Sie persönlich zu identifizieren und werden niemals für andere als die unten angegebenen Zwecke verwendet."
     },
     "partners": {
       "title": "Wer sind unsere Partner?",

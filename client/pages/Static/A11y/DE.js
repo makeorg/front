@@ -3,522 +3,419 @@ import React from 'react';
 import { RedLinkHTMLElementStyle } from 'Client/ui/Elements/LinkElements';
 import { i18n } from 'Shared/i18n';
 import { ScreenReaderItemStyle } from 'Client/ui/Elements/AccessibilityElements';
-import { ACCESSIBILITY_EMAIL, A11Y_DATE } from 'Shared/constants/config';
-import {
-  getA11YPageLink,
-  getBrowseConsultationsLink,
-  getBrowseResultsLink,
-  getParticipateLink,
-  getContactPageLink,
-  getDataPageLink,
-  getGTUPageLink,
-  getHomeLink,
-  getLegalPageLink,
-  getPasswordRecoveryLink,
-  getPersonalityProfileLink,
-  getProposalLink,
-  getResultsLink,
-  getSequenceLink,
-  getTopIdeaDetailsLink,
-  getTopIdeasLink,
-} from 'Shared/helpers/url';
-import {
-  getRouteOrganisationProposals,
-  getRouteOrganisationVotes,
-  getRouteProfile,
-  getRouteProfileEdit,
-  getRouteProfileFavourites,
-  getRouteProfileOpinions,
-  getRouteProfileProposals,
-  getRouteSearch,
-  getRouteSearchConsultations,
-  getRouteSearchOrganisations,
-  getRouteSearchProposals,
-} from 'Shared/routes';
+import { ACCESSIBILITY_EMAIL, MAKE_ADDRESS } from 'Shared/constants/config';
 import { MetaTags } from 'Client/app/MetaTags';
 import { env } from 'Shared/env';
-import { summary } from 'Shared/constants/accessibilitySummary';
-import { DateHelper } from 'Shared/helpers/date';
-
-import { useSelector } from 'react-redux';
-import { type StateRoot } from 'Shared/store/types';
-import { DATE_CAPITALIZE_LL_FORMAT } from 'Shared/constants/date';
+// import { useSelector } from 'react-redux';
+// import { type StateRoot } from 'Shared/store/types';
 import {
   StaticPageWrapperStyle,
   StaticSecondLevelTitleStyle,
   StaticParagraphStyle,
   StaticPrimaryOrderedListStyle,
-  StaticPrimaryOrderedListItemStyle,
   StaticThirdLevelTitleStyle,
-  StaticFourthLevelTitleStyle,
   StaticSquareListItemStyle,
   StaticSquareListStyle,
   StaticExternalLinkIconStyle,
-  FocusBlockWrapperStyle,
-  FocusBlockTitleStyle,
-  FocusBlockParagraphStyle,
-  FocusBlockCheckIconStyle,
+  StaticTitleExtra,
 } from '../style';
 
-export const A11yDE = () => {
-  const { country, language } = useSelector(
-    (state: StateRoot) => state.appConfig
-  );
-  return (
-    <>
-      <MetaTags
-        title={i18n.t('meta.a11y.title')}
-        description={i18n.t('meta.a11y.description')}
-      />
-      <StaticPageWrapperStyle>
-        <StaticSecondLevelTitleStyle>
-          ZUGÄNGLICHKEITSERKLÄRUNG
-        </StaticSecondLevelTitleStyle>
+export const A11yDE = () => (
+  // const { country, language } = useSelector(
+  //   (state: StateRoot) => state.appConfig
+  // );
+  <>
+    <MetaTags
+      title={i18n.t('meta.a11y.title')}
+      description={i18n.t('meta.a11y.description')}
+    />
+    <StaticPageWrapperStyle>
+      <StaticSecondLevelTitleStyle>
+        ERKLÄRUNG ZUR BARRIEREFREIHEIT
+      </StaticSecondLevelTitleStyle>
+      <StaticParagraphStyle>
+        <StaticTitleExtra>
+          Hinweis: Aus Gründen der Lesbarkeit wurde im Text nur die männliche
+          Form gewählt, nichtsdestoweniger beziehen sich die Angaben auf
+          Angehörige aller Geschlechter.
+        </StaticTitleExtra>
+      </StaticParagraphStyle>
+      <StaticParagraphStyle>
+        Make.org verpflichtet sich, seine Website gemäß der{' '}
+        <RedLinkHTMLElementStyle href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016L2102">
+          {' '}
+          Richtlinie (EU) 2016/2102 des Europäischen Parlaments und des Rates
+        </RedLinkHTMLElementStyle>{' '}
+        barrierefrei zu gestalten.
+      </StaticParagraphStyle>
+      <StaticParagraphStyle>
+        Diese Erklärung zur Barrierefreiheit bezieht sich auf{' '}
+        <RedLinkHTMLElementStyle href={env.frontUrl()}>
+          {env.frontUrl()}
+        </RedLinkHTMLElementStyle>
+        .
+      </StaticParagraphStyle>
+      <StaticParagraphStyle>
+        Identität des Registranten: Make.org {MAKE_ADDRESS}
+      </StaticParagraphStyle>
+      <StaticParagraphStyle>
+        Kontakt:{' '}
+        <RedLinkHTMLElementStyle href={ACCESSIBILITY_EMAIL}>
+          {ACCESSIBILITY_EMAIL}
+        </RedLinkHTMLElementStyle>
+      </StaticParagraphStyle>
+      <StaticPrimaryOrderedListStyle>
+        <StaticThirdLevelTitleStyle>
+          KONFORMITÄTSSTATUS
+        </StaticThirdLevelTitleStyle>
         <StaticParagraphStyle>
-          Make.org verpflichtet sich, seine Website in Übereinstimmung mit
-          Artikel 47 des Gesetzes Nr. 2005-102 vom 11. Februar 2005 zugänglich
-          zu machen.
-        </StaticParagraphStyle>
-        <StaticParagraphStyle>
-          Diese Zugänglichkeitserklärung gilt für{' '}
-          <RedLinkHTMLElementStyle href={env.frontUrl()}>
-            {env.frontUrl()}
+          Make.org entspricht teilweise den{' '}
+          <RedLinkHTMLElementStyle
+            href="https://www.w3.org/TR/WCAG21/"
+            target="_blank"
+            rel="noopener"
+          >
+            <abbr
+              lang="fr"
+              title="Web Content Accessibility Guidelines - Version 2.1"
+            >
+              WCAG 2.1
+            </abbr>
+            <StaticExternalLinkIconStyle aria-hidden focusable="false" />
+            <ScreenReaderItemStyle>
+              {i18n.t('common.open_new_window')}
+            </ScreenReaderItemStyle>
           </RedLinkHTMLElementStyle>
           .
         </StaticParagraphStyle>
-        <FocusBlockWrapperStyle as="section">
-          <FocusBlockCheckIconStyle aria-hidden focusable="false" />
-          <FocusBlockTitleStyle>
-            {`${summary.criteria.pourcentOk}% `}
-            der{' '}
-            <abbr
-              lang="fr"
-              title="Référentiel Général d’Amélioration de l’Accessibilité"
-            >
-              RGAA
-            </abbr>{' '}
-            4.0-Kriterien werden erfüllt
-          </FocusBlockTitleStyle>
-          <FocusBlockParagraphStyle>
-            Make.org setzt sich für die Verbesserung der Barrierefreiheit und
-            Inklusion in der digitalen Welt ein. Die{' '}
-            <abbr
-              lang="fr"
-              title="Référentiel Général d’Amélioration de l’Accessibilité"
-            >
-              RGAA
-            </abbr>{' '}
-            (Französische Zugänglichkeitsrichtlinien) sind ein maßgebliches
-            Dokument, in dem Zugänglichkeitsstandards festgelegt sind, die
-            unsere Design- und Technikteams so weit wie möglich zu erfüllen
-            versuchen.
-          </FocusBlockParagraphStyle>
-          <FocusBlockParagraphStyle>
-            Diese Seite soll transparent den aktuellen Stand der
-            Barrierefreiheit von Make.org aufzeigen.
-          </FocusBlockParagraphStyle>
-        </FocusBlockWrapperStyle>
-        <StaticPrimaryOrderedListStyle>
-          <StaticPrimaryOrderedListItemStyle>
-            <StaticThirdLevelTitleStyle>
-              KONFORMITÄTSSTATUS
-            </StaticThirdLevelTitleStyle>
-            <StaticParagraphStyle>
-              Make.org ist teilweise konform mit{' '}
-              <RedLinkHTMLElementStyle
-                href="https://www.numerique.gouv.fr/publications/rgaa-accessibilite/"
-                target="_blank"
-                rel="noopener"
-              >
-                <abbr
-                  lang="fr"
-                  title="Référentiel Général d’Amélioration de l’Accessibilité - Version 4.0"
-                >
-                  RGAA 4.0
-                </abbr>
-                <StaticExternalLinkIconStyle aria-hidden focusable="false" />
-                <ScreenReaderItemStyle>
-                  {i18n.t('common.open_new_window')}
-                </ScreenReaderItemStyle>
-              </RedLinkHTMLElementStyle>
-              .
-            </StaticParagraphStyle>
-          </StaticPrimaryOrderedListItemStyle>
-          <StaticPrimaryOrderedListItemStyle>
-            <StaticThirdLevelTitleStyle>
-              TESTERGEBNISSE
-            </StaticThirdLevelTitleStyle>
-            <StaticParagraphStyle>
-              Die interne Ordnungsmäßigkeitsprüfung zeigt, dass :
-            </StaticParagraphStyle>
-            <StaticSquareListStyle>
-              <StaticSquareListItemStyle>
-                {`${summary.test.successOk} Tests werden erfolgreich abgeschlossen.`}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {`${summary.test.successKo} Tests schlagen fehl.`}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {`${summary.test.successNa} Tests beziehen sich auf nicht anwendbare Kriterien.`}
-              </StaticSquareListItemStyle>
-            </StaticSquareListStyle>
-            <StaticSquareListStyle>
-              <StaticSquareListItemStyle>
-                {`${summary.criteria.successOk} Kriterien erfüllt sind.`}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {`${summary.criteria.successKo} Kriterien nicht erfüllt sind.`}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {`${summary.criteria.successNa} Kriterien sind nicht anwendbar.`}
-              </StaticSquareListItemStyle>
-            </StaticSquareListStyle>
-            <StaticParagraphStyle>
-              Das bedeutet, dass
-              {` ${summary.criteria.pourcentOk}% `}
-              <abbr
-                lang="fr"
-                title="Référentiel Général d’Amélioration de l’Accessibilité"
-              >
-                RGAA
-              </abbr>{' '}
-              4.0-Kriterien erfüllt sind.
-            </StaticParagraphStyle>
-          </StaticPrimaryOrderedListItemStyle>
-          <StaticPrimaryOrderedListItemStyle>
-            <StaticThirdLevelTitleStyle>
-              ERSTELLUNG DIESER ERKLÄRUNG ZUR ZUGÄNGLICHKEIT
-            </StaticThirdLevelTitleStyle>
-            <StaticParagraphStyle>
-              Diese Erklärung wurde am{' '}
-              {DateHelper.localizedAndFormattedDate(
-                A11Y_DATE,
-                DATE_CAPITALIZE_LL_FORMAT
-              )}{' '}
-              erstellt. Sie wurde am{' '}
-              {DateHelper.localizedAndFormattedDate(
-                A11Y_DATE,
-                DATE_CAPITALIZE_LL_FORMAT
-              )}{' '}
-              aktualisiert.
-            </StaticParagraphStyle>
-            <StaticFourthLevelTitleStyle>
-              Technologien, die zur Erstellung der Make.org-Website verwendet
-              werden:
-            </StaticFourthLevelTitleStyle>
-            <StaticSquareListStyle>
-              <StaticSquareListItemStyle>HTML5</StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>CSS</StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>Javascript</StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                React JS version 16
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                Hier finden Sie die{' '}
-                <RedLinkHTMLElementStyle
-                  href="https://gitlab.com/makeorg/platform/front/-/blob/production/package.json"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  vollständige Liste derverwendetenTechnologienIn einer neuen
-                  Registerkarteöffnen
-                  <StaticExternalLinkIconStyle aria-hidden focusable="false" />
-                  <ScreenReaderItemStyle>
-                    {i18n.t('common.open_new_window')}
-                  </ScreenReaderItemStyle>
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-            </StaticSquareListStyle>
-            <StaticFourthLevelTitleStyle>
-              Benutzeragenten, unterstützende Technologien und Werkzeuge zur
-              Überprüfung der Barrierefreiheit :
-            </StaticFourthLevelTitleStyle>
-            <StaticSquareListStyle>
-              <StaticSquareListItemStyle>
-                Chrome 86 / Mac OS 10.15 VoiceOver
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                Firefox 82.0 / Linux Orca 3.36.2
-              </StaticSquareListItemStyle>
-            </StaticSquareListStyle>
-            <StaticFourthLevelTitleStyle>
-              Die folgenden Werkzeuge wurden bei der Auswertung verwendet:
-            </StaticFourthLevelTitleStyle>
-            <StaticSquareListStyle>
-              <StaticSquareListItemStyle lang="en">
-                Google Lighthouse{' '}
-                <RedLinkHTMLElementStyle
-                  href="https://developers.google.com/web/tools/lighthouse#devtools"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  DevTools{' '}
-                  <StaticExternalLinkIconStyle aria-hidden focusable="false" />
-                  <ScreenReaderItemStyle lang="de">
-                    {i18n.t('common.open_new_window')}
-                  </ScreenReaderItemStyle>
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle lang="en">
-                Google Lighthouse{' '}
-                <RedLinkHTMLElementStyle
-                  href="https://github.com/GoogleChrome/lighthouse-ci"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  CI{' '}
-                  <StaticExternalLinkIconStyle aria-hidden focusable="false" />
-                  <ScreenReaderItemStyle lang="de">
-                    {i18n.t('common.open_new_window')}
-                  </ScreenReaderItemStyle>
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                <span lang="en">Web Developer</span>{' '}
-                <RedLinkHTMLElementStyle
-                  href="https://chrispederick.com/work/web-developer/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Browser-ErweiterungIn{' '}
-                  <StaticExternalLinkIconStyle aria-hidden focusable="false" />
-                  <ScreenReaderItemStyle>
-                    {i18n.t('common.open_new_window')}
-                  </ScreenReaderItemStyle>
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                Axe{' '}
-                <RedLinkHTMLElementStyle
-                  href="https://www.deque.com/axe/browser-extensions/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Browser-ErweiterungIn
-                  <StaticExternalLinkIconStyle aria-hidden focusable="false" />
-                  <ScreenReaderItemStyle>
-                    {i18n.t('common.open_new_window')}
-                  </ScreenReaderItemStyle>
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle lang="en">
-                WCAG Color contrast checker{' '}
-                <RedLinkHTMLElementStyle
-                  href="
-              https://chrome.google.com/webstore/detail/wcag-color-contrast-check/plnahcmalebffmaghcpcmpaciebdhgdf"
-                  target="_blank"
-                  rel="noopener"
-                  lang="de"
-                >
-                  Browser-ErweiterungIn{' '}
-                  <StaticExternalLinkIconStyle aria-hidden focusable="false" />
-                  <ScreenReaderItemStyle>
-                    {i18n.t('common.open_new_window')}
-                  </ScreenReaderItemStyle>
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-            </StaticSquareListStyle>
-            <StaticFourthLevelTitleStyle>
-              Die Seiten der Site, die der Konformitätsprüfung unterzogen
-              wurden:
-            </StaticFourthLevelTitleStyle>
-            <StaticSquareListStyle>
-              <StaticSquareListItemStyle>
-                {'Startseite Frankreich : '}
-                <RedLinkHTMLElementStyle href={getHomeLink('FR')}>
-                  {env.frontUrl() + getHomeLink('FR')}
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Startseite Großbritannien : '}
-                <RedLinkHTMLElementStyle href={getHomeLink('GB')}>
-                  {env.frontUrl() + getHomeLink('GB')}
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Seite zum Durchsuchen von Konsultationen : '}
-                <RedLinkHTMLElementStyle
-                  href={getBrowseConsultationsLink(country)}
-                >
-                  {env.frontUrl() + getBrowseConsultationsLink(country)}
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Ergebnisse der Seitensuche : '}
-                <RedLinkHTMLElementStyle href={getBrowseResultsLink(country)}>
-                  {env.frontUrl() + getBrowseResultsLink(country)}
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Konsultationsseite : '}
-                {env.frontUrl() + getParticipateLink(country, 'dynamicslug')}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Vorschlagsseite in Reihenfolge : '}
-                {env.frontUrl() + getSequenceLink(country, 'dynamicslug')}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Ergebnisseite einer Abfrage : '}
-                {env.frontUrl() + getResultsLink(country, 'dynamicslug')}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Top-Ideen-Seite einer Beratung : '}
-                {env.frontUrl() + getTopIdeasLink(country, 'dynamicslug')}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Detailseite einer Top-Idee für eine Beratung : '}
-                {env.frontUrl() +
-                  getTopIdeaDetailsLink(country, 'dynamicslug', 'ideaId')}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Vorschlagsseite : '}
-                {env.frontUrl() +
-                  getProposalLink(
-                    country,
-                    'dynamicslug',
-                    'proposalSlug',
-                    'proposalId'
-                  )}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Seite zum Zurücksetzen des Passworts : '}
-                {env.frontUrl() +
-                  getPasswordRecoveryLink(country, 'userId', 'resetToken')}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Benutzerprofilseite : '}
-                {env.frontUrl() + getRouteProfile(country)}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Seite zum Bearbeiten des Benutzerprofils : '}
-                {env.frontUrl() + getRouteProfileEdit(country)}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Seite der Benutzer-Vorschlagsliste : '}
-                {env.frontUrl() + getRouteProfileProposals(country)}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Seite der Liste mit den Lieblingsvorschlägen des Benutzers :'}
-                {env.frontUrl() + getRouteProfileFavourites(country)}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Meinungsseite zur Persönlichkeit : '}
-                {env.frontUrl() + getRouteProfileOpinions(country)}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Öffentliche Profilseite einer Persönlichkeit : '}
-                {env.frontUrl() + getPersonalityProfileLink(country, 'userId')}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Öffentliches Profil Organisation Vorschlagsseite : '}
-                {env.frontUrl() +
-                  getRouteOrganisationProposals(country, 'userId')}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {
-                  'Abstimmungsseite eines öffentlichen Profils einer Organisation : '
-                }
-                {env.frontUrl() + getRouteOrganisationVotes(country, 'userId')}
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Suchergebnisse Seite : '}
-                <RedLinkHTMLElementStyle
-                  href={getRouteSearch('FR', 'accessibilité')}
-                >
-                  {env.frontUrl() + getRouteSearch('FR', 'accessibilité')}
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Ergebnisseite der Vorschlagssuche : '}
-                <RedLinkHTMLElementStyle
-                  href={getRouteSearchProposals('FR', 'accessibilité')}
-                >
-                  {env.frontUrl() +
-                    getRouteSearchProposals('FR', 'accessibilité')}
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Organisationen Suchergebnisseite : '}
-                <RedLinkHTMLElementStyle
-                  href={getRouteSearchOrganisations('FR', 'association')}
-                >
-                  {env.frontUrl() +
-                    getRouteSearchOrganisations('FR', 'association')}
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Suchergebnisseite für Beratungen : '}
-                <RedLinkHTMLElementStyle
-                  href={getRouteSearchConsultations('FR', 'comment')}
-                >
-                  {env.frontUrl() +
-                    getRouteSearchConsultations('FR', 'comment')}
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Rechtliche Seite : '}
-                <RedLinkHTMLElementStyle
-                  href={getLegalPageLink(country, language)}
-                >
-                  {env.frontUrl() + getLegalPageLink(country, language)}
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Seite mit den Nutzungsbedingungen : '}
-                <RedLinkHTMLElementStyle
-                  href={getGTUPageLink(country, language)}
-                >
-                  {env.frontUrl() + getGTUPageLink(country, language)}
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Seite zur Datenpolitik : '}
-                <RedLinkHTMLElementStyle
-                  href={getDataPageLink(country, language)}
-                >
-                  {env.frontUrl() + getDataPageLink(country, language)}
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Seite zur Erklärung der Barrierefreiheit : '}
-                <RedLinkHTMLElementStyle
-                  href={getA11YPageLink(country, language)}
-                >
-                  {env.frontUrl() + getA11YPageLink(country, language)}
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Kontaktseite : '}
-                <RedLinkHTMLElementStyle
-                  href={getContactPageLink(country, language)}
-                >
-                  {env.frontUrl() + getContactPageLink(country, language)}
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-            </StaticSquareListStyle>
-          </StaticPrimaryOrderedListItemStyle>
-          <StaticPrimaryOrderedListItemStyle>
-            <StaticThirdLevelTitleStyle>
-              FEEDBACK UND KONTAKT
-            </StaticThirdLevelTitleStyle>
-            <StaticParagraphStyle>
-              Wenn Sie auf einen Inhalt oder eine Dienstleistung nicht zugreifen
-              können, können Sie sich an den Betreiber der Website wenden, um
-              auf eine zugängliche Alternative verwiesen zu werden oder um den
-              Inhalt in einer anderen Form zu erhalten.
-            </StaticParagraphStyle>
-            <StaticParagraphStyle>
-              {'Kontaktieren Sie uns unter dieser E-Mail Adresse : '}
-              <RedLinkHTMLElementStyle href={`mailto:${ACCESSIBILITY_EMAIL}`}>
-                {`${ACCESSIBILITY_EMAIL}`}
-              </RedLinkHTMLElementStyle>
-            </StaticParagraphStyle>
-          </StaticPrimaryOrderedListItemStyle>
-        </StaticPrimaryOrderedListStyle>
-      </StaticPageWrapperStyle>
-    </>
-  );
-};
+        <StaticThirdLevelTitleStyle>TESTERGEBNISSE</StaticThirdLevelTitleStyle>
+        <StaticParagraphStyle>
+          Ein Audit der Website offenbart, dass diese die Konformitätsstufen A
+          und AA erreicht und somit eine teilweise Konformität mit den WCAG
+          2.1-Richtlinien aufweist.
+        </StaticParagraphStyle>
+        <StaticThirdLevelTitleStyle>
+          ERSTELLUNG DER ERKLÄRUNG ZUR BARRIEREFREIHEIT
+        </StaticThirdLevelTitleStyle>
+        <StaticParagraphStyle>
+          Diese Erklärung wurde am 4. November 2020 erstellt und am 28. Juli
+          2021 aktualisiert.
+        </StaticParagraphStyle>
+        <StaticParagraphStyle>
+          Technologien, die zur Erstellung der Make.org-Website verwendet
+          wurden:
+        </StaticParagraphStyle>
+        <StaticSquareListStyle>
+          <StaticSquareListItemStyle>HTML5</StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>CSS</StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>JavaScript </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            React JS Version 16
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Hier finden Sie die{' '}
+            <RedLinkHTMLElementStyle href="https://gitlab.com/makeorg/platform/front/-/blob/production/package.json">
+              vollständige Liste der verwendeten Technologien
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+        </StaticSquareListStyle>
+        <StaticParagraphStyle>
+          Zur Überprüfung der Barrierefreiheit verwendete Nutzeragenten,
+          unterstützende Technologien und Tools:
+        </StaticParagraphStyle>
+        <StaticSquareListStyle>
+          <StaticSquareListItemStyle>
+            Chrome 86 / Mac OS 10.15 VoiceOver
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Firefox 82.0 / Linux Orca 3.36.2
+          </StaticSquareListItemStyle>
+        </StaticSquareListStyle>
+        <StaticParagraphStyle>
+          Für die Auswertung wurden folgende Tools verwendet:
+        </StaticParagraphStyle>
+        <StaticSquareListStyle>
+          <StaticSquareListItemStyle>
+            Google Lighthouse{' '}
+            <RedLinkHTMLElementStyle href="https://developers.google.com/web/tools/lighthouse#devtools">
+              DevTools
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Google Lighthouse{' '}
+            <RedLinkHTMLElementStyle href="https://github.com/GoogleChrome/lighthouse-ci">
+              CI
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Web Developer{' '}
+            <RedLinkHTMLElementStyle href="https://chrispederick.com/work/web-developer/">
+              Browser-Plug-in
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Axe
+            <RedLinkHTMLElementStyle href="https://www.deque.com/axe/browser-extensions/">
+              Browser-Plug-in{' '}
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            WCAG Color contrast checker{' '}
+            <RedLinkHTMLElementStyle href="https://chrome.google.com/webstore/detail/wcag-color-contrast-check/plnahcmalebffmaghcpcmpaciebdhgdf">
+              Browser-Plug-in
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+        </StaticSquareListStyle>
+        <StaticParagraphStyle>
+          Folgende Seiten der Website wurden auf ihre Barrierefreiheit geprüft:
+        </StaticParagraphStyle>
+        <StaticSquareListStyle>
+          <StaticSquareListItemStyle>
+            Startseite Frankreich:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR">
+              https://make.org/FR
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Startseite Großbritannien:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/GB">
+              https://make.org/GB
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite „Alle Konsultationen durchsuchen“:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/browse/consultations/page/1 ">
+              https://make.org/FR/browse/consultations/page/1
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite „Ergebnisse der Konsultationen“:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/browse/results/page/1 ">
+              https://make.org/FR/browse/results/page/1
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Konsultationsseite:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/consultation/dynamicslug/participate">
+              https://make.org/FR/consultation/dynamicslug/participate
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite mit der Abstimmungssequenz der Vorschläge:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/consultation/dynamicslug/selection ">
+              https://make.org/FR/consultation/dynamicslug/selection
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite mit den Ergebnissen einer{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/consultation/dynamicslug/results">
+              https://make.org/FR/consultation/dynamicslug/results
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite mit den beliebtesten Ideen einer{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/consultation/dynamicslug/top-ideas ">
+              https://make.org/FR/consultation/dynamicslug/top-ideas
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite mit den Details einer beliebten Idee einer Konsultation:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/consultation/dynamicslug/top-ideas/ideaId  ">
+              https://make.org/FR/consultation/dynamicslug/top-ideas/ideaId
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite mit den Vorschlägen:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/consultation/dynamicslug/proposal/proposalSlug/proposalId">
+              https://make.org/FR/consultation/dynamicslug/proposal/proposalSlug/proposalId
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite zum Zurücksetzen des Passworts:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/password-recovery/userId/resetToken">
+              https://make.org/FR/password-recovery/userId/resetToken
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite „Benutzerprofil“:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/profile ">
+              https://make.org/FR/profile
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite zum Bearbeiten des Benutzerprofils:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/profile/edit ">
+              https://make.org/FR/profile/edit
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite mit der Liste der Vorschläge des Nutzers:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/profile/proposals ">
+              https://make.org/FR/profile/proposals
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite mit der Liste der Lieblingsvorschläge des Nutzers:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/profile/favourites ">
+              https://make.org/FR/profile/favourites
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite mit der Meinung einer bekannten Persönlichkeit:
+            <RedLinkHTMLElementStyle href="https://make.org/FR/profile/opinions">
+              https://make.org/FR/profile/opinions
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite mit dem öffentlichen Profil einer bekannten Persönlichkeit:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/profile/personality/userId">
+              https://make.org/FR/profile/personality/userId
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite mit den Vorschlägen auf dem öffentlichen Profil einer
+            Organisation:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/profile/organisation/userId/proposals">
+              https://make.org/FR/profile/organisation/userId/proposals
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite zur Abstimmung auf dem öffentlichen Profil einer Organisation:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/profile/organisation/userId/votes">
+              https://make.org/FR/profile/organisation/userId/votes
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite mit den Suchergebnissen:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/search?query=accessibilité">
+              https://make.org/FR/search?query=accessibilité
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite mit den Ergebnissen der Suche nach Vorschlägen:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/search/proposals?query=accessibilit%C3%A9">
+              https://make.org/FR/search/proposals?query=accessibilit%C3%A9
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite mit den Ergebnissen der Suche nach Organisationen:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/search/organisations?query=association">
+              https://make.org/FR/search/organisations?query=association
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite mit den Ergebnissen der Suche nach Konsultationen:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/search/consultations?query=commen">
+              https://make.org/FR/search/consultations?query=commen
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite „Impressum“:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/mentions-legales">
+              https://make.org/FR/mentions-legales
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite „Nutzungsbedingungen“:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/conditions-dutilisation">
+              https://make.org/FR/conditions-dutilisation
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite Seite „Datenschutzerklärung“:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/politique-donnees">
+              https://make.org/FR/politique-donnees
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite „Erklärung zur Barrierefreiheit“:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/declaration-accessibilite">
+              https://make.org/FR/declaration-accessibilite
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Seite „Kontakt“:{' '}
+            <RedLinkHTMLElementStyle href="https://make.org/FR/contact">
+              https://make.org/FR/contact
+            </RedLinkHTMLElementStyle>
+          </StaticSquareListItemStyle>
+        </StaticSquareListStyle>
+        <StaticParagraphStyle>
+          Da der Länderindikator eine Variable in der Seitenstruktur ist, können
+          wir bestätigen, dass alle Seiten, deren URLs einer der geprüften
+          Strukturen folgen, die gleichen Prüfergebnisse aufweisen und dass der
+          Grad der Barrierefreiheit in allen Ländern, in denen Make.org
+          verfügbar ist, der gleiche ist.
+        </StaticParagraphStyle>
+        <StaticThirdLevelTitleStyle>
+          NICHT BARRIEREFREIHEITE INHALTE
+        </StaticThirdLevelTitleStyle>
+        <StaticSquareListStyle>
+          <StaticSquareListItemStyle>
+            Informationstragende Canvas-Elemente („Canvas“-Tags) lassen sich
+            nicht ersetzen oder können nicht durch formatierten Text ersetzt
+            werden;
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Rahmen-Elemente („iframe“-Tags) der Vermittlungsdienste von Google
+            und Facebook beinhalten kein Attribut „title“;
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Manche Skript-Elemente („Skript“-Tags) sind mit den unterstützenden
+            Technologien nicht kompatibel und bieten keine sinnvolle
+            Alternative;
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Es kann unvermittelt zu einem Kontextwechsel kommen (Abmelden,
+            Benachrichtigungen, Weiterleitung usw.);
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Manche Abkürzungen werden nicht erklärt;
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Bei bestimmten Elementen kann der „Fokus“ unscharf werden;
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Manche ausgeblendeten Elemente können von Sprachsynthesizern
+            mitgesprochen werden;
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Steuerung von Elementen wie „Tooltip“ oder „Sliders“;
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Manche Felder in Formularen müssen gesondert bestätigt werden, ohne
+            dass dies ausdrücklich vorab erklärt wird;
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Es fehlt eine Übersicht über die Website (Sitemap);
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Auf Seiten ohne Ankerlink kann die Rückkehr nach oben die
+            Reihenfolge der Tastaturbefehle durcheinanderbringen.
+          </StaticSquareListItemStyle>
+          <StaticSquareListItemStyle>
+            Einige länderspezifische Bilder (visueller Inhalt, Alternative)
+          </StaticSquareListItemStyle>
+        </StaticSquareListStyle>
+        <StaticThirdLevelTitleStyle>
+          FEEDBACK UND KONTAKT
+        </StaticThirdLevelTitleStyle>
+        <StaticParagraphStyle>
+          Sollten Sie auf einen Inhalt oder eine Funktion nicht zugreifen
+          können, wenden Sie sich bitte an den Betreiber der Website. Er zeigt
+          Ihnen eine barrierefreie Alternative auf oder lässt Ihnen den Inhalt
+          in einer anderen Form zukommen.
+        </StaticParagraphStyle>
+        <StaticParagraphStyle>
+          Sie erreichen uns unter dieser E-Mail-Adresse:{' '}
+          <RedLinkHTMLElementStyle href="https://make.org/FR/declaration-accessibilite">
+            https://make.org/FR/declaration-accessibilite
+          </RedLinkHTMLElementStyle>
+        </StaticParagraphStyle>
+      </StaticPrimaryOrderedListStyle>
+    </StaticPageWrapperStyle>
+  </>
+);
 
 // default export needed for loadable component
 export default A11yDE; // eslint-disable-line import/no-default-export

@@ -41,12 +41,15 @@ import { useParams } from 'react-router';
 import { CookieSwitch } from 'Client/app/CookieModal/CookieSwitch';
 import {
   GOOGLE_LINK_FR,
+  GOOGLE_LINK_DE,
   GOOGLE_LINK_EN,
   FACEBOOK_LINK_FR,
   FACEBOOK_LINK_EN,
   TWITTER_LINK_FR,
+  TWITTER_LINK_DE,
   TWITTER_LINK_EN,
   LINKEDIN_LINK_FR,
+  LINKEDIN_LINK_DE,
   LINKEDIN_LINK_EN,
 } from 'Shared/constants/config';
 import {
@@ -72,10 +75,23 @@ export const Cookies = () => {
     'DD MMMM YYYY'
   );
   const isFR = country === 'FR';
-  const googleLink = isFR ? GOOGLE_LINK_FR : GOOGLE_LINK_EN;
+  const isDE = country === 'DE';
   const facebookLink = isFR ? FACEBOOK_LINK_FR : FACEBOOK_LINK_EN;
-  const twitterLink = isFR ? TWITTER_LINK_FR : TWITTER_LINK_EN;
-  const linkedInLink = isFR ? LINKEDIN_LINK_FR : LINKEDIN_LINK_EN;
+  const googleLink = () => {
+    if (isFR) return GOOGLE_LINK_FR;
+    if (isDE) return GOOGLE_LINK_DE;
+    return GOOGLE_LINK_EN;
+  };
+  const twitterLink = () => {
+    if (isFR) return TWITTER_LINK_FR;
+    if (isDE) return TWITTER_LINK_DE;
+    return TWITTER_LINK_EN;
+  };
+  const linkedInLink = () => {
+    if (isFR) return LINKEDIN_LINK_FR;
+    if (isDE) return LINKEDIN_LINK_DE;
+    return LINKEDIN_LINK_EN;
+  };
 
   const handlePreferences = () => {
     trackClickModalCookieSave('cookies-accept-preferences');
@@ -94,6 +110,11 @@ export const Cookies = () => {
     <>
       <MetaTags title={i18n.t('meta.cookies.title')} />
       <StaticPageWrapperStyle>
+        {isDE && (
+          <StaticTitleExtra>
+            {i18n.t('cookies_management.subTitle')}
+          </StaticTitleExtra>
+        )}
         <StaticSecondLevelTitleStyle>
           {i18n.t('cookies_management.title')}
           <StaticTitleExtra>
