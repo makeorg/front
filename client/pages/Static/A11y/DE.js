@@ -6,8 +6,6 @@ import { ScreenReaderItemStyle } from 'Client/ui/Elements/AccessibilityElements'
 import { ACCESSIBILITY_EMAIL, MAKE_ADDRESS } from 'Shared/constants/config';
 import { MetaTags } from 'Client/app/MetaTags';
 import { env } from 'Shared/env';
-// import { useSelector } from 'react-redux';
-// import { type StateRoot } from 'Shared/store/types';
 import {
   StaticPageWrapperStyle,
   StaticSecondLevelTitleStyle,
@@ -16,14 +14,11 @@ import {
   StaticThirdLevelTitleStyle,
   StaticSquareListItemStyle,
   StaticSquareListStyle,
+  StaticStrongStyle,
   StaticExternalLinkIconStyle,
-  StaticTitleExtra,
 } from '../style';
 
 export const A11yDE = () => (
-  // const { country, language } = useSelector(
-  //   (state: StateRoot) => state.appConfig
-  // );
   <>
     <MetaTags
       title={i18n.t('meta.a11y.title')}
@@ -33,13 +28,6 @@ export const A11yDE = () => (
       <StaticSecondLevelTitleStyle>
         ERKLÄRUNG ZUR BARRIEREFREIHEIT
       </StaticSecondLevelTitleStyle>
-      <StaticParagraphStyle>
-        <StaticTitleExtra>
-          Hinweis: Aus Gründen der Lesbarkeit wurde im Text nur die männliche
-          Form gewählt, nichtsdestoweniger beziehen sich die Angaben auf
-          Angehörige aller Geschlechter.
-        </StaticTitleExtra>
-      </StaticParagraphStyle>
       <StaticParagraphStyle>
         Make.org verpflichtet sich, seine Website gemäß der{' '}
         <RedLinkHTMLElementStyle href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016L2102">
@@ -56,9 +44,8 @@ export const A11yDE = () => (
         .
       </StaticParagraphStyle>
       <StaticParagraphStyle>
-        Identität des Registranten: Make.org {MAKE_ADDRESS}
-      </StaticParagraphStyle>
-      <StaticParagraphStyle>
+        <StaticStrongStyle>Identität des Registranten: </StaticStrongStyle>
+        <br /> Make.org <br /> {MAKE_ADDRESS} <br />
         Kontakt:{' '}
         <RedLinkHTMLElementStyle href={ACCESSIBILITY_EMAIL}>
           {ACCESSIBILITY_EMAIL}
@@ -154,9 +141,9 @@ export const A11yDE = () => (
             </RedLinkHTMLElementStyle>
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
-            Axe
+            Axe{' '}
             <RedLinkHTMLElementStyle href="https://www.deque.com/axe/browser-extensions/">
-              Browser-Plug-in{' '}
+              Browser-Plug-in
             </RedLinkHTMLElementStyle>
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
@@ -207,13 +194,13 @@ export const A11yDE = () => (
             </RedLinkHTMLElementStyle>
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
-            Seite mit den Ergebnissen einer{' '}
+            Seite mit den Ergebnissen einer Konsultation{' '}
             <RedLinkHTMLElementStyle href="https://make.org/FR/consultation/dynamicslug/results">
               https://make.org/FR/consultation/dynamicslug/results
             </RedLinkHTMLElementStyle>
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
-            Seite mit den beliebtesten Ideen einer{' '}
+            Seite mit den beliebtesten Ideen einer Konsultation{' '}
             <RedLinkHTMLElementStyle href="https://make.org/FR/consultation/dynamicslug/top-ideas ">
               https://make.org/FR/consultation/dynamicslug/top-ideas
             </RedLinkHTMLElementStyle>
@@ -261,7 +248,7 @@ export const A11yDE = () => (
             </RedLinkHTMLElementStyle>
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
-            Seite mit der Meinung einer bekannten Persönlichkeit:
+            Seite mit der Meinung einer bekannten Persönlichkeit:{' '}
             <RedLinkHTMLElementStyle href="https://make.org/FR/profile/opinions">
               https://make.org/FR/profile/opinions
             </RedLinkHTMLElementStyle>
@@ -294,7 +281,7 @@ export const A11yDE = () => (
           <StaticSquareListItemStyle>
             Seite mit den Ergebnissen der Suche nach Vorschlägen:{' '}
             <RedLinkHTMLElementStyle href="https://make.org/FR/search/proposals?query=accessibilit%C3%A9">
-              https://make.org/FR/search/proposals?query=accessibilit%C3%A9
+              https://make.org/FR/search/proposals?query=accessibilité
             </RedLinkHTMLElementStyle>
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
@@ -408,8 +395,8 @@ export const A11yDE = () => (
         </StaticParagraphStyle>
         <StaticParagraphStyle>
           Sie erreichen uns unter dieser E-Mail-Adresse:{' '}
-          <RedLinkHTMLElementStyle href="https://make.org/FR/declaration-accessibilite">
-            https://make.org/FR/declaration-accessibilite
+          <RedLinkHTMLElementStyle href={ACCESSIBILITY_EMAIL}>
+            {ACCESSIBILITY_EMAIL}
           </RedLinkHTMLElementStyle>
         </StaticParagraphStyle>
       </StaticPrimaryOrderedListStyle>

@@ -95,9 +95,8 @@ export const TermsOfUseEN = () => {
               The Site and the Services (or collectively “the Services”) are
               operated by the company Make.org, a simplified joint stock company
               with a capital of {MAKE_CAPITAL}, with its headquarters at{' '}
-              {MAKE_ADDRESS} FRANCE, registered at the Trade and Companies
-              Register (RCS) of Paris under number {MAKE_RCS} (hereinafter
-              “Make.org”).
+              {MAKE_ADDRESS} FRANCE, registered with the RCS of Paris under
+              number {MAKE_RCS} (here after “MAKE.ORG”).
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
@@ -932,6 +931,35 @@ export const TermsOfUseEN = () => {
                   elements, in whole or in part, without the authorisation of
                   Make.org, is strictly forbidden and may result in legal
                   proceedings.
+                </StaticParagraphStyle>
+                <StaticStrongStyle>Database producer rights</StaticStrongStyle>
+                <StaticParagraphStyle>
+                  The Site is a database or databases with Make.org as the
+                  database producer (as defined under Articles L.341-1 et seq.
+                  of the French Intellectual Property Code). Make.org expressly
+                  prohibits: (i) any extraction, i.e. a permanent or temporary
+                  transfer, of all or a qualitatively or quantitatively
+                  substantial part of the database’s contents to another medium
+                  by any means or in any form; (ii) any re-use of all or a
+                  qualitatively or quantitatively substantial part of the
+                  database’s contents by making them available to the public in
+                  any form; and (iii) any systematic, repeated extraction or
+                  re-use of a qualitatively or quantitatively non-substantial
+                  part of the database’s contents that clearly exceeds normal
+                  use. Any person who extracts or re-uses the database’s
+                  contents in breach of these terms may face civil and/or
+                  criminal charges. If Articles L.341-1 et seq. of the French
+                  Intellectual Property Code do not apply for any reason, any
+                  person who extracts or uses the database’s contents without
+                  Make.org’s specific prior consent may face civil and/or
+                  criminal charges. In particular, Users may be held
+                  contractually liable.
+                </StaticParagraphStyle>
+                <StaticParagraphStyle>
+                  Make.org reserves all rights including the right to pursue
+                  legal action against anyone who breaches these terms. None of
+                  this clause’s terms can be construed as a waiver of any rights
+                  in such respect.
                 </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
               <StaticSecondaryOrderedListItemStyle className="section12">

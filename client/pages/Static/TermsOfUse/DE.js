@@ -58,27 +58,25 @@ export const TermsOfUseDE = () => {
           zugängliche Website und Dienstleistungen anbietet.
         </StaticParagraphStyle>
         <StaticParagraphStyle>
-          Zu diesem Zweck ermöglicht es den Benutzern, Vorschläge auf der
-          Website zu machen. Andere Nutzer, die dies wünschen, können diese
-          Vorschläge dann kommentieren oder für sie abstimmen, um sie zu
-          unterstützen. Ziel ist es, dass es gelingt, in der Gesellschaft
-          Gedanken zu Themen von allgemeinem Interesse, insbesondere zu
-          wirtschaftlichen, sozialen, staatsbürgerlichen und bürgerlichen
-          Angelegenheiten, in den Vordergrund zu bringen. Diese Überlegungen
-          können dann von Make.org-Partnern aufgegriffen werden, die helfen, sie
-          konkret und real zu machen.
+          Zu diesem Zweck ermöglicht sie den Nutzern, Vorschläge auf der Website
+          zu machen. Andere Nutzer, die dies wünschen, können diese Vorschläge
+          dann kommentieren oder für sie abstimmen, um sie zu unterstützen. Ziel
+          ist es, in der Gesellschaft die Auseinandersetzung mit Themen von
+          allgemeinem Interesse, insbesondere zu wirtschaftlichen, sozialen,
+          staatsbürgerlichen und bürgerlichen Angelegenheiten zu fördern. Diese
+          Ideen können dann von Make.org-Partnern aufgegriffen werden, die
+          helfen, sie konkret umzusetzen.
         </StaticParagraphStyle>
         <StaticPrimaryOrderedListStyle>
           <StaticPrimaryOrderedListItemStyle>
             <StaticThirdLevelTitleStyle>
-              SERVICEZWECK
+              ZWECK DER AUF DIESER WEBSITE ANGEBOTENEN DIENSTE
             </StaticThirdLevelTitleStyle>
             <StaticParagraphStyle>
               Der Zweck dieser allgemeinen Bedingungen ist es, die Bedingungen
               für die Nutzung der auf Make.org angebotenen Dienste (im
-              Folgenden: die &rdquo;Dienste&rdquo;) zu definieren, sowie die
-              Rechte und Pflichten der Parteien in diesem Zusammenhang zu
-              definieren.
+              Folgenden: die &rdquo;Dienste&rdquo;) sowie die Rechte und
+              Pflichten der Parteien in diesem Zusammenhang zu definieren.
             </StaticParagraphStyle>
             <StaticParagraphStyle>
               Sie sind jederzeit über einen direkten Link am unteren Rand der
@@ -93,13 +91,14 @@ export const TermsOfUseDE = () => {
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
             <StaticThirdLevelTitleStyle>
-              BETREIBER DER WEBSITE UND DIENSTE
+              BETREIBER DER WEBSITE UND DER DIENSTE
             </StaticThirdLevelTitleStyle>
             <StaticParagraphStyle>
               Die Website und die Dienste (oder zusammen &rdquo;die
-              Dienste&rdquo;) werden von Make.org, SAS mit einem Kapital von{' '}
-              {MAKE_CAPITAL}, mit Sitz in {MAKE_ADDRESS} Frankreich, eingetragen
-              im Handels- und Gesellschaftsregister von PARIS unter der Nummer{' '}
+              Dienste&rdquo;) werden von Make.org, einer vereinfachten
+              Aktiengesellschaft französischen Rechts, mit einem Grundkapital
+              von {MAKE_CAPITAL}, mit Sitz in {MAKE_ADDRESS}, eingetragen im
+              Handels- und Gesellschaftsregister von PARIS unter der Nummer{' '}
               {MAKE_RCS} (im Folgenden &rdquo;Make.org&rdquo;) betrieben.
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>
@@ -108,27 +107,23 @@ export const TermsOfUseDE = () => {
               ZUGANG ZUR WEBSITE UND ZU DEN DIENSTEN
             </StaticThirdLevelTitleStyle>
             <StaticParagraphStyle>
-              Der Zugang zur Website und zu den Diensten ist kostenlos.
-            </StaticParagraphStyle>
-            <StaticParagraphStyle>
-              Der Zugang zur Website und zu den Diensten ist kostenlos. Sie ist
-              offen und unterliegt den auf der Seite angegebenen
-              Einschränkungen:
+              Der Zugang zur Website und zu den Diensten ist kostenlos und den
+              auf der Website angegebenen Personen vorbehalten:
             </StaticParagraphStyle>
             <StaticSquareListStyle>
               <StaticSquareListItemStyle>
-                an jede natürliche Person, die voll geschäftsfähig ist, um sich
-                an diese Bedingungen zu binden. Eine natürliche Person, die
-                nicht voll geschäftsfähig ist, darf nur mit Zustimmung ihres
-                gesetzlichen Vertreters auf die Website und die Dienste
-                zugreifen,
+                jeder natürlichen Person, die voll rechts- und geschäftsfähig
+                ist, um sich an diese Bedingungen zu binden. Eine natürliche
+                Person, die nicht voll rechts- und geschäftsfähig ist, darf nur
+                mit Zustimmung ihres gesetzlichen Vertreters auf die Website und
+                die Dienste zugreifen,
               </StaticSquareListItemStyle>
               <StaticSquareListItemStyle>
-                an jeden Minderjährigen mit der Genehmigung seiner gesetzlichen
+                jedem Minderjährigen mit der Genehmigung seiner gesetzlichen
                 Vertreter und unter deren Kontrolle,
               </StaticSquareListItemStyle>
               <StaticSquareListItemStyle>
-                jede juristische Person, die durch eine natürliche Person
+                jeder juristischen Person, die durch eine natürliche Person
                 handelt, die die Rechtsfähigkeit besitzt, im Namen und im
                 Auftrag der juristischen Person Verträge abzuschließen.
               </StaticSquareListItemStyle>
@@ -136,28 +131,27 @@ export const TermsOfUseDE = () => {
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
             <StaticThirdLevelTitleStyle>
-              AKZEPTANZ DER BEDINGUNGEN UND KONDITIONEN
+              ANNAHME DER ALLGEMEINEN NUTZUNGSBEDINGUNGEN
             </StaticThirdLevelTitleStyle>
             <StaticParagraphStyle>
-              Der Zweck dieser Allgemeinen Geschäftsbedingungen (im Folgenden
+              Der Zweck dieser Allgemeinen Nutzungsbedingungen (im Folgenden
               &rdquo;AGB&rdquo;) ist es, die Bedingungen zu definieren, unter
-              denen der Benutzer auf die Dienste zugreifen und diese nutzen
-              kann. Sie stellen einen Vertrag zwischen Make.org und den Nutzern
-              des Dienstes dar. Sie ersetzen alle früheren Bestimmungen und
-              stellen die Gesamtheit der Rechte und Pflichten der Parteien dar.
-              Die GCUS werden jedem Benutzer mitgeteilt, der sie liest.
+              denen der Nutzer auf die Dienste zugreifen und diese nutzen kann.
+              Sie stellen einen Vertrag zwischen Make.org und den Nutzern des
+              Dienstes dar. Sie ersetzen alle früheren Bestimmungen und stellen
+              die Gesamtheit der Rechte und Pflichten der Parteien dar. Die ANB
+              werden jedem Nutzer mitgeteilt, der sie liest.
             </StaticParagraphStyle>
             <StaticParagraphStyle>
               Die Nutzung des Dienstes setzt die vollständige und
-              uneingeschränkte Annahme dieser AGB voraus. Die Nichtakzeptanz der
+              uneingeschränkte Annahme dieser ANB voraus. Die Ablehnung der
               Nutzungsbedingungen bedeutet den Verzicht auf die Nutzung des
               Dienstes.
             </StaticParagraphStyle>
             <StaticParagraphStyle>
-              Die Nutzung des Dienstes impliziert auch die vollständige und
-              uneingeschränkte Akzeptanz der
-              Make.org-Datenverwendungsrichtlinie, die einen integralen
-              Bestandteil dieser TOS bildet und hier verfügbar{' '}
+              Die Nutzung des Dienstes beinhaltet auch die vollständige und
+              uneingeschränkte Akzeptanz der Make.org-Datenschutzerklärung, die
+              einen integralen Bestandteil dieser ANB bildet und hier verfügbar{' '}
               <RedLinkHTMLElementStyle
                 href={getDataPageLink(country, language)}
               >
@@ -165,54 +159,54 @@ export const TermsOfUseDE = () => {
               </RedLinkHTMLElementStyle>
             </StaticParagraphStyle>
             <StaticParagraphStyle>
-              Diese AGB können jederzeit und ohne Ankündigung von Make.org
+              Diese ANB können jederzeit und ohne Ankündigung von Make.org
               geändert werden. Jede Änderung wird unmittelbar mit der
-              Veröffentlichung der neuen Version der AVB auf der Website
-              wirksam. Der Benutzer wird daher aufgefordert, regelmäßig die
-              neueste Version der AGB auf der Website zu konsultieren. Tun Sie
-              dies nicht, wird davon ausgegangen, dass Sie die neue Version der
-              Allgemeinen Nutzungsbedingungen vorbehaltlos akzeptieren.
+              Veröffentlichung der neuen Version der ANB auf der Website
+              wirksam. Der Nutzer wird daher aufgefordert, regelmäßig die
+              neueste Version der ANB auf der Website zu konsultieren.
+              Andernfalls gilt die neue Version der Allgemeinen
+              Nutzungsbedingungen als vorbehaltlos angenommen.
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
             <StaticThirdLevelTitleStyle>
-              SITE-NUTZUNG
+              NUTZUNG DER WEBSITE
             </StaticThirdLevelTitleStyle>
             <StaticSecondaryOrderedListStyle>
               <StaticSecondaryOrderedListItemStyle className="section5">
                 <StaticFourthLevelTitleStyle>
-                  Zugang zum Standort
+                  Zugang zur Website
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
-                  Die Seite ist öffentlich zugänglich und alle Benutzer können
-                  die Seite besuchen und über die Vorschläge abstimmen.
+                  Die Seite ist öffentlich zugänglich und alle Nutzer können die
+                  Seite besuchen und über die Vorschläge abstimmen.
                 </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
               <StaticSecondaryOrderedListItemStyle className="section5">
                 <StaticFourthLevelTitleStyle>
-                  Registrierte Benutzer
+                  Registrierte Nutzer
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
-                  Alle Benutzer können auf der Seite abstimmen, aber nur
-                  registrierte Benutzer können Bürgervorschläge machen. Zu
-                  diesem Zweck können sich diejenigen, die dies wünschen, auf
-                  der Website registrieren, indem sie das zu diesem Zweck
-                  vorgesehene Formular ausfüllen. Sie müssen dann alle als
-                  obligatorisch gekennzeichneten Angaben machen. Eine
-                  unvollständige Anmeldung wird nicht berücksichtigt.
+                  Alle Nutzer können auf der Seite abstimmen, aber nur
+                  registrierte Nutzer können Vorschläge im Rahmen einer
+                  Konsultation machen. Zu diesem Zweck können sich diejenigen,
+                  die dies wünschen, auf der Website registrieren, indem sie das
+                  zu diesem Zweck vorgesehene Formular ausfüllen. Sie müssen
+                  dann alle als obligatorisch gekennzeichneten Angaben machen.
+                  Eine unvollständige Anmeldung wird nicht berücksichtigt.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  ie auf der Website registrierten Benutzer werden ausdrücklich
-                  als &rdquo;registrierte Benutzer&rdquo; bezeichnet.
+                  Die auf der Website registrierten Nutzer werden ausdrücklich
+                  als &rdquo;registrierte Nutzer&rdquo; bezeichnet.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Registrierte Benutzer garantieren, dass alle im
+                  Registrierte Nutzer garantieren, dass alle im
                   Registrierungsformular gemachten Angaben korrekt, aktuell und
                   wahrheitsgemäß sind und nicht irreführend sind.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
                   Der Nutzer verpflichtet sich, diese Informationen in seinem
-                  Persönlichen Bereich zu aktualisieren, indem er Make.org per
+                  persönlichen Bereich zu aktualisieren, indem er Make.org per
                   E-Mail an{' '}
                   <RedLinkHTMLElementStyle href={`mailto:${CONTACT_EMAIL_DE}`}>
                     {`${CONTACT_EMAIL_DE}`}
@@ -220,11 +214,11 @@ export const TermsOfUseDE = () => {
                   kontaktiert.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Der registrierte Benutzer ist darüber informiert und
-                  akzeptiert, dass die zum Zweck der Erstellung oder
-                  Aktualisierung seines Kontos eingegebenen Informationen ein
-                  Beweis für seine Identität sind. Die vom Benutzer eingegebenen
-                  Informationen sind nach der Validierung verbindlich.
+                  Der registrierte Nutzer ist darüber informiert und akzeptiert,
+                  dass die zum Zweck der Erstellung oder Aktualisierung seines
+                  Kontos eingegebenen Informationen ein Beweis für seine
+                  Identität sind. Die vom Nutzer eingegebenen Informationen sind
+                  nach der Validierung verbindlich.
                 </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
               <StaticSecondaryOrderedListItemStyle className="section5">
@@ -233,15 +227,15 @@ export const TermsOfUseDE = () => {
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
                   Die Registrierung führt automatisch zur Eröffnung eines Kontos
-                  (im Folgenden: das &rdquo;Konto&rdquo;), das Zugang zu einem
+                  (im Folgenden: &rdquo;Konto&rdquo;), das Zugang zu einem
                   persönlichen Bereich (im Folgenden: der &rdquo;Persönliche
                   Bereich&rdquo;) gibt, der es ermöglicht, die Nutzung der
                   Dienste in einer Form und mit den technischen Mitteln zu
-                  verwalten, die Make.org für am geeignetsten hält und die sich
-                  im Laufe der Zeit ändern können.
+                  verwalten, die Make.org für geeignet hält und die sich im
+                  Laufe der Zeit ändern können.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Registrierte Benutzer können jederzeit auf ihren persönlichen
+                  Registrierte Nutzer können jederzeit auf ihren persönlichen
                   Bereich zugreifen, nachdem sie sich mit ihrem Login und
                   Passwort identifiziert haben.
                 </StaticParagraphStyle>
@@ -252,37 +246,37 @@ export const TermsOfUseDE = () => {
                   denn, sie übernehmen die volle Verantwortung dafür.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Registrierte Benutzer sind ebenfalls für die Geheimhaltung
-                  ihres Logins und Passworts verantwortlich. Sie sollten
-                  Make.org sofort kontaktieren, wenn sie feststellen, dass ihr
-                  Konto ohne ihr Wissen verwendet wurde. Sie erkennen an, dass
-                  Make.org das Recht hat, in solchen Fällen entsprechende
-                  Maßnahmen zu ergreifen.
+                  Registrierte Nutzer sind ebenfalls für die Geheimhaltung ihres
+                  Logins und Passworts verantwortlich. Sie sollten Make.org
+                  sofort kontaktieren, wenn sie feststellen, dass ihr Konto ohne
+                  ihr Wissen verwendet wurde. Sie erkennen an, dass Make.org das
+                  Recht hat, in solchen Fällen entsprechende Maßnahmen zu
+                  ergreifen.
                 </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
             </StaticSecondaryOrderedListStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
             <StaticThirdLevelTitleStyle>
-              BESCHREIBUNG DER DIENSTLEISTUNGEN
+              BESCHREIBUNG DER DIENSTE
             </StaticThirdLevelTitleStyle>
             <StaticSecondaryOrderedListStyle>
               <StaticSecondaryOrderedListItemStyle className="section6">
                 <StaticFourthLevelTitleStyle>
-                  Bürgervorschläge
+                  Vorschläge von Bürgern
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
-                  Die Plattform bietet Nutzern die Möglichkeit, über
-                  Bürgervorschläge abzustimmen, die von anderen Nutzern
-                  vorgeschlagen wurden.
+                  Die Plattform bietet Nutzern die Möglichkeit, über Vorschläge
+                  von Bürgern (im Folgenden: der &rdquo;Bürgervorschlag&rdquo;)
+                  abzustimmen, die von anderen Nutzern vorgeschlagen wurden.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
                   Die bei Make.org eingereichten Bürgervorschläge haben alle die
                   gleiche Chance, in die Tat umgesetzt zu werden.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Durch ihr Votum können die Nutzer einen Vorschlag zu einer
-                  Citizen Action werden lassen, für die sich Make.org einsetzt.
+                  Durch ihr Votum können die Nutzer einen Vorschlag in eine
+                  konkrete Maßnahme verwandeln, für die sich Make.org einsetzt.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
                   Make.org versteht sich dann als Vermittler zwischen
@@ -295,13 +289,12 @@ export const TermsOfUseDE = () => {
               </StaticSecondaryOrderedListItemStyle>
               <StaticSecondaryOrderedListItemStyle className="section6">
                 <StaticFourthLevelTitleStyle>
-                  Einen Bürgervorschlag formulieren
+                  Einen Vorschlag formulieren
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
-                  Registrierte Benutzer können eigene Bürgervorschläge machen,
-                  die veröffentlicht, kommentiert, analysiert und diskutiert
-                  werden sollen und zur Abstimmung durch die Benutzer gestellt
-                  werden.
+                  Registrierte Nutzer können eigene Bürgervorschläge machen, die
+                  veröffentlicht, kommentiert, analysiert und diskutiert werden
+                  sollen und zur Abstimmung durch die Nutzer gestellt werden.
                 </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
               <StaticSecondaryOrderedListItemStyle className="section6">
@@ -309,59 +302,59 @@ export const TermsOfUseDE = () => {
                   Form und Inhalt der Bürgervorschläge
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
-                  Jeder Bürgervorschlag muss unbedingt mit &rdquo;Es muss&rdquo;
-                  beginnen und darf maximal 140 Zeichen enthalten. Der
-                  Bürgervorschlag muss gut lesbar und in einer allgemein
-                  verständlichen Form in französischer Sprache verfasst sein,
-                  ohne Abkürzungen und ohne Missbrauch von Großbuchstaben.
+                  Jeder Bürgervorschlag muss unbedingt mit &rdquo;„Man
+                  sollte“&rdquo; beginnen und darf maximal 140 Zeichen
+                  enthalten. Der Vorschlag muss gut lesbar und in einer
+                  allgemein verständlichen Form in deutscher Sprache verfasst
+                  sein, ohne Abkürzungen und ohne übermäßige Verwendung von
+                  Großbuchstaben.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
                   Der Vorschlag darf keine Elemente enthalten, die gegen das
-                  Gesetz oder die guten Sitten verstoßen oder deren Bedingungen
-                  gegen die Bestimmungen dieser Nutzungsbedingungen verstoßen
-                  würden.
+                  Gesetz oder die guten Sitten verstoßen oder dessen Inhalt
+                  gegen die Bestimmungen dieser Nutzungsbedingungen verstößt.
                 </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
               <StaticSecondaryOrderedListItemStyle className="section6">
                 <StaticFourthLevelTitleStyle>
-                  Moderation und Veröffentlichung des Bürgervorschlags
+                  Moderieren und Veröffentlichung von Bürgervorschlägen
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
-                  Die Veröffentlichung des Bürgervorschlags des Nutzers
-                  unterliegt der Moderation unter den in diesen AVB definierten
+                  Die Veröffentlichung des Vorschlags eines Nutzers unterliegt
+                  dem Moderieren unter den in diesen ANB definierten
                   Bedingungen. Die Anfrage zur Veröffentlichung eines
                   Bürgervorschlags wird so schnell wie möglich von den
-                  Make.org-Teams bearbeitet, mit dem Ziel, innerhalb von 48
-                  Stunden zu antworten.
+                  Make.org-Teams bearbeitet. Ziel ist eine Antwort in weniger
+                  als 48 Stunden.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Der Moderationsdienst von Make.org prüft jeden eingegangenen
-                  Bürgervorschlag, bevor er online gestellt wird. Der Nutzer
-                  muss daher sicherstellen, dass er die Einreichung eines
-                  Vorschlags für einen Bürgerantrag nicht unnötig wiederholt und
-                  nicht denselben Vorschlag für einen Bürgerantrag einreicht. Er
-                  sollte die Dienste auch nicht spammen, indem er die gleichen
-                  Lösungen mit verschiedenen E-Mail-Adressen vorschlägt.
+                  Die für das Moderieren zuständige Abteilung von Make.org prüft
+                  jeden eingegangenen Bürgervorschlag, bevor er online gestellt
+                  wird. Der Nutzer muss daher sicherstellen, dass er einen
+                  Vorschlag nicht unnötig mehrfach abschickt oder einen
+                  Vorschlag mehrfach einreicht. Er sollte die Dienste auch nicht
+                  spammen, indem er die gleichen Vorschläge von verschiedenen
+                  E-Mail-Adressen versendet.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Sobald der Bürgervorschlag des Benutzers validiert ist, wird
-                  er im Dienst veröffentlicht und eine Benachrichtigung über die
+                  Sobald der Bürgervorschlag eines Nutzers validiert ist, wird
+                  er veröffentlicht und eine Benachrichtigung über die
                   Veröffentlichung an den Autor gesendet.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Wenn der Bürgervorschlag des Nutzers abgelehnt wird, erhält
-                  der Nutzer von Make.org eine E-Mail, die ihn über die
-                  Ablehnung informiert. Der Benutzer kann dann frei einen neuen
-                  Bürgervorschlag einreichen.
+                  Wird der Bürgervorschlag eines Nutzers abgelehnt, erhält der
+                  Nutzer von Make.org eine E-Mail, die ihn über die Ablehnung
+                  informiert. Der Nutzer kann dann nach eigenem Ermessen einen
+                  neuen Vorschlag einreichen.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Sobald es in den Diensten veröffentlicht wurde, kann es in den
-                  Diensten erscheinen, aber Make.org garantiert nicht die
-                  Häufigkeit des Erscheinens oder das Publikum.
+                  Sobald der Vorschlag veröffentlicht wurde, kann er auf der
+                  Plattform erscheinen, aber Make.org garantiert weder für die
+                  Häufigkeit des Erscheinens noch für das Publikum.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
                   Make.org verpflichtet sich, den legalen Inhalt, der ihm
-                  vorgeschlagen wird und der seinen Moderationsregeln
+                  vorgeschlagen wird und der seinen Regeln für das Moderieren
                   entspricht, nicht willkürlich zu verändern, abgesehen von
                   Korrekturen, die die Rechtschreibung betreffen.
                 </StaticParagraphStyle>
@@ -369,10 +362,10 @@ export const TermsOfUseDE = () => {
               <StaticSecondaryOrderedListItemStyle className="section6">
                 <StaticFourthLevelTitleStyle>
                   Antrag auf Löschung eines Bürgervorschlags durch einen
-                  registrierten Benutzer
+                  registrierten Nutzer
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
-                  Für den Fall, dass ein registrierter Benutzer seinen
+                  Für den Fall, dass ein registrierter Nutzer seinen
                   veröffentlichten Bürgervorschlag löschen lassen möchte, sollte
                   er eine Anfrage per E-Mail an Make.org an die folgende Adresse
                   senden:{' '}
@@ -381,8 +374,8 @@ export const TermsOfUseDE = () => {
                   </RedLinkHTMLElementStyle>
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Der Antrag des Nutzers auf Löschung wird innerhalb einer
-                  angemessenen Zeit von Make.org bearbeitet.
+                  Der Antrag des Nutzers auf Löschung wird innerhalb eines
+                  angemessenen Zeitrahmens von Make.org bearbeitet.
                 </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
               <StaticSecondaryOrderedListItemStyle className="section6">
@@ -390,31 +383,32 @@ export const TermsOfUseDE = () => {
                   Abstimmen über einen Bürgervorschlag
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
-                  Alle Benutzer können sich durch Abstimmungen über die
+                  Alle Nutzer können sich durch Abstimmungen über die
                   Bürgervorschläge auf der Website äußern, ohne ein Konto
                   erstellen zu müssen, indem sie auf die Schaltflächen
-                  &rdquo;Zustimmen&rdquo;, &rdquo;Nicht zustimmen&rdquo; oder
-                  &rdquo;Leere Stimme&rdquo; klicken.
+                  &rdquo;Ich stimme zu&rdquo;, &rdquo;Ich stimme nicht zu&rdquo;
+                  oder &rdquo;Neutral&rdquo; klicken.
                 </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
               <StaticSecondaryOrderedListItemStyle className="section6">
                 <StaticFourthLevelTitleStyle>
-                  Verwendung von Bürgervorschlägen
+                  Verwendung von Bürgervorschläge
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
                   <StaticStrongStyle>
                     Verwendung für statistische Zwecke:{' '}
                   </StaticStrongStyle>
-                  Make.org kann die Eingaben der Bürger, aggregiert oder nicht
-                  und bereinigt von allen persönlichen Daten, einschließlich
-                  Zusammenstellungen, Zusammenfassungen für statistische,
-                  Forschungs- oder andere Zwecke verwenden.
+                  Make.org kann die Bürgervorschläge, darunter
+                  Zusammenstellungen bzw. Übersichten für statistische,
+                  Forschungs- oder jedwede anderen Zwecke, gruppiert oder
+                  einzeln und bereinigt von allen personenbezogene Daten
+                  verwenden.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
                   <StaticStrongStyle>
                     Verwendung für Debatten:{' '}
                   </StaticStrongStyle>
-                  Die auf dem Dienst veröffentlichten Bürgervorschläge können
+                  Die auf der Plattform veröffentlichten Bürgervorschläge können
                   von Make.org ausgewählt werden, um in öffentlichen Debatten,
                   die von Make.org oder seinen Partnern organisiert werden,
                   analysiert, kommentiert und/oder diskutiert zu werden.
@@ -423,21 +417,11 @@ export const TermsOfUseDE = () => {
                   <StaticStrongStyle>
                     Verwendung für Berichterstattung und Forschung:{' '}
                   </StaticStrongStyle>
-                  Die auf dem Dienst veröffentlichten Bürgervorschläge sowie die
-                  dazu abgegebenen Stimmen können von Make.org ausgewählt
+                  Die auf der Plattform veröffentlichten Bürgervorschläge sowie
+                  die dazu abgegebenen Stimmen können von Make.org ausgewählt
                   werden, um u.a. Analysen, Berichte und Studien für
-                  statistische und Forschungszwecke durchzuführen oder um Anlass
-                  für die Erstellung von Reformprojekten zu geben.
-                </StaticParagraphStyle>
-                <StaticParagraphStyle>
-                  <StaticStrongStyle>
-                    Verwendung für Berichterstattung und Forschung:{' '}
-                  </StaticStrongStyle>
-                  Die auf dem Dienst veröffentlichten Bürgervorschläge sowie die
-                  dazu abgegebenen Stimmen können von Make.org ausgewählt
-                  werden, um u.a. Analysen, Berichte und Studien für
-                  statistische und Forschungszwecke durchzuführen oder um Anlass
-                  für die Erstellung von Reformprojekten zu geben.
+                  statistische und Forschungszwecke durchzuführen oder um
+                  Reformprojekte zu erarbeiten.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
                   <StaticStrongStyle>
@@ -445,7 +429,7 @@ export const TermsOfUseDE = () => {
                   </StaticStrongStyle>
                   Make.org kann nicht-kommerzielle White Papers veröffentlichen
                   oder mitveröffentlichen, die ganz oder teilweise die
-                  Vorschläge der Bürger enthalten.
+                  Bürgervorschläge enthalten.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
                   <StaticStrongStyle>Redaktionelle Nutzung: </StaticStrongStyle>
@@ -457,24 +441,27 @@ export const TermsOfUseDE = () => {
                 <StaticParagraphStyle>
                   <StaticStrongStyle>
                     Verwendung zu Kommunikationszwecken:{' '}
-                  </StaticStrongStyle>{' '}
-                  Eingaben von Bürgern können von Make.org auch auf der Website
-                  verwendet und in Werbeflächen angezeigt werden, die von
-                  Make.org-Partnern betrieben werden. In diesem Fall führt die
-                  Verwendung eines Bürgervorschlages in einer solchen
-                  Werbefläche zur Veröffentlichung des Vorschlages, wenn dieser
-                  anonym veröffentlicht wurde oder mit Vorname, Alter und
-                  Abteilung versehen, wenn der Nutzer diese Angaben gemacht hat.
+                  </StaticStrongStyle>
+                  Bürgervorschläge können von Make.org auch auf seiner Website
+                  verwendet und auf von Make.org-Partnern betriebenen
+                  Werbeflächen angezeigt werden.
+                </StaticParagraphStyle>
+                <StaticParagraphStyle>
+                  Wurde der Vorschlag anonym gemacht, wird er auf der
+                  Werbefläche ohne persönliche Angaben veröffentlicht; hat der
+                  Nutzer Vorname, Alter und Region angegeben, werden diese auf
+                  der Werbefläche erwähnt.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
                   <StaticStrongStyle>
                     Umsetzung von Bürgervorschlägen:{' '}
                   </StaticStrongStyle>
                   Schließlich können die Vorschläge Gegenstand einer konkreten
-                  Umwandlungsaktion sein, entweder direkt durch die Nutzer oder
-                  durch die Aktionspartner von Make.org, die der Nutzer, von dem
-                  der Vorschlag stammt, sowie die Nutzer, die über ihn
-                  abgestimmt haben, verstehen und ausdrücklich akzeptieren.
+                  Umsetzungsmaßnahme sein, entweder direkt durch die Nutzer oder
+                  durch die Aktionspartner von Make.org. Der Nutzer, von dem der
+                  Vorschlag stammt, sowie die Nutzer, die über ihn abgestimmt
+                  haben, verstehen und akzeptieren diesen Sachverhalt
+                  ausdrücklich.
                 </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
               <StaticSecondaryOrderedListItemStyle
@@ -482,44 +469,43 @@ export const TermsOfUseDE = () => {
                 className="section6"
               >
                 <StaticFourthLevelTitleStyle>
-                  Partner-Aktionen
+                  Aktionspartner
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
-                  Registrierte Benutzer können eigene Bürgervorschläge machen,
-                  die veröffentlicht, kommentiert, analysiert und diskutiert
-                  werden sollen und zur Abstimmung durch die Benutzer gestellt
-                  werden.
+                  Registrierte Nutzer können eigene Bürgervorschläge machen, die
+                  veröffentlicht, kommentiert, analysiert und diskutiert werden
+                  sollen und zur Abstimmung durch die Nutzer gestellt werden.
                 </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
             </StaticSecondaryOrderedListStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
-            <StaticThirdLevelTitleStyle>PROOF</StaticThirdLevelTitleStyle>
+            <StaticThirdLevelTitleStyle>NACHWEISE</StaticThirdLevelTitleStyle>
             <StaticParagraphStyle>
               Der Nutzer nimmt dies ausdrücklich zur Kenntnis und erklärt sich
               damit einverstanden:
             </StaticParagraphStyle>
             <StaticSquareListStyle>
               <StaticSquareListItemStyle>
-                dass die Daten, die auf der Website und auf der
-                Computerausrüstung von Make.org gesammelt werden, ein Beweis für
-                die Realität der Operationen sind, die im Rahmen des
-                vorliegenden Dokuments durchgeführt werden;
+                dass die Daten, die auf der Website und auf den IT-Geräten von
+                Make.org gesammelt werden, ein Nachweis für die Realität der
+                Handlungen sind, die im Rahmen des vorliegenden Dokuments
+                vorgenommen werden;
               </StaticSquareListItemStyle>
               <StaticSquareListItemStyle>
-                dass diese Daten die einzige zwischen den Parteien zugelassene
-                Beweisart darstellen.
+                dass diese Daten den einzigen zwischen den Parteien zugelassenen
+                Nachweis darstellen.
               </StaticSquareListItemStyle>
             </StaticSquareListStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
             <StaticThirdLevelTitleStyle>
-              PFLICHTEN DES ANWENDERS
+              PFLICHTEN DES NUTZERS
             </StaticThirdLevelTitleStyle>
             <StaticParagraphStyle>
               Unbeschadet der anderen hierin vorgesehenen Verpflichtungen
-              verpflichtet sich der Benutzer, die folgenden Verpflichtungen
-              einzuhalten:
+              verpflichtet sich der Nutzer zur Einhaltung der folgenden
+              Bestimmungen:
             </StaticParagraphStyle>
             <StaticSecondaryOrderedListStyle>
               <StaticSecondaryOrderedListItemStyle className="section8">
@@ -527,15 +513,16 @@ export const TermsOfUseDE = () => {
                   Einhaltung von Gesetzen und Vorschriften
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
-                  Der Nutzer verpflichtet sich, bei der Nutzung der Dienste die
-                  geltenden Gesetze und Vorschriften zu beachten und nicht gegen
-                  die Rechte Dritter oder die öffentliche Ordnung zu verstoßen.
-                  Der Nutzer ist allein verantwortlich für die ordnungsgemäße
-                  Erledigung aller administrativen, steuerlichen und/oder
-                  sozialen Formalitäten sowie für die Zahlung von Beiträgen,
-                  Steuern oder Abgaben jeglicher Art, die im Zusammenhang mit
-                  seiner Nutzung der Dienste anfallen können. Make.org kann in
-                  dieser Hinsicht in keiner Weise haftbar gemacht werden.
+                  Der Nutzer verpflichtet sich, bei der Nutzung der Plattform
+                  die geltenden Gesetze und Vorschriften zu beachten und nicht
+                  gegen die Rechte Dritter oder die öffentliche Ordnung zu
+                  verstoßen. Der Nutzer ist allein verantwortlich für die
+                  ordnungsgemäße Einhaltung aller administrativen, steuerlichen
+                  und/oder sozialen Formalitäten sowie für die Zahlung von
+                  Beiträgen, Steuern oder Abgaben jeglicher Art, die im
+                  Zusammenhang mit seiner Nutzung der Plattform anfallen können.
+                  Make.org kann in dieser Hinsicht in keiner Weise haftbar
+                  gemacht werden.
                 </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
               <StaticSecondaryOrderedListItemStyle className="section8">
@@ -543,20 +530,20 @@ export const TermsOfUseDE = () => {
                   Nutzung der Website und Dienste
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
-                  Der Benutzer erkennt an, dass er die Eigenschaften und
+                  Der Nutzer erkennt an, dass er die Eigenschaften und
                   Beschränkungen aller Dienste auf der Website, insbesondere die
                   technischen, gelesen hat. Er ist allein verantwortlich für
                   seine Nutzung der Dienste.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Der Benutzer ist darüber informiert und akzeptiert, dass die
-                  Implementierung der Dienste eine Verbindung zum Internet
-                  erfordert und dass die Qualität der Dienste direkt von dieser
-                  Verbindung abhängt, für die er allein verantwortlich ist.
+                  Der Nutzer ist darüber informiert und akzeptiert, dass die
+                  Umsetzung der Dienste eine Internetverbindung voraussetzt und
+                  dass die Qualität der Dienste direkt von dieser Verbindung
+                  abhängt, für die er allein verantwortlich ist
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Der Nutzer verpflichtet sich, keine Angebote mit werbendem
-                  Charakter oder zur Förderung von Dienstleistungen mit
+                  Der Nutzer verpflichtet sich, keine Vorschläge mit
+                  Werbecharakter oder zur Förderung von Dienstleistungen mit
                   Gewinnabsicht zu veröffentlichen. Der Nutzer verpflichtet
                   sich, keine nicht ernst gemeinten oder themenfremden
                   Vorschläge zu veröffentlichen. Der Nutzer verpflichtet sich
@@ -567,60 +554,63 @@ export const TermsOfUseDE = () => {
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
                   Der Nutzer verpflichtet sich, keine Vorschläge zu
-                  veröffentlichen, die Parteien, Organisationen oder Personen
-                  des öffentlichen Lebens fördern oder verunglimpfen.
+                  veröffentlichen, die Werbung für Parteien, Organisationen oder
+                  Personen des öffentlichen Lebens darstellen oder diese
+                  verunglimpfen.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
                   Der Nutzer ist auch allein verantwortlich für die Beziehungen,
                   die er mit anderen Nutzern eingeht und die Informationen, die
                   er ihnen im Rahmen der Dienste mitteilt. Es liegt in der
-                  Verantwortung des Benutzers, bei diesen Beziehungen und
+                  Verantwortung des Nutzers, bei diesen Beziehungen und
                   Kommunikationen die erforderliche Sorgfalt und Diskretion
                   walten zu lassen. Der Nutzer verpflichtet sich außerdem, im
                   Austausch mit anderen Nutzern die üblichen Regeln der
                   Höflichkeit zu beachten.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Der Benutzer verpflichtet sich, keine Kommentare oder
-                  Vorschläge zu machen, die gegen das Gesetz oder die guten
-                  Sitten verstoßen, insbesondere, ohne dass diese Aufzählung
-                  abschließend ist:
+                  Der Nutzer verpflichtet sich, keine Kommentare oder Vorschläge
+                  zu machen, die gegen das Gesetz oder die guten Sitten
+                  verstoßen, insbesondere (ohne dass diese Aufzählung einen
+                  Anspruch auf Vollständigkeit erhebt):
                 </StaticParagraphStyle>
                 <StaticSquareListStyle>
                   <StaticSquareListItemStyle>
-                    Äußerungen, die zum Rassenhass aufstacheln, rassistische,
-                    antisemitische, fremdenfeindliche, homophobe Äußerungen,
-                    usw.;
+                    keine Äußerungen, die zum Rassenhass aufstacheln,
+                    rassistische, antisemitische, fremdenfeindliche, homophobe
+                    Äußerungen, usw.;
                   </StaticSquareListItemStyle>
                   <StaticSquareListItemStyle>
-                    gewalttätig, pornografisch, pädophil, usw..;
+                    keine gewalttätigen, pornografischen, pädophilen Äußerungen
+                    etc.;
                   </StaticSquareListItemStyle>
                   <StaticSquareListItemStyle>
-                    beleidigend, verunglimpfend, diffamierend oder die
-                    Persönlichkeitsrechte Dritter verletzend;
+                    keine beleidigenden, verunglimpfenden, diffamierenden oder
+                    die Persönlichkeitsrechte Dritter verletzende Äußerungen;
                   </StaticSquareListItemStyle>
                   <StaticSquareListItemStyle>
-                    Leugnung von Verbrechen gegen die Menschlichkeit und
-                    anerkannten Völkermorden und Verherrlichung von Verbrechen ;
+                    keine Äußerungen, die Verbrechen gegen die Menschlichkeit
+                    und anerkannten Völkermorden leugnen und Verbrechen
+                    verherrlichen;
                   </StaticSquareListItemStyle>
                   <StaticSquareListItemStyle>
-                    Anstiftung zu strafbaren Handlungen, wie z. B. Anstiftung
-                    zur Gewalt, zum Terrorismus, zum Verkauf von
-                    Betäubungsmitteln usw. ;
+                    keine Anstiftung zu strafbaren Handlungen, wie z. B.
+                    Anstiftung zur Gewalt, zum Terrorismus, zum Verkauf von
+                    Betäubungsmitteln etc.;
                   </StaticSquareListItemStyle>
                   <StaticSquareListItemStyle>
-                    Äußerungen, die die Privatsphäre oder geistige
-                    Eigentumsrechte anderer verletzen,
+                    keine Äußerungen, die die Privatsphäre oder geistige
+                    Eigentumsrechte anderer Personen verletzen;
                   </StaticSquareListItemStyle>
                   <StaticSquareListItemStyle>
-                    Aussagen, die gegen die Unschuldsvermutung oder das
-                    Untersuchungsgeheimnis verstoßen, etc;
+                    keine Äußerungen, die gegen die Unschuldsvermutung oder das
+                    Untersuchungsgeheimnis verstoßen etc.;
                   </StaticSquareListItemStyle>
                   <StaticSquareListItemStyle>
-                    Worte, die die Menschenwürde verletzen ;
+                    keine Äußerungen, die die Menschenwürde verletzen;
                   </StaticSquareListItemStyle>
                   <StaticSquareListItemStyle>
-                    Äußerungen, die als Missbrauch des Rechts auf freie
+                    keine Äußerungen, die als Missbrauch des Rechts auf freie
                     Meinungsäußerung angesehen werden könnten.
                   </StaticSquareListItemStyle>
                 </StaticSquareListStyle>
@@ -632,14 +622,14 @@ export const TermsOfUseDE = () => {
                 <StaticParagraphStyle>
                   Der Nutzer verpflichtet sich, Make.org alle Informationen zur
                   Verfügung zu stellen, die für die ordnungsgemäße Erbringung
-                  der Dienstleistungen erforderlich sind. Im Allgemeinen stimmt
-                  der Nutzer zu, aktiv mit Make.org bei der ordnungsgemäßen
-                  Durchführung dieses Vertrages zu kooperieren.
+                  der Dienste erforderlich sind. Im Allgemeinen stimmt der
+                  Nutzer zu, aktiv mit Make.org bei der ordnungsgemäßen
+                  Durchführung dieses Vertrages zusammenzuarbeiten.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
                   Der Nutzer verpflichtet sich, dafür zu sorgen, dass seine
-                  Vorschläge in Übereinstimmung mit den Regeln der Indizierung,
-                  Formatierung und Hervorhebung von Make.org, in seiner
+                  Vorschläge in Übereinstimmung mit den Indexierungs-,
+                  Formatierungs- und Hervorhebungsregeln von Make.org, in seiner
                   Eigenschaft als Herausgeber des Dienstes, wiedergegeben
                   werden.
                 </StaticParagraphStyle>
@@ -648,12 +638,12 @@ export const TermsOfUseDE = () => {
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
             <StaticThirdLevelTitleStyle>
-              ANWENDERGARANTIEN
+              NUTZERGARANTIEN
             </StaticThirdLevelTitleStyle>
             <StaticSecondaryOrderedListStyle>
               <StaticSecondaryOrderedListItemStyle className="section9">
                 <StaticFourthLevelTitleStyle>
-                  Inhalt
+                  Inhalte
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
                   Der Nutzer ist allein verantwortlich für die Inhalte jeglicher
@@ -677,8 +667,9 @@ export const TermsOfUseDE = () => {
                   Make.org nach sich ziehen können.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Dem Nutzer ist es daher untersagt, insbesondere und ohne dass
-                  diese Aufzählung abschließend ist, zu verbreiten:
+                  Dem Nutzer ist es daher untersagt, insbesondere folgende
+                  Inhalte zu verbreiten (ohne dass diese Aufzählung einen
+                  Anspruch auf Vollständigkeit erhebt):
                 </StaticParagraphStyle>
                 <StaticSquareListStyle>
                   <StaticSquareListItemStyle>
@@ -695,12 +686,12 @@ export const TermsOfUseDE = () => {
                   </StaticSquareListItemStyle>
                   <StaticSquareListItemStyle>
                     Inhalte, die falsch oder irreführend sind oder die illegale,
-                    betrügerische oder täuschende Aktivitäten vorschlagen oder
+                    betrügerische oder täuschende Handlungen vorschlagen oder
                     fördern,
                   </StaticSquareListItemStyle>
                   <StaticSquareListItemStyle>
                     Inhalte, die für die Computersysteme Dritter schädlich sind
-                    (wie z.B. Viren, Würmer, Trojanische Pferde, etc.),
+                    (wie z. B. Viren, Würmer, Trojanische Pferde, etc.),
                   </StaticSquareListItemStyle>
                   <StaticSquareListItemStyle>
                     und ganz allgemein Inhalte, die geeignet sind, die Rechte
@@ -721,12 +712,12 @@ export const TermsOfUseDE = () => {
                   kann.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Der Benutzer muss die notwendigen Maßnahmen ergreifen, um die
-                  von ihm als notwendig erachteten Informationen über seinen
-                  Persönlichen Bereich mit eigenen Mitteln zu speichern.
+                  Der Nutzer muss die notwendigen Maßnahmen ergreifen, um die
+                  von ihm als notwendig erachteten Informationen aus seinem
+                  persönlichen Bereich mit eigenen Mitteln zu speichern.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Der Benutzer ist darüber informiert und akzeptiert, dass die
+                  Der Nutzer ist darüber informiert und akzeptiert, dass die
                   Implementierung der Dienste eine Verbindung zum Internet
                   erfordert und dass die Qualität der Dienste direkt von dieser
                   Verbindung abhängt, für die er allein verantwortlich ist.
@@ -739,13 +730,13 @@ export const TermsOfUseDE = () => {
                 <StaticParagraphStyle>
                   Der Nutzer stellt Make.org von allen Ansprüchen, Beschwerden,
                   Klagen und Forderungen frei, die Make.org als Folge der
-                  Verletzung von Verpflichtungen oder Garantien des Nutzers
-                  gemäß diesen Bedingungen erleiden könnte.
+                  Verletzung von Verpflichtungen oder Nutzergarantien gemäß
+                  diesen Bedingungen erleiden könnte.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
                   Der Nutzer verpflichtet sich, Make.org für jeglichen Schaden
                   zu entschädigen und alle Kosten, Gebühren und/oder Urteile zu
-                  zahlen, die ihm dadurch entstehen können.
+                  zahlen, die für Make.org dadurch entstehen können.
                 </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
             </StaticSecondaryOrderedListStyle>
@@ -760,36 +751,37 @@ export const TermsOfUseDE = () => {
             </StaticParagraphStyle>
             <StaticSquareListStyle>
               <StaticSquareListItemStyle>
-                die Beteiligung an illegalen oder betrügerischen Aktivitäten
+                für die Beteiligung an illegalen oder betrügerischen Aktivitäten
                 oder an Aktivitäten, die die Rechte oder die Sicherheit anderer
-                verletzen,
+                Personen verletzen,
               </StaticSquareListItemStyle>
               <StaticSquareListItemStyle>
-                die Verletzung der öffentlichen Ordnung oder die Verletzung der
-                geltenden Gesetze und Vorschriften,
+                für die Verletzung der öffentlichen Ordnung oder die Verletzung
+                der geltenden Gesetze und Vorschriften,
               </StaticSquareListItemStyle>
               <StaticSquareListItemStyle>
-                Eindringen in das Computersystem eines Dritten oder jegliche
-                Aktivitäten, die darauf abzielen, das Computersystem eines
-                Dritten ganz oder teilweise zu schädigen, zu kontrollieren, zu
-                stören oder abzufangen, seine Integrität oder Sicherheit zu
-                verletzen,
+                für das Eindringen in das Computersystem eines Dritten oder
+                jegliche Aktivitäten, die darauf abzielen, das Computersystem
+                eines Dritten ganz oder teilweise zu schädigen, zu
+                kontrollieren, zu stören oder abzufangen, seine Integrität oder
+                Sicherheit zu verletzen,
               </StaticSquareListItemStyle>
               <StaticSquareListItemStyle>
-                Versenden von unaufgeforderten E-Mails und/oder kommerzieller
-                Prospektion oder Anwerbung,
+                für das Versenden von unaufgeforderten E-Mails und/oder
+                kommerzieller Prospektion oder Anwerbung,
               </StaticSquareListItemStyle>
               <StaticSquareListItemStyle>
-                Manipulationen, die dazu dienen, die Referenzierung einer
+                für Manipulationen, die dazu dienen, die Referenzierung einer
                 fremden Seite zu verbessern,
               </StaticSquareListItemStyle>
               <StaticSquareListItemStyle>
-                Beihilfe oder Anstiftung, in welcher Form auch immer, zu einer
-                oder mehreren der oben beschriebenen Handlungen und Aktivitäten,
+                für die Beihilfe oder Anstiftung, in welcher Form auch immer, zu
+                einer oder mehreren der oben beschriebenen Handlungen und
+                Aktivitäten,
               </StaticSquareListItemStyle>
               <StaticSquareListItemStyle>
-                und ganz allgemein jede Praxis, die die Dienste zu anderen
-                Zwecken als denen, für die sie konzipiert wurden, umleitet.
+                und ganz allgemein für jede Praxis, die die Dienste zu anderen
+                Zwecken als denen, für die sie konzipiert wurden, missbraucht.
               </StaticSquareListItemStyle>
             </StaticSquareListStyle>
             <StaticParagraphStyle>
@@ -799,29 +791,29 @@ export const TermsOfUseDE = () => {
               missbrauchen.
             </StaticParagraphStyle>
             <StaticParagraphStyle>
-              Folgendes ist ebenfalls strengstens verboten: (i) jedes Verhalten,
-              das geeignet ist, die Kontinuität der Dienste zu unterbrechen,
+              Ebenfalls strengstens verboten sind: (i) jedes Verhalten, das
+              geeignet ist, die Kontinuität der Dienste zu unterbrechen,
               auszusetzen, zu verlangsamen oder zu verhindern, (ii) jedes
-              Eindringen oder versuchte Eindringen in die Systeme von
-              Make.org-Systeme, (iii) jede Umleitung der Systemressourcen der
-              Website, (iv) jede Handlung, die eine unverhältnismäßige Belastung
-              der Infrastruktur der Website darstellen könnte, (v) jede
-              Verletzung von Sicherheits- und Authentifizierungsmaßnahmen, (vi)
-              jede Handlung, die die finanziellen, kommerziellen oder
-              moralischen Rechte und Interessen von Make.org oder seinen
-              Website-Nutzern verletzen könnte, und allgemeiner (vii) jede
-              Verletzung dieser allgemeinen Bedingungen.
+              Eindringen oder versuchte Eindringen in die Systeme von Make.org,
+              (iii) jede Umleitung der Systemressourcen der Website, (iv) jede
+              Handlung, die eine unverhältnismäßige Belastung der Infrastruktur
+              der Website darstellen könnte, (v) jede Verletzung von
+              Sicherheits- und Authentifizierungsmaßnahmen, (vi) jede Handlung,
+              die die finanziellen, kommerziellen oder moralischen Rechte und
+              Interessen von Make.org oder seinen Website-Nutzern verletzen
+              könnte, und allgemein (vii) jede Verletzung dieser Allgemeinen
+              Nutzungsbedingungen.
             </StaticParagraphStyle>
             <StaticParagraphStyle>
               Es ist strengstens untersagt, den Zugang zu den Diensten oder der
               Website sowie die darin gehosteten und/oder geteilten
-              Informationen ganz oder teilweise zu monetarisieren, zu verkaufen
+              Informationen ganz oder teilweise zu Geld zu machen, zu verkaufen
               oder zu lizenzieren.
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
             <StaticThirdLevelTitleStyle>
-              EINSCHRÄNKUNGEN DER MAKE.ORG-GARANTIE
+              EINSCHRÄNKUNGEN DER GARANTIEN VON MAKE.ORG
             </StaticThirdLevelTitleStyle>
             <StaticSecondaryOrderedListStyle>
               <StaticSecondaryOrderedListItemStyle className="section11">
@@ -831,30 +823,31 @@ export const TermsOfUseDE = () => {
                 <StaticParagraphStyle>
                   Make.org kann nicht garantieren, dass der Dienst nicht
                   unterbrochen wird. Make.org verpflichtet sich, den Service
-                  sorgfältig und in Übereinstimmung mit den Regeln des Handels
-                  bereitzustellen, wobei daran erinnert wird, dass dies nur eine
-                  Verpflichtung der Mittel ist, die die Benutzer ausdrücklich
-                  anerkennen und akzeptieren.
+                  sorgfältig und ordnungsgemäß bereitzustellen, wobei dies nur
+                  die Verpflichtung beinhaltet, auf das angestrebte Ergebnis
+                  hinzuwirken, was die Nutzer ausdrücklich anerkennen und
+                  akzeptieren.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
                   Make.org verpflichtet sich, regelmäßige Kontrollen
-                  durchzuführen, um den Betrieb und die Erreichbarkeit der Seite
-                  zu überprüfen. In diesem Zusammenhang behält sich Make.org das
-                  Recht vor, den Zugriff auf die Seite für Wartungszwecke
-                  vorübergehend zu unterbrechen. Ebenso kann Make.org nicht für
-                  Schwierigkeiten oder vorübergehende Unmöglichkeit des Zugriffs
-                  auf die Website aufgrund von Umständen außerhalb seiner
-                  Kontrolle, höherer Gewalt oder aufgrund von Störungen in den
-                  Telekommunikationsnetzen verantwortlich gemacht werden.
+                  durchzuführen, um den Betrieb und die Erreichbarkeit der
+                  Website zu überprüfen. In diesem Zusammenhang behält sich
+                  Make.org das Recht vor, den Zugriff auf die Website für
+                  Wartungszwecke vorübergehend zu unterbrechen. Ebenso kann
+                  Make.org nicht für Schwierigkeiten oder vorübergehende
+                  Unmöglichkeit des Zugriffs auf die Website aufgrund von
+                  Umständen, die sich seiner Kontrolle entziehen, höherer Gewalt
+                  oder aufgrund von Störungen in den Telekommunikationsnetzen
+                  verantwortlich gemacht werden.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Make.org garantiert den Benutzern nicht, dass (i) die Dienste,
-                  die ständiger Forschung zur Verbesserung der Leistung und des
-                  Fortschritts unterliegen, völlig frei von Fehlern, Mängeln
-                  oder Unzulänglichkeiten sind, (ii) die Dienste, die Standard
-                  sind und nicht nur für die Nutzung eines bestimmten Benutzers
-                  nach seinen eigenen persönlichen Einschränkungen angeboten
-                  werden, speziell seinen Bedürfnissen und Erwartungen
+                  Make.org garantiert den Nutzern nicht, dass (i) die Dienste,
+                  die ständig zum Zweck der Verbesserung der Leistung und des
+                  Fortschritts weiterentwickelt werden, völlig frei von Fehlern,
+                  Mängeln oder Unzulänglichkeiten sind, (ii) die Dienste, die
+                  Standard sind und nicht nur für die Nutzung eines bestimmten
+                  Nutzers nach seinen eigenen persönlichen Einschränkungen
+                  angeboten werden, speziell seinen Bedürfnissen und Erwartungen
                   entsprechen.
                 </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
@@ -864,16 +857,17 @@ export const TermsOfUseDE = () => {
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
                   Obwohl die Dienste moderiert werden, kann Make.org nicht für
-                  Inhalte verantwortlich gemacht werden, deren Autoren Dritte
-                  sind, und jegliche Ansprüche sollten in erster Instanz an den
-                  Autor des fraglichen Inhalts gerichtet werden.
+                  Inhalte verantwortlich gemacht werden, deren Urheber Dritte
+                  sind, und jegliche Reklamationen sollten in erster Instanz an
+                  den Urheber des fraglichen Inhalts gerichtet werden.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
                   Inhalte, die für Dritte schädlich sind, können Make.org gemäß
-                  den Bestimmungen des Artikels 6 I 5 des Gesetzes n° 2004-575
-                  vom 21. Juni 2004 für das Vertrauen in die digitale Wirtschaft
-                  gemeldet werden, wobei Make.org sich das Recht vorbehält, die
-                  in Artikel 12 beschriebenen Maßnahmen zu ergreifen.
+                  den Bestimmungen des Artikels 6 I 5 des französischen Gesetzes
+                  Nr. 2004-575 vom 21. Juni 2004 über das Vertrauen im digitalen
+                  Wirtschaftsverkehr gemeldet werden, wobei Make.org sich das
+                  Recht vorbehält, die in Artikel 12 beschriebenen Maßnahmen zu
+                  ergreifen.
                 </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
               <StaticSecondaryOrderedListItemStyle className="section11">
@@ -882,15 +876,16 @@ export const TermsOfUseDE = () => {
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
                   Da der Dienst kostenlos zur Verfügung gestellt wird, lehnt
-                  Make.org jede Verantwortung für den Verlust von Informationen
-                  ab, die im Persönlichen Bereich des Benutzers zugänglich sind,
-                  da der Benutzer eine Kopie speichern muss und keine
-                  Entschädigung dafür verlangen kann.
+                  Make.org jede Verantwortung und jeden Anspruch auf
+                  Schadenersatz für den Verlust von Informationen ab, die im
+                  persönlichen Bereich des Nutzers zugänglich sind, da es in der
+                  Verantwortung des Nutzers liegt, eine Kopie davon zu
+                  erstellen.
                 </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
               <StaticSecondaryOrderedListItemStyle className="section11">
                 <StaticFourthLevelTitleStyle>
-                  Beschädigung
+                  Schäden
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
                   In jedem Fall ist die Haftung, die Make.org unter den
@@ -911,50 +906,86 @@ export const TermsOfUseDE = () => {
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
                   Make.org erhebt keinen Anspruch auf das Eigentum an den von
-                  den Benutzern bereitgestellten Daten und Inhalten.
+                  den Nutzern bereitgestellten Daten und Inhalten.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
                   Die Systeme, Software, Strukturen, Infrastrukturen,
                   Datenbanken und Inhalte jeglicher Art (Texte, Bilder, Visuals,
-                  Musik, Logos, Marken, Datenbanken, etc.), die von Make.org auf
+                  Musik, Logos, Marken, Datenbanken etc.), die von Make.org auf
                   der Website verwendet werden, sind durch alle geltenden Rechte
                   des geistigen Eigentums oder Rechte der Hersteller von
                   Datenbanken geschützt.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Jede unbefugte Vervielfältigung, Darstellung,
+                  Für jede unbefugte Vervielfältigung, Darstellung,
                   Veröffentlichung, Übertragung oder, allgemeiner, jede
                   unbefugte Nutzung des gesamten oder eines Teils des Dienstes
                   und der darin enthaltenen Informationen, ohne die
-                  ausdrückliche Genehmigung von Make.org, wird die Verantwortung
-                  des Benutzers zu engagieren.
+                  ausdrückliche Genehmigung von Make.org, haftet der Nutzer.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
-                  Jegliche Disassemblierung, Dekompilierung, Entschlüsselung,
+                  Jegliche Demontage, Dekompilierung, Entschlüsselung,
                   Extraktion, Wiederverwendung, Vervielfältigung und,
-                  allgemeiner, jeder Akt der Vervielfältigung, Darstellung,
+                  allgemeiner, jegliche Vervielfältigung, Darstellung,
                   Verteilung und Verwendung eines dieser Elemente, ganz oder
                   teilweise, ohne die Genehmigung von Make.org ist strengstens
                   untersagt und kann Gegenstand rechtlicher Schritte sein.
                 </StaticParagraphStyle>
+                <StaticStrongStyle>
+                  Rechte des Datenbankherstellers
+                </StaticStrongStyle>
+                <StaticParagraphStyle>
+                  Make.org ist gemäß Artikel L.341-1 ff. des französischen
+                  Gesetzes über geistiges Eigentum (Code de la propriété
+                  intellectuelle) Hersteller der Datenbank(en), die von der
+                  Website gebildet werden. Make.org verbietet ausdrücklich: (1)
+                  die Entnahme (durch dauerhafte oder vorübergehende
+                  Übertragung) der Gesamtheit oder eines qualitativ oder
+                  quantitativ wesentlichen Teils des Inhalts der Datenbank auf
+                  einen anderen Datenträger, unabhängig davon, mit welchen
+                  Mitteln und in welcher Form, (2) die Weiterverwendung durch
+                  Veröffentlichung der Gesamtheit oder eines qualitativ oder
+                  quantitativ wesentlichen Teils des Inhalts der Datenbank,
+                  unabhängig davon, in welcher Form (3) die wiederholte und
+                  systematische Entnahme oder Weiterverwendung von qualitativ
+                  oder quantitativ unwesentlichen Teilen des Inhalts der
+                  Datenbank, wenn diese Vorgänge offensichtlich über die
+                  normalen Bedingungen der Nutzung der Datenbank hinausgehen.
+                  Eine derartige Wiederverwendung oder Entnahme kann die zivil-
+                  und/oder strafrechtliche Haftung des Urhebers nach sich
+                  ziehen. Im Falle der Nichtanwendung der Artikel L.341-1 ff.
+                  des französischen Gesetzes über geistiges Eigentum kann jede
+                  Entnahme oder Nutzung des Inhalts der Datenbank, die nicht
+                  ausdrücklich und vorher von Make.org genehmigt wurde, die
+                  zivilrechtliche Haftung (insbesondere die vertragliche Haftung
+                  für die Nutzer der Website) und/oder die strafrechtliche
+                  Haftung des Urhebers auslösen.
+                </StaticParagraphStyle>
+                <StaticParagraphStyle>
+                  Make.org behält sich das Recht vor, seine Rechte geltend zu
+                  machen und rechtliche Schritte gegen diejenigen einzuleiten,
+                  die gegen dieses Verbot aus verschiedensten Gründen verstoßen.
+                  Keine Bestimmung dieser Klausel ist als Verzicht auf solche
+                  Rechte und Rechtsmittel auszulegen.
+                </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
               <StaticSecondaryOrderedListItemStyle className="section12">
                 <StaticFourthLevelTitleStyle>
-                  Eigentümerschaft von Bürgervorschlägen
+                  Eigentum an den Bürgervorschlägen
                 </StaticFourthLevelTitleStyle>
                 <StaticParagraphStyle>
                   Die Bürgervorschläge selbst sind Eigentum ihrer Autoren, die
                   Make.org eine nicht-exklusive, übertragbare und kostenlose
                   Lizenz zur Nutzung in Frankreich und weltweit, für jede
                   Online-Nutzung und für alle Verbreitungswege, für die Dauer
-                  dieser GCUS und für alle hier genannten Nutzungen gewähren.
+                  dieser ANB und für alle hier genannten Nutzungen gewähren.
                 </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
             </StaticSecondaryOrderedListStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
             <StaticThirdLevelTitleStyle>
-              LINKS UND WEBSITES VON DRITTEN
+              LINKS UND WEBSITES DRITTER
             </StaticThirdLevelTitleStyle>
             <StaticParagraphStyle>
               Make.org ist in keiner Weise verantwortlich für die technische
@@ -970,9 +1001,9 @@ export const TermsOfUseDE = () => {
             </StaticParagraphStyle>
             <StaticParagraphStyle>
               Make.org ist nicht verantwortlich für Transaktionen zwischen dem
-              Benutzer und einem Werbetreibenden, Fachmann oder Händler
-              (einschließlich seiner Partner), an die der Benutzer über die
-              Website weitergeleitet wird, und ist nicht Partei bei
+              Nutzer und einem Werbetreibenden, Fachmann oder Händler
+              (einschließlich seiner Partner), an die der Nutzer über die
+              Website weitergeleitet wird, und ist in keinem Fall Partei bei
               Streitigkeiten mit solchen Dritten in Bezug auf die Lieferung von
               Produkten und/oder Dienstleistungen, Garantien, Zusicherungen oder
               anderen Verpflichtungen jeglicher Art.
@@ -980,18 +1011,18 @@ export const TermsOfUseDE = () => {
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
             <StaticThirdLevelTitleStyle>
-              SANKTIONEN UND KÜNDIGUNG
+              RECHTSFOLGEN UND KÜNDIGUNG
             </StaticThirdLevelTitleStyle>
             <StaticParagraphStyle>
               Im Falle eines Verstoßes gegen eine der Bestimmungen dieser
-              Bedingungen oder, allgemeiner, eines Verstoßes gegen geltende
-              Gesetze und Vorschriften durch einen Benutzer, Make.org behält
-              sich das Recht vor, alle geeigneten Maßnahmen zu ergreifen und
-              insbesondere zu :
+              Nutzungsbedingungen oder, allgemeiner, eines Verstoßes gegen
+              geltende Gesetze und Vorschriften durch einen Nutzer, behält sich
+              Make.org das Recht vor, alle geeigneten Maßnahmen zu ergreifen und
+              insbesondere:
             </StaticParagraphStyle>
             <StaticSquareListStyle>
               <StaticSquareListItemStyle>
-                den Zugang zu den Diensten des Benutzers, der Urheber des
+                den Zugang zu den Diensten des Nutzers, der Urheber des
                 Verstoßes oder der Verletzung ist oder daran teilgenommen hat,
                 auszusetzen oder zu beenden,
               </StaticSquareListItemStyle>
@@ -1003,10 +1034,10 @@ export const TermsOfUseDE = () => {
                 die Make.org für nützlich hält,
               </StaticSquareListItemStyle>
               <StaticSquareListItemStyle>
-                benachrichtigen Sie jede zuständige Behörde,
+                jegliche zuständige Behörde zu benachrichtigen,
               </StaticSquareListItemStyle>
               <StaticSquareListItemStyle>
-                rechtliche Schritte einleiten.
+                rechtliche Schritte einzuleiten.
               </StaticSquareListItemStyle>
             </StaticSquareListStyle>
             <StaticParagraphStyle>
@@ -1022,10 +1053,13 @@ export const TermsOfUseDE = () => {
               sowie zur Löschung seiner Daten und Inhalte. Der Nutzer wird über
               diese Kündigung per E-Mail an die von ihm bei der Registrierung
               angegebene Adresse informiert. Die Kündigung erfolgt unbeschadet
-              etwaiger Schadensersatzansprüche, die Make.org als Entschädigung
-              für einen durch die angeblichen Verstöße des Nutzers entstandenen
-              Schaden geltend machen kann. Make.org kann dem Nutzer anschließend
-              die Erstellung eines neuen Kontos auf dem Dienst verweigern.
+              etwaiger
+            </StaticParagraphStyle>
+            <StaticParagraphStyle>
+              Schadensersatzansprüche, die Make.org als Entschädigung für einen
+              durch die angeblichen Verstöße des Nutzers entstandenen Schaden
+              geltend machen kann. Make.org kann dem Nutzer anschließend die
+              Erstellung eines neuen Kontos auf der Plattform verweigern.
             </StaticParagraphStyle>
             <StaticParagraphStyle>
               Da die Dienste kostenlos sind, kann Make.org jederzeit und ohne
@@ -1033,16 +1067,9 @@ export const TermsOfUseDE = () => {
               dauerhaft die Veröffentlichung eines Bürgervorschlags löschen.
             </StaticParagraphStyle>
             <StaticParagraphStyle>
-              Auch, weil die Dienste sind kostenlos, Make.org kann jederzeit und
-              ohne vorherige Ankündigung, aus irgendeinem Grund, vorübergehend
-              oder dauerhaft, ändern oder löschen Sie die Dienste in Teilen oder
-              im Ganzen.
-            </StaticParagraphStyle>
-            <StaticParagraphStyle>
-              Auch, weil die Dienste sind kostenlos, Make.org kann jederzeit und
-              ohne vorherige Ankündigung, aus irgendeinem Grund, vorübergehend
-              oder dauerhaft, ändern oder löschen Sie die Dienste in Teilen oder
-              im Ganzen.
+              Aufgrund der Unentgeltlichkeit der Dienste kann Make.org die
+              Dienste jederzeit und ohne vorherige Ankündigung vorübergehend
+              oder dauerhaft ändern bzw. vollständig oder teilweise löschen.
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
@@ -1053,16 +1080,17 @@ export const TermsOfUseDE = () => {
               Die Dienste werden für einen unbestimmten Zeitraum abonniert.
             </StaticParagraphStyle>
             <StaticParagraphStyle>
-              Der registrierte Benutzer kann sich jederzeit von den Diensten
+              Der registrierte Nutzer kann sich jederzeit von den Diensten
               abmelden, indem er eine entsprechende Anfrage an Make.org per
               E-Mail an{' '}
               <RedLinkHTMLElementStyle href={`mailto:${CONTACT_EMAIL_DE}`}>
                 {`${CONTACT_EMAIL_DE}`}
-              </RedLinkHTMLElementStyle>
+              </RedLinkHTMLElementStyle>{' '}
+              sendet.
             </StaticParagraphStyle>
             <StaticParagraphStyle>
               Die Abmeldung ist sofort wirksam. Sie führt zur automatischen
-              Löschung des Kontos des registrierten Benutzers sowie seiner
+              Löschung des Kontos des registrierten Nutzers sowie seiner
               Vorschläge.
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>
@@ -1073,8 +1101,8 @@ export const TermsOfUseDE = () => {
               Bedingungen jederzeit zu ändern.
             </StaticParagraphStyle>
             <StaticParagraphStyle>
-              Der Benutzer wird über diese Änderungen auf jede sinnvolle Weise
-              informiert werden.
+              Der Nutzer wird über diese Änderungen durch jede geeignete Art der
+              Kommunikation informiert.
             </StaticParagraphStyle>
             <StaticParagraphStyle>
               Der Nutzer, der die geänderten Bedingungen nicht akzeptiert, muss
@@ -1082,29 +1110,29 @@ export const TermsOfUseDE = () => {
               Nutzungsbedingungen der Website festgelegten Bedingungen abmelden.
             </StaticParagraphStyle>
             <StaticParagraphStyle>
-              Jeder Benutzer, der die Dienste nach dem Inkrafttreten der
-              geänderten allgemeinen Bedingungen nutzt, gilt als mit diesen
-              Änderungen einverstanden.
+              Jeder Nutzer, der die Dienste nach dem Inkrafttreten der
+              geänderten allgemeinen Nutzungsbedingungen nutzt, gilt als mit
+              diesen Änderungen einverstanden.
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
             <StaticThirdLevelTitleStyle>INTEGRITÄT</StaticThirdLevelTitleStyle>
             <StaticParagraphStyle>
               Sollten eine oder mehrere der hierin enthaltenen Bestimmungen
-              durch ein Gesetz oder eine Verordnung für ungültig erklärt werden
-              oder durch eine rechtskräftige Entscheidung eines zuständigen
-              Gerichts für ungültig erklärt werden, so gelten sie als
-              ungeschrieben. Die übrigen Bestimmungen dieser Vereinbarung
-              bleiben unter Beibehaltung ihrer ganzen Tragweite in Kraft, soweit
-              dies möglich ist, und die Parteien verpflichten sich, soweit
-              erforderlich, zusammenzukommen, um die unwirksame Klausel durch
-              eine wirksame Klausel zu ersetzen, die dem Geist derjenigen, die
-              sie ersetzen soll, möglichst nahe kommt.
+              durch ein Gesetz oder eine Verordnung oder durch eine
+              rechtskräftige Entscheidung eines zuständigen Gerichts für
+              ungültig erklärt werden, so gelten sie als nicht geschrieben. Die
+              übrigen Bestimmungen dieser Vereinbarung bleiben, sofern möglich,
+              unter Beibehaltung ihrer ganzen Tragweite in Kraft und die
+              Parteien verpflichten sich, soweit erforderlich, zusammenzukommen,
+              um die unwirksame Bestimmung durch eine wirksame Bestimmung zu
+              ersetzen, die dem Geist derjenigen, die sie ersetzen soll,
+              möglichst nahekommt.
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
             <StaticThirdLevelTitleStyle>
-              NICHT-WAIVER
+              VERZICHTSAUSSCHLUSS
             </StaticThirdLevelTitleStyle>
             <StaticParagraphStyle>
               Das Versäumnis einer Partei, sich zu irgendeinem Zeitpunkt auf
@@ -1115,9 +1143,9 @@ export const TermsOfUseDE = () => {
               nicht die Rechte der betroffenen Partei, entsprechend zu handeln.
             </StaticParagraphStyle>
             <StaticParagraphStyle>
-              Es wird davon ausgegangen, dass keine Partei auf ein Recht aus dem
-              Vertrag verzichtet hat, wenn sie nicht eine schriftliche
-              Verzichtserklärung unterzeichnet hat.
+              In Ermangelung einer schriftlichen Verzichtserklärung wird davon
+              ausgegangen, dass keine Partei auf ein Recht aus dem Vertrag
+              verzichtet hat.
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
@@ -1125,28 +1153,28 @@ export const TermsOfUseDE = () => {
               HÖHERE GEWALT
             </StaticThirdLevelTitleStyle>
             <StaticParagraphStyle>
-              Jedes unvorhersehbare, unabwendbare Ereignis, das außerhalb der
-              Parteien liegt, wie z.B. (aber nicht beschränkt auf)
-              Kriegshandlungen oder Terrorismus, kriminelle Handlungen, Unruhen,
-              Natur- oder Industriekatastrophen, Explosionen, gesetzliche
-              Anforderungen und andere gesetzliche oder behördliche
+              Alle unvorhersehbaren, unabwendbaren Ereignisse, die außerhalb des
+              Einflusses der Parteien liegen, wie z. B. (aber nicht beschränkt
+              auf) Kriegshandlungen oder Terrorismus, kriminelle Handlungen,
+              Unruhen, Natur- oder Industriekatastrophen, Explosionen,
+              gesetzliche Anforderungen und andere gesetzliche oder behördliche
               Bestimmungen, die die Ausübung der Tätigkeit von Make.org
               einschränken, Störungen elektronischer Kommunikationsnetze, die
               außerhalb der Kontrolle von Make.org liegen, usw., werden als
               höhere Gewalt betrachtet. Im Falle von höherer Gewalt kann
-              Make.org den Dienst aussetzen müssen. Die Wirkungen des Vertrages
-              werden dann ausgesetzt und können nach Beendigung des Ereignisses
-              höherer Gewalt für den Rest der Vertragslaufzeit wieder
-              aufgenommen werden. Sie können auch suspendiert bleiben.
+              Make.org den Dienst aussetzen. Die Wirkungen des Vertrages werden
+              dann ausgesetzt und können nach Beendigung des Ereignisses höherer
+              Gewalt für den Rest der Vertragslaufzeit wieder aufgenommen
+              werden. Sie können auch ausgesetzt bleiben.
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
             <StaticThirdLevelTitleStyle>SPRACHE</StaticThirdLevelTitleStyle>
             <StaticParagraphStyle>
-              Im Falle einer Übersetzung dieser Allgemeinen Geschäftsbedingungen
+              Im Falle einer Übersetzung dieser Allgemeinen Nutzungbedingungen
               in eine oder mehrere Sprachen ist im Falle eines Widerspruchs oder
               eines Streits über die Bedeutung eines Begriffs oder einer
-              Bestimmung die französische Sprache für die Auslegung maßgeblich.
+              Bestimmung die französische Sprache für die Auslegung maßgeblich.{' '}
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
@@ -1159,9 +1187,10 @@ export const TermsOfUseDE = () => {
             </StaticParagraphStyle>
             <StaticParagraphStyle>
               Im Falle eines Rechtsstreits über die Gültigkeit, Auslegung
-              und/oder Ausführung dieser allgemeinen Bedingungen vereinbaren die
-              Parteien die ausschließliche Zuständigkeit der Gerichte in Paris,
-              sofern nicht zwingende Verfahrensvorschriften entgegenstehen.
+              und/oder Ausführung dieser allgemeinen Nutzungsbedingungen
+              vereinbaren die Parteien die ausschließliche Zuständigkeit der
+              Gerichte in Paris, sofern nicht zwingende Verfahrensvorschriften
+              entgegenstehen.
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
@@ -1169,7 +1198,7 @@ export const TermsOfUseDE = () => {
               INKRAFTTRETEN
             </StaticThirdLevelTitleStyle>
             <StaticParagraphStyle>
-              Diese Bedingungen sind am{' '}
+              Diese Nutzungsbedingungen sind am{' '}
               {DateHelper.localizedAndFormattedDate(
                 GTU_DATE,
                 DATE_CAPITALIZE_L_FORMAT
