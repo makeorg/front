@@ -183,94 +183,63 @@ export const A11yDE = () => (
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
             Konsultationsseite:{' '}
-            <RedLinkHTMLElementStyle href="https://make.org/FR/consultation/dynamicslug/participate">
-              https://make.org/FR/consultation/dynamicslug/participate
-            </RedLinkHTMLElementStyle>
+            https://make.org/FR/consultation/dynamicslug/participate
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
             Seite mit der Abstimmungssequenz der Vorschläge:{' '}
-            <RedLinkHTMLElementStyle href="https://make.org/FR/consultation/dynamicslug/selection ">
-              https://make.org/FR/consultation/dynamicslug/selection
-            </RedLinkHTMLElementStyle>
+            https://make.org/FR/consultation/dynamicslug/selection
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
             Seite mit den Ergebnissen einer Konsultation{' '}
-            <RedLinkHTMLElementStyle href="https://make.org/FR/consultation/dynamicslug/results">
-              https://make.org/FR/consultation/dynamicslug/results
-            </RedLinkHTMLElementStyle>
+            https://make.org/FR/consultation/dynamicslug/results
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
             Seite mit den beliebtesten Ideen einer Konsultation{' '}
-            <RedLinkHTMLElementStyle href="https://make.org/FR/consultation/dynamicslug/top-ideas ">
-              https://make.org/FR/consultation/dynamicslug/top-ideas
-            </RedLinkHTMLElementStyle>
+            https://make.org/FR/consultation/dynamicslug/top-ideas
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
             Seite mit den Details einer beliebten Idee einer Konsultation:{' '}
-            <RedLinkHTMLElementStyle href="https://make.org/FR/consultation/dynamicslug/top-ideas/ideaId  ">
-              https://make.org/FR/consultation/dynamicslug/top-ideas/ideaId
-            </RedLinkHTMLElementStyle>
+            https://make.org/FR/consultation/dynamicslug/top-ideas/ideaId
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
             Seite mit den Vorschlägen:{' '}
-            <RedLinkHTMLElementStyle href="https://make.org/FR/consultation/dynamicslug/proposal/proposalSlug/proposalId">
-              https://make.org/FR/consultation/dynamicslug/proposal/proposalSlug/proposalId
-            </RedLinkHTMLElementStyle>
+            https://make.org/FR/consultation/dynamicslug/proposal/proposalSlug/proposalId
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
             Seite zum Zurücksetzen des Passworts:{' '}
-            <RedLinkHTMLElementStyle href="https://make.org/FR/password-recovery/userId/resetToken">
-              https://make.org/FR/password-recovery/userId/resetToken
-            </RedLinkHTMLElementStyle>
+            https://make.org/FR/password-recovery/userId/resetToken
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
-            Seite „Benutzerprofil“:{' '}
-            <RedLinkHTMLElementStyle href="https://make.org/FR/profile ">
-              https://make.org/FR/profile
-            </RedLinkHTMLElementStyle>
+            Seite „Benutzerprofil“: https://make.org/FR/profile
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
             Seite zum Bearbeiten des Benutzerprofils:{' '}
-            <RedLinkHTMLElementStyle href="https://make.org/FR/profile/edit ">
-              https://make.org/FR/profile/edit
-            </RedLinkHTMLElementStyle>
+            https://make.org/FR/profile/edit
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
             Seite mit der Liste der Vorschläge des Nutzers:{' '}
-            <RedLinkHTMLElementStyle href="https://make.org/FR/profile/proposals ">
-              https://make.org/FR/profile/proposals
-            </RedLinkHTMLElementStyle>
+            https://make.org/FR/profile/proposals
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
             Seite mit der Liste der Lieblingsvorschläge des Nutzers:{' '}
-            <RedLinkHTMLElementStyle href="https://make.org/FR/profile/favourites ">
-              https://make.org/FR/profile/favourites
-            </RedLinkHTMLElementStyle>
+            https://make.org/FR/profile/favourites
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
             Seite mit der Meinung einer bekannten Persönlichkeit:{' '}
-            <RedLinkHTMLElementStyle href="https://make.org/FR/profile/opinions">
-              https://make.org/FR/profile/opinions
-            </RedLinkHTMLElementStyle>
+            https://make.org/FR/profile/opinions
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
             Seite mit dem öffentlichen Profil einer bekannten Persönlichkeit:{' '}
-            <RedLinkHTMLElementStyle href="https://make.org/FR/profile/personality/userId">
-              https://make.org/FR/profile/personality/userId
-            </RedLinkHTMLElementStyle>
+            https://make.org/FR/profile/personality/userId
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
             Seite mit den Vorschlägen auf dem öffentlichen Profil einer
             Organisation:{' '}
-            <RedLinkHTMLElementStyle href="https://make.org/FR/profile/organisation/userId/proposals">
-              https://make.org/FR/profile/organisation/userId/proposals
-            </RedLinkHTMLElementStyle>
+            https://make.org/FR/profile/organisation/userId/proposals
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
             Seite zur Abstimmung auf dem öffentlichen Profil einer Organisation:{' '}
-            <RedLinkHTMLElementStyle href="https://make.org/FR/profile/organisation/userId/votes">
-              https://make.org/FR/profile/organisation/userId/votes
-            </RedLinkHTMLElementStyle>
+            https://make.org/FR/profile/organisation/userId/votes
           </StaticSquareListItemStyle>
           <StaticSquareListItemStyle>
             Seite mit den Suchergebnissen:{' '}
