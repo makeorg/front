@@ -1,6 +1,7 @@
 // @flow
 import { USER_PREFERENCES_COOKIE } from 'Shared/constants/cookies';
 import { FacebookTracking } from 'Shared/services/Trackers/FacebookTracking';
+import { MixpanelTracking } from 'Shared/services/Trackers/MixpanelTracking';
 import { TwitterUniversalTag } from 'Shared/services/Trackers/TwitterTracking';
 import { TWITTER_SCRIPT, twttr } from 'Shared/services/Trackers/twttr';
 import { type StateUserCookiesPreferences } from 'Shared/store/types';
@@ -41,6 +42,9 @@ export const initTrackersFromPreferences = (
     body.appendChild(twitterScript);
     TwitterUniversalTag.init();
   }
+
+  // allways init mixpanel
+  MixpanelTracking.init();
 };
 
 export const removeTrackersFromPreferences = (

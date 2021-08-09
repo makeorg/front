@@ -121,7 +121,6 @@ export class ApiServiceClient implements IApiServiceStrategy {
     };
 
     const headers = { ...defaultHeaders, ...(options.headers || {}) };
-
     axiosRetry(axios, {
       retries: 5,
       retryDelay: retryCount => retryCount * 100,
@@ -135,10 +134,15 @@ export class ApiServiceClient implements IApiServiceStrategy {
         ...options,
         headers,
       });
-
-      response.then(res =>
-        this._headersListeners.forEach(listener => listener(res.headers))
-      );
+      response
+        .then(res => {
+          this._headersListeners.forEach(listener => listener(res.headers));
+        })
+        .catch(apiServiceError => {
+          this._headersListeners.forEach(listener =>
+            listener(apiServiceError.headers)
+          );
+        });
 
       return response;
     } catch (apiServiceError) {

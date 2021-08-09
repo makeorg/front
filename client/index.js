@@ -74,6 +74,12 @@ const logAndTrackEvent = (eventName: string) => {
 const initApp = async state => {
   const { language, country, source, queryParams } = state.appConfig;
 
+  // add listener to update trackingParamsService
+  // should be before first api call (before authenticationState) to get visitorId
+  apiClient.addHeadersListener('trackingServiceListener', headers => {
+    trackingParamsService.visitorId =
+      headers['x-visitor-id'] || trackingParamsService.visitorId;
+  });
   const authenticationStateData = await authenticationState();
 
   // Set in session storage some keys from query params
@@ -102,6 +108,7 @@ const initApp = async state => {
     resources: translationRessources,
   });
 
+  // Cookie preference
   const cookies = new Cookies();
   const preferencesCookie = cookies.get(USER_PREFERENCES_COOKIE);
   initTrackersFromPreferences(preferencesCookie);

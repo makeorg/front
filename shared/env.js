@@ -1,5 +1,7 @@
 const onClientSide = typeof window !== 'undefined';
 
+const PRODUCTION_DOMAIN = 'make.org';
+
 // Define client env variables
 const nodeEnvWindow = () => onClientSide && window.NODE_ENV;
 const isDevWindow = () => nodeEnvWindow === 'development';
@@ -9,6 +11,8 @@ const proxyTargetApiUrlWindow = () =>
   onClientSide && window.PROXY_TARGET_API_URL;
 const frontUrlWindow = () => onClientSide && window.FRONT_URL;
 const portWindow = () => onClientSide && window.PORT;
+const isProductionUrlWWindow = () =>
+  frontUrlWindow() && frontUrlWindow().includes(PRODUCTION_DOMAIN);
 
 // Define server env variables
 const nodeEnvProcess = () => process.env.NODE_ENV;
@@ -18,6 +22,8 @@ const apiUrlProcess = () => process.env.API_URL;
 const proxyTargetApiUrlProcess = () => process.env.PROXY_TARGET_API_URL;
 const frontUrlProcess = () => process.env.FRONT_URL;
 const portProcess = () => process.env.PORT;
+const isProductionUrlProcess = () =>
+  frontUrlProcess() && frontUrlProcess().includes(PRODUCTION_DOMAIN);
 
 // Export in env object
 export const env = {
@@ -30,4 +36,7 @@ export const env = {
     : proxyTargetApiUrlProcess,
   frontUrl: onClientSide ? frontUrlWindow : frontUrlProcess,
   port: onClientSide ? portWindow : portProcess,
+  isProductionUrl: onClientSide
+    ? isProductionUrlWWindow
+    : isProductionUrlProcess,
 };

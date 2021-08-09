@@ -20,6 +20,8 @@ export class ApiServiceError extends Error {
 
   requestId: ?string;
 
+  headers: ?Object;
+
   clone = (message: string) =>
     new ApiServiceError(
       message,
@@ -29,7 +31,8 @@ export class ApiServiceError extends Error {
       this.method,
       this.logId,
       this.logged,
-      this.requestId
+      this.requestId,
+      this.headers
     );
 
   constructor(
@@ -40,7 +43,8 @@ export class ApiServiceError extends Error {
     method: ?string,
     logId: ?string,
     logged: ?boolean,
-    requestId: ?string
+    requestId: ?string,
+    headers: ?Object
   ) {
     super(message);
     this.status = status;
@@ -52,6 +56,7 @@ export class ApiServiceError extends Error {
     this.logged = logged || false;
     this.name = 'api-service-error';
     this.requestId = requestId;
+    this.headers = headers;
 
     if (Error.captureStackTrace) {
       Error.captureStackTrace(this, ApiServiceError);
