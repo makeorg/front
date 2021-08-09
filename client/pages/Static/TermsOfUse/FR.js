@@ -99,7 +99,7 @@ export const TermsOfUseFR = () => {
               exploités par la société Make.org, Société par Actions Simplifiées
               au capital de {MAKE_CAPITAL}, ayant son siège social au{' '}
               {MAKE_ADDRESS}, immatriculée au RCS de PARIS sous le numéro{' '}
-              {MAKE_RCS} (ci-après« Make.org »).
+              {MAKE_RCS} (ci-après« MAKE.ORG »).
             </StaticParagraphStyle>
           </StaticPrimaryOrderedListItemStyle>
           <StaticPrimaryOrderedListItemStyle>
@@ -155,7 +155,7 @@ export const TermsOfUseFR = () => {
               L’utilisation du Service implique également l’acceptation entière
               et sans réserve de la Politique d’utilisation des données de
               Make.org qui fait partie intégrante des présentes CGUS et est
-              disponible
+              disponible{' '}
               <RedLinkHTMLElementStyle
                 href={getDataPageLink(country, language)}
               >
@@ -927,6 +927,43 @@ export const TermsOfUseFR = () => {
                   quelconque de ces éléments, en tout ou partie, sans
                   l’autorisation de Make.org sont strictement interdits et
                   pourront faire l’objet de poursuites judiciaires.
+                </StaticParagraphStyle>
+                <StaticStrongStyle>
+                  Droits du producteur de base de données
+                </StaticStrongStyle>
+                <StaticParagraphStyle>
+                  Make.org est le producteur de la ou des base(s) de données
+                  constituée(s) par le Site au sens des articles L.341-1 et
+                  suivants du Code de la propriété intellectuelle. Make.org
+                  interdit expressément: (1) l’extraction (par transfert
+                  permanent ou temporaire) de la totalité ou d’une partie
+                  qualitativement ou quantitativement substantielle du contenu
+                  de la base de données sur un autre support, par tout moyen et
+                  sous toute forme que ce soit, (2) la réutilisation, par la
+                  mise à la disposition du public de la totalité ou d’une partie
+                  qualitativement ou quantitativement substantielle du contenu
+                  de la base de données, quelle qu’en soit la forme, et (3)
+                  l’extraction ou la réutilisation répétée et systématique de
+                  parties qualitativement ou quantitativement non substantielles
+                  du contenu de la base de données lorsque ces opérations
+                  excèdent manifestement les conditions d’utilisation normale de
+                  la base de données. De telles réutilisations ou extractions
+                  peuvent engager la responsabilité civile et/ou pénale de leur
+                  auteur. En cas de non-application des articles L.341-1 et
+                  suivants du Code de la propriété intellectuelle, toute
+                  extraction ou utilisation du contenu de la base de données non
+                  expressément et préalablement autorisée par Make.org peut
+                  engager la responsabilité civile (notamment la responsabilité
+                  contractuelle pour les Utilisateurs du Site) et/ou pénale de
+                  son auteur.{' '}
+                </StaticParagraphStyle>
+                <StaticParagraphStyle>
+                  Make.org se réserve la possibilité de faire valoir ses droits
+                  et de saisir toutes voies de droit à l’encontre des personnes
+                  qui n’auraient pas respecté cette interdiction sur les
+                  différents fondements disponibles. Rien au sein de la présente
+                  clause ne saurait être interprété comme un renoncement auxdits
+                  droits et voies de droit.
                 </StaticParagraphStyle>
               </StaticSecondaryOrderedListItemStyle>
               <StaticSecondaryOrderedListItemStyle className="section12">

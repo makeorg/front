@@ -39,16 +39,12 @@ import {
 import { DateHelper } from 'Shared/helpers/date';
 import { useParams } from 'react-router';
 import { CookieSwitch } from 'Client/app/CookieModal/CookieSwitch';
+import { FACEBOOK_LINK_FR, FACEBOOK_LINK_EN } from 'Shared/constants/config';
 import {
-  GOOGLE_LINK_FR,
-  GOOGLE_LINK_EN,
-  FACEBOOK_LINK_FR,
-  FACEBOOK_LINK_EN,
-  TWITTER_LINK_FR,
-  TWITTER_LINK_EN,
-  LINKEDIN_LINK_FR,
-  LINKEDIN_LINK_EN,
-} from 'Shared/constants/config';
+  googleLinkPrivacy,
+  twitterLinkPrivacy,
+  linkedInLinkPrivacy,
+} from 'Shared/helpers/social';
 import {
   StaticExternalLinkIconStyle,
   StaticPageWrapperStyle,
@@ -72,10 +68,7 @@ export const Cookies = () => {
     'DD MMMM YYYY'
   );
   const isFR = country === 'FR';
-  const googleLink = isFR ? GOOGLE_LINK_FR : GOOGLE_LINK_EN;
   const facebookLink = isFR ? FACEBOOK_LINK_FR : FACEBOOK_LINK_EN;
-  const twitterLink = isFR ? TWITTER_LINK_FR : TWITTER_LINK_EN;
-  const linkedInLink = isFR ? LINKEDIN_LINK_FR : LINKEDIN_LINK_EN;
 
   const handlePreferences = () => {
     trackClickModalCookieSave('cookies-accept-preferences');
@@ -135,11 +128,11 @@ export const Cookies = () => {
                 {'Google : '}
                 <RedLinkHTMLElementStyle
                   as="a"
-                  href={googleLink}
+                  href={googleLinkPrivacy(country)}
                   target="_blank"
                   rel="noopener"
                 >
-                  {googleLink}
+                  {googleLinkPrivacy(country)}
                   <StaticExternalLinkIconStyle aria-hidden focusable="false" />
                   <ScreenReaderItemStyle>
                     {i18n.t('common.open_new_window')}
@@ -165,11 +158,11 @@ export const Cookies = () => {
                 {'Twitter : '}
                 <RedLinkHTMLElementStyle
                   as="a"
-                  href={twitterLink}
+                  href={twitterLinkPrivacy(country)}
                   target="_blank"
                   rel="noopener"
                 >
-                  {twitterLink}
+                  {twitterLinkPrivacy(country)}
                   <StaticExternalLinkIconStyle aria-hidden focusable="false" />
                   <ScreenReaderItemStyle>
                     {i18n.t('common.open_new_window')}
@@ -180,11 +173,11 @@ export const Cookies = () => {
                 {'LinkedIn : '}
                 <RedLinkHTMLElementStyle
                   as="a"
-                  href={linkedInLink}
+                  href={linkedInLinkPrivacy(country)}
                   target="_blank"
                   rel="noopener"
                 >
-                  {linkedInLink}
+                  {linkedInLinkPrivacy(country)}
                   <StaticExternalLinkIconStyle aria-hidden focusable="false" />
                   <ScreenReaderItemStyle>
                     {i18n.t('common.open_new_window')}
