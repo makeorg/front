@@ -28,6 +28,9 @@ export const SeparatorWrapperStyle = styled(MiddleRowStyle)`
   &.no-margin-top {
     margin-top: 0;
   }
+  &.no-margin-bottom {
+    margin-bottom: 0;
+  }
   @media (min-width: ${intToPx(Breakpoints.Tablet)}) {
     margin: 35px 0;
   }

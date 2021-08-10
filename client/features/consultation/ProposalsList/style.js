@@ -6,6 +6,8 @@ import { UnstyledListStyle } from 'Client/ui/Elements/ListElements';
 import { Link } from 'react-router-dom';
 import { intToPx } from 'Shared/helpers/styled';
 import styled from 'styled-components';
+import { BlackBorderButtonStyle } from 'Client/ui/Elements/Buttons/V2/style';
+import { MakeFonts } from 'Client/app/assets/vars/Fonts';
 
 export const ProposalsListStyle = styled(UnstyledListStyle)`
   width: 100%;
@@ -58,4 +60,20 @@ export const ProposalDateStyle = styled.time`
   letter-spacing: 0.13px;
   text-align: center;
   margin-top: 25px;
+`;
+
+export const RegisterCardStyle = styled(ProposalCardStyle)`
+  justify-content: center;
+  gap: 17px;
+`;
+
+export const RegisterLinkCardStyle = styled(BlackBorderButtonStyle)`
+  color: ${color.black};
+`;
+
+export const RegisterCardTitleStyle = styled.span`
+  font-size: ${intToPx(typography.font.fontsize.XS.value)};
+  color: ${color.black};
+  text-align: center;
+  font-family: ${MakeFonts.CircularStandardBold};
 `;

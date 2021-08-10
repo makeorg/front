@@ -13,12 +13,15 @@ import {
   DATE_CAPITALIZE_L_FORMAT,
   DATE_LOWERCASE_LL_FORMAT,
 } from 'Shared/constants/date';
+import { AuthenticationRegisterButtons } from 'Client/features/auth/Register/Buttons';
 import {
   ProposalsListStyle,
   ProposalListItemStyle,
   ProposalCardStyle,
   ProposalLinkStyle,
   ProposalDateStyle,
+  RegisterCardStyle,
+  RegisterCardTitleStyle,
 } from './style';
 
 type Props = {
@@ -60,6 +63,14 @@ export const ProposalsList = ({ isLoading, proposals }: Props) => {
   if (hasProposals) {
     return (
       <ProposalsListStyle>
+        <ProposalListItemStyle>
+          <RegisterCardStyle>
+            <RegisterCardTitleStyle>
+              {i18n.t('common.social_register.card_title')}
+            </RegisterCardTitleStyle>
+            <AuthenticationRegisterButtons />
+          </RegisterCardStyle>
+        </ProposalListItemStyle>
         {proposals.map((proposal: ProposalType, index: number) => (
           <ProposalListItemStyle key={proposal.id}>
             <ProposalCardStyle>
