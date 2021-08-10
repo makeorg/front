@@ -4,6 +4,8 @@ import { SocialNetworksColors } from 'Client/app/assets/vars/Colors';
 import { SvgMailPlain } from 'Client/ui/Svg/elements';
 import { FlexElementStyle } from 'Client/ui/Elements/FlexElements';
 import { MakeFonts } from 'Client/app/assets/vars/Fonts';
+import { Breakpoints } from 'Client/app/assets/vars/Breakpoints';
+import { intToPx } from 'Shared/helpers/styled';
 
 export const AuthenticationButtonWrapperStyle = styled(FlexElementStyle)`
   width: 100%;
@@ -11,6 +13,10 @@ export const AuthenticationButtonWrapperStyle = styled(FlexElementStyle)`
   margin: 20px 0;
   flex-direction: column;
   gap: 17px;
+  @media (min-width: ${intToPx(Breakpoints.Desktop)}) {
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const SvgLogoWrapperStyle = styled.span`
@@ -26,6 +32,7 @@ export const SvgLogoWrapperStyle = styled.span`
 export const SvgLogoFacebookWrapperStyle = styled(SvgLogoWrapperStyle)`
   background-color: ${SocialNetworksColors.Facebook};
   fill: white;
+  padding-top: 5px;
 `;
 
 export const SocialButtonStyle = styled.button`
@@ -41,6 +48,9 @@ export const SocialButtonStyle = styled.button`
   border-radius: 17.5px;
   background-color: ${color.white};
   border: 1px solid ${color.black};
+  @media (min-width: ${intToPx(Breakpoints.Desktop)}) {
+    width: 250px;
+  }
 `;
 
 export const SocialButtonLabelStyle = styled.span`
