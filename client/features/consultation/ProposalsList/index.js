@@ -1,8 +1,9 @@
 // @flow
+import React from 'react';
 import { ScreenReaderItemStyle } from 'Client/ui/Elements/AccessibilityElements';
 import { ProposalAuthor } from 'Client/ui/Proposal/Author';
 import { ProposalSkeleton } from 'Client/ui/Skeletons/Proposal';
-import React from 'react';
+import { SubmitProposal } from 'Client/features/consultation/Cards/SubmitProposal';
 import { getProposalLink } from 'Shared/helpers/url';
 import { i18n } from 'Shared/i18n';
 import { type ProposalType } from 'Shared/types/proposal';
@@ -116,6 +117,5 @@ export const ProposalsList = ({ isLoading, proposals }: Props) => {
     );
   }
 
-  // @todo check with product team for behavior without proposals
-  return null;
+  return <SubmitProposal />;
 };
