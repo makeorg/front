@@ -68,7 +68,7 @@ export const MixpanelTracking = {
       return;
     }
 
-    if (env.isDev()) {
+    if (env.isDev() || env.isTest()) {
       // eslint-disable-next-line no-console
       console.info(
         `Tracking Custom Mixpanel (${MIXPANEL_TOKEN})
