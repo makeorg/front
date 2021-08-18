@@ -35,13 +35,13 @@ import {
 /**
  * Handles Facebook authentication
  */
-
 export const FacebookAuthentication = () => {
   const dispatch = useDispatch();
   const { privacyPolicy } = useSelector((state: StateRoot) => state.appConfig);
   // setting facebook browser to true or false
   const [isFacebookBrowser, setFacebookBrowser] = useState(false);
   const { language } = useSelector((state: StateRoot) => state.appConfig);
+
   const handleFacebookLoginCallback = response => {
     if (!response?.accessToken && response?.status === 'unknown') {
       Logger.logInfo({
@@ -139,7 +139,7 @@ export const FacebookAuthentication = () => {
               <SvgFacebookLogoF aria-hidden focusable="false" />
             </SvgLogoFacebookWrapperStyle>
             <SocialButtonLabelStyle>
-              {i18n.t('common.social_register.facebook_register')}
+              {i18n.t('common.social_login.facebook_connect')}
             </SocialButtonLabelStyle>
             <ScreenReaderItemStyle>Facebook</ScreenReaderItemStyle>
           </FacebookButtonStyle>

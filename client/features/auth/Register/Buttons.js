@@ -39,7 +39,7 @@ export const AuthenticationRegisterButtons = () => {
           type="button"
         />
         <SocialButtonLabelStyle>
-          {i18n.t('common.social_register.email_register')}
+          {i18n.t('common.social_login.email_register')}
         </SocialButtonLabelStyle>
       </EmailButtonStyle>
     </AuthenticationButtonWrapperStyle>
