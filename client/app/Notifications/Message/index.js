@@ -16,6 +16,7 @@ import {
   FIRST_VOTE_TIP_MESSAGE,
   SOCIAL_MEDIA_COOKIES_MESSAGE,
   COOKIES_PREFERENCES_UPDATE_MESSAGE,
+  LOGIN_SOCIAL_MISSING_EMAIL_DATA,
 } from 'Shared/constants/notifications';
 import { SecureExpiredMessage } from 'Client/app/Notifications/Banner/SecureExpired';
 import { AccountActivationSuccessMessage } from 'Client/app/Notifications/Banner/AccountActivationSuccess';
@@ -27,6 +28,7 @@ import { RegisterSuccessValidateMessage } from 'Client/app/Notifications/Banner/
 import { RegisterSuccessMessage } from 'Client/app/Notifications/Banner/RegisterSuccess';
 import { NetworkErrorMessage } from 'Client/app/Notifications/Banner/NetworkError';
 import { UnexpectedErrorMessage } from 'Client/app/Notifications/Banner/UnexpectedError';
+import { LoginSocialMissingDataMessage } from 'Client/app/Notifications/Banner/LoginSocialMissingData';
 import { VoteOnlyMessage } from 'Client/app/Notifications/Banner/VoteOnly';
 import { AccountDeletionSuccessMessage } from 'Client/app/Notifications/Banner/AccountDeletionSuccess';
 import { FirstVoteTip } from 'Client/app/Notifications/Tip/FirstVote';
@@ -65,6 +67,8 @@ export const NotificationMessage = ({ name, params, close }) => {
       return <SocialMediaCookiesMessage />;
     case COOKIES_PREFERENCES_UPDATE_MESSAGE:
       return <CookiesPreferencesUpdateMessage />;
+    case LOGIN_SOCIAL_MISSING_EMAIL_DATA:
+      return <LoginSocialMissingDataMessage />;
     default:
       return <></>;
   }

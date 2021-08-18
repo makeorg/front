@@ -23,7 +23,9 @@ import { displayNotificationBanner } from 'Shared/store/actions/notifications';
 import {
   NOTIFICATION_LEVEL_ALERT,
   UNEXPECTED_ERROR_MESSAGE,
+  LOGIN_SOCIAL_MISSING_EMAIL_DATA,
 } from 'Shared/constants/notifications';
+import { closePanel } from 'Shared/store/reducers/panel/actions';
 import {
   FacebookButtonStyle,
   SvgLogoFacebookWrapperStyle,
@@ -50,6 +52,7 @@ export const FacebookAuthentication = () => {
 
       return;
     }
+
     if (!response?.accessToken) {
       Logger.logError({
         message: `Facebook login failure: ${response?.status}`,
@@ -61,7 +64,27 @@ export const FacebookAuthentication = () => {
           NOTIFICATION_LEVEL_ALERT
         )
       );
+      dispatch(closePanel());
       dispatch(modalClose());
+
+      return;
+    }
+
+    if (!response?.email) {
+      Logger.logError({
+        message: `Facebook login failure no email in profile (login is a phone number or email is not yet confirmed)`,
+        name: 'social-auth',
+      });
+      dispatch(
+        displayNotificationBanner(
+          LOGIN_SOCIAL_MISSING_EMAIL_DATA,
+          NOTIFICATION_LEVEL_ALERT
+        )
+      );
+      dispatch(closePanel());
+      dispatch(modalClose());
+
+      return;
     }
 
     const success = () => {
@@ -70,7 +93,7 @@ export const FacebookAuthentication = () => {
     };
 
     const handleErrors = () => {
-      trackAuthenticationSocialFailure();
+      trackAuthenticationSocialFailure(FACEBOOK_PROVIDER_ENUM);
     };
     const unexpectedError = () => dispatch(modalClose());
 

@@ -162,6 +162,7 @@
       "delete_account_success": "Dein Konto wurde gelöscht. Wir hoffen, dich bald wieder auf Make.org zu sehen!",
       "login_success": "Du hast dich erfolgreich eingeloggt.",
       "logout_success": "Du hast dich erfolgreich abgemeldet.",
+      "login_social_missing_email_data": "Wir können keine gültige E-Mail-Adresse von Ihrem Facebook-Konto abrufen, um sich zu registrieren. Wir laden Sie ein, unser Registrierungsformular per E-Mail zu verwenden.",
       "register_success": "Herzlich willkommen! Du hast dich erfolgreich registriert.",
       "register_validate": "Vielen Dank für deine Anmeldung. Du hast soeben eine E-Mail an {{email}} erhalten, um dein Konto mit einem Klick zu aktivieren.",
       "secure_expired": {

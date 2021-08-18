@@ -43,7 +43,7 @@ export const GoogleAuthentication = () => {
     };
 
     const handleErrors = () => {
-      trackAuthenticationSocialFailure();
+      trackAuthenticationSocialFailure(GOOGLE_PROVIDER_ENUM);
     };
     const unexpectedError = () => dispatch(modalClose());
 

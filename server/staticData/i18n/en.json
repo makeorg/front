@@ -189,6 +189,7 @@
       "delete_account_success": "Your account has been deleted. It was good to have you.",
       "login_success": "You logged in successfully.",
       "logout_success": "You logged out successfully.",
+      "login_social_missing_email_data": "We are unable to get a right address email from your Facebook account to register. Please sign up by email using the form.",
       "register_success": "Welcome, you are now signed up.",
       "register_validate": "Thanks for signing up! We sent you an email at {{email}} to validate your account.",
       "secure_expired": {
