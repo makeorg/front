@@ -168,6 +168,7 @@
       "delete_account_success": "Votre compte a bien été supprimé. Nous espérons vous revoir bientôt sur Make.org !",
       "login_success": "Vous avez été connecté(e) avec succès.",
       "logout_success": "Vous avez été déconnecté(e) avec succès.",
+      "login_social_missing_email_data": "Nous n’arrivons pas à obtenir une adresse email valide depuis votre compte Facebook pour vous inscrire. Nous vous invitons à utiliser notre formulaire d'inscription par email.",
       "register_success": "Bienvenue ! Vous avez été inscrit avec succès.",
       "register_validate": "Merci pour votre inscription. Un mail vient de vous être envoyé à l'adresse {{email}} afin d'activer votre compte en un clic.",
       "secure_expired": {
