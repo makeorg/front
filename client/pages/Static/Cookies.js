@@ -85,7 +85,11 @@ export const Cookies = () => {
 
   return (
     <>
-      <MetaTags title={i18n.t('meta.cookies.title')} />
+      <MetaTags
+        title={i18n.t('meta.cookies.title')}
+        description={i18n.t('meta.cookies.description')}
+      />
+
       <StaticPageWrapperStyle>
         <StaticSecondLevelTitleStyle>
           {i18n.t('cookies_management.title')}

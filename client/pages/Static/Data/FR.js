@@ -18,6 +18,7 @@ import { type StateRoot } from 'Shared/store/types';
 import { useSelector } from 'react-redux';
 import { DATE_CAPITALIZE_LL_FORMAT } from 'Shared/constants/date';
 import { getCookiesPageLink } from 'Shared/helpers/url';
+import { i18n } from 'Shared/i18n';
 import {
   StaticPageWrapperStyle,
   StaticSecondLevelTitleStyle,
@@ -38,7 +39,10 @@ export const DataFR = () => {
 
   return (
     <>
-      <MetaTags title="Charte de données personnelles - Make.org" />
+      <MetaTags
+        title={i18n.t('meta.privacy_policy.title')}
+        description={i18n.t('meta.privacy_policy.description')}
+      />
       <StaticPageWrapperStyle>
         <StaticSecondLevelTitleStyle>
           Charte de données personnelles

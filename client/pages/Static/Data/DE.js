@@ -14,6 +14,7 @@ import { useSelector } from 'react-redux';
 import { getCountryDPA } from 'Shared/helpers/countries';
 import { type StateRoot } from 'Shared/store/types';
 import { DATE_CAPITALIZE_LL_FORMAT } from 'Shared/constants/date';
+import { i18n } from 'Shared/i18n';
 import {
   StaticPageWrapperStyle,
   StaticSecondLevelTitleStyle,
@@ -34,7 +35,10 @@ export const DataDE = () => {
 
   return (
     <>
-      <MetaTags title="DATENSCHUTZERKLÄRUNG - Make.org" />
+      <MetaTags
+        title={i18n.t('meta.privacy_policy.title')}
+        description={i18n.t('meta.privacy_policy.description')}
+      />
       <StaticPageWrapperStyle>
         <StaticSecondLevelTitleStyle>
           DATENSCHUTZERKLÄRUNG

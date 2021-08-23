@@ -29,7 +29,8 @@
       "description": "Unterstütze meinen Vorschlag durch deine Stimmabgabe und lass uns gemeinsam Lösungen für die großen Herausforderungen unserer Zeit entwickeln. Die am meisten unterstützten Ideen werden von Make.org und seinen Kooperationspartnern in die Tat umgesetzt."
     },
     "participate": {
-      "title": "Beteilige dich an der Konsultation „{{question}}“ – Make.org"
+      "title": "Beteilige dich an den Konsultationen – {{question}} – Make.org",
+      "description": "Vorschlagen, abstimmen, handeln: Lass uns gemeinsam Antworten auf die großen Fragen unserer Zeit finden. Die am meisten unterstützten Ideen werden von Make.org und seinen Kooperationspartnern in die Tat umgesetzt."
     },
     "explore": {
       "title": "Entdecke die Vorschläge zur Konsultation „{{question}}“ – Make.org"
@@ -71,16 +72,27 @@
       }
     },
     "legal": {
-      "title": "Impressum – Make.org"
+      "title": "Impressum – Make.org",
+      "description": "Hier findet das Impressum der Website."
+    },
+    "privacy_policy": {
+      "title": "Datenschutzerklärung - Make.org",
+      "description": "Lerne alles über die Verarbeitung deiner persönlichen Daten, wenn du die Website besuchst."
+    },
+    "gtu": {
+      "title": "Nutwungsbedingungen - Make.org",
+      "description": "Erfahre alles über die Nutzungsbedingungen für das Abstimmen und Vorschlagen auf unsere Bürgerbeteiligungsplattform."
     },
     "contact": {
-      "title": "Kontaktiere uns – Make.org"
+      "title": "Kontaktiere uns – Make.org",
+      "description": "Wenn du keine Antwort auf deine Frage findest, kontaktiere uns per E-Mail."
     },
     "no_cookies": {
       "title": "Hoppla! Deine Cookies sind deaktiviert – Make.org"
     },
     "cookies": {
-      "title": "Cookie-Verwaltung – Make.org"
+      "title": "Cookie-Verwaltung – Make.org",
+      "description": "Erfahre alles über die Verwendung von Cookies, wenn du die Plattform besuchst."
     },
     "password-recovery": {
       "title": "Ich erstelle ein neues Passwort – Make.org"
