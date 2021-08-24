@@ -9,6 +9,7 @@ import {
 } from 'Shared/constants/config';
 import { DateHelper } from 'Shared/helpers/date';
 import { DATE_CAPITALIZE_LL_FORMAT } from 'Shared/constants/date';
+import { i18n } from 'Shared/i18n';
 import {
   StaticPageWrapperStyle,
   StaticSecondLevelTitleStyle,
@@ -23,7 +24,10 @@ import {
 
 export const DataEN = () => (
   <>
-    <MetaTags title="Privacy policy - Make.org" />
+    <MetaTags
+      title={i18n.t('meta.privacy_policy.title')}
+      description={i18n.t('meta.privacy_policy.description')}
+    />
     <StaticPageWrapperStyle>
       <StaticSecondLevelTitleStyle>
         Privacy policy

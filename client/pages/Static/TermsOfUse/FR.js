@@ -17,6 +17,7 @@ import {
   DATE_CAPITALIZE_LL_FORMAT,
   DATE_CAPITALIZE_L_FORMAT,
 } from 'Shared/constants/date';
+import { i18n } from 'Shared/i18n';
 import {
   StaticPageWrapperStyle,
   StaticSecondLevelTitleStyle,
@@ -40,7 +41,10 @@ export const TermsOfUseFR = () => {
 
   return (
     <>
-      <MetaTags title="Conditions d’utilisation - Make.org" />
+      <MetaTags
+        title={i18n.t('meta.gtu.title')}
+        description={i18n.t('meta.gtu.description')}
+      />
       <StaticPageWrapperStyle>
         <StaticSecondLevelTitleStyle>
           Conditions d’utilisation de Make.org

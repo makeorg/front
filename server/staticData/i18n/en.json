@@ -67,16 +67,28 @@
       }
     },
     "legal": {
-      "title": "Legal mentions - Make.org"
+      "title": "Legal mentions - Make.org",
+      "description": "Find out all the legal notice of the website."
+    },
+    "privacy_policy": {
+      "title": "Privacy policy - Make.org",
+      "description": "All of the information about the processing of your personal data during a session on the website."
+    },
+    "gtu": {
+      "title": "Terms of service - Make.org",
+      "description": "Learn everything about the terms of use when you vote and propose a solution on our citizen engagement platform."
     },
     "contact": {
-      "title": "Contact us - Make.org"
+      "title": "Contact us - Make.org",
+      "description": "If you don't find the right answer to your question, then contact us by email."
     },
     "no_cookies": {
       "title": "Looks like your cookies are deactivated - Make.org"
     },
     "cookies": {
-      "title": "Managing cookies - Make.org"
+      "title": "Managing cookies - Make.org",
+      "description": "Discover how the cookies work and how we use them during your visit on the website."
+
     },
     "password-recovery": {
       "title": "Create a new password - Make.org"
@@ -90,7 +102,8 @@
       "description": "The requested page doesn't exist anymore."
     },
     "participate": {
-      "title": "Participate in the consultation '{{question}}' - Make.org"
+      "title": "Contribute to the current consultations - {{question}} - Make.org",
+      "description": "Finding solutions is easier when working together. Discover a democratic place where you can discuss, vote and submit your solutions on the big issues you care about."
     },
     "explore": {
       "title": "Explore solutions of '{{question}}' - Make.org"

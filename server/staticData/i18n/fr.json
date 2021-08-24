@@ -2,7 +2,7 @@
   "meta": {
     "home": {
       "title": "Agir avec Make.org - Make.org",
-      "description": "Proposez, votez, agissons : ensemble, trouvons des solutions aux grandes problématiques actuelles. Les plus soutenues seront mises en action par Make.org et ses partenaires.",
+      "description": "Proposez, votez, agissons : ensemble, trouvons des solutions aux grandes problématiques actuelles.",
       "picture": "https://assets.make.org/assets/metas/default_meta-fr.png"
     },
     "organisation": {
@@ -29,7 +29,8 @@
       "description": "Soutenez ma proposition en votant et trouvons ensemble des solutions aux grandes problématiques actuelles. Les plus soutenues seront mises en action par Make.org et ses partenaires."
     },
     "participate": {
-      "title": "Participer à la consultation '{{question}}' - Make.org"
+      "title": "Participez aux consultations – {{question}} – Make.org",
+      "description": "Proposez, votez, agissons : ensemble, trouvons des solutions aux grandes problématiques actuelles."
     },
     "explore": {
       "title": "Explorer les propositions de la consultation '{{question}}' - Make.org"
@@ -63,7 +64,7 @@
     "browse": {
       "consultations": {
         "title": "Participez aux consultations avec Make.org - Make.org",
-        "description": "Proposez, votez, agissons : ensemble, trouvons des solutions aux grandes problématiques actuelles. Les plus soutenues seront mises en action par Make.org et ses partenaires."
+        "description": "Proposez, votez, agissons : ensemble, trouvons des solutions aux grandes problématiques actuelles."
       },
       "results": {
         "title": "Résultats des consultations avec Make.org - Make.org",
@@ -71,16 +72,27 @@
       }
     },
     "legal": {
-      "title": "Mentions légales - Make.org"
+      "title": "Mentions légales - Make.org",
+      "description": "Trouvez ici les mentions légales du site."
+    },
+    "privacy_policy": {
+      "title": "Charte de données personnelles - Make.org",
+      "description": "Tout comprendre sur le traitement de vos données personnelles lors d'une visite sur le site."
+    },
+    "gtu": {
+      "title": "Conditions d’utilisation - Make.org",
+      "description": "Tout savoir sur les conditions d'utilisation pour voter et proposer sur la plateforme d'engagement citoyen."
     },
     "contact": {
-      "title": "Contactez-nous - Make.org"
+      "title": "Contactez-nous - Make.org",
+      "description": "Si vous ne trouvez pas la réponse à votre question, contactez-nous par email."
     },
     "no_cookies": {
       "title": "Ooops ! Vos cookies sont désactivés - Make.org"
     },
     "cookies": {
-      "title": "Gestion des cookies - Make.org"
+      "title": "Gestion des cookies - Make.org",
+      "description": "Découvrez toutes les explications sur l'utilisation des cookies lors de votre visite sur la plateforme."
     },
     "password-recovery": {
       "title": "Je crée un nouveau mot de passe - Make.org"

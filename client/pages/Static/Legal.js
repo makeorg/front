@@ -22,7 +22,10 @@ import {
 
 export const LegalPage = () => (
   <>
-    <MetaTags title={i18n.t('meta.legal.title')} />
+    <MetaTags
+      title={i18n.t('meta.legal.title')}
+      description={i18n.t('meta.legal.description')}
+    />
     <StaticPageWrapperStyle>
       <StaticSecondLevelTitleStyle>
         {i18n.t('legal.title')}
