@@ -105,42 +105,33 @@ export class ProposalApiService {
   static searchProposals(
     country: string,
     questionId?: string,
-    content?: string,
     tagsIds?: string,
     seed?: ?number,
     limit?: number = 20,
     skip?: number = 0,
-    sort?: string,
-    order?: string,
+    sortTypeKey?: string,
+    content?: string,
     ideaIds?: string,
-    sortAlgorithm?: string,
-    keywords?: string,
-    isNotVoted?: boolean,
-    userType?: string,
+    order?: string,
     headers?: ApiServiceHeadersType = {}
   ): Promise<any> {
     const params = {
-      country,
       questionId,
       content,
-      tagsIds,
       seed,
       limit,
       skip,
-      sort,
-      order,
+      tagsIds,
+      country,
       ideaIds,
-      sortAlgorithm,
-      keywords,
-      isNotVoted,
-      userType,
+      order,
     };
 
-    if (sort) {
-      const sortType = AVAILABLE_ALGORITHMS[sort];
+    if (sortTypeKey) {
+      const sortType = AVAILABLE_ALGORITHMS[sortTypeKey];
       params[sortType.key] = sortType.value;
 
-      if (AVAILABLE_ALGORITHMS[sort].key === 'sort') {
+      if (AVAILABLE_ALGORITHMS[sortTypeKey].key === 'sort') {
         params.order = 'DESC';
       }
     }

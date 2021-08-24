@@ -58,35 +58,27 @@ const getPopularProposals = async (
 const searchProposals = async (
   country: string,
   questionId?: string,
-  content?: string,
   tagsIds?: string,
   seed?: ?number,
   limit?: number = 20,
   skip?: number = 0,
-  sort?: string,
-  order?: string,
+  sortTypeKey?: string,
+  content?: string,
   ideaIds?: string,
-  sortAlgorithm?: string,
-  keywords?: string,
-  isNotVoted?: boolean,
-  userType?: string
+  order?: string
 ): Promise<?ProposalsType> => {
   try {
     const response = await ProposalApiService.searchProposals(
       country,
       questionId,
-      content,
       tagsIds,
       seed,
       limit,
       skip,
-      sort,
-      order,
+      sortTypeKey,
+      content,
       ideaIds,
-      sortAlgorithm,
-      keywords,
-      isNotVoted,
-      userType
+      order
     );
     const { data } = response;
 

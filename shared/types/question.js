@@ -245,11 +245,3 @@ export type QuestionKeywordType = {
   score: number,
   count: number,
 };
-
-export type TypeFilterAndSortValues = {
-  keyword: ?string,
-  sortAlgorithm: ?string,
-  sort: ?string,
-  isNotVoted: ?boolean,
-  userType: ?string,
-};

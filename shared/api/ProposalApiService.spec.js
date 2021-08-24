@@ -12,6 +12,7 @@ describe('ProposalApiService', () => {
     ApiService.callApi.mockClear();
     jest.spyOn(ApiService, 'callApi');
   });
+
   describe('propose', () => {
     it('must call ApiService.callApi', async () => {
       await ProposalApiService.propose('content', '12345');
@@ -51,6 +52,7 @@ describe('ProposalApiService', () => {
           limit: 20,
           seed: undefined,
           skip: 0,
+          sortAlgorithm: undefined,
           tagsIds: undefined,
         },
       });
@@ -64,23 +66,16 @@ describe('ProposalApiService', () => {
           country: 'FR',
           questionId: '12345',
           content: undefined,
-          tagsIds: undefined,
-          seed: undefined,
           limit: 20,
+          seed: undefined,
           skip: 0,
-          sort: undefined,
-          order: undefined,
-          idealIds: undefined,
+          sortAlgorithm: undefined,
+          tagsIds: undefined,
         },
       });
     });
     it('must filter by questionId && tagIds', async () => {
-      await ProposalApiService.searchProposals(
-        'FR',
-        '12345',
-        undefined,
-        'foo, bar'
-      );
+      await ProposalApiService.searchProposals('FR', '12345', 'foo, bar');
       expect(ApiService.callApi).toHaveBeenNthCalledWith(1, PATH_PROPOSALS, {
         headers: {},
         method: 'GET',
@@ -88,13 +83,11 @@ describe('ProposalApiService', () => {
           country: 'FR',
           questionId: '12345',
           content: undefined,
-          tagsIds: 'foo, bar',
-          seed: undefined,
           limit: 20,
+          seed: undefined,
           skip: 0,
-          sort: undefined,
-          order: undefined,
-          idealIds: undefined,
+          sortAlgorithm: undefined,
+          tagsIds: 'foo, bar',
         },
       });
     });
@@ -102,11 +95,12 @@ describe('ProposalApiService', () => {
       await ProposalApiService.searchProposals(
         'FR',
         undefined,
-        'foo',
         undefined,
         undefined,
         20,
-        0
+        0,
+        undefined,
+        'foo'
       );
       expect(ApiService.callApi).toHaveBeenNthCalledWith(1, PATH_PROPOSALS, {
         headers: {},
@@ -115,13 +109,11 @@ describe('ProposalApiService', () => {
           country: 'FR',
           questionId: undefined,
           content: 'foo',
-          tagsIds: undefined,
-          seed: undefined,
           limit: 20,
+          seed: undefined,
           skip: 0,
-          sort: undefined,
-          order: undefined,
-          idealIds: undefined,
+          sortAlgorithm: undefined,
+          tagsIds: undefined,
         },
       });
     });

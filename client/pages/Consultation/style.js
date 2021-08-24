@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import { color, typography } from 'athena-design-tokens';
 import { intToPx, pxToPercent } from 'Shared/helpers/styled';
-import { Link } from 'react-router-dom';
 import {
   ColumnElementStyle,
-  SpaceBetweenRowStyle,
+  ColumnToRowElementStyle,
 } from 'Client/ui/Elements/FlexElements';
 import { Breakpoints, Layouts } from 'Client/app/assets/vars/Breakpoints';
 import { MakeFonts } from 'Client/app/assets/vars/Fonts';
@@ -121,12 +120,11 @@ export const ResultsTitleStyle = styled(ParticipateTitleStyle)`
   }
 `;
 
-export const ExploreTitleWrapperStyle = styled(ColumnElementStyle)`
+export const ExploreTitleWrapperStyle = styled(ColumnToRowElementStyle)`
   margin-top: 30px;
-  margin-bottom: 20px;
   @media (min-width: ${intToPx(Breakpoints.Tablet)}) {
     align-items: baseline;
-    margin-bottom: 30px;
+    margin-top: 50px;
   }
 `;
 
@@ -143,31 +141,11 @@ export const ExploreTitleStyle = styled.h3`
   }
 `;
 
-export const ExploreSubTitleWrapperStyle = styled.div`
-  font-family: ${MakeFonts.CircularStandardBook};
-  font-size: ${intToPx(typography.font.fontsize.XS.value)};
-  letter-spacing: 0.14px;
-  margin-top: 15px;
-  margin-bottom: 20px;
-`;
-
 export const ExploreProposalsCountStyle = styled.span`
-  font-family: ${MakeFonts.CircularStandardBold};
-  font-size: ${intToPx(typography.font.fontsize.S.value)};
-  color: ${color.black};
-  letter-spacing: 0.12px;
-`;
-export const ExploreDescriptionStyle = styled(SpaceBetweenRowStyle)`
-  width: 100%;
-`;
-
-export const ResetLinkStyle = styled(Link)`
-  display: inline-flex;
-  align-items: center;
   font-family: ${MakeFonts.CircularStandardBook};
-  text-decoration: none;
   font-size: ${intToPx(typography.font.fontsize.XS.value)};
-  color: ${color.black};
+  color: ${color.greyDark};
+  letter-spacing: 0.14px;
 `;
 
 export const ParticipateDescriptionStyle = styled.p`
