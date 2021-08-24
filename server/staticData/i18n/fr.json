@@ -168,10 +168,10 @@
         "malformed": "Merci de respecter le format url \"https://example.com\""
       }
     },
-    "social_register": {
+    "social_login": {
       "card_title": "Pour retrouver l’historique de vos votes",
-      "facebook_register": "S’inscrire avec Facebook",
-      "google_register": "S’inscrire avec Google",
+      "facebook_connect": "Continuer avec Facebook",
+      "google_connect": "Continuer avec Google",
       "email_register": "S’inscrire par mail"
     },
     "notifications": {

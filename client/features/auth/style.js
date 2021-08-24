@@ -16,7 +16,7 @@ import { MakeFonts } from 'Client/app/assets/vars/Fonts';
 
 export const AuthenticationWrapperStyle = styled.section`
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -30,6 +30,13 @@ export const AuthenticationWrapperStyle = styled.section`
 
 export const AuthenticationTitleStyle = styled(SecondLevelTitleStyle)`
   padding: 0 25px;
+`;
+
+export const SocialRegisterButtonsWrapperStyle = styled.h3`
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: 17px;
 `;
 
 export const LegalFormStyle = styled(FormCenterAlignStyle)`

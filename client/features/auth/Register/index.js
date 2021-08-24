@@ -27,9 +27,12 @@ import { UserService } from 'Shared/services/User';
 import { Logger } from 'Shared/services/Logger';
 import { getUser } from 'Shared/store/actions/authentication';
 import { RegisterForm } from './Form';
-
-import { AuthenticationWrapperStyle } from '../style';
 import { LegalConsent } from './LegalConsent';
+
+import {
+  AuthenticationWrapperStyle,
+  SocialRegisterButtonsWrapperStyle,
+} from '../style';
 
 export const Register = () => {
   const dispatch = useDispatch();
@@ -162,12 +165,10 @@ export const Register = () => {
           {i18n.t('register.title')}
         </SecondLevelTitleStyle>
         <SmallSeparatorWithMarginStyle />
-        <FourthLevelTitleStyle as="h3">
-          {i18n.t('register.social_connect')}
+        <SocialRegisterButtonsWrapperStyle>
           <FacebookAuthentication />
-          {i18n.t('register.or')}
           <GoogleAuthentication />
-        </FourthLevelTitleStyle>
+        </SocialRegisterButtonsWrapperStyle>
         <SeparatorWrapperStyle>
           <SeparatorStyle />
           <TextSeparatorStyle>{i18n.t('register.or')}</TextSeparatorStyle>

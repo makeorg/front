@@ -171,11 +171,11 @@
         "malformed": "Please use the right url format \"https://example.com\""
       }
     },
-    "social_register": {
-      "card_title": "@@profile.common.social_register.card_title|fr:Pour retrouver l’historique de vos votes",
-      "facebook_register": "@@profile.common.social_register.facebook_register|fr:S’inscrire avec Facebook",
-      "google_register": "@@profile.common.social_register.google_register|fr:S’inscrire avec Google",
-      "email_register": "@@profile.common.social_register.email_register|fr:S’inscrire par mail"
+    "social_login": {
+      "card_title": "To find the history of your votes",
+      "facebook_connect": "Continue with Facebook",
+      "google_connect": "Continue with Google",
+      "email_register": "Sign up with email"
     },
     "from": "on",
     "email": "Email",

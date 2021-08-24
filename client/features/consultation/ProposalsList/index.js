@@ -67,7 +67,7 @@ export const ProposalsList = ({ isLoading, proposals }: Props) => {
         <ProposalListItemStyle>
           <RegisterCardStyle>
             <RegisterCardTitleStyle>
-              {i18n.t('common.social_register.card_title')}
+              {i18n.t('common.social_login.card_title')}
             </RegisterCardTitleStyle>
             <AuthenticationRegisterButtons />
           </RegisterCardStyle>

@@ -251,11 +251,11 @@
     "million": "Million",
     "million_plural": "Millionen",
     "close_panel": "Die Dropdown-Liste schließen",
-    "social_register": {
-      "card_title": "@@common.social_register.card_title|fr:Pour retrouver l’historique de vos votes",
-      "facebook_register": "@@common.social_register.facebook_register|fr:S’inscrire avec Facebook",
-      "google_register": "@@common.social_register.google_register|fr:S’inscrire avec Google",
-      "email_register": "@@common.social_register.email_register|fr:S’inscrire par mail"
+    "social_login": {
+      "card_title": "So finden Sie Ihr Abstimmungsverhalten",
+      "facebook_connect": "Mit Facebook fortfahren",
+      "google_connect": "Mit Google fortfahren",
+      "email_register": "Registrieren bei Mail"
     }
   },
   "header": {
