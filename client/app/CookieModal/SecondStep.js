@@ -139,9 +139,6 @@ export const SecondStepCookie = ({
             <CookieModalCookieDetailParagraphStyle>
               {i18n.t('cookie_modal.statistics.visitor')}
             </CookieModalCookieDetailParagraphStyle>
-            <CookieModalCookieDetailParagraphStyle>
-              {i18n.t('cookie_modal.statistics.tracking')}
-            </CookieModalCookieDetailParagraphStyle>
           </ColumnElementStyle>
         </CookieModalElementStyle>
         <CookieModalElementStyle>

@@ -63,11 +63,11 @@
     },
     "browse": {
       "consultations": {
-        "title": "Participez aux consultations avec Make.org - Make.org",
+        "title": "Participez aux consultations - Make.org",
         "description": "Proposez, votez, agissons : ensemble, trouvons des solutions aux grandes problématiques actuelles."
       },
       "results": {
-        "title": "Résultats des consultations avec Make.org - Make.org",
+        "title": "Résultats des consultations - Make.org",
         "description" : "Découvrez les résultats de nos consultations ainsi que les actions mises en place par Make.org et ses partenaires."
       }
     },

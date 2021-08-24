@@ -3,7 +3,7 @@
     "home": {
       "title": "Make a change in our society with Make.org -",
       "description": "Finding solutions is easier when working together. Make.org helps you share ideas with forward-thinking people like you. Discover a democratic place where you can discuss, vote and submit your solutions on the big issues you care about.",
-      "picture": "https://assets.make.org/assets/metas/default-meta-en.png"
+      "picture": "https://assets.make.org/assets/metas/default-meta-en.jpg"
     },
     "organisation": {
       "proposals": {
@@ -58,11 +58,11 @@
     },
     "browse": {
       "consultations": {
-        "title": "Contribute to the current consultations on Make.org - Make.org",
+        "title": "Contribute to the current consultations - Make.org",
         "description": "Finding solutions is easier when working together. Make.org helps you share ideas with forward-thinking people like you. Discover a democratic place where you can discuss, vote and submit your solutions on the big issues you care about."
       },
       "results": {
-        "title": "Find out the results on Make.org - Make.org",
+        "title": "Find out the results - Make.org",
         "description": "Find out the results of all our past consultations."
       }
     },
