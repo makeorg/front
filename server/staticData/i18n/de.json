@@ -521,7 +521,7 @@
       "cookie": "make-cookie-preferences: Dieses Cookie speichert deine Präferenzen in Bezug auf die Verwendung von Cookies auf unserer Website."
     },
     "statistics": {
-      "visitor": "make-visitor-id: Dieses Cookie wird verwendet, um Besuche und erneute Besuche auf unserer Website zu verfolgen und den Datenverkehr auf anonyme und gebündelte Weise zu messen. Dieses Tracking erfolgt nicht auf individueller Ebene.",
+      "visitor": "make-visitor-id: Dieses Cookie wird verwendet, um Besuche auf unserer Website zu verfolgen und den Datenverkehr auf anonyme und gebündelte Weise zu messen. Navigationsereignisse werden an das Analysetool MixPanel gesendet.",
       "tracking": "Facebook-Tracking-Cookie: Dieses Cookie wird verwendet, um Daten zur Nutzung des Dienstes zu sammeln. Diese Daten sind Teil einer gebündelten Analyse, mit deren Hilfe der Dienst verbessert werden soll. Das Cookie wird auch verwendet, um soziodemografische Daten (Alter, Geschlecht, Region) in gebündelter Form zu sammeln und so die Analyse der Konsultationen zu bereichern."
     },
     "social_media": {
@@ -1158,7 +1158,7 @@
       "statistics": {
         "name": "Statistik-Cookies:",
         "description": "Diese Cookies dienen dazu, die Besuche auf unserer Website zu analysieren und die Leistung der Website entsprechend zu verbessern. Alle Informationen, die diese Cookies sammeln, werden gebündelt und sind daher anonymisiert. Wenn Sie diese Cookies nicht akzeptieren, werden wir nicht über Ihren erneuten Besuch auf Make.org informiert.",
-        "visitor-id": "make-visitor-id: Dieses Cookie wird verwendet, um einen einmaligen Besucher zu identifizieren.",
+        "visitor-id": "make-visitor-id: Dieses Cookie wird verwendet, um Besuche auf unserer Website zu verfolgen und den Datenverkehr auf anonyme und gebündelte Weise zu messen. Navigationsereignisse werden an das Analysetool MixPanel gesendet.",
         "visitor-created-at": "make-visitor-created-at: Dieses Cookie wird verwendet, um das Datum des ersten Besuchs auf der Plattform zu erhalten.",
         "facebook-tracking": "Facebook-Tracking-Cookie: Dieses Cookie ermöglicht es uns, Statistiken über die Anzahl der Besucher auf unserer Website zu erstellen. Diese Statistiken helfen uns dabei, unsere Website zu verbessern und die Analyse unserer Konsultationen zu bereichern."
       },

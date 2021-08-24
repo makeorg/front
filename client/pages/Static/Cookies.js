@@ -362,11 +362,6 @@ export const Cookies = () => {
                       })}
                     </CookieLabelStyle>
                   </CookieModalCookieDetailParagraphStyle>
-                  <CookieModalCookieDetailParagraphStyle className="cookie-page">
-                    {i18n.t(
-                      'cookies_management.details.statistics.facebook-tracking'
-                    )}
-                  </CookieModalCookieDetailParagraphStyle>
                 </ColumnElementStyle>
               </CookieModalElementStyle>
               <CookieModalElementStyle>
@@ -382,13 +377,6 @@ export const Cookies = () => {
                     </strong>{' '}
                     {i18n.t('cookies_management.details.social.description')}
                   </CookieDescriptionStyle>
-                  <CookieSwitch
-                    onCookiePage
-                    value="facebook_tracking"
-                    description={i18n.t(
-                      'cookies_management.details.social.facebook_tracking'
-                    )}
-                  />
                   <CookieSwitch
                     onCookiePage
                     value="twitter_tracking"

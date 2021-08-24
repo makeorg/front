@@ -560,7 +560,7 @@
       "cookie": "make-cookie-preferences : ce cookie permettra de garder en mémoire vos préférences concernant l‘utilisation des cookies sur notre service."
     },
     "statistics": {
-      "visitor": "make-visitor-id : ce cookie sert à suivre les visites et revisites sur notre service de façon à mesurer le trafic de façon anonyme et agrégée. Ce suivi ne se fait pas au niveau individuel.",
+      "visitor": "make-visitor-id : ce cookie sert à suivre les visites sur notre service de façon à mesurer le trafic de façon anonyme et agrégée. Les événements de navigation sont envoyés à l'outil d'analyse MixPanel.",
       "tracking": "Cookie de tracking Facebook : il sert à recueillir de la donnée de comportement sur le service en vue d'analyses agrégées permettant d’améliorer le service. Il sert également à recueillir les données socio démo (âge, genre, région) de façon agrégée pour enrichir l’analyse de la consultation."
     },
     "social_media": {
@@ -1198,7 +1198,7 @@
       "statistics": {
         "name": "Les cookies de statistiques :",
         "description": "ces cookies sont destinés à analyser les visites sur notre site et à améliorer les performances de ce dernier. Toutes les informations collectées par ces cookies sont agrégées et donc anonymisées. Si vous n‘acceptez pas ces cookies, nous ne serons pas informés de votre revisite.",
-        "visitor-id": "make-visitor-id: ce cookie sert à identifier un visiteur unique.",
+        "visitor-id": "make-visitor-id: ce cookie sert à suivre les visites sur notre service de façon à mesurer le trafic de façon anonyme et agrégée. Les événements de navigation sont envoyés à l'outil d'analyse MixPanel.",
         "visitor-created-at": "make-visitor-created-at : ce cookie sert à obtenir la date de la première visite sur la plateforme.",
         "facebook-tracking": "cookie de tracking Facebook : ce cookie permet de générer des statistiques concernant la fréquentation destinées à améliorer notre site et à enrichir l‘analyse de nos consultations."
       },
