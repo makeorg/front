@@ -34,6 +34,7 @@ MIXPANEL_CUSTOM_LIB_URL:MIXPANEL_SCRIPT_URL;g=f.getElementsByTagName("script")[0
     window.mixpanel.init(MIXPANEL_TOKEN, {
       api_host: 'https://api-eu.mixpanel.com',
       opt_out_tracking_by_default: false,
+      disable_persistence: true,
       // debug: true
     });
     /* eslint-enable */
