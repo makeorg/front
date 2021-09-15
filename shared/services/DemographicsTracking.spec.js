@@ -15,45 +15,23 @@ describe('DemographicsTrackingService Service', () => {
       DemographicsTrackingApiService.track.mockRestore();
     });
 
-    it('trackAge', async () => {
-      await DemographicsTrackingService.track('age', '12-25', {
-        utm_test: 'hello',
-        notrackparam: 'world',
-      });
+    it('track', async () => {
+      await DemographicsTrackingService.track(
+        'demographicId',
+        'demographicToken',
+        '12-25',
+        {
+          utm_test: 'hello',
+          notrackparam: 'world',
+        }
+      );
 
       expect(DemographicsTrackingApiService.track).toHaveBeenNthCalledWith(
         1,
-        'age',
+        'demographicId',
+        'demographicToken',
         '12-25',
         { utm_test: 'hello' }
-      );
-    });
-
-    it('trackRegion', async () => {
-      await DemographicsTrackingService.track('region', 'FR-GES', {
-        utm_test: 'hello2',
-        notrackparam: 'world',
-      });
-
-      expect(DemographicsTrackingApiService.track).toHaveBeenNthCalledWith(
-        1,
-        'region',
-        'FR-GES',
-        { utm_test: 'hello2' }
-      );
-    });
-
-    it('trackGender', async () => {
-      await DemographicsTrackingService.track('gender', 'M', {
-        utm_test: 'hello2',
-        notrackparam: 'world',
-      });
-
-      expect(DemographicsTrackingApiService.track).toHaveBeenNthCalledWith(
-        1,
-        'gender',
-        'M',
-        { utm_test: 'hello2' }
       );
     });
   });

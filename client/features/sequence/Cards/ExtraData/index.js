@@ -1,60 +1,58 @@
 // @flow
-import {
-  buildDemographicsByType,
-  setTitleByType,
-  DEMOGRAPHIC_TYPES,
-} from 'Client/helper/demographics';
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { type StateRoot } from 'Shared/store/types';
+import React from 'react';
+import { type DemographicDataType } from 'Shared/types/demographic';
 import { i18n } from 'Shared/i18n';
-import { getRandomFromArray } from 'Client/helper/randomFromArray';
+import { Logger } from 'Shared/services/Logger';
+import { useDispatch, useSelector } from 'react-redux';
+import { setDemographicsAsSubmitted } from 'Shared/store/actions/sequence';
 import { SequenceWrapperStyle, SequenceIntroParagraphStyle } from '../style';
 import { ExtraDataForm } from './Form';
 import { ExtraDataDescriptionStyle } from './style';
 import { SubmittedDemographics } from './SubmittedStep';
 
-export const ExtraDataCard = () => {
-  const currentQuestion = useSelector(
-    (state: StateRoot) => state.currentQuestion
+type Props = {
+  configuration: DemographicDataType,
+};
+
+export const ExtraDataCard = ({ configuration }: Props) => {
+  const dispatch = useDispatch();
+  const isSubmitted = useSelector(
+    (state: StateRoot) => state.sequence.demographics?.submitted
   );
-  const persistedDemographics = useSelector(
-    (state: StateRoot) => state.sequence.demographics
-  );
-  const [type, setType] = useState(null);
 
-  const [demographics, setDemographics] = useState(null);
-  const persistedDemographicsWithValue =
-    persistedDemographics?.type && persistedDemographics?.value;
+  // set demographics
+  if (!configuration) {
+    Logger.logError({
+      message: 'No demographic data found',
+      name: 'sequence',
+      configuration,
+    });
 
-  // set a random type
-  useState(() => {
-    const newType = getRandomFromArray(DEMOGRAPHIC_TYPES);
-    setType(newType);
-    setDemographics(buildDemographicsByType(newType));
-  }, [type]);
-
-  if (persistedDemographicsWithValue) {
-    return <SubmittedDemographics type={persistedDemographics.type} />;
+    return null;
   }
 
-  if (type) {
-    return (
-      <SequenceWrapperStyle data-cy-demographic-type={type}>
-        <SequenceIntroParagraphStyle>
-          {setTitleByType(type)}
-        </SequenceIntroParagraphStyle>
-        <ExtraDataDescriptionStyle>
-          {i18n.t('demographics_card.disclaimer')}
-        </ExtraDataDescriptionStyle>
-        <ExtraDataForm
-          type={type}
-          demographics={demographics}
-          currentQuestion={currentQuestion}
-        />
-      </SequenceWrapperStyle>
-    );
-  }
+  const { id, name, layout, title, parameters, token } = configuration;
 
-  return null;
+  const submitSuccess = () => {
+    dispatch(setDemographicsAsSubmitted());
+  };
+
+  return isSubmitted ? (
+    <SubmittedDemographics title={title} name={name} demographicId={id} />
+  ) : (
+    <SequenceWrapperStyle data-cy-demographic-layout={configuration.layout}>
+      <SequenceIntroParagraphStyle>{title}</SequenceIntroParagraphStyle>
+      <ExtraDataDescriptionStyle>
+        {i18n.t('demographics_card.disclaimer')}
+      </ExtraDataDescriptionStyle>
+      <ExtraDataForm
+        demographicId={id}
+        name={name}
+        layout={layout}
+        data={parameters}
+        token={token}
+        submitSuccess={submitSuccess}
+      />
+    </SequenceWrapperStyle>
+  );
 };

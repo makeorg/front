@@ -19,9 +19,9 @@ sequenceRouter.get('/standard/:questionId', (req, res) => {
       index += 1;
     });
   }
-
   return res.send({
     proposals,
+    demographics: fixtures.demographics,
   });
 });
 
@@ -45,6 +45,7 @@ sequenceRouter.get('/consensus/:questionId', (req, res) => {
 
   return res.send({
     proposals,
+    demographics: fixtures.demographics,
   });
 });
 

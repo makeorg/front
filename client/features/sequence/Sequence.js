@@ -52,15 +52,20 @@ export const Sequence = ({ sequenceKind }: Props) => {
 
   const executeStartSequence = async (
     questionId: string,
-    votedIds: string[]
+    votedIds: string[],
+    demographicCardId?: string,
+    token?: string
   ) => {
-    const { proposals } = await SequenceService.startSequenceByKind(
-      questionId,
-      votedIds,
-      sequenceKind
-    );
+    const { proposals, demographics } =
+      await SequenceService.startSequenceByKind(
+        questionId,
+        votedIds,
+        sequenceKind,
+        demographicCardId,
+        token
+      );
 
-    return proposals || [];
+    return { proposals: proposals || [], demographics };
   };
 
   const { isLoading, currentCard, isEmptySequence } = useSequence(

@@ -27,14 +27,15 @@ type TrackingConfigurationType = {
 
 const validateParameters = (
   values: Object,
-  expectedParameters: TrackingConfigurationParamType[]
+  expectedParameters: TrackingConfigurationParamType[],
+  eventName: string
 ) => {
   const keys = Object.keys(values);
   const expectedKeys = expectedParameters.map(param => param.key);
   const extraKeys = keys.filter(key => !expectedKeys.find(el => el === key));
   if (extraKeys.length) {
     throw new Error(
-      `Tracking error : find unexpected tracking values "${extraKeys.toString()}"`
+      `Tracking error : find unexpected tracking values "${extraKeys.toString()}" for "${eventName}"`
     );
   }
   expectedParameters.forEach(expectedParam => {
@@ -72,7 +73,7 @@ Object.keys(trackingConfiguration).forEach(key => {
       parameters,
       protected_parameters: protectedParameters,
     } = eventConfiguration;
-    validateParameters(params || {}, parameters || []);
+    validateParameters(params || {}, parameters || [], eventName);
 
     return {
       eventName: eventName || '',

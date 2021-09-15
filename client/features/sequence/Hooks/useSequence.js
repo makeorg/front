@@ -6,6 +6,7 @@ import { type StateRoot } from 'Shared/store/types';
 import { type SequenceCardType } from 'Shared/types/card';
 import { type QuestionType } from 'Shared/types/question';
 import { type ProposalType } from 'Shared/types/proposal';
+import { type DemographicDataType } from 'Shared/types/demographic';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectAuthentication } from 'Shared/store/selectors/user.selector';
 import { scrollToTop } from 'Shared/helpers/styled';
@@ -18,7 +19,6 @@ import { Cookies } from 'react-cookie';
 import { DEMOGRAPHICS_COOKIE } from 'Shared/constants/cookies';
 import { useSequenceTracking } from './useSequenceTracking';
 import { useSequenceVoteOnlyNotification } from './useSequenceVoteOnlyNotification';
-import { useSequenceExtraDataAutoSubmit } from './useSequenceExtraDataAutoSubmit';
 import { useSequenceQueryParams } from './useSequenceQueryParams';
 
 /**
@@ -28,7 +28,12 @@ export const useSequence = (
   question: QuestionType,
   isStandardSequence: boolean,
   country,
-  executeStartSequence: (questionId, votedIds) => ProposalType[]
+  executeStartSequence: (
+    questionId: string,
+    votedIds: string[],
+    demographicsCardId?: string,
+    token?: string
+  ) => { proposals: ProposalType[], demographics: ?DemographicDataType }
 ) => {
   // Dispatch
   const dispatch = useDispatch();
@@ -54,20 +59,17 @@ export const useSequence = (
   const [isLoading, setLoading] = useState(true);
   const [cards, setCards] = useState([]);
   const [sequenceProposals, setSequenceProposals] = useState([]);
+  const [sequenceDemographic, setSequenceDemographic] = useState(null);
 
   // Sequence hooks
   useSequenceTracking();
   useSequenceVoteOnlyNotification(question);
   const { firstProposalParam, introCardParam, pushProposalParam } =
     useSequenceQueryParams();
-  useSequenceExtraDataAutoSubmit(question.slug, cards, currentIndex);
-
-  // Other
-  const isFR = country === 'FR';
 
   const cookies = new Cookies();
   const demographicsCookie = cookies.get(DEMOGRAPHICS_COOKIE);
-  const withDemographicsCard = isFR && !demographicsCookie;
+  const withDemographicsCard = !demographicsCookie;
 
   // scroll to top
   useEffect(() => {
@@ -82,15 +84,19 @@ export const useSequence = (
       : votedProposalIdsOfQuestion;
 
     if (question) {
-      const proposals = await executeStartSequence(
+      const { proposals, demographics } = await executeStartSequence(
         question.questionId,
-        votedIds
+        votedIds,
+        sequenceDemographic?.id,
+        sequenceDemographic?.token
       );
+
       if (proposals.length === 0) {
         setLoading(false);
       }
       if (proposals) {
         setSequenceProposals(proposals);
+        setSequenceDemographic(demographics);
       }
     }
   }, [question, firstProposalParam, isLoggedIn, hasProposed]);
@@ -109,11 +115,11 @@ export const useSequence = (
       isStandardSequence,
       introCardParam,
       pushProposalParam,
-      withDemographicsCard
+      withDemographicsCard && sequenceDemographic
     );
     setCards(buildedCards);
     dispatch(loadSequenceCards(buildedCards));
-  }, [hasProposed, sequenceProposals]);
+  }, [hasProposed, sequenceProposals, sequenceDemographic]);
 
   // set current card
   useEffect(() => {

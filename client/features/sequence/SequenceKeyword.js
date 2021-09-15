@@ -51,7 +51,7 @@ export const SequenceKeyword = () => {
 
     setKeywordLabel(response?.label || '');
 
-    return response?.proposals || [];
+    return { proposals: response?.proposals || [] };
   };
 
   const { isLoading, currentCard, isEmptySequence } = useSequence(

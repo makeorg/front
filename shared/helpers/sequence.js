@@ -2,6 +2,7 @@
 import { type QuestionExtraSlidesConfigType } from 'Shared/types/question';
 import { type SequenceCardType } from 'Shared/types/card';
 import { type ProposalType } from 'Shared/types/proposal';
+import { type DemographicDataType } from 'Shared/types/demographic';
 import {
   CARD_TYPE_EXTRASLIDE_DEMOGRAPHICS_CARD,
   CARD_TYPE_EXTRASLIDE_FINAL_CARD,
@@ -36,7 +37,7 @@ export const buildCards = (
   isStandardSequence: boolean,
   introCardParam?: string,
   pushProposalParam?: string,
-  withDemographics?: boolean
+  sequenceDemographicData?: DemographicDataType
 ): SequenceCardType[] => {
   const withPushProposalCard: boolean =
     extraSlidesConfig.pushProposalCard &&
@@ -72,10 +73,10 @@ export const buildCards = (
     });
   }
 
-  if (withDemographics) {
+  if (sequenceDemographicData) {
     cards.splice(withIntroCard ? 3 : 2, 0, {
       type: CARD_TYPE_EXTRASLIDE_DEMOGRAPHICS_CARD,
-      configuration: {},
+      configuration: sequenceDemographicData,
       index: 0,
     });
   }

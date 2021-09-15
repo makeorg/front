@@ -42,10 +42,11 @@ export const RadioDemographics = ({
   setCurrentValue,
 }: Props) => {
   const [focusValue, setFocusValue] = useState(null);
-  const isAgeDemographic = type === 'age';
 
   return (
-    <ExtraDataRadioGroupStyle className={isAgeDemographic && 'three-columns'}>
+    <ExtraDataRadioGroupStyle
+      className={type === 'three-columns' && 'three-columns'}
+    >
       {data.map(demographic => (
         <RadioAsButtonWrapperStyle
           key={demographic.value}
@@ -60,7 +61,7 @@ export const RadioDemographics = ({
               id={demographic.value}
               type="radio"
               value={demographic.value}
-              name={type}
+              name="demographic"
               onChange={() => setCurrentValue(demographic.value)}
               onFocus={() => setFocusValue(demographic.value)}
               onBlur={() => setFocusValue(null)}

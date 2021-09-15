@@ -1,5 +1,4 @@
 // @flow
-import { setTitleByType } from 'Client/helper/demographics';
 import { RedButtonStyle } from 'Client/ui/Elements/Buttons/V2/style';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
@@ -12,21 +11,27 @@ import {
 import { SequenceIntroParagraphStyle, SequenceParagraphStyle } from '../style';
 
 type Props = {
-  type: string,
+  title: string,
+  name: string,
+  demographicId: string,
 };
 
-export const SubmittedDemographics = ({ type }: Props) => {
+export const SubmittedDemographics = ({
+  title,
+  name,
+  demographicId,
+}: Props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    trackDisplayDemographicsConfirmation(type);
+    trackDisplayDemographicsConfirmation(name, demographicId);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
       <SequenceIntroParagraphStyle className="with-margin-bottom">
-        {setTitleByType(type)}
+        {title}
       </SequenceIntroParagraphStyle>
       <SequenceParagraphStyle>
         {i18n.t('demographics_card.submitted_thanks')}
@@ -38,7 +43,7 @@ export const SubmittedDemographics = ({ type }: Props) => {
         data-cy-button="demographic-continue-vote"
         onClick={() => {
           dispatch(incrementSequenceIndex());
-          trackClickVoteDemographics(type);
+          trackClickVoteDemographics(name, demographicId);
         }}
       >
         {i18n.t('proposal_submit.success.button')}

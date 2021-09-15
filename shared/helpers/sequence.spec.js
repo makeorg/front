@@ -12,6 +12,18 @@ describe('Sequence Helper', () => {
   describe('test buildCards', () => {
     const proposals = [];
 
+    const defaultDemographicData = {
+      id: 'demographicId',
+      name: 'demographicName',
+      layout: 'OneColumnRadio',
+      title: 'demographic title',
+      parameters: [
+        { label: 'label1', value: 'value1' },
+        { label: 'label2', value: 'value2' },
+      ],
+      token: 'demographicToken',
+    };
+
     it("doesn't contain intro card in API conf and in params", () => {
       const extraSlidesConfig = {
         introCard: { enabled: false },
@@ -25,14 +37,14 @@ describe('Sequence Helper', () => {
         'standard',
         introCardParam,
         false,
-        true
+        defaultDemographicData
       );
       expect(cards.length).toBe(2);
       expect(cards).toEqual([
         {
           index: 0,
           type: CARD_TYPE_EXTRASLIDE_DEMOGRAPHICS_CARD,
-          configuration: {},
+          configuration: defaultDemographicData,
         },
         {
           index: 1,
@@ -55,14 +67,14 @@ describe('Sequence Helper', () => {
         'standard',
         introCardParam,
         false,
-        true
+        defaultDemographicData
       );
       expect(cards.length).toBe(2);
       expect(cards).toEqual([
         {
           index: 0,
           type: CARD_TYPE_EXTRASLIDE_DEMOGRAPHICS_CARD,
-          configuration: {},
+          configuration: defaultDemographicData,
         },
         {
           index: 1,
@@ -85,14 +97,14 @@ describe('Sequence Helper', () => {
         'standard',
         introCardParam,
         false,
-        true
+        defaultDemographicData
       );
       expect(cards.length).toBe(2);
       expect(cards).toEqual([
         {
           index: 0,
           type: CARD_TYPE_EXTRASLIDE_DEMOGRAPHICS_CARD,
-          configuration: {},
+          configuration: defaultDemographicData,
         },
         {
           index: 1,
@@ -115,7 +127,7 @@ describe('Sequence Helper', () => {
         'standard',
         introCardParam,
         false,
-        true
+        defaultDemographicData
       );
 
       expect(cards.length).toBe(3);
@@ -128,7 +140,7 @@ describe('Sequence Helper', () => {
         {
           index: 1,
           type: CARD_TYPE_EXTRASLIDE_DEMOGRAPHICS_CARD,
-          configuration: {},
+          configuration: defaultDemographicData,
         },
         {
           index: 2,
@@ -153,14 +165,14 @@ describe('Sequence Helper', () => {
         'standard',
         false,
         pushProposalParam,
-        true
+        defaultDemographicData
       );
       expect(cards.length).toBe(2);
       expect(cards).toEqual([
         {
           index: 0,
           type: CARD_TYPE_EXTRASLIDE_DEMOGRAPHICS_CARD,
-          configuration: {},
+          configuration: defaultDemographicData,
         },
         {
           index: 1,
@@ -185,14 +197,14 @@ describe('Sequence Helper', () => {
         'standard',
         false,
         pushProposalParam,
-        true
+        defaultDemographicData
       );
       expect(cards.length).toBe(2);
       expect(cards).toEqual([
         {
           index: 0,
           type: CARD_TYPE_EXTRASLIDE_DEMOGRAPHICS_CARD,
-          configuration: {},
+          configuration: defaultDemographicData,
         },
         {
           index: 1,
@@ -217,14 +229,14 @@ describe('Sequence Helper', () => {
         'standard',
         false,
         pushProposalParam,
-        true
+        defaultDemographicData
       );
       expect(cards.length).toBe(2);
       expect(cards).toEqual([
         {
           index: 0,
           type: CARD_TYPE_EXTRASLIDE_DEMOGRAPHICS_CARD,
-          configuration: {},
+          configuration: defaultDemographicData,
         },
         {
           index: 1,
@@ -249,7 +261,7 @@ describe('Sequence Helper', () => {
         'standard',
         false,
         pushProposalParam,
-        true
+        defaultDemographicData
       );
 
       expect(cards.length).toBe(3);
@@ -262,7 +274,7 @@ describe('Sequence Helper', () => {
         {
           index: 1,
           type: CARD_TYPE_EXTRASLIDE_DEMOGRAPHICS_CARD,
-          configuration: {},
+          configuration: defaultDemographicData,
         },
         {
           index: 2,
@@ -287,7 +299,7 @@ describe('Sequence Helper', () => {
         'standard',
         false,
         pushProposalParam,
-        true
+        defaultDemographicData
       );
 
       expect(cards.length).toBe(2);
@@ -295,7 +307,7 @@ describe('Sequence Helper', () => {
         {
           index: 0,
           type: CARD_TYPE_EXTRASLIDE_DEMOGRAPHICS_CARD,
-          configuration: {},
+          configuration: defaultDemographicData,
         },
         {
           index: 1,
@@ -320,7 +332,7 @@ describe('Sequence Helper', () => {
         'standard',
         false,
         pushProposalParam,
-        true
+        defaultDemographicData
       );
 
       expect(cards.length).toBe(2);
@@ -328,7 +340,7 @@ describe('Sequence Helper', () => {
         {
           index: 0,
           type: CARD_TYPE_EXTRASLIDE_DEMOGRAPHICS_CARD,
-          configuration: {},
+          configuration: defaultDemographicData,
         },
         {
           index: 1,

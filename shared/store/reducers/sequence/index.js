@@ -3,7 +3,7 @@
 import {
   SEQUENCE_DECREMENT_INDEX,
   SEQUENCE_DEMOGRAPHICS_ADD_QUESTION,
-  SEQUENCE_DEMOGRAPHICS_PERSIST,
+  SEQUENCE_DEMOGRAPHICS_SUBMITTED,
   SEQUENCE_INCREMENT_INDEX,
   SEQUENCE_LOAD_CARDS,
   SEQUENCE_LOAD_PROPOSALS,
@@ -94,13 +94,11 @@ export function sequence(
         ...state,
         currentIndex: state.currentIndex - 1,
       };
-    case SEQUENCE_DEMOGRAPHICS_PERSIST:
+    case SEQUENCE_DEMOGRAPHICS_SUBMITTED:
       return {
         ...state,
         demographics: {
-          type: action.payload.type,
-          value: action.payload.value,
-          questions: [action.payload.questionSlug],
+          submitted: action.payload.submitted,
         },
       };
     case SEQUENCE_DEMOGRAPHICS_ADD_QUESTION:

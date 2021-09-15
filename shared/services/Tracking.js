@@ -563,42 +563,62 @@ export const trackClickModalCookieBack = () => {
   TrackingService.sendAllTrackers(trackingEvent.CLICK_COOKIE_MODAL_BACK());
 };
 
-export const trackDisplayDemographics = (type: string) => {
+export const trackDisplayDemographics = (
+  name: string,
+  demographicId: string
+) => {
   TrackingService.sendAllTrackers(
     trackingEvent.DISPLAY_DEMOGRAPHICS({
-      type,
+      name,
+      demographicId,
     })
   );
 };
 
-export const trackDisplayDemographicsConfirmation = (type: string) => {
+export const trackDisplayDemographicsConfirmation = (
+  name: string,
+  demographicId: string
+) => {
   TrackingService.sendAllTrackers(
     trackingEvent.DISPLAY_DEMOGRAPHICS_CONFIRMATION({
-      type,
+      name,
+      demographicId,
     })
   );
 };
 
-export const trackClickSaveDemographics = (type: string) => {
+export const trackClickSaveDemographics = (
+  name: string,
+  demographicId: string
+) => {
   TrackingService.sendAllTrackers(
     trackingEvent.CLICK_SAVE_DEMOGRAPHICS({
-      type,
+      name,
+      demographicId,
     })
   );
 };
 
-export const trackClickSkipDemographics = (type: string) => {
+export const trackClickSkipDemographics = (
+  name: string,
+  demographicId: string
+) => {
   TrackingService.sendAllTrackers(
     trackingEvent.CLICK_SKIP_DEMOGRAPHICS({
-      type,
+      name,
+      demographicId,
     })
   );
 };
 
-export const trackClickVoteDemographics = (type: string) => {
+export const trackClickVoteDemographics = (
+  name: string,
+  demographicId: string
+) => {
   TrackingService.sendAllTrackers(
     trackingEvent.CLICK_VOTE_DEMOGRAPHICS({
-      type,
+      name,
+      demographicId,
     })
   );
 };

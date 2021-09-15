@@ -46,7 +46,7 @@ export const Card = ({ card, question }: CardProps) => {
     case CARD_TYPE_EXTRASLIDE_SPECIAL_FINAL_CARD:
       return <SpecialFinalCard />;
     case CARD_TYPE_EXTRASLIDE_DEMOGRAPHICS_CARD:
-      return <ExtraDataCard />;
+      return <ExtraDataCard configuration={card.configuration} />;
     case CARD_TYPE_NO_PROPOSAL_CARD: {
       const { title, description } = card.configuration;
       return (

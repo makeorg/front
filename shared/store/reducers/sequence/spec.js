@@ -64,15 +64,13 @@ describe('Sequence reducer', () => {
 
   it('Persist Demographics Data reducer', () => {
     const action = {
-      type: actionTypes.SEQUENCE_DEMOGRAPHICS_PERSIST,
-      payload: { type: 'foo', value: 'bar', questionSlug: 'baz' },
+      type: actionTypes.SEQUENCE_DEMOGRAPHICS_SUBMITTED,
+      payload: { submitted: true },
     };
     const previousState = null;
     const expectedState = {
       demographics: {
-        type: 'foo',
-        value: 'bar',
-        questions: ['baz'],
+        submitted: true,
       },
     };
 
