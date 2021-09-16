@@ -39,9 +39,7 @@ export type StateSequence = $ReadOnly<{
   proposals: ProposalType[],
   cards: SequenceCardType[],
   demographics?: {
-    type: string,
-    value: string,
-    question: string[],
+    submitted: boolean,
   },
 }>;
 

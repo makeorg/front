@@ -1,7 +1,7 @@
 import { ApiService } from 'Shared/api/ApiService';
 import {
   DemographicsTrackingApiService,
-  DEMOGRAPHICS_TRACKING_PATH,
+  DEMOGRAPHICS_TRACKING_PATH_UNSECURE,
 } from './DemographicsTrackingApiService';
 
 jest.mock('./ApiService');
@@ -19,13 +19,13 @@ describe('DemographicsTrackingApiService', () => {
       const expected =
         '{"demographic":"age","value":"18-25","questionId":"49c68ed3-62ca-47b2-b552-9866bf52c89b","source":"core","country":"FR","parameters":{"utm_campaign":"ma campagne d\'acquisition","utm_source":"facebook"}}';
 
-      await DemographicsTrackingApiService.track('age', '18-25', {
+      await DemographicsTrackingApiService.trackUnsecure('age', '18-25', {
         utm_campaign: "ma campagne d'acquisition",
         utm_source: 'facebook',
       });
       expect(ApiService.callApi).toHaveBeenNthCalledWith(
         1,
-        DEMOGRAPHICS_TRACKING_PATH,
+        DEMOGRAPHICS_TRACKING_PATH_UNSECURE,
         {
           method: 'POST',
           body: expected,
@@ -47,10 +47,10 @@ describe('DemographicsTrackingApiService', () => {
     const expected =
       '{"demographic":"age","value":"18-25","questionId":"49c68ed3-62ca-47b2-b552-9866bf52c89b","source":"core","country":"FR","parameters":{}}';
 
-    await DemographicsTrackingApiService.track('age', '18-25');
+    await DemographicsTrackingApiService.trackUnsecure('age', '18-25');
     expect(ApiService.callApi).toHaveBeenNthCalledWith(
       1,
-      DEMOGRAPHICS_TRACKING_PATH,
+      DEMOGRAPHICS_TRACKING_PATH_UNSECURE,
       {
         method: 'POST',
         body: expected,

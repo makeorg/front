@@ -9,7 +9,7 @@ import { type VoteType } from 'Shared/types/vote';
 import {
   SEQUENCE_DECREMENT_INDEX,
   SEQUENCE_DEMOGRAPHICS_ADD_QUESTION,
-  SEQUENCE_DEMOGRAPHICS_PERSIST,
+  SEQUENCE_DEMOGRAPHICS_SUBMITTED,
   SEQUENCE_INCREMENT_INDEX,
   SEQUENCE_LOAD_CARDS,
   SEQUENCE_LOAD_PROPOSALS,
@@ -157,13 +157,9 @@ export const qualify =
     );
   };
 
-export const persistDemographics = (
-  type: string,
-  value: string,
-  questionSlug: string
-) => ({
-  type: SEQUENCE_DEMOGRAPHICS_PERSIST,
-  payload: { type, value, questionSlug },
+export const setDemographicsAsSubmitted = () => ({
+  type: SEQUENCE_DEMOGRAPHICS_SUBMITTED,
+  payload: { submitted: true },
 });
 
 export const addQuestionToDemographics = (questionSlug: string) => ({

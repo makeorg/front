@@ -1,8 +1,5 @@
 /* @flow */
-import {
-  DemographicsTrackingApiService,
-  TypeDemographicName,
-} from 'Shared/api/DemographicsTrackingApiService';
+import { DemographicsTrackingApiService } from 'Shared/api/DemographicsTrackingApiService';
 import { defaultUnexpectedError } from './DefaultErrorHandler';
 
 const PREFIX_QUERY_PARAMS_ACCEPTED = 'utm_';
@@ -18,15 +15,15 @@ const sanitizeQueryParams = queryParams => {
   return queryParamSanitized;
 };
 
-export const track = async (
-  name: TypeDemographicName,
+export const trackUnsecure = async (
+  name: string,
   value: string,
   parameters: { [string]: string } = {},
   success: () => void = () => {},
   error: () => void = () => {}
 ): Promise<void> => {
   try {
-    await DemographicsTrackingApiService.track(
+    await DemographicsTrackingApiService.trackUnsecure(
       name,
       value,
       sanitizeQueryParams(parameters)
@@ -38,6 +35,34 @@ export const track = async (
   }
 };
 
+export const track = async (
+  demographicsCardId: string,
+  token: string,
+  value: string,
+  parameters: { [string]: string } = {},
+  success: () => void = () => {},
+  error: (message: string, data: ?Object) => void = () => {}
+): Promise<void> => {
+  try {
+    await DemographicsTrackingApiService.track(
+      demographicsCardId,
+      token,
+      value,
+      sanitizeQueryParams(parameters)
+    );
+    success();
+  } catch (apiServiceError) {
+    if (apiServiceError.status === 400) {
+      error(apiServiceError.message, apiServiceError.data);
+      return;
+    }
+
+    defaultUnexpectedError(apiServiceError);
+    error(apiServiceError.message, null);
+  }
+};
+
 export const DemographicsTrackingService = {
+  trackUnsecure,
   track,
 };

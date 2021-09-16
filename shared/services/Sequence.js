@@ -1,6 +1,7 @@
 /* @flow */
 import { QuestionApiService } from 'Shared/api/QuestionApiService';
 import { type ProposalType } from 'Shared/types/proposal';
+import { type DemographicDataType } from 'Shared/types/demographic';
 import { Logger } from './Logger';
 import { defaultUnexpectedError } from './DefaultErrorHandler';
 
@@ -12,6 +13,7 @@ type Accumulator = {
 
 type SequenceByKindResponse = {
   proposals: ProposalType[],
+  demographics?: DemographicDataType,
 };
 
 const getOrderedProposals = (
@@ -93,13 +95,17 @@ const logCornerCases = (
 const startSequenceByKind = async (
   questionId: string,
   includedProposalIds: string[],
-  sequenceKind: string
+  sequenceKind: string,
+  demographicsCardId?: string,
+  token?: string
 ): Promise<?SequenceByKindResponse> => {
   try {
     const { data } = await QuestionApiService.startSequenceByKind(
       questionId,
       includedProposalIds,
-      sequenceKind
+      sequenceKind,
+      demographicsCardId,
+      token
     );
 
     const orderedProposals = getOrderedProposals(
@@ -123,6 +129,7 @@ const startSequenceByKind = async (
 
     const response = {
       proposals: uniqueOrderedProposals,
+      demographics: data.demographics,
     };
 
     return response;

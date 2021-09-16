@@ -333,16 +333,12 @@ Then('total {string} qualifications are equal to {string} on the current card',(
 });
 
 When ('I select a demographic value', () => {
-  cy.get('[data-cy-demographic-type]').then(el => {
+  cy.get('[data-cy-demographic-layout]').then(el => {
     const type = el[0].dataset.cyDemographicType;
-    if (type=='gender') {
-      cy.get('[data-cy-demographic-type] label').first().click();
-    };
-    if (type=='region') {
-      cy.get('[data-cy-demographic-type] select').select('FR-ARA');
-    };
-    if (type=='age') {
-      cy.get('[data-cy-demographic-type] label').first().click();
+    if (type=='select') {
+      // ToDo
+    } else {
+      cy.get('[data-cy-demographic-layout] label').first().click();
     };
   });
 });

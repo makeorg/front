@@ -39,7 +39,9 @@ describe('Question Service', () => {
         1,
         'foo',
         includedProposalIds,
-        'controversy'
+        'controversy',
+        undefined,
+        undefined
       );
     });
 
