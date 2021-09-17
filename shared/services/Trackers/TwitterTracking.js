@@ -61,20 +61,28 @@ export const TwitterUniversalTag = {
   init() {
     if (env.isTest() || env.isDev()) {
       return;
-    }
-    // $FlowFixMe
-    !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
-    // $FlowFixMe
-    twq('init',TWITTER_UNIVERSAL_MAKE_TAG);
+    } 
     
+    try {
+      // $FlowFixMe
+      !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+      // $FlowFixMe
+      twq('init',TWITTER_UNIVERSAL_MAKE_TAG);
+    } catch (e) {
+      Logger.logError(e);
+    }
   },
   pageView() {
     if (env.isTest() || env.isDev()) {
       Logger.logInfo({message: `Tracking Twitter: event pageView`, name: 'tracking-init'});
       return;
     }
-    // $FlowFixMe
-    twq('track','PageView');
+    try {
+      // $FlowFixMe
+      twq('track','PageView');
+    } catch (e) {
+        Logger.logError(e);
+      }
   },
   /* eslint-enable */
 };

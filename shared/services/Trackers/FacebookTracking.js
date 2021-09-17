@@ -1,5 +1,6 @@
 // @flow
 import { env } from 'Shared/env';
+import { Logger } from '../Logger';
 import { fbq } from './fbq';
 
 const makePixelId: string = '260470104426586';
@@ -34,9 +35,13 @@ export const isFBInitialized = (): boolean => {
 
 export const FacebookTracking = {
   init(): void {
-    fbq.load();
-    fbq.track('init', makePixelId);
-    initialized = true;
+    try {
+      fbq.load();
+      fbq.track('init', makePixelId);
+      initialized = true;
+    } catch (e) {
+      Logger.logError(e);
+    }
   },
 
   isInitialized(): void {
@@ -55,8 +60,11 @@ export const FacebookTracking = {
     if (env.isDev()) {
       return;
     }
-
-    fbq.track('track', 'PageView');
+    try {
+      fbq.track('track', 'PageView');
+    } catch (e) {
+      Logger.logError(e);
+    }
   },
 
   trackCustom(eventName: string, eventParameters: FacebookEventParams): void {
@@ -73,7 +81,10 @@ export const FacebookTracking = {
       );
       return;
     }
-
-    fbq.track('trackSingleCustom', makePixelId, eventName, eventParameters);
+    try {
+      fbq.track('trackSingleCustom', makePixelId, eventName, eventParameters);
+    } catch (e) {
+      Logger.logError(e);
+    }
   },
 };
