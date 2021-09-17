@@ -382,7 +382,7 @@
     "success": {
       "title": "Danke, {{name}}!",
       "description": "Dein Vorschlag wird jetzt von unseren Teams moderiert.",
-      "button": "Weiter abstimmen"
+      "button": "Ich stimme weiter ab"
     }
   },
   "vote": {
@@ -793,14 +793,14 @@
     },
     "timeline": {
       "timeline_title_great_cause": "Was sind die Höhepunkte dieser Herkulesaufgabe?",
-      "timeline_title_consultation": "Was sind die Höhepunkte dieser Konsultation?",
+      "timeline_title_consultation": "Welche sind die Höhepunkte dieser Konsultation?",
       "consultation_title": "Bürgerkonsultation",
-      "consultation_description": "Alle unsere Konsultationen beginnen mit einem Aufruf, dass Bürger:innen Ideen einreichen und darüber abstimmen.",
+      "consultation_description": "Alle unsere Konsultationen beginnen mit einem Aufruf an die Bürger:innen, Ideen und Vorschläge einzureichen.",
       "result_title": "Ergebnisse",
       "workshop_title": "Zukunftswerkstätten",
       "workshop_link": "Kontaktiere uns, um daran teilzunehmen",
       "consultation_from_to": "Vom {{startDate}} bis {{endDate}}",
-      "action_title": "Maßnahmen umsetzen"
+      "action_title": "Umsetzung"
     },
     "navigation": {
       "introduction": "Informiere dich über die anderen Themen, die in der Konsultation  „{{name}}“ angesprochen wurden:",
@@ -1222,11 +1222,11 @@
     "US": "USA"
   },
   "demographics_card": {
-    "disclaimer": "@@demographics_card.disclaimer|fr:Vos informations sont anonymes et permettent à nos résultats d'être représentatifs.",
-    "skip": "@@demographics_card.skip|fr:Passer",
-    "submit_mobile": "@@demographics_card.submit_mobile|fr:Enregistrer",
-    "submit_desktop": "@@demographics_card.submit_desktop|fr:Enregistrer et continuer",
-    "submitted_thanks": "@@demographics_card.submitted_thanks|fr:Merci pour votre réponse.",
-    "submitted_disclaimer": "@@demographics_card.submitted_disclaimer|fr: Elle sera utilisée de façon anonyme pour analyser les résultats de la consultation."
+    "disclaimer": "Deine Angaben sind anonym und ermöglichen es, die Ergebnisse möglichst repräsentativ zu gestalten.",
+    "skip": "Überspringen",
+    "submit_mobile": "Speichern",
+    "submit_desktop": "Speichern und weiter abstimmen",
+    "submitted_thanks": "Danke für deine Antwort.",
+    "submitted_disclaimer": "Sie wird anonym verwendet, um die Ergebnisse der Konsultation zu analysieren."
   }
 }
