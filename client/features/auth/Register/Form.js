@@ -137,6 +137,7 @@ export const RegisterForm = ({
       )}
       <UntypedInput
         type="text"
+        id="profile.profession"
         name="profile.profession"
         icon={JobFieldIcon}
         value={user.profile.profession}
