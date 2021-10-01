@@ -56,19 +56,14 @@ export const RegisterForm = ({
   const { country, language } = useSelector(
     (state: StateRoot) => state.appConfig
   );
-  const currentQuestion = useSelector(
-    (state: StateRoot) => state.currentQuestion
-  );
 
   const emailError = getFieldError('email', errors);
   const passwordError = getFieldError('password', errors);
   const firstnameError = getFieldError('firstname', errors);
   const ageError = getFieldError('dateofbirth', errors);
   const postalcodeError = getFieldError('postalcode', errors);
-  // @todo remove after territoires consultation is over
-  const isPostalCodeRequired = currentQuestion === 'territoires';
   const postalCodeLabel = i18n.t('common.form.label.postalcode', {
-    context: !isPostalCodeRequired && 'optional',
+    context: 'optional',
   });
 
   return (
@@ -132,7 +127,6 @@ export const RegisterForm = ({
           label={postalCodeLabel}
           handleChange={handleChange}
           pattern={postCodeValidator.html5regexByCountry(country)}
-          required={isPostalCodeRequired}
         />
       )}
       <UntypedInput

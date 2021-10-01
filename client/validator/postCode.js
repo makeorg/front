@@ -4,6 +4,8 @@ const postCodeRegexes = new Map();
 
 // FR
 postCodeRegexes.set('FR', /^(?:[0-8]\d|9[0-8])\d{3}$/);
+// DE
+postCodeRegexes.set('DE', /^(?:[0-8]\d|9[0-8])\d{3}$/);
 
 export const regexByCountry = country => postCodeRegexes.get(country) || null;
 
