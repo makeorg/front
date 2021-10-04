@@ -12,7 +12,6 @@ export const initialState: StateRoot = {
   },
   views: {},
   proposal: {
-    hasProposed: false,
     popularProposals: [],
     error: undefined,
     data: undefined,

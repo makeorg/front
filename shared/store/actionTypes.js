@@ -1,7 +1,6 @@
 /* @flow */
 
 /** Proposal Action */
-export const PROPOSE_SUCCESS = 'PROPOSAL_PROPOSE_SUCCESS';
 export const PROPOSAL_LOAD = 'PROPOSAL_LOAD';
 /** Register Action */
 export const REGISTER_REQUEST = 'USER_REGISTER_REQUEST';
