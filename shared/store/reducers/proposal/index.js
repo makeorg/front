@@ -10,11 +10,6 @@ export function proposal(
   action: ProposalActionType
 ) {
   switch (action.type) {
-    case actionTypes.PROPOSE_SUCCESS:
-      return {
-        ...state,
-        hasProposed: true,
-      };
     case actionTypes.PROPOSAL_LOAD:
       return {
         ...state,

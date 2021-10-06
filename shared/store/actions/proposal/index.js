@@ -4,8 +4,6 @@ import * as actionTypes from 'Shared/store/actionTypes';
 import { Logger } from 'Shared/services/Logger';
 import { ProposalService } from 'Shared/services/Proposal';
 
-export const proposeSuccess = () => ({ type: actionTypes.PROPOSE_SUCCESS });
-
 export const fetchProposalData = (proposalId: string) => (dispatch: Dispatch) =>
   ProposalService.getProposal(proposalId)
     .then(proposal => {

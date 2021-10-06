@@ -33,7 +33,6 @@ describe('Sequence Helper', () => {
         proposals,
         extraSlidesConfig,
         false,
-        false,
         'standard',
         introCardParam,
         false,
@@ -62,7 +61,6 @@ describe('Sequence Helper', () => {
       const cards = helpers.buildCards(
         proposals,
         extraSlidesConfig,
-        false,
         false,
         'standard',
         introCardParam,
@@ -93,7 +91,6 @@ describe('Sequence Helper', () => {
         proposals,
         extraSlidesConfig,
         false,
-        false,
         'standard',
         introCardParam,
         false,
@@ -122,7 +119,6 @@ describe('Sequence Helper', () => {
       const cards = helpers.buildCards(
         proposals,
         extraSlidesConfig,
-        false,
         false,
         'standard',
         introCardParam,
@@ -155,12 +151,10 @@ describe('Sequence Helper', () => {
         pushProposalCard: { enabled: false },
       };
       const pushProposalParam = false;
-      const hasProposed = false;
       const canPropose = true;
       const cards = helpers.buildCards(
         proposals,
         extraSlidesConfig,
-        hasProposed,
         canPropose,
         'standard',
         false,
@@ -187,12 +181,10 @@ describe('Sequence Helper', () => {
         pushProposalCard: { enabled: true },
       };
       const pushProposalParam = false;
-      const hasProposed = false;
       const canPropose = true;
       const cards = helpers.buildCards(
         proposals,
         extraSlidesConfig,
-        hasProposed,
         canPropose,
         'standard',
         false,
@@ -219,12 +211,10 @@ describe('Sequence Helper', () => {
         pushProposalCard: { enabled: false },
       };
       const pushProposalParam = true;
-      const hasProposed = false;
       const canPropose = true;
       const cards = helpers.buildCards(
         proposals,
         extraSlidesConfig,
-        hasProposed,
         canPropose,
         'standard',
         false,
@@ -251,12 +241,10 @@ describe('Sequence Helper', () => {
         pushProposalCard: { enabled: true },
       };
       const pushProposalParam = true;
-      const hasProposed = false;
       const canPropose = true;
       const cards = helpers.buildCards(
         proposals,
         extraSlidesConfig,
-        hasProposed,
         canPropose,
         'standard',
         false,
@@ -284,50 +272,15 @@ describe('Sequence Helper', () => {
       ]);
     });
 
-    it('contain push proposal but has already proposed', () => {
-      const extraSlidesConfig = {
-        pushProposalCard: { enabled: true },
-      };
-      const pushProposalParam = true;
-      const hasProposed = true;
-      const canPropose = true;
-      const cards = helpers.buildCards(
-        proposals,
-        extraSlidesConfig,
-        hasProposed,
-        canPropose,
-        'standard',
-        false,
-        pushProposalParam,
-        defaultDemographicData
-      );
-
-      expect(cards.length).toBe(2);
-      expect(cards).toEqual([
-        {
-          index: 0,
-          type: CARD_TYPE_EXTRASLIDE_DEMOGRAPHICS_CARD,
-          configuration: defaultDemographicData,
-        },
-        {
-          index: 1,
-          type: CARD_TYPE_EXTRASLIDE_FINAL_CARD,
-          configuration: undefined,
-        },
-      ]);
-    });
-
     it('contain push proposal but canPropose is disabled', () => {
       const extraSlidesConfig = {
         pushProposalCard: { enabled: true },
       };
       const pushProposalParam = true;
-      const hasProposed = false;
       const canPropose = false;
       const cards = helpers.buildCards(
         proposals,
         extraSlidesConfig,
-        hasProposed,
         canPropose,
         'standard',
         false,

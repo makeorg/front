@@ -27,11 +27,6 @@ export type StateViews = $ReadOnly<{
   country?: string,
 }>;
 
-// Proposal State
-export type StateProposal = $ReadOnly<{
-  hasProposed: boolean,
-}>;
-
 // Sequence State
 export type StateSequence = $ReadOnly<{
   currentIndex: number,

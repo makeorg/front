@@ -12,7 +12,6 @@ import {
 import { selectAuthentication } from 'Shared/store/selectors/user.selector';
 import { ProposalService } from 'Shared/services/Proposal';
 import { modalShowProposalSuccess } from 'Shared/store/actions/modal';
-import { proposeSuccess } from 'Shared/store/actions/proposal';
 import { getLocalizedBaitText } from 'Shared/helpers/proposal';
 import { DEFAULT_LANGUAGE } from 'Shared/constants/config';
 import { useLocation } from 'react-router';
@@ -78,7 +77,6 @@ export const ProposalJourney = () => {
     dispatch(removePanelContent());
     dispatch(closePanel());
     dispatch(modalShowProposalSuccess());
-    dispatch(proposeSuccess());
     trackDisplayProposalSubmitValidation();
   };
 

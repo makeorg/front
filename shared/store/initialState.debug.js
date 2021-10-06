@@ -53,9 +53,6 @@ export const initialStateDebug = {
       linkedin_sharing: false,
     },
   },
-  proposal: {
-    hasProposed: false,
-  },
   sequence: {
     votedProposalIds: {},
     cards: [],

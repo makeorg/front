@@ -22,7 +22,6 @@ import { i18n } from 'Shared/i18n';
  * Build cards array
  * @param  {ProposalType[]} proposals
  * @param  {QuestionExtraSlidesConfigType} extraSlidesConfig
- * @param  {boolean} hasProposed
  * @param  {boolean} canPropose
  * @param  {boolean} isStandardSequence
  * @param  {string} introCardParam
@@ -32,7 +31,6 @@ import { i18n } from 'Shared/i18n';
 export const buildCards = (
   proposals: ProposalType[],
   extraSlidesConfig: QuestionExtraSlidesConfigType,
-  hasProposed: boolean,
   canPropose: boolean,
   isStandardSequence: boolean,
   introCardParam?: string,
@@ -43,8 +41,7 @@ export const buildCards = (
     extraSlidesConfig.pushProposalCard &&
     extraSlidesConfig.pushProposalCard.enabled &&
     canPropose &&
-    pushProposalParam &&
-    !hasProposed;
+    pushProposalParam;
   const withIntroCard: boolean =
     extraSlidesConfig.introCard &&
     extraSlidesConfig.introCard.enabled &&
