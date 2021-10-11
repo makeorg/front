@@ -25,4 +25,8 @@ export const countriesConfiguration = [
     countryCode: 'LU',
     language: 'fr',
   },
+  {
+    countryCode: 'CH',
+    language: 'de',
+  },
 ];

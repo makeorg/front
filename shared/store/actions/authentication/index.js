@@ -160,8 +160,9 @@ export const loginSocial =
       return Promise.resolve();
     }
 
-    const success = () => {
+    const success = createdAt => {
       dispatch(loginSocialSuccess());
+      trackAuthenticationSocialSuccess(provider, createdAt);
       dispatch(getUser());
       dispatch(
         displayNotificationBanner(
@@ -181,14 +182,7 @@ export const loginSocial =
       approvePrivacyPolicy,
       success,
       failure
-    ).then(auth => {
-      if (auth) {
-        trackAuthenticationSocialSuccess(
-          provider,
-          auth.account_creation.toString()
-        );
-      }
-    });
+    );
   };
 
 export const logout =

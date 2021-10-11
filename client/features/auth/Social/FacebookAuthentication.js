@@ -12,10 +12,14 @@ import {
   modalClose,
   modalShowDataPolicySocial,
 } from 'Shared/store/actions/modal';
-import { trackAuthenticationSocialFailure } from 'Shared/services/Tracking';
+import {
+  trackAuthenticationSocialFailure,
+  trackAuthenticationSocialSuccess,
+} from 'Shared/services/Tracking';
 
 import {
   loginSocialSuccess,
+  loginSocialFailure,
   getUser,
 } from 'Shared/store/actions/authentication';
 import { Logger } from 'Shared/services/Logger';
@@ -44,6 +48,7 @@ export const FacebookAuthentication = () => {
 
   const handleFacebookLoginCallback = response => {
     if (!response?.accessToken && response?.status === 'unknown') {
+      dispatch(loginSocialFailure());
       Logger.logInfo({
         message:
           'Facebook auth failed with status unknown. Probably user close popup.',
@@ -71,6 +76,7 @@ export const FacebookAuthentication = () => {
     }
 
     if (!response?.email) {
+      dispatch(loginSocialFailure());
       Logger.logError({
         message: `Facebook login failure no email in profile (login is a phone number or email is not yet confirmed)`,
         name: 'social-auth',
@@ -87,9 +93,10 @@ export const FacebookAuthentication = () => {
       return;
     }
 
-    const success = () => {
+    const success = createdAt => {
       dispatch(loginSocialSuccess());
       dispatch(getUser());
+      trackAuthenticationSocialSuccess(FACEBOOK_PROVIDER_ENUM, createdAt);
     };
 
     const handleErrors = () => {
