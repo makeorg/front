@@ -252,7 +252,7 @@ const loginSocial = async (
   provider: string,
   token: string,
   approvePrivacyPolicy?: boolean,
-  success?: () => void = () => {},
+  success?: (createdAt: string) => void = () => {},
   failure?: () => void = () => {}
 ): Promise<?UserAuthType> => {
   try {
@@ -261,9 +261,11 @@ const loginSocial = async (
       token,
       approvePrivacyPolicy
     );
-    success();
+    if (response && response.data && success) {
+      success(response.data.created_at);
+    }
 
-    return response.data;
+    return response && response.data;
   } catch (apiServiceError) {
     defaultUnexpectedError(apiServiceError);
     failure();
@@ -277,7 +279,7 @@ const checkSocialPrivacyPolicy = async (
   token: string,
   privacyPolicyDate: string,
   action?: () => void = () => {},
-  success?: () => void = () => {},
+  success?: (createdAt: string) => void = () => {},
   failure?: () => void = () => {},
   unexpectedError?: () => void = () => {}
 ): Promise<string | null> => {

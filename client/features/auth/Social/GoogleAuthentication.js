@@ -12,10 +12,14 @@ import {
   modalClose,
   modalShowDataPolicySocial,
 } from 'Shared/store/actions/modal';
-import { trackAuthenticationSocialFailure } from 'Shared/services/Tracking';
+import {
+  trackAuthenticationSocialFailure,
+  trackAuthenticationSocialSuccess,
+} from 'Shared/services/Tracking';
 
 import {
   loginSocialSuccess,
+  loginSocialFailure,
   getUser,
 } from 'Shared/store/actions/authentication';
 import { Logger } from 'Shared/services/Logger';
@@ -37,8 +41,9 @@ export const GoogleAuthentication = () => {
   const { privacyPolicy } = useSelector((state: StateRoot) => state.appConfig);
   /** Google login method callback */
   const handleGoogleLoginSuccess = response => {
-    const success = () => {
+    const success = createdAt => {
       dispatch(loginSocialSuccess());
+      trackAuthenticationSocialSuccess(GOOGLE_PROVIDER_ENUM, createdAt);
       dispatch(getUser());
     };
 
@@ -62,6 +67,7 @@ export const GoogleAuthentication = () => {
   };
 
   const handleGoogleLoginFailure = response => {
+    dispatch(loginSocialFailure());
     if (response?.error === 'popup_closed_by_user') {
       Logger.logInfo({
         message: 'Google auth popup closed by user',
