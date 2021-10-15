@@ -338,7 +338,14 @@ export const TermsOfUseDE = () => {
                   Vorschlag nicht unnötig mehrfach abschickt oder einen
                   Vorschlag mehrfach einreicht. Er sollte die Dienste auch nicht
                   spammen, indem er die gleichen Vorschläge von verschiedenen
-                  E-Mail-Adressen versendet.
+                  E-Mail-Adressen versendet. Um allen Nutzer:innen eine Stimme
+                  zu geben, kann jeder Nutzer und jede Nutzerin 30 Tage lang
+                  maximal 100 Vorschläge zu ein und derselben Konsultation
+                  einreichen. Bei Überschreitung dieses Grenzwertes können wir
+                  keine Vorschläge mehr annehmen und werden die betreffenden
+                  Nutzer:innen per E-Mail benachrichtigen, um ihnen die Gründe
+                  dieses Grenzwertes zu erläutern und ihnen eine optimale
+                  Nutzung der Plattform zu ermöglichen.
                 </StaticParagraphStyle>
                 <StaticParagraphStyle>
                   Sobald der Bürgervorschlag eines Nutzers validiert ist, wird
