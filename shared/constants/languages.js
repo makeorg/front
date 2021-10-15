@@ -27,6 +27,10 @@ export const countriesConfiguration = [
   },
   {
     countryCode: 'CH',
-    language: 'de',
+    language: 'fr',
+  },
+  {
+    countryCode: 'BE',
+    language: 'fr',
   },
 ];
