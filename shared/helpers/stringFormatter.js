@@ -29,6 +29,3 @@ export const formatOrganisationName = (
 
 export const formatAuthorName = (name: string, locales?: string[]): string =>
   capitalize(name, true, locales);
-
-export const capitalizeFirstLetter = (word: string) =>
-  word.charAt(0).toUpperCase() + word.substring(1).toLowerCase();

@@ -9,7 +9,6 @@ import { ProposalSubmit } from 'Client/features/proposal/Submit';
 import { CARD_TYPE_NO_PROPOSAL_CARD } from 'Shared/constants/card';
 import { getParticipateLink } from 'Shared/helpers/url';
 import { i18n } from 'Shared/i18n';
-import { capitalizeFirstLetter } from 'Shared/helpers/stringFormatter';
 import { useParams } from 'react-router';
 import { MetaTags } from 'Client/app/MetaTags';
 import { selectCurrentQuestion } from 'Shared/store/selectors/questions.selector';
@@ -69,7 +68,7 @@ export const SequenceKeyword = () => {
     type: CARD_TYPE_NO_PROPOSAL_CARD,
     configuration: {
       title: i18n.t('no_proposal_card.title.keyword', {
-        keyword: capitalizeFirstLetter(keywordLabel),
+        keyword: keywordLabel,
       }),
       description: i18n.t('no_proposal_card.description.special'),
     },
@@ -94,7 +93,7 @@ export const SequenceKeyword = () => {
           <SequenceAltTitleStyle>{question.question}</SequenceAltTitleStyle>
           <SequenceSpecialTitleStyle>
             <SequenceSpecialIconStyle aria-hidden focusable={false} />
-            {capitalizeFirstLetter(keywordLabel)}
+            {keywordLabel}
           </SequenceSpecialTitleStyle>
 
           <SequenceCard

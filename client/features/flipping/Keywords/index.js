@@ -4,7 +4,6 @@ import { useParams } from 'react-router';
 import { i18n } from 'Shared/i18n';
 import { Spinner } from 'Client/ui/Elements/Loading/Spinner';
 import { getSequenceKeywordLink } from 'Shared/helpers/url';
-import { capitalizeFirstLetter } from 'Shared/helpers/stringFormatter';
 import { trackOpenSequence } from 'Shared/services/Tracking';
 import { COMPONENT_PARAM_SEQUENCE_KEYWORD } from 'Shared/constants/tracking';
 import {
@@ -86,7 +85,7 @@ export const Keywords = ({ question, isKeywordActive }: Props) => {
                 trackOpenSequence(COMPONENT_PARAM_SEQUENCE_KEYWORD)
               }
             >
-              {capitalizeFirstLetter(keyword.label)}
+              {keyword.label}
               <SvgAngleArrowRight width={17} height={17} />
             </KeywordItemLinkStyle>
           </KeywordListItemStyle>
