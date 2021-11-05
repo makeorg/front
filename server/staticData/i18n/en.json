@@ -1232,6 +1232,7 @@
     "submit_mobile": "@@demographics_card.submit_mobile|fr:Enregistrer",
     "submit_desktop": "@@demographics_card.submit_desktop|fr:Enregistrer et continuer",
     "submitted_thanks": "@@demographics_card.submitted_thanks|fr:Merci pour votre réponse.",
-    "submitted_disclaimer": "@@demographics_card.submitted_disclaimer|fr: Elle sera utilisée de façon anonyme pour analyser les résultats de la consultation."
+    "submitted_disclaimer": "@@demographics_card.submitted_disclaimer|fr: Elle sera utilisée de façon anonyme pour analyser les résultats de la consultation.",
+    "select": "Choose"
   }
 }
