@@ -26,9 +26,15 @@ export const Hero = () => {
     (state: StateRoot) => state.appConfig
   );
   const { homepage } = useSelector((state: StateRoot) => state.views);
+  const { featuredQuestions, posts } = homepage || {
+    featuredQuestions: [],
+    posts: [],
+  };
   const isDesktop = matchDesktopDevice(device);
   const isFr = country === 'FR';
   const hasActiveConsultations = homepage?.currentQuestions.length > 0;
+  const hasFeaturedQuestions = featuredQuestions?.length > 0;
+  const hasPosts = posts?.length > 0;
 
   return (
     <HeroWrapperStyle as="section" aria-labelledby="hero-title">
@@ -53,7 +59,7 @@ export const Hero = () => {
                 <WhiteArrowDownIcon aria-hidden focusable="false" />
               </HeroRedButtonStyle>
             )}
-            {isFr && (
+            {isFr && hasFeaturedQuestions && hasPosts && (
               <HeroTransparentButtonStyle
                 as="a"
                 href="#featured_questions"
