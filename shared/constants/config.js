@@ -6,6 +6,6 @@ export const GOOGLE_LOGIN_ID =
 
 export const DEFAULT_LANGUAGE = 'en';
 export const DEFAULT_COUNTRY = 'FR';
-export const CONSULTATION_SLUG = 'environnement';
+export const CONSULTATION_SLUG = 'pour-un-avenir-durable';
 export const BASE_URL = `/FR/consultation/${CONSULTATION_SLUG}/selection`;
 export const CONTACT_EMAIL = 'contact@placebymake.org';
