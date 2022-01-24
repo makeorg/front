@@ -9,6 +9,8 @@ import {
   MODAL_SHOW_DEPARTMENT_FORM,
   MODAL_SHOW_PROPOSAL_SUCCESS,
   MODAL_SHOW_COUNTRIES,
+  MODAL_CLOSE_COOKIES,
+  MODAL_SHOW_COOKIES,
 } from 'Shared/store/actionTypes';
 import {
   MODAL_LOGIN,
@@ -23,6 +25,16 @@ import { type StateModal } from 'Shared/store/types';
 
 export function modal(state: StateModal = initialState.modal, action: Object) {
   switch (action.type) {
+    case MODAL_CLOSE_COOKIES:
+      return {
+        ...state,
+        showCookies: false,
+      };
+    case MODAL_SHOW_COOKIES:
+      return {
+        ...state,
+        showCookies: true,
+      };
     case MODAL_SHOW_LOGIN:
       return {
         ...state,

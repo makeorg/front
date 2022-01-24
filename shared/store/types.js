@@ -148,3 +148,8 @@ export type StateRoot = {
   panel: StatePanel,
   session: StateSession,
 };
+
+// Cookies Preferences
+export type StateUserCookiesPreferences = $ReadOnly<{
+  facebook_tracking: boolean,
+}>;

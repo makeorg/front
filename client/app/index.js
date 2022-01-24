@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useSelector } from 'react-redux';
 import { ModernNormalizeStylesheet } from 'Client/app/assets/css-in-js/ModernNormalize';
 import { FontFacesStylesheet } from 'Client/app/assets/css-in-js/FontFaces';
 import { DefaultStylesheet } from 'Client/app/assets/css-in-js/DefaultStyle';
@@ -10,7 +11,7 @@ import {
 import { NAVIGATION_ARIA_CLASS, PANEL_ARIA_CLASS } from 'Shared/constants/a11y';
 import { MAIN_CONTENT } from 'Shared/constants/ids';
 import { NotificationBanner } from 'Client/ui/Elements/Notifications/Banner';
-import { CookieBanner } from './CookieBanner';
+import { CookieModal } from 'Client/app/CookieModal';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { Modal } from './Modal';
@@ -25,36 +26,41 @@ import { Hreflang } from './Hreflang';
 /**
  * Handles App Business Logic
  */
-export const AppContainer = () => (
-  <SecureExpiration>
-    <SessionExpiration>
-      <ServiceErrorHandler>
-        <ErrorBoundary>
-          {/** page_wrapper id is used to set page background color in usePageBackgroundColor hook */}
-          <AppWrapperStyle id="page_wrapper">
-            <CanonicalUrl />
-            <Hreflang />
-            <ModernNormalizeStylesheet />
-            <FontFacesStylesheet />
-            <DefaultStylesheet />
-            <UIThemeStylesheet />
-            <CookieBanner />
-            <MainSkipLinks />
-            <Header />
-            <AppMainContentStyle
-              id={MAIN_CONTENT}
-              data-cy-container="main"
-              className={`${NAVIGATION_ARIA_CLASS} ${PANEL_ARIA_CLASS}`}
-            >
-              <NotificationBanner />
-              <Routes />
-            </AppMainContentStyle>
-            <Modal />
-            <Footer />
-          </AppWrapperStyle>
-          <Panel />
-        </ErrorBoundary>
-      </ServiceErrorHandler>
-    </SessionExpiration>
-  </SecureExpiration>
-);
+export const AppContainer = () => {
+  const { country } = useSelector((state: StateRoot) => state.appConfig);
+  const hasCountry = country && country !== null;
+
+  return (
+    <SecureExpiration>
+      <SessionExpiration>
+        {hasCountry && <CookieModal />}
+        <ServiceErrorHandler>
+          <ErrorBoundary>
+            {/** page_wrapper id is used to set page background color in usePageBackgroundColor hook */}
+            <AppWrapperStyle id="page_wrapper">
+              <CanonicalUrl />
+              <Hreflang />
+              <ModernNormalizeStylesheet />
+              <FontFacesStylesheet />
+              <DefaultStylesheet />
+              <UIThemeStylesheet />
+              <MainSkipLinks />
+              <Header />
+              <AppMainContentStyle
+                id={MAIN_CONTENT}
+                data-cy-container="main"
+                className={`${NAVIGATION_ARIA_CLASS} ${PANEL_ARIA_CLASS}`}
+              >
+                <NotificationBanner />
+                <Routes />
+              </AppMainContentStyle>
+              <Modal />
+              <Footer />
+            </AppWrapperStyle>
+            <Panel />
+          </ErrorBoundary>
+        </ServiceErrorHandler>
+      </SessionExpiration>
+    </SecureExpiration>
+  );
+};

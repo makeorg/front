@@ -46,6 +46,9 @@ export const initialState: StateRoot = {
       error: false,
       updated: false,
     },
+    cookiesPreferences: {
+      facebook_tracking: false,
+    },
   },
   modal: {
     isOpen: false,

@@ -1,13 +1,9 @@
-/* @flow */
+// @flow
 import { env } from 'Shared/env';
+import { Logger } from '../Logger';
 import { fbq } from './fbq';
 
 const makePixelId: string = '260470104426586';
-const weEuropeansPixelId: string = '387088288517542';
-
-const weeuropeansquestionRegex = new RegExp(
-  /(weeuropeans|weuropeanround)-[a-z]+/
-);
 
 let initialized: boolean = false;
 
@@ -26,7 +22,7 @@ type FacebookEventParams = {
   questionSlug?: string,
 };
 
-const isInitialized = (): boolean => {
+export const isFBInitialized = (): boolean => {
   if (!initialized) {
     // eslint-disable-next-line no-console
     console.warn(
@@ -39,32 +35,43 @@ const isInitialized = (): boolean => {
 
 export const FacebookTracking = {
   init(): void {
-    fbq.load();
-    fbq.track('init', makePixelId);
-    fbq.track('init', weEuropeansPixelId);
-    initialized = true;
+    try {
+      fbq.load();
+      fbq.track('init', makePixelId);
+      initialized = true;
+    } catch (e) {
+      Logger.logError(e);
+    }
+  },
+
+  isInitialized(): void {
+    if (isFBInitialized()) {
+      return true;
+    }
+
+    return false;
   },
 
   pageView(): void {
-    if (!isInitialized()) {
+    if (!isFBInitialized()) {
       return;
     }
 
     if (env.isDev()) {
       return;
     }
-
-    fbq.track('track', 'PageView');
+    try {
+      fbq.track('track', 'PageView');
+    } catch (e) {
+      Logger.logError(e);
+    }
   },
 
   trackCustom(eventName: string, eventParameters: FacebookEventParams): void {
-    if (!isInitialized()) {
+    if (!isFBInitialized()) {
       return;
     }
 
-    const isWeeuropeans =
-      eventParameters.question &&
-      weeuropeansquestionRegex.test(eventParameters.question);
     if (env.isDev()) {
       // eslint-disable-next-line no-console
       console.info(
@@ -72,25 +79,12 @@ export const FacebookTracking = {
         event => ${eventName}
         params => ${JSON.stringify(eventParameters)}`
       );
-      if (isWeeuropeans) {
-        // eslint-disable-next-line no-console
-        console.info(
-          `Tracking Custom Facebook (${weEuropeansPixelId})
-          event => ${eventName}
-          params => ${JSON.stringify(eventParameters)}`
-        );
-      }
       return;
     }
-
-    fbq.track('trackSingleCustom', makePixelId, eventName, eventParameters);
-    if (isWeeuropeans) {
-      fbq.track(
-        'trackSingleCustom',
-        weEuropeansPixelId,
-        eventName,
-        eventParameters
-      );
+    try {
+      fbq.track('trackSingleCustom', makePixelId, eventName, eventParameters);
+    } catch (e) {
+      Logger.logError(e);
     }
   },
 };

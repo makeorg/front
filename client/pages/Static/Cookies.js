@@ -1,127 +1,428 @@
-// @flow
 import React from 'react';
 import { MetaTags } from 'Client/app/MetaTags';
+import { i18n } from 'Shared/i18n';
+import { RedLinkHTMLElementStyle } from 'Client/ui/Elements/LinkElements';
+import { ScreenReaderItemStyle } from 'Client/ui/Elements/AccessibilityElements';
 import {
+  CookieDescriptionStyle,
+  CookieLabelStyle,
+  CookieModalCookieDetailParagraphStyle,
+  CookieModalElementStyle,
+  CookieModalSectionWrapperStyle,
+  CookieSectionWrapperStyle,
+  CookieSVGStyle,
+} from 'Client/app/CookieModal/style';
+import {
+  SvgLoudSpeaker,
+  SvgSettings,
+  SvgSmiley,
+  SvgStats,
+} from 'Client/ui/Svg/elements';
+import {
+  CenterColumnStyle,
+  ColumnElementStyle,
+} from 'Client/ui/Elements/FlexElements';
+import { trackClickModalCookieSave } from 'Shared/services/Tracking';
+import { useDispatch, useSelector } from 'react-redux';
+import { type StateRoot } from 'Shared/store/types';
+import { RedButtonStyle } from 'Client/ui/Elements/Buttons/V2/style';
+import {
+  initTrackersFromPreferences,
+  removeTrackersFromPreferences,
+  setPreferencesCookie,
+} from 'Client/helper/cookies';
+import { displayNotificationBanner } from 'Shared/store/actions/notifications';
+import {
+  COOKIES_PREFERENCES_UPDATE_MESSAGE,
+  NOTIFICATION_LEVEL_INFORMATION,
+} from 'Shared/constants/notifications';
+import { DateHelper } from 'Shared/helpers/date';
+import { useParams } from 'react-router';
+import { CookieSwitch } from 'Client/app/CookieModal/CookieSwitch';
+import { FACEBOOK_LINK_FR, FACEBOOK_LINK_EN } from 'Shared/constants/config';
+import {
+  googleLinkPrivacy,
+  twitterLinkPrivacy,
+  linkedInLinkPrivacy,
+} from 'Shared/helpers/social';
+import {
+  StaticExternalLinkIconStyle,
   StaticPageWrapperStyle,
-  StaticSecondLevelTitleStyle,
-  StaticTitleExtra,
   StaticParagraphStyle,
-  StaticThirdLevelTitleStyle,
-  StaticSquareListStyle,
-  StaticSquareListItemStyle,
   StaticPrimaryUnorderedListItemStyle,
   StaticPrimaryUnorderedListStyle,
+  StaticSecondLevelTitleStyle,
+  StaticSquareListItemStyle,
+  StaticSquareListStyle,
+  StaticThirdLevelTitleStyle,
+  StaticTitleExtra,
 } from './style';
 
-export const Cookies = () => (
-  <>
-    <MetaTags title="Gestion des cookies - Place by Make.org" />
-    <StaticPageWrapperStyle>
-      <StaticSecondLevelTitleStyle>
-        Gestion des cookies
-        <StaticTitleExtra>- en date du 18 mai 2021 -</StaticTitleExtra>
-      </StaticSecondLevelTitleStyle>
-      <StaticThirdLevelTitleStyle>
-        QU‘EST-CE QU‘UN COOKIE ?
-      </StaticThirdLevelTitleStyle>
-      <StaticParagraphStyle>
-        Un cookie est un petit fichier informatique qui peut être déposé et lu
-        lors de la consultation par un internaute d‘un site internet ou d‘une
-        application mobile et ce, quel que soit le type de terminal utilisé
-        (ordinateur, smartphone, etc...). Certains cookies sont essentiels au
-        bon fonctionnement des sites ou applications, d’autres contribuent à
-        optimiser leur performance du site ou à améliorer l’expérience des
-        internautes.
-      </StaticParagraphStyle>
-      <StaticThirdLevelTitleStyle>
-        COMMENT UTILISONS-NOUS LES COOKIES ?
-      </StaticThirdLevelTitleStyle>
-      <StaticParagraphStyle>
-        Lorsque vous vous connectez sur notre site, des cookies sont déposés sur
-        votre terminal afin d’améliorer votre expérience, accroître la
-        performance de notre site et optimiser nos consultations citoyennes. Les
-        informations contenues dans les cookies ne visent pas à vous identifier
-        personnellement et ne sont jamais utilisées à d‘autres fins que celles
-        indiquées ci-après.
-      </StaticParagraphStyle>
-      <StaticThirdLevelTitleStyle>
-        QUELS COOKIES UTILISONS NOUS ?
-      </StaticThirdLevelTitleStyle>
-      <StaticParagraphStyle>
-        Les cookies déposés sur notre site sont les suivants :
-      </StaticParagraphStyle>
-      <StaticPrimaryUnorderedListStyle>
-        <StaticPrimaryUnorderedListItemStyle>
-          <StaticParagraphStyle>
-            Les cookies techniques : ces cookies sont nécessaires au
-            fonctionnement du site et ne peuvent pas être désactivés. Vous
-            pouvez configurer votre navigateur afin de bloquer ou être informé
-            de l‘existence de ces cookies, mais certaines parties de notre site
-            peuvent être affectées. Ces cookies ne visent pas à vous identifier
-            personnellement. Toujours actif.
-          </StaticParagraphStyle>
-          <StaticSquareListStyle>
-            <StaticSquareListItemStyle>
-              make-secure : une fois que vous vous êtes connecté à votre espace
-              citoyen sur Place by Make.org, ce cookie garantit que cette
-              connexion va se maintenir pendant votre navigation sur le service.
-              Durée : Session.
-            </StaticSquareListItemStyle>
-            <StaticSquareListItemStyle>
-              make-secure-expiration: ce cookie sert à détecter votre inactivité
-              sur le service de façon à faire expirer cette connexion. Durée :
-              Session.
-            </StaticSquareListItemStyle>
-          </StaticSquareListStyle>
-        </StaticPrimaryUnorderedListItemStyle>
-        <StaticPrimaryUnorderedListItemStyle>
-          <StaticParagraphStyle>
-            Les cookies de préférences : ces cookies sont utilisés pour retenir
-            vos préférences sur notre site et ainsi améliorer votre expérience
-            lors de votre navigation. Vous pouvez configurer votre navigateur
-            afin de bloquer ou être informé de l’existence de ces cookies, mais
-            certaines parties de notre site peuvent être affectées. Ces cookies
-            ne visent pas à vous identifier personnellement. Toujours actif.
-          </StaticParagraphStyle>
-          <StaticSquareListStyle>
-            <StaticSquareListItemStyle>
-              make-session-id : ce cookie sert à regrouper toutes les actions
-              que vous effectuez sur le site dans une session. Durée : Session.
-            </StaticSquareListItemStyle>
-            <StaticSquareListItemStyle>
-              make-session-id-expiration : ce cookie permet de vous afficher la
-              notification indiquant que votre session a expiré (au bout de 20
-              minutes) et va donc être rechargée. Durée : Session.
-            </StaticSquareListItemStyle>
-            <StaticSquareListItemStyle>
-              make-cookie : ce cookie permet de nous assurer que vous avez été
-              informé de notre politique de gestion des cookies. Durée : 1 an.
-            </StaticSquareListItemStyle>
-          </StaticSquareListStyle>
-        </StaticPrimaryUnorderedListItemStyle>
-        <StaticPrimaryUnorderedListItemStyle>
-          <StaticParagraphStyle>
-            Les cookies de statistiques : ces cookies sont destinés à analyser
-            les visites sur notre site et à améliorer les performances de ce
-            dernier. Toutes les informations collectées par ces cookies sont
-            agrégées et donc anonymisées. Si vous n‘acceptez pas ces cookies,
-            nous ne serons pas informés de votre revisite. Toujours actif.
-          </StaticParagraphStyle>
-          <StaticSquareListStyle>
-            <StaticSquareListItemStyle>
-              make-visitor-id: ce cookie sert à identifier un visiteur unique.
-              Durée : 1 an.
-            </StaticSquareListItemStyle>
-            <StaticSquareListItemStyle>
-              make-visitor-created-at : ce cookie sert à obtenir la date de la
-              première visite sur la plateforme. Durée : 1 an.
-            </StaticSquareListItemStyle>
-          </StaticSquareListStyle>
-        </StaticPrimaryUnorderedListItemStyle>
-      </StaticPrimaryUnorderedListStyle>
-    </StaticPageWrapperStyle>
-  </>
-);
+export const Cookies = () => {
+  const dispatch = useDispatch();
+  const { country } = useParams();
+  const { cookiesPreferences } = useSelector((state: StateRoot) => state.user);
+  const DATE = new Date(2021, 3, 28);
+  const formattedDate = DateHelper.localizedAndFormattedDate(
+    DATE,
+    'DD MMMM YYYY'
+  );
+  const isFR = country === 'FR';
+  const facebookLink = isFR ? FACEBOOK_LINK_FR : FACEBOOK_LINK_EN;
 
-// default export needed for loadable component
-export default Cookies; // eslint-disable-line import/no-default-export
+  const handlePreferences = () => {
+    trackClickModalCookieSave('cookies-accept-preferences');
+    setPreferencesCookie(cookiesPreferences);
+    removeTrackersFromPreferences(cookiesPreferences);
+    initTrackersFromPreferences(cookiesPreferences);
+    dispatch(
+      displayNotificationBanner(
+        COOKIES_PREFERENCES_UPDATE_MESSAGE,
+        NOTIFICATION_LEVEL_INFORMATION
+      )
+    );
+  };
+
+  return (
+    <>
+      <MetaTags
+        title={i18n.t('meta.cookies.title')}
+        description={i18n.t('meta.cookies.description')}
+      />
+
+      <StaticPageWrapperStyle>
+        <StaticSecondLevelTitleStyle>
+          {i18n.t('cookies_management.title')}
+          <StaticTitleExtra>
+            {i18n.t('cookies_management.dated', { date: formattedDate })}
+          </StaticTitleExtra>
+        </StaticSecondLevelTitleStyle>
+        <StaticPrimaryUnorderedListStyle>
+          <StaticPrimaryUnorderedListItemStyle>
+            <StaticThirdLevelTitleStyle>
+              {i18n.t('cookies_management.intro.title')}
+            </StaticThirdLevelTitleStyle>
+            <StaticParagraphStyle>
+              {i18n.t('cookies_management.intro.first_paragraph')}
+            </StaticParagraphStyle>
+            <StaticParagraphStyle>
+              {i18n.t('cookies_management.intro.second_paragraph')}
+            </StaticParagraphStyle>
+          </StaticPrimaryUnorderedListItemStyle>
+          <StaticPrimaryUnorderedListItemStyle>
+            <StaticThirdLevelTitleStyle>
+              {i18n.t('cookies_management.use.title')}
+            </StaticThirdLevelTitleStyle>
+            <StaticParagraphStyle>
+              {i18n.t('cookies_management.use.first_paragraph')}
+            </StaticParagraphStyle>
+            <StaticParagraphStyle>
+              {i18n.t('cookies_management.use.second_paragraph')}
+            </StaticParagraphStyle>
+          </StaticPrimaryUnorderedListItemStyle>
+          <StaticPrimaryUnorderedListItemStyle>
+            <StaticThirdLevelTitleStyle>
+              {i18n.t('cookies_management.partners.title')}
+            </StaticThirdLevelTitleStyle>
+            <StaticParagraphStyle>
+              {i18n.t('cookies_management.partners.intro')}
+            </StaticParagraphStyle>
+            <StaticSquareListStyle>
+              <StaticSquareListItemStyle>
+                {'Google : '}
+                <RedLinkHTMLElementStyle
+                  as="a"
+                  href={googleLinkPrivacy(country)}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {googleLinkPrivacy(country)}
+                  <StaticExternalLinkIconStyle aria-hidden focusable="false" />
+                  <ScreenReaderItemStyle>
+                    {i18n.t('common.open_new_window')}
+                  </ScreenReaderItemStyle>
+                </RedLinkHTMLElementStyle>
+              </StaticSquareListItemStyle>
+              <StaticSquareListItemStyle>
+                {'Facebook : '}
+                <RedLinkHTMLElementStyle
+                  as="a"
+                  href={facebookLink}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {facebookLink}
+                  <StaticExternalLinkIconStyle aria-hidden focusable="false" />
+                  <ScreenReaderItemStyle>
+                    {i18n.t('common.open_new_window')}
+                  </ScreenReaderItemStyle>
+                </RedLinkHTMLElementStyle>
+              </StaticSquareListItemStyle>
+              <StaticSquareListItemStyle>
+                {'Twitter : '}
+                <RedLinkHTMLElementStyle
+                  as="a"
+                  href={twitterLinkPrivacy(country)}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {twitterLinkPrivacy(country)}
+                  <StaticExternalLinkIconStyle aria-hidden focusable="false" />
+                  <ScreenReaderItemStyle>
+                    {i18n.t('common.open_new_window')}
+                  </ScreenReaderItemStyle>
+                </RedLinkHTMLElementStyle>
+              </StaticSquareListItemStyle>
+              <StaticSquareListItemStyle>
+                {'LinkedIn : '}
+                <RedLinkHTMLElementStyle
+                  as="a"
+                  href={linkedInLinkPrivacy(country)}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {linkedInLinkPrivacy(country)}
+                  <StaticExternalLinkIconStyle aria-hidden focusable="false" />
+                  <ScreenReaderItemStyle>
+                    {i18n.t('common.open_new_window')}
+                  </ScreenReaderItemStyle>
+                </RedLinkHTMLElementStyle>
+              </StaticSquareListItemStyle>
+            </StaticSquareListStyle>
+          </StaticPrimaryUnorderedListItemStyle>
+          <StaticPrimaryUnorderedListItemStyle>
+            <StaticThirdLevelTitleStyle>
+              {i18n.t('cookies_management.details.title')}
+            </StaticThirdLevelTitleStyle>
+            <StaticParagraphStyle>
+              {i18n.t('cookies_management.details.intro')}
+            </StaticParagraphStyle>
+            <CookieModalSectionWrapperStyle>
+              <CookieModalElementStyle className="with-separator">
+                <SvgSettings
+                  style={CookieSVGStyle}
+                  aria-hidden
+                  focusable="false"
+                />
+                <ColumnElementStyle>
+                  <CookieSectionWrapperStyle>
+                    <CookieDescriptionStyle>
+                      <strong>
+                        {i18n.t('cookies_management.details.technicals.name')}
+                      </strong>{' '}
+                      {i18n.t(
+                        'cookies_management.details.technicals.description'
+                      )}
+                    </CookieDescriptionStyle>
+                    <CookieLabelStyle className="cookie-page">
+                      {i18n.t('cookies_management.details.mandatory')}
+                    </CookieLabelStyle>
+                  </CookieSectionWrapperStyle>
+                  <CookieModalCookieDetailParagraphStyle className="cookie-page">
+                    {i18n.t('cookies_management.details.technicals.secure')}
+                    <CookieLabelStyle className="cookie-page">
+                      {i18n.t('cookies_management.details.duration', {
+                        duration: i18n.t('cookies_management.details.session'),
+                      })}
+                    </CookieLabelStyle>
+                  </CookieModalCookieDetailParagraphStyle>
+                  <CookieModalCookieDetailParagraphStyle className="cookie-page">
+                    {i18n.t(
+                      'cookies_management.details.technicals.secure-expiration'
+                    )}
+                    <CookieLabelStyle className="cookie-page">
+                      {i18n.t('cookies_management.details.duration', {
+                        duration: i18n.t('cookies_management.details.session'),
+                      })}
+                    </CookieLabelStyle>
+                  </CookieModalCookieDetailParagraphStyle>
+                  <CookieModalCookieDetailParagraphStyle className="cookie-page">
+                    {i18n.t(
+                      'cookies_management.details.technicals.demographics'
+                    )}
+                    <CookieLabelStyle className="cookie-page">
+                      {i18n.t('cookies_management.details.duration', {
+                        duration: i18n.t('cookies_management.details.month', {
+                          count: 1,
+                        }),
+                      })}
+                    </CookieLabelStyle>
+                  </CookieModalCookieDetailParagraphStyle>
+                </ColumnElementStyle>
+              </CookieModalElementStyle>
+              <CookieModalElementStyle className="with-separator">
+                <SvgSmiley
+                  style={CookieSVGStyle}
+                  aria-hidden
+                  focusable="false"
+                />
+                <ColumnElementStyle>
+                  <CookieSectionWrapperStyle>
+                    <CookieDescriptionStyle>
+                      <strong>
+                        {i18n.t('cookies_management.details.preferences.name')}
+                      </strong>{' '}
+                      {i18n.t(
+                        'cookies_management.details.preferences.description'
+                      )}
+                    </CookieDescriptionStyle>
+                    <CookieLabelStyle className="cookie-page">
+                      {i18n.t('cookies_management.details.mandatory')}
+                    </CookieLabelStyle>
+                  </CookieSectionWrapperStyle>
+                  <CookieModalCookieDetailParagraphStyle className="cookie-page">
+                    {i18n.t(
+                      'cookies_management.details.preferences.google-connect'
+                    )}
+                  </CookieModalCookieDetailParagraphStyle>
+                  <CookieModalCookieDetailParagraphStyle className="cookie-page">
+                    {i18n.t(
+                      'cookies_management.details.preferences.facebook-connect'
+                    )}
+                  </CookieModalCookieDetailParagraphStyle>
+                  <CookieModalCookieDetailParagraphStyle className="cookie-page">
+                    {i18n.t(
+                      'cookies_management.details.preferences.session-id'
+                    )}
+                    <CookieLabelStyle className="cookie-page">
+                      {i18n.t('cookies_management.details.duration', {
+                        duration: i18n.t('cookies_management.details.session'),
+                      })}
+                    </CookieLabelStyle>
+                  </CookieModalCookieDetailParagraphStyle>
+                  <CookieModalCookieDetailParagraphStyle className="cookie-page">
+                    {i18n.t(
+                      'cookies_management.details.preferences.session-id-expiration'
+                    )}
+                    <CookieLabelStyle className="cookie-page">
+                      {i18n.t('cookies_management.details.duration', {
+                        duration: i18n.t('cookies_management.details.session'),
+                      })}
+                    </CookieLabelStyle>
+                  </CookieModalCookieDetailParagraphStyle>
+                  <CookieModalCookieDetailParagraphStyle className="cookie-page">
+                    {i18n.t('cookies_management.details.preferences.user-id')}
+                    <CookieLabelStyle className="cookie-page">
+                      {i18n.t('cookies_management.details.duration', {
+                        duration: i18n.t('cookies_management.details.year', {
+                          count: 1,
+                        }),
+                      })}
+                    </CookieLabelStyle>
+                  </CookieModalCookieDetailParagraphStyle>
+                  <CookieModalCookieDetailParagraphStyle className="cookie-page">
+                    {i18n.t(
+                      'cookies_management.details.preferences.cookie-preferences'
+                    )}
+                    <CookieLabelStyle className="cookie-page">
+                      {i18n.t('cookies_management.details.duration', {
+                        duration: i18n.t('cookies_management.details.year', {
+                          count: 1,
+                        }),
+                      })}
+                    </CookieLabelStyle>
+                  </CookieModalCookieDetailParagraphStyle>
+                </ColumnElementStyle>
+              </CookieModalElementStyle>
+              <CookieModalElementStyle className="with-separator">
+                <SvgStats
+                  style={CookieSVGStyle}
+                  aria-hidden
+                  focusable="false"
+                />
+                <ColumnElementStyle>
+                  <CookieSectionWrapperStyle>
+                    <CookieDescriptionStyle>
+                      <strong>
+                        {i18n.t('cookies_management.details.statistics.name')}
+                      </strong>{' '}
+                      {i18n.t(
+                        'cookies_management.details.statistics.description'
+                      )}
+                    </CookieDescriptionStyle>
+                    <CookieLabelStyle className="cookie-page">
+                      {i18n.t('cookies_management.details.mandatory')}
+                    </CookieLabelStyle>
+                  </CookieSectionWrapperStyle>
+                  <CookieModalCookieDetailParagraphStyle className="cookie-page">
+                    {i18n.t('cookies_management.details.statistics.visitor-id')}
+                    <CookieLabelStyle className="cookie-page">
+                      {i18n.t('cookies_management.details.duration', {
+                        duration: i18n.t('cookies_management.details.year', {
+                          count: 1,
+                        }),
+                      })}
+                    </CookieLabelStyle>
+                  </CookieModalCookieDetailParagraphStyle>
+                  <CookieModalCookieDetailParagraphStyle className="cookie-page">
+                    {i18n.t(
+                      'cookies_management.details.statistics.visitor-created-at'
+                    )}
+                    <CookieLabelStyle className="cookie-page">
+                      {i18n.t('cookies_management.details.duration', {
+                        duration: i18n.t('cookies_management.details.year', {
+                          count: 1,
+                        }),
+                      })}
+                    </CookieLabelStyle>
+                  </CookieModalCookieDetailParagraphStyle>
+                </ColumnElementStyle>
+              </CookieModalElementStyle>
+              <CookieModalElementStyle>
+                <SvgLoudSpeaker
+                  style={CookieSVGStyle}
+                  aria-hidden
+                  focusable="false"
+                />
+                <ColumnElementStyle>
+                  <CookieDescriptionStyle>
+                    <strong>
+                      {i18n.t('cookies_management.details.social.name')}
+                    </strong>{' '}
+                    {i18n.t('cookies_management.details.social.description')}
+                  </CookieDescriptionStyle>
+                  <CookieSwitch
+                    onCookiePage
+                    value="twitter_tracking"
+                    description={i18n.t(
+                      'cookies_management.details.social.twitter_tracking'
+                    )}
+                  />
+                  <CookieSwitch
+                    onCookiePage
+                    value="facebook_sharing"
+                    description={i18n.t(
+                      'cookies_management.details.social.facebook_sharing'
+                    )}
+                  />
+                  <CookieSwitch
+                    onCookiePage
+                    value="twitter_sharing"
+                    description={i18n.t(
+                      'cookies_management.details.social.twitter_sharing'
+                    )}
+                  />
+                  <CookieSwitch
+                    onCookiePage
+                    value="linkedin_sharing"
+                    description={i18n.t(
+                      'cookies_management.details.social.linkedin_sharing'
+                    )}
+                  />
+                </ColumnElementStyle>
+              </CookieModalElementStyle>
+            </CookieModalSectionWrapperStyle>
+            <CenterColumnStyle>
+              <RedButtonStyle type="button" onClick={handlePreferences}>
+                {i18n.t('cookies_management.button')}
+              </RedButtonStyle>
+            </CenterColumnStyle>
+          </StaticPrimaryUnorderedListItemStyle>
+        </StaticPrimaryUnorderedListStyle>
+      </StaticPageWrapperStyle>
+    </>
+  );
+};
+
+// eslint-disable-next-line import/no-default-export
+export default Cookies;

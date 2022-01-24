@@ -44,3 +44,11 @@ export const modalShowCountries = (focusAfterClose: boolean) => ({
   type: actionTypes.MODAL_SHOW_COUNTRIES,
   payload: { focusAfterClose },
 });
+
+export const modalCloseCookies = () => (dispatch: Function) => {
+  dispatch({ type: actionTypes.MODAL_CLOSE_COOKIES });
+};
+
+export const modalShowCookies = () => (dispatch: Function) => {
+  dispatch({ type: actionTypes.MODAL_SHOW_COOKIES });
+};

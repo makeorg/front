@@ -462,3 +462,59 @@ CLICK_SUBSCRIBE:
 DISPLAY_SESSION_EXPIRED:
     key: display-session-expired
     description: Display modal session expired 
+
+DISPLAY_COOKIE_MODAL_FIRST_STEP:
+    key: display-cookies-modal-first-step
+    description: Display cookie modal first step
+
+DISPLAY_COOKIE_MODAL_SECOND_STEP:
+    key: display-cookies-modal-second-step
+    description: Display cookie modal second step
+
+CLICK_COOKIE_MODAL_REFUSE:
+    key: click-cookies-close-modal
+    description: Close modal without cookies acceptance
+
+CLICK_COOKIE_MODAL_PERSONALIZE:
+    key: click-cookies-personalize
+    description: Click on personalize button in cookie modal
+
+CLICK_COOKIE_MODAL_SAVE:
+    key: click-cookies-save
+    description: Click to accept cookies
+    parameters:
+      - key: type
+        description: type name
+        values:
+          - cookies-accept-all
+          - cookies-accept-preferences
+
+CLICK_COOKIE_SWITCH_ACCEPT:
+    key: click-cookies-accept
+    description: Click on switch to accept cookies
+    parameters:
+      - key: type
+        description: type name
+        values:
+          - facebook_tracking
+          - twitter_tracking
+          - facebook_sharing
+          - twitter_sharing
+          - linkedin_sharing
+
+CLICK_COOKIE_SWITCH_REFUSE:
+    key: click-cookies-refuse
+    description: Click switch to refuse cookies
+    parameters:
+      - key: type
+        description: type name
+        values:
+          - facebook_tracking
+          - twitter_tracking
+          - facebook_sharing
+          - twitter_sharing
+          - linkedin_sharing
+
+CLICK_COOKIE_MODAL_BACK:
+    key: click-cookies-back
+    description: Click on back button in cookie modal
