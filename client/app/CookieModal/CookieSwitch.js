@@ -17,7 +17,7 @@ import {
 type Props = {
   value: string,
   description: string,
-  // onCookiePage?: boolean,
+  onCookiePage?: boolean,
 };
 
 export const CookieSwitch = ({ value, description, onCookiePage }: Props) => {
@@ -25,10 +25,6 @@ export const CookieSwitch = ({ value, description, onCookiePage }: Props) => {
   const { cookiesPreferences }: StateUserCookiesPreferences = useSelector(
     (state: StateRoot) => state.user
   );
-  console.log('>>>cookiesPreferences', cookiesPreferences);
-  console.log('>>> COOKIE SWITCH VALUE', value);
-  console.log('>>> COOKIE SWITCH DESCRIPTION', description);
-  console.log('>>> COOKIE SWITCH onCookiePage', onCookiePage);
 
   return (
     <CookieModalElementSwitchWrapperStyle>

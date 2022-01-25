@@ -121,6 +121,21 @@ export class DateHelperSingleton {
     return moment(objectDate).format('L');
   }
 
+  localizedAndFormattedDate(date?: string, format?: string) {
+    if (!date || !format) {
+      return null;
+    }
+
+    const objectDate = new Date(date);
+    if (Number.isNaN(objectDate.getMonth())) {
+      return null;
+    }
+
+    moment.locale(this._language);
+
+    return moment(objectDate).format(format);
+  }
+
   getRemainingDays(endDate: ?string | null) {
     if (!endDate) {
       return null;

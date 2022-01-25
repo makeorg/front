@@ -88,9 +88,6 @@ export const SecondStepCookie = ({
             <CookieModalCookieDetailParagraphStyle>
               {i18n.t('cookie_modal.technicals.expiration')}
             </CookieModalCookieDetailParagraphStyle>
-            <CookieModalCookieDetailParagraphStyle>
-              {i18n.t('cookie_modal.technicals.demographics')}
-            </CookieModalCookieDetailParagraphStyle>
           </ColumnElementStyle>
         </CookieModalElementStyle>
         <CookieModalElementStyle className="with-separator">
@@ -107,16 +104,10 @@ export const SecondStepCookie = ({
               </CookieLabelStyle>
             </CookieSectionWrapperStyle>
             <CookieModalCookieDetailParagraphStyle>
-              {i18n.t('cookie_modal.preferences.authentication')}
-            </CookieModalCookieDetailParagraphStyle>
-            <CookieModalCookieDetailParagraphStyle>
               {i18n.t('cookie_modal.preferences.session')}
             </CookieModalCookieDetailParagraphStyle>
             <CookieModalCookieDetailParagraphStyle>
               {i18n.t('cookie_modal.preferences.expiration')}
-            </CookieModalCookieDetailParagraphStyle>
-            <CookieModalCookieDetailParagraphStyle>
-              {i18n.t('cookie_modal.preferences.user')}
             </CookieModalCookieDetailParagraphStyle>
             <CookieModalCookieDetailParagraphStyle>
               {i18n.t('cookie_modal.preferences.cookie')}
@@ -138,6 +129,11 @@ export const SecondStepCookie = ({
             </CookieSectionWrapperStyle>
             <CookieModalCookieDetailParagraphStyle>
               {i18n.t('cookie_modal.statistics.visitor')}
+            </CookieModalCookieDetailParagraphStyle>
+            <CookieModalCookieDetailParagraphStyle>
+              {i18n.t(
+                'cookies_management.details.statistics.visitor-created-at'
+              )}
             </CookieModalCookieDetailParagraphStyle>
           </ColumnElementStyle>
         </CookieModalElementStyle>

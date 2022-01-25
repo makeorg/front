@@ -82,6 +82,10 @@
     "no_cookies": {
       "title": "Ooops ! Vos cookies sont désactivés - Make.org"
     },
+    "cookies": {
+      "title": "Gestion des cookies - Make.org",
+      "description": "Découvrez toutes les explications sur l'utilisation des cookies lors de votre visite sur la plateforme."
+    },
     "password-recovery": {
       "title": "Je crée un nouveau mot de passe - Make.org"
     },
@@ -190,7 +194,12 @@
           "message": "La consultation ne peut plus recevoir de nouvelles propositions, mais continuez à voter pour départager les propositions existantes.",
           "button": "j'ai compris"
       },
-      "vote_on_proposal" : "Votez sur cette proposition"
+      "vote_on_proposal" : "Votez sur cette proposition",
+      "cookies": {
+        "social_media": "Afin d'accéder à cette fonctionnalité, vous devez autoriser les cookies concernés sur la page ",
+        "cookie_page": "Gestion des cookies",
+        "update": "Merci, nous avons bien enregistré vos préférences de gestion de vos cookies."
+      }
     },
     "from": "sur",
     "email": "Email",
@@ -519,7 +528,7 @@
       "cookie": "make-cookie-preferences : ce cookie permettra de garder en mémoire vos préférences concernant l‘utilisation des cookies sur notre service."
     },
     "statistics": {
-      "visitor": "make-visitor-id : ce cookie sert à suivre les visites sur notre service de façon à mesurer le trafic de façon anonyme et agrégée. Les événements de navigation sont envoyés à l'outil d'analyse MixPanel.",
+      "visitor": "make-visitor-id : ce cookie sert à suivre les visites sur notre service de façon à mesurer le trafic de façon anonyme et agrégée.",
       "tracking": "Cookie de tracking Facebook : il sert à recueillir de la donnée de comportement sur le service en vue d'analyses agrégées permettant d’améliorer le service. Il sert également à recueillir les données socio démo (âge, genre, région) de façon agrégée pour enrichir l’analyse de la consultation."
     },
     "social_media": {

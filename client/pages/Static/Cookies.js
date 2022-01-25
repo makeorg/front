@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import { MetaTags } from 'Client/app/MetaTags';
 import { i18n } from 'Shared/i18n';
@@ -41,11 +42,6 @@ import { useParams } from 'react-router';
 import { CookieSwitch } from 'Client/app/CookieModal/CookieSwitch';
 import { FACEBOOK_LINK_FR, FACEBOOK_LINK_EN } from 'Shared/constants/config';
 import {
-  googleLinkPrivacy,
-  twitterLinkPrivacy,
-  linkedInLinkPrivacy,
-} from 'Shared/helpers/social';
-import {
   StaticExternalLinkIconStyle,
   StaticPageWrapperStyle,
   StaticParagraphStyle,
@@ -62,7 +58,7 @@ export const Cookies = () => {
   const dispatch = useDispatch();
   const { country } = useParams();
   const { cookiesPreferences } = useSelector((state: StateRoot) => state.user);
-  const DATE = new Date(2021, 3, 28);
+  const DATE = new Date(2021, 0, 15);
   const formattedDate = DateHelper.localizedAndFormattedDate(
     DATE,
     'DD MMMM YYYY'
@@ -129,21 +125,6 @@ export const Cookies = () => {
             </StaticParagraphStyle>
             <StaticSquareListStyle>
               <StaticSquareListItemStyle>
-                {'Google : '}
-                <RedLinkHTMLElementStyle
-                  as="a"
-                  href={googleLinkPrivacy(country)}
-                  target="_blank"
-                  rel="noopener"
-                >
-                  {googleLinkPrivacy(country)}
-                  <StaticExternalLinkIconStyle aria-hidden focusable="false" />
-                  <ScreenReaderItemStyle>
-                    {i18n.t('common.open_new_window')}
-                  </ScreenReaderItemStyle>
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
                 {'Facebook : '}
                 <RedLinkHTMLElementStyle
                   as="a"
@@ -152,36 +133,6 @@ export const Cookies = () => {
                   rel="noopener"
                 >
                   {facebookLink}
-                  <StaticExternalLinkIconStyle aria-hidden focusable="false" />
-                  <ScreenReaderItemStyle>
-                    {i18n.t('common.open_new_window')}
-                  </ScreenReaderItemStyle>
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'Twitter : '}
-                <RedLinkHTMLElementStyle
-                  as="a"
-                  href={twitterLinkPrivacy(country)}
-                  target="_blank"
-                  rel="noopener"
-                >
-                  {twitterLinkPrivacy(country)}
-                  <StaticExternalLinkIconStyle aria-hidden focusable="false" />
-                  <ScreenReaderItemStyle>
-                    {i18n.t('common.open_new_window')}
-                  </ScreenReaderItemStyle>
-                </RedLinkHTMLElementStyle>
-              </StaticSquareListItemStyle>
-              <StaticSquareListItemStyle>
-                {'LinkedIn : '}
-                <RedLinkHTMLElementStyle
-                  as="a"
-                  href={linkedInLinkPrivacy(country)}
-                  target="_blank"
-                  rel="noopener"
-                >
-                  {linkedInLinkPrivacy(country)}
                   <StaticExternalLinkIconStyle aria-hidden focusable="false" />
                   <ScreenReaderItemStyle>
                     {i18n.t('common.open_new_window')}
@@ -236,18 +187,6 @@ export const Cookies = () => {
                       })}
                     </CookieLabelStyle>
                   </CookieModalCookieDetailParagraphStyle>
-                  <CookieModalCookieDetailParagraphStyle className="cookie-page">
-                    {i18n.t(
-                      'cookies_management.details.technicals.demographics'
-                    )}
-                    <CookieLabelStyle className="cookie-page">
-                      {i18n.t('cookies_management.details.duration', {
-                        duration: i18n.t('cookies_management.details.month', {
-                          count: 1,
-                        }),
-                      })}
-                    </CookieLabelStyle>
-                  </CookieModalCookieDetailParagraphStyle>
                 </ColumnElementStyle>
               </CookieModalElementStyle>
               <CookieModalElementStyle className="with-separator">
@@ -272,16 +211,6 @@ export const Cookies = () => {
                   </CookieSectionWrapperStyle>
                   <CookieModalCookieDetailParagraphStyle className="cookie-page">
                     {i18n.t(
-                      'cookies_management.details.preferences.google-connect'
-                    )}
-                  </CookieModalCookieDetailParagraphStyle>
-                  <CookieModalCookieDetailParagraphStyle className="cookie-page">
-                    {i18n.t(
-                      'cookies_management.details.preferences.facebook-connect'
-                    )}
-                  </CookieModalCookieDetailParagraphStyle>
-                  <CookieModalCookieDetailParagraphStyle className="cookie-page">
-                    {i18n.t(
                       'cookies_management.details.preferences.session-id'
                     )}
                     <CookieLabelStyle className="cookie-page">
@@ -297,16 +226,6 @@ export const Cookies = () => {
                     <CookieLabelStyle className="cookie-page">
                       {i18n.t('cookies_management.details.duration', {
                         duration: i18n.t('cookies_management.details.session'),
-                      })}
-                    </CookieLabelStyle>
-                  </CookieModalCookieDetailParagraphStyle>
-                  <CookieModalCookieDetailParagraphStyle className="cookie-page">
-                    {i18n.t('cookies_management.details.preferences.user-id')}
-                    <CookieLabelStyle className="cookie-page">
-                      {i18n.t('cookies_management.details.duration', {
-                        duration: i18n.t('cookies_management.details.year', {
-                          count: 1,
-                        }),
                       })}
                     </CookieLabelStyle>
                   </CookieModalCookieDetailParagraphStyle>
@@ -383,30 +302,9 @@ export const Cookies = () => {
                   </CookieDescriptionStyle>
                   <CookieSwitch
                     onCookiePage
-                    value="twitter_tracking"
+                    value="facebook_tracking"
                     description={i18n.t(
-                      'cookies_management.details.social.twitter_tracking'
-                    )}
-                  />
-                  <CookieSwitch
-                    onCookiePage
-                    value="facebook_sharing"
-                    description={i18n.t(
-                      'cookies_management.details.social.facebook_sharing'
-                    )}
-                  />
-                  <CookieSwitch
-                    onCookiePage
-                    value="twitter_sharing"
-                    description={i18n.t(
-                      'cookies_management.details.social.twitter_sharing'
-                    )}
-                  />
-                  <CookieSwitch
-                    onCookiePage
-                    value="linkedin_sharing"
-                    description={i18n.t(
-                      'cookies_management.details.social.linkedin_sharing'
+                      'cookies_management.details.social.facebook_tracking'
                     )}
                   />
                 </ColumnElementStyle>
