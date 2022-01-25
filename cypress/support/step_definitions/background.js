@@ -7,6 +7,12 @@ beforeEach(() => {
   xhrRequests.list = {};
   xhrTrackingRequests.list = {};
   executed = false;
+  cy.setCookie(
+    'make-cookie-preferences',
+    JSON.stringify({
+      facebook_tracking: true,
+    })
+  );
 })
 
 afterEach(() => {

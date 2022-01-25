@@ -51,6 +51,9 @@ Object {
       "isLoggedIn": false,
       "user": undefined,
     },
+    "cookiesPreferences": Object {
+      "facebook_tracking": false,
+    },
     "passwordRecovery": Object {
       "error": false,
       "errorMessage": undefined,

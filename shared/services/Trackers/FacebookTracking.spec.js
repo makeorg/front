@@ -23,10 +23,7 @@ describe('Facebook Tracking Service', () => {
 
     FacebookTracking.init();
     expect(fbq.load).toHaveBeenCalled();
-    expect(fbq.track.mock.calls).toEqual([
-      ['init', '260470104426586'],
-      ['init', '387088288517542'],
-    ]);
+    expect(fbq.track.mock.calls).toEqual([['init', '260470104426586']]);
   });
 
   it('dont send event in dev environnemnt', () => {
@@ -49,36 +46,6 @@ describe('Facebook Tracking Service', () => {
 
     expect(fbq.track.mock.calls).toEqual([
       ['trackSingleCustom', '260470104426586', eventName, eventParameters],
-    ]);
-  });
-
-  it('send event in weeuropeans context', () => {
-    jest.spyOn(fbq, 'track');
-    const eventName = 'FooEvent';
-    const eventParameters = {
-      question: 'weeuropeans-it',
-    };
-
-    FacebookTracking.trackCustom(eventName, eventParameters);
-
-    expect(fbq.track.mock.calls).toEqual([
-      ['trackSingleCustom', '260470104426586', eventName, eventParameters],
-      ['trackSingleCustom', '387088288517542', eventName, eventParameters],
-    ]);
-  });
-
-  it('send event in weuropeanround context', () => {
-    jest.spyOn(fbq, 'track');
-    const eventName = 'FooEvent';
-    const eventParameters = {
-      question: 'weuropeanround-it',
-    };
-
-    FacebookTracking.trackCustom(eventName, eventParameters);
-
-    expect(fbq.track.mock.calls).toEqual([
-      ['trackSingleCustom', '260470104426586', eventName, eventParameters],
-      ['trackSingleCustom', '387088288517542', eventName, eventParameters],
     ]);
   });
 
