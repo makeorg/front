@@ -16,7 +16,7 @@ export const FLUSH_TAGS_TRIGGER: string = 'flush_tags_trigger';
 export const DEPARTMENT_STORAGE_KEY: string = 'declared_department';
 
 /** Main Elements */
-export const COOKIE_BANNER: string = 'cookie_banner';
+export const COOKIE_MODAL: string = 'cookie_modal';
 export const MAIN_SKIPLINKS: string = 'main_skiplinks';
 export const MAIN_HEADER: string = 'main_header';
 export const MAIN_CONTENT: string = 'main_content';

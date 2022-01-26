@@ -74,3 +74,7 @@ export { SvgPlace } from './Place';
 export { SvgSettings } from './Settings';
 export { SvgSmiley } from './Smiley';
 export { SvgStats } from './Stats';
+export { SvgSwitchLabelChecked } from './SwitchLabelChecked';
+export { SvgSwitchLabelCross } from './SwitchLabelCross';
+export { SvgLoudSpeaker } from './LoudSpeaker';
+export { SvgCookie } from './Cookie';

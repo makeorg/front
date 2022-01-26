@@ -9,3 +9,7 @@ export const DEFAULT_COUNTRY = 'FR';
 export const CONSULTATION_SLUG = 'pour-un-avenir-durable';
 export const BASE_URL = `/FR/consultation/${CONSULTATION_SLUG}/selection`;
 export const CONTACT_EMAIL = 'contact@placebymake.org';
+
+/* Social Medias */
+export const FACEBOOK_LINK_FR = 'https://fr-fr.facebook.com/policy.php';
+export const FACEBOOK_LINK_EN = 'https://en-gb.facebook.com/policy.php';

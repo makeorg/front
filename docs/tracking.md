@@ -510,4 +510,56 @@ Following parameters are added to all events.
     
   
 
+  - `display-cookies-modal-first-step` Display cookie modal first step
+
+    
+  
+
+  - `display-cookies-modal-second-step` Display cookie modal second step
+
+    
+  
+
+  - `click-cookies-close-modal` Close modal without cookies acceptance
+
+    
+  
+
+  - `click-cookies-personalize` Click on personalize button in cookie modal
+
+    
+  
+
+  - `click-cookies-save` Click to accept cookies
+
+    
+    | param_name | required | description | values |
+    |-|-|-|-|
+    | `type` | true | type name | `cookies-accept-all`, `cookies-accept-preferences` |
+  
+  
+
+  - `click-cookies-accept` Click on switch to accept cookies
+
+    
+    | param_name | required | description | values |
+    |-|-|-|-|
+    | `type` | true | type name | `facebook_tracking` |
+  
+  
+
+  - `click-cookies-refuse` Click switch to refuse cookies
+
+    
+    | param_name | required | description | values |
+    |-|-|-|-|
+    | `type` | true | type name | `facebook_tracking` |
+  
+  
+
+  - `click-cookies-back` Click on back button in cookie modal
+
+    
+  
+
 </auto-generated-tracking-doc>

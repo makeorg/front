@@ -6,6 +6,7 @@
 *.log
 /cypress/screenshots
 /cypress/videos
+/cypress/coverage
 */.vscode
 .vscode/settings.json
 .idea

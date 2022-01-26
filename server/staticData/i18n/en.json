@@ -94,6 +94,10 @@
     },
     "explore": {
       "title": "@@meta.explore.title|fr:Explorer les propositions de la consultation '{{question}}' - Make.org"
+    },
+    "cookies": {
+      "title": "@@meta.cookies.title|fr:Gestion des cookies - Make.org",
+      "description": "@@meta.cookies.description|fr:Découvrez toutes les explications sur l'utilisation des cookies lors de votre visite sur la plateforme."
     }
   },
   "common": {
@@ -211,7 +215,12 @@
         "message": "Many solutions have been submitted since the beginning of this consultation. We need your votes to make a difference between them. In the meantime we can't accept new solutions.",
         "button": "ok"
       },
-      "vote_on_proposal": "Vote on this solution"
+      "vote_on_proposal": "Vote on this solution",
+      "cookies": {
+        "social_media": "@@common.notifications.cookies.social_media|fr:Afin d'accéder à cette fonctionnalité, vous devez autoriser les cookies concernés sur la page ",
+        "cookie_page": "@@common.notifications.cookies.cookie_page|fr:Gestion des cookies",
+        "update": "@@common.notifications.cookies.update|fr:Merci, nous avons bien enregistré vos préférences de gestion de vos cookies."
+      }
     },
     "footer_nav": "Footer navigation",
     "sidebar_area": "Content sidebar",
@@ -1109,5 +1118,103 @@
     "SE": "Sweden",
     "SI": "Slovenia",
     "SK": "Slovakia"
+  },
+  "cookie_modal": {
+    "title": "@@cookie_modal.title|fr:Exprimez-vous chez Make.org dans le respect de votre vie privée",
+    "description": "@@cookie_modal.description|fr:Dans un souci d’optimiser encore davantage notre service et votre expérience, nous sollicitons votre consentement aux cookies que nous et nos partenaires souhaitons utiliser lors de votre visite.",
+    "details": {
+      "title": "@@cookie_modal.details.title|fr:De quels cookies s’agit-il ?",
+      "technicals": "@@cookie_modal.details.technicals|fr:<strong>Techniques :</strong> des cookies indispensables pour faire fonctionner le site",
+      "preferences": "@@cookie_modal.details.preferences|fr:<strong>Préférences :</strong> des cookies pour améliorer votre expérience lors de votre navigation sur le site",
+      "statistics": "@@cookie_modal.details.statistics|fr:<strong>Statistiques :</strong> des cookies pour enrichir l’analyse de nos consultations citoyennes de façon agrégée",
+      "social_media": "@@cookie_modal.details.social_media|fr:<strong>Réseaux sociaux :</strong> des cookies pour nous aider à optimiser notre impact grâce aux réseaux sociaux"
+    },
+    "accept": "@@cookie_modal.accept|fr:Accepter",
+    "personalize": "@@cookie_modal.personalize|fr:Personnaliser",
+    "refuse": "@@cookie_modal.refuse|fr:Continuer sans accepter",
+    "back": "@@cookie_modal.back|fr:Revenir à l'étape précédente",
+    "mandatory": "@@cookie_modal.mandatory|fr:Toujours actif",
+    "save": "@@cookie_modal.save|fr:Valider ma sélection",
+    "technicals": {
+      "secure": "@@cookie_modal.technicals.secure|fr:make secure : une fois que vous vous êtes connecté à votre espace citoyen sur Make.org, ce cookie garantit que cette connexion va se maintenir pendant votre navigation sur le service.",
+      "expiration": "@@cookie_modal.technicals.expiration|fr:make-secure-expiration : ce cookie sert à détecter votre inactivité sur le service de façon à faire expirer cette connexion.",
+      "demographics": "@@cookie_modal.technicals.demographics|fr:make-demographics: ce cookie nous permet de savoir si des informations démographiques (tranche d'âge, région, genre, etc) vous ont déjà été demandées sur cet appareil, afin de ne pas vous les demander à nouveau lors d'une prochaine visite."
+    },
+    "preferences": {
+      "authentication": "@@cookie_modal.preferences.authentication|fr:Les cookies d'authentification Google et Facebook : ils permettent l'inscription et la connexion à votre espace citoyen via ces réseaux sociaux.",
+      "session": "@@cookie_modal.preferences.session|fr:make-session-id : ce cookie sert à regrouper toutes les actions que vous effectuez sur le service dans une session.",
+      "expiration": "@@cookie_modal.preferences.expiration|fr:make-session-id-expiration : ce cookie permet de vous afficher la notification indiquant que votre session a expiré (au bout de 20 minutes) et va donc être rechargée.",
+      "user": "@@cookie_modal.preferences.user|fr:make-user-id : ce cookie permet d’identifier que vous avez déjà créé un espace sur Make.org et à vous inviter à vous connecter de façon à ce que vous puissiez retrouver toutes vos actions dans votre espace citoyen.",
+      "cookie": "@@cookie_modal.preferences.cookie|fr:make-cookie-preferences : ce cookie permettra de garder en mémoire vos préférences concernant l‘utilisation des cookies sur notre service."
+    },
+    "statistics": {
+      "visitor": "@@cookie_modal.statistics.visitor|fr:make-visitor-id : ce cookie sert à suivre les visites sur notre service de façon à mesurer le trafic de façon anonyme et agrégée.",
+      "tracking": "@@cookie_modal.statistics.tracking|fr:Cookie de tracking Facebook : il sert à recueillir de la donnée de comportement sur le service en vue d'analyses agrégées permettant d’améliorer le service. Il sert également à recueillir les données socio démo (âge, genre, région) de façon agrégée pour enrichir l’analyse de la consultation."
+    },
+    "social_media": {
+      "facebook_pixel": "@@cookie_modal.social_media.facebook_pixel|fr:Pixel Facebook : il sert à optimiser les performances des campagnes de promotions des consultations sur Facebook afin d’augmenter la participation des citoyens."
+    }
+  },
+  "cookies_management": {
+    "title": "@@cookies_management.title|fr:Gestion des Cookies",
+    "dated": "@@cookies_management.dated|fr:- en date du {{date}} -",
+    "button": "@@cookies_management.button|fr:Valider ma sélection",
+    "intro": {
+      "title": "@@cookies_management.intro.title|fr:Qu‘est-ce qu'un cookie ?",
+      "first_paragraph": "@@cookies_management.intro.first_paragraph|fr:Un cookie est un petit fichier informatique qui peut être déposé et lu lors de la consultation par un internaute d‘un site internet ou d‘une application mobile et ce, quel que soit le type de terminal utilisé (ordinateur, smartphone, etc...).",
+      "second_paragraph": "@@cookies_management.intro.second_paragraph|fr:Certains cookies sont essentiels au bon fonctionnement des sites ou applications, d’autres contribuent à optimiser leur performance du site ou à améliorer l’expérience des internautes."
+    },
+    "use": {
+      "title": "@@cookies_management.use.title|fr:Comment utilisons-nous les cookies ?",
+      "first_paragraph": "@@cookies_management.use.first_paragraph|fr:Lorsque vous vous connectez sur notre site, des cookies sont déposés sur votre terminal afin d’améliorer votre expérience, accroître la performance de notre site et optimiser nos consultations citoyennes.",
+      "second_paragraph": "@@cookies_management.use.second_paragraph|fr:Les informations contenues dans les cookies ne visent pas à vous identifier personnellement et ne sont jamais utilisées à d‘autres fins que celles indiquées ci-après."
+    },
+    "partners": {
+      "title": "@@cookies_management.partners.title|fr:Qui sont nos partenaires ?",
+      "intro": "@@cookies_management.partners.intro|fr:Outre les cookies créés et gérés par Make, des cookies sont également déposés sur notre site par les partenaires suivants :"
+    },
+    "details": {
+      "title": "@@cookies_management.details.title|fr:Quels cookies utilisons nous ?",
+      "intro": "@@cookies_management.details.intro|fr:Les cookies déposés sur notre site sont les suivants :",
+      "mandatory": "@@cookies_management.details.mandatory|fr:Toujours actif",
+      "duration": "@@cookies_management.details.duration|fr:Durée : {{duration}}",
+      "session": "@@cookies_management.details.session|fr:Session",
+      "month": "@@cookies_management.details.month|fr:{{count}} mois",
+      "year": "@@cookies_management.details.year|fr:{{count}} an",
+      "year_plural": "@@cookies_management.details.year_plural|fr:{{count}} ans",
+      "technicals": {
+        "name": "@@cookies_management.details.technicals.name|fr:Les cookies techniques :",
+        "description": "@@cookies_management.details.technicals.description|fr:ces cookies sont nécessaires au fonctionnement du site et ne peuvent pas être désactivés. Vous pouvez configurer votre navigateur afin de bloquer ou être informé de l‘existence de ces cookies, mais certaines parties de notre site peuvent être affectées. Ces cookies ne visent pas à vous identifier personnellement.",
+        "secure": "@@cookies_management.details.technicals.secure|fr:make-secure : une fois que vous vous êtes connecté à votre espace citoyen sur Make.org, ce cookie garantit que cette connexion va se maintenir pendant votre navigation sur le service.",
+        "secure-expiration": "@@cookies_management.details.technicals.secure-expiration|fr:make-secure-expiration: ce cookie sert à détecter votre inactivité sur le service de façon à faire expirer cette connexion.",
+        "demographics": "@@cookies_management.details.technicals.demographics|fr:make-demographics: ce cookie nous permet de savoir si des informations démographiques (tranche d'âge, région, genre, etc) vous ont déjà été demandées sur cet appareil, afin de ne pas vous les demander à nouveau lors d'une prochaine visite."
+      },
+      "preferences": {
+        "name": "@@cookies_management.details.preferences.name|fr:Les cookies de préférences :",
+        "description": "@@cookies_management.details.preferences.description|fr:ces cookies sont utilisés pour retenir vos préférences sur notre site et ainsi améliorer votre expérience lors de votre navigation. Vous pouvez configurer votre navigateur afin de bloquer ou être informé de l'existence de ces cookies, mais certaines parties de notre site peuvent être affectées. Ces cookies ne visent pas à vous identifier personnellement.",
+        "google-connect": "@@cookies_management.details.preferences.google-connect|fr:Google connect : ces cookies permettent l‘inscription et la connexion à votre espace citoyen.",
+        "facebook-connect": "@@cookies_management.details.preferences.facebook-connect|fr:Facebook connect : ces cookies permettent l‘inscription et la connexion à votre espace citoyen.",
+        "session-id": "@@cookies_management.details.preferences.session-id|fr:make-session-id : ce cookie sert à regrouper toutes les actions que vous effectuez sur le site dans une session.",
+        "session-id-expiration": "@@cookies_management.details.preferences.session-id-expiration|fr:make-session-id-expiration : ce cookie permet de vous afficher la notification indiquant que votre session a expiré (au bout de 20 minutes) et va donc être rechargée.",
+        "user-id": "@@cookies_management.details.preferences.user-id|fr:make-user-id : ce cookie permettra de vous identifier suite à une connexion à un espace personnel sur Make.org. Il servira à vous inviter à vous reconnecter en pré-remplissant votre identifiant.",
+        "cookie-preferences": "@@cookies_management.details.preferences.cookie-preferences|fr:make-cookie-preferences : ce cookie permettra de garder en mémoire vos préférences concernant l‘utilisation des cookies sur notre service."
+      },
+      "statistics": {
+        "name": "@@cookies_management.details.statistics.name|fr:Les cookies de statistiques :",
+        "description": "@@cookies_management.details.statistics.description|fr:ces cookies sont destinés à analyser les visites sur notre site et à améliorer les performances de ce dernier. Toutes les informations collectées par ces cookies sont agrégées et donc anonymisées. Si vous n‘acceptez pas ces cookies, nous ne serons pas informés de votre revisite.",
+        "visitor-id": "@@cookies_management.details.statistics.visitor-id|fr:make-visitor-id: ce cookie sert à suivre les visites sur notre service de façon à mesurer le trafic de façon anonyme et agrégée. Les événements de navigation sont envoyés à l'outil d'analyse MixPanel.",
+        "visitor-created-at": "@@cookies_management.details.statistics.visitor-created-at|fr:make-visitor-created-at : ce cookie sert à obtenir la date de la première visite sur la plateforme.",
+        "facebook-tracking": "@@cookies_management.details.statistics.facebook-tracking|fr:cookie de tracking Facebook : ce cookie permet de générer des statistiques concernant la fréquentation destinées à améliorer notre site et à enrichir l‘analyse de nos consultations."
+      },
+      "social": {
+        "name": "@@cookies_management.details.social.name|fr:Les cookies « réseaux sociaux » :",
+        "description": "@@cookies_management.details.social.description|fr:ces cookies, activés par des tiers, vous permettent de partager le contenu de notre site sur les réseaux sociaux et nous aident ainsi à optimiser notre impact. Si vous ne consentez pas au dépôt de ces cookies, il se peut que vous ne puissiez pas bénéficier de ces outils de partage.",
+        "facebook_tracking": "@@cookies_management.details.social.facebook_tracking|fr:pixel Facebook : ces cookies servent à optimiser les performances des campagnes de promotion des consultations sur Facebook afin d’augmenter la participation des citoyens.",
+        "twitter_tracking": "@@cookies_management.details.social.twitter_tracking|fr:pixel Twitter : ces cookies servent à optimiser les performances des campagnes de promotion des consultations sur Twitter afin d’augmenter la participation des citoyens.",
+        "facebook_sharing": "@@cookies_management.details.social.facebook_sharing|fr:partage Facebook : ce cookie permet à l’utilisateur de partager du contenu sur Facebook et d’améliorer la convivialité.",
+        "twitter_sharing": "@@cookies_management.details.social.twitter_sharing|fr:partage Twitter : ce cookie permet à l’utilisateur de partager du contenu sur Twitter et d’améliorer la convivialité.",
+        "linkedin_sharing": "@@cookies_management.details.social.linkedin_sharing|fr:partage LinkedIn : ce cookie permet à l’utilisateur de partager du contenu sur LinkedIn et d’améliorer la convivialité."
+      }
+    }
   }
 }

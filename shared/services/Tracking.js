@@ -489,5 +489,56 @@ export const trackDisplaySessionExpired = () => {
   TrackingService.sendAllTrackers(trackingEvent.DISPLAY_SESSION_EXPIRED());
 };
 
+// Cookie Modal Tracking
+export const trackDisplayModalCookieFirstStep = () => {
+  TrackingService.sendAllTrackers(
+    trackingEvent.DISPLAY_COOKIE_MODAL_FIRST_STEP()
+  );
+};
+
+export const trackDisplayModalCookieSecondStep = () => {
+  TrackingService.sendAllTrackers(
+    trackingEvent.DISPLAY_COOKIE_MODAL_SECOND_STEP()
+  );
+};
+
+export const trackClickModalCookieRefuse = () => {
+  TrackingService.sendAllTrackers(trackingEvent.CLICK_COOKIE_MODAL_REFUSE());
+};
+
+export const trackClickModalCookiePersonalize = () => {
+  TrackingService.sendAllTrackers(
+    trackingEvent.CLICK_COOKIE_MODAL_PERSONALIZE()
+  );
+};
+
+export const trackClickModalCookieSave = (type: string) => {
+  TrackingService.sendAllTrackers(
+    trackingEvent.CLICK_COOKIE_MODAL_SAVE({
+      type,
+    })
+  );
+};
+
+export const trackClickCookieSwitchAccept = (type: string) => {
+  TrackingService.sendAllTrackers(
+    trackingEvent.CLICK_COOKIE_SWITCH_ACCEPT({
+      type,
+    })
+  );
+};
+
+export const trackClickCookieSwitchRefuse = (type: string) => {
+  TrackingService.sendAllTrackers(
+    trackingEvent.CLICK_COOKIE_SWITCH_REFUSE({
+      type,
+    })
+  );
+};
+
+export const trackClickModalCookieBack = () => {
+  TrackingService.sendAllTrackers(trackingEvent.CLICK_COOKIE_MODAL_BACK());
+};
+
 /* eslint-disable import/no-default-export */
 export default TrackingService;
