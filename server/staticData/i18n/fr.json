@@ -500,7 +500,7 @@
     "cookies": "Gestion des cookies"
   },
   "cookie_modal": {
-    "title": "Exprimez-vous chez Make.org dans le respect de votre vie privée",
+    "title": "Exprimez-vous sur Place by Make.org dans le respect de votre vie privée",
     "description": "Dans un souci d’optimiser encore davantage notre service et votre expérience, nous sollicitons votre consentement aux cookies que nous et nos partenaires souhaitons utiliser lors de votre visite.",
     "details" :{
       "title": "De quels cookies s’agit-il ?",
@@ -1172,7 +1172,7 @@
       },
       "social": {
         "name": "Les cookies « réseaux sociaux » :",
-        "description": "ces cookies, activés par des tiers, vous permettent de partager le contenu de notre site sur les réseaux sociaux et nous aident ainsi à optimiser notre impact. Si vous ne consentez pas au dépôt de ces cookies, il se peut que vous ne puissiez pas bénéficier de ces outils de partage.",
+        "description": "Les cookies réseaux sociaux : ces cookies, activés par des tiers, nous aident à optimiser notre impact en diffusant la consultation à plus grande échelle.",
         "facebook_tracking": "pixel Facebook : ces cookies servent à optimiser les performances des campagnes de promotion des consultations sur Facebook afin d’augmenter la participation des citoyens.",
         "twitter_tracking": "pixel Twitter : ces cookies servent à optimiser les performances des campagnes de promotion des consultations sur Twitter afin d’augmenter la participation des citoyens.",
         "facebook_sharing": "partage Facebook : ce cookie permet à l’utilisateur de partager du contenu sur Facebook et d’améliorer la convivialité.",
