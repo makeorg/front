@@ -1,6 +1,8 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import { CookiesProvider } from 'react-cookie';
+import Cookies from 'universal-cookie';
+import { USER_PREFERENCES_COOKIE } from 'Shared/constants/cookies';
 import { Provider } from 'react-redux';
 import { i18n } from 'Shared/i18n';
 import { Router, Switch, Route, Redirect } from 'react-router-dom';
@@ -15,6 +17,7 @@ import { apiClient } from 'Shared/api/ApiService/ApiService.client';
 import { trackingParamsService } from 'Shared/services/TrackingParamsService';
 import { DateHelper } from 'Shared/helpers/date';
 import { detected as adBlockerDetected } from 'adblockdetect';
+import { initTrackersFromPreferences } from 'Client/helper/cookies';
 import {
   cookieIsEnabled,
   thirdCookieEnabled,
@@ -97,6 +100,11 @@ const initApp = async state => {
     session: { sessionId: '' },
     customData: customDataHelper.getAll(), // custom_data already saved in session_storage
   });
+
+  // Cookie preference
+  const cookies = new Cookies();
+  const preferencesCookie = cookies.get(USER_PREFERENCES_COOKIE);
+  initTrackersFromPreferences(preferencesCookie);
 
   // Set date helper language
   DateHelper.language = state.appConfig.language;

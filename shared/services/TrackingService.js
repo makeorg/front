@@ -2,7 +2,10 @@
 import { TrackingApiService } from 'Shared/api/TrackingApiService';
 import { env } from 'Shared/env';
 import { type PerformanceTimingType } from 'Shared/types/tracking';
+import Cookies from 'universal-cookie';
+import { USER_PREFERENCES_COOKIE } from 'Shared/constants/cookies';
 import trackingConfiguration from 'Shared/services/trackingConfiguration.yaml';
+import { FacebookTracking } from './Trackers/FacebookTracking';
 import { trackingParamsService } from './TrackingParamsService';
 import { defaultUnexpectedError } from './DefaultErrorHandler';
 
@@ -115,10 +118,31 @@ export const TrackingService = {
   sendAllTrackers: ({
     eventName,
     parameters,
+    protectedParameters = [],
   }: {
     eventName: string,
     parameters: Object,
+    protectedParameters: string[],
   }) => {
+    const cookies = new Cookies();
+    const preferencesCookie = cookies.get(USER_PREFERENCES_COOKIE);
+    const externalTrackingParameters = Object.keys(parameters)
+      .filter(key => !protectedParameters.includes(key))
+      .reduce(
+        (obj, key) => ({
+          ...obj,
+          [key]: parameters[key],
+        }),
+        {}
+      );
     TrackingService.track(eventName, parameters);
+
+    // Facebook
+    if (preferencesCookie?.facebook_tracking) {
+      FacebookTracking.trackCustom(
+        eventName,
+        getEventParameters(externalTrackingParameters)
+      );
+    }
   },
 };
