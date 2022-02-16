@@ -247,14 +247,11 @@ export const trackFirstVote = (
   position?: number
 ) => {
   const cardPosition = getPosition(position);
-  const params = { 'card-position': cardPosition };
-  const internalParams = { proposalId, nature };
+  const params = { 'card-position': cardPosition, proposalId, nature };
 
-  const { eventName, parameters } = trackingEvent.CLICK_SEQUENCE_FIRST_VOTE({
-    ...params,
-    ...internalParams,
-  });
-  TrackingService.track(eventName, parameters);
+  TrackingService.sendAllTrackers(
+    trackingEvent.CLICK_SEQUENCE_FIRST_VOTE(params)
+  );
 };
 
 export const trackUnvote = (
