@@ -43,7 +43,7 @@ When('I register with email {string} and password {string} and firstname {string
   cy.get('[name=age]').type(age);
   cy.get('#registerCheckbox').click({force:true});
   cy.intercept({method: 'POST', url: 'http://localhost:9000/user'} , (req) => {
-    expect(req.body).to.include({password: "TestMake", firstName: "testfirstname", dateOfBirth: "1986-01-01", approvePrivacyPolicy: true }),
+    expect(req.body).to.include({password: "TestMake", firstName: "testfirstname", dateOfBirth: "1987-01-01", approvePrivacyPolicy: true }),
     req.reply({
       statusCode: 200,
       body: {...userData, email: emailValue, firstName: firstname, lastConnection: now.toISOString()},
