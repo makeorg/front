@@ -44,6 +44,7 @@ export const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
 
 export const CheckboxLabelStyle = styled.label`
   display: inline-flex;
+  align-items: center;
   color: ${color.greyDark};
   font-family: ${MakeFonts.CircularStandardBook};
   font-size: ${intToPx(typography.font.fontsize.X2S.value)};

@@ -36,6 +36,7 @@ export const Register = () => {
       legalMinorConsent: false,
       legalAdvisorApproval: false,
       approvePrivacyPolicy: false,
+      optInNewsletter: false,
     },
   });
   const [errors, setErrors] = useState<ErrorObjectType[]>([]);
@@ -48,8 +49,8 @@ export const Register = () => {
     dispatch(modalShowLogin());
   };
 
-  const handleLegalField = (fieldName: string, value: boolean) => {
-    if (!fieldName || !value) {
+  const handleCheckbox = (fieldName: string, value: boolean) => {
+    if (!fieldName) {
       return null;
     }
 
@@ -135,7 +136,7 @@ export const Register = () => {
     <>
       <LegalConsent
         needLegalConsent={needLegalConsent}
-        handleLegalField={handleLegalField}
+        handleLegalField={handleCheckbox}
         handleSubmit={handleSubmit}
         toggleLegalConsent={toggleLegalConsent}
       />
@@ -155,6 +156,7 @@ export const Register = () => {
           handleChange={handleChange}
           handleSubmit={userIsAChild ? toggleLegalConsent : handleSubmit}
           disableSubmit={waitingCallback}
+          handleCheckbox={handleCheckbox}
         />
         <ExtraParagraphStyle>
           {i18n.t('register.login_title')}
