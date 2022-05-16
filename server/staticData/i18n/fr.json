@@ -461,7 +461,8 @@
     "submit": "Valider",
     "privacy_policy_text": "J'accepte la ",
     "privacy_policy": "politique de données",
-    "privacy_make": " de Place by Make.org"
+    "privacy_make": " de Place by Make.org",
+    "optin_newsletter": "J'accepte de recevoir des emails de Place by Make.org pour me tenir au courant de l'actualité de la consultation."
   },
   "forgot_password": {
     "title": "je réinitialise mon mot de passe",

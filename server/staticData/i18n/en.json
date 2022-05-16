@@ -1042,7 +1042,8 @@
     "submit": "Validate",
     "privacy_policy_text": "I accept the ",
     "privacy_policy": "privacy policy",
-    "privacy_make": " of Make.org"
+    "privacy_make": " of Make.org",
+    "optin_newsletter": "I agree to receive emails from Place by Make.org to be updated on this consultation."
   },
   "browse": {
     "page_title": "Browse consultations",

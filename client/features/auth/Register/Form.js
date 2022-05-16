@@ -15,6 +15,7 @@ import { PasswordInput } from 'Client/ui/Elements/Form/PasswordInput';
 import { REGISTER_FORMNAME } from 'Shared/constants/form';
 import { SubmitButton } from 'Client/ui/Elements/Form/SubmitButton';
 import { RegisterCheckBox } from 'Client/ui/Elements/Form/CheckBox/RegisterCheckbox';
+import { OptinNewsletterCheckBox } from 'Client/ui/Elements/Form/CheckBox/OptinNewsletterCheckbox';
 import {
   EmailFieldIcon,
   PasswordFieldIcon,
@@ -29,6 +30,7 @@ type Props = {
   errors: ErrorObjectType[],
   handleChange: (event: SyntheticInputEvent<HTMLInputElement>) => any,
   handleSubmit: (event: SyntheticInputEvent<HTMLInputElement>) => any,
+  handleCheckbox: (event: SyntheticInputEvent<HTMLInputElement>) => any,
   disableSubmit: boolean,
 };
 /**
@@ -39,6 +41,7 @@ export const RegisterForm = ({
   errors,
   handleChange,
   handleSubmit,
+  handleCheckbox,
   disableSubmit,
 }: Props) => {
   const emailError = getFieldError('email', errors);
@@ -89,6 +92,7 @@ export const RegisterForm = ({
         {i18n.t('register.gtu_text')}
       </ConditionParagraphStyle>
       <RegisterCheckBox required />
+      <OptinNewsletterCheckBox handleCheckbox={handleCheckbox} />
       <SubmitButton
         formName={REGISTER_FORMNAME}
         id="authentication-register-submit"
