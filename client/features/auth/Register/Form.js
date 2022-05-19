@@ -5,7 +5,6 @@ import { type RegisterFormDataType } from 'Shared/types/form';
 import { type ErrorObjectType } from 'Shared/types/api';
 import {
   FormCenterAlignStyle,
-  ConditionParagraphStyle,
   FormRequirementsStyle,
   CommentFieldStyle,
 } from 'Client/ui/Elements/Form/Styled/Content';
@@ -88,9 +87,6 @@ export const RegisterForm = ({
         required
         handleChange={handleChange}
       />
-      <ConditionParagraphStyle>
-        {i18n.t('register.gtu_text')}
-      </ConditionParagraphStyle>
       <RegisterCheckBox required />
       <OptinNewsletterCheckBox handleCheckbox={handleCheckbox} />
       <SubmitButton
